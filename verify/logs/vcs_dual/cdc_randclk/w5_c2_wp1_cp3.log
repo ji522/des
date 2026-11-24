@@ -1,0 +1,13 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 15 16:40 2026
+RANDCLK CFG w_half=5 c_half=2 w_phase=1 c_phase=3
+========== CDC RANDCLK TB ==========
+RANDCLK STAT push=190 cmp=190 mismatch=0 x=0 extra=0 rekey=16 wfull=292
+RANDCLK PASS push=190/cmp=190/mismatch=0/x=0/extra=0 wfull=292
+$finish called from file "/home/ICer/work/vcs_randclk/tb/tb_des_cdc_randclk.v", line 230.
+$finish at simulation time             38169000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 38169000 ps
+CPU Time:      0.130 seconds;       Data structure size:   0.1Mb
+Sun Nov 15 16:40:41 2026

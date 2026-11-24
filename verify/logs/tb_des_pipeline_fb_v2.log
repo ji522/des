@@ -1,0 +1,113 @@
+=== xvlog ===
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_pipeline_fb_v2.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_pipeline_fb_v2
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_des_pipeline_fb_v2 -s tb_des_pipeline_fb_v2 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.tb_des_pipeline_fb_v2
+Built simulation snapshot tb_des_pipeline_fb_v2
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/_sim_tb_des_pipeline_fb_v2/xsim.dir/tb_des_pipeline_fb_v2/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 24 09:36:18 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_pipeline_fb_v2/xsim_script.tcl
+# xsim {tb_des_pipeline_fb_v2} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+=== DES 鍙嶅帇楠岃瘉 v2 寮€濮?: N_ENC=28 N_DEC=14 ===
+[455000]  OK   #0 : 85e813540f0ab405
+[475000]  OK   #1 : 9768537ed9ace3ce
+[495000]  OK   #2 : 5e185389844e8363
+[515000]  OK   #3 : be87e76d63a7a5ac
+[535000]  OK   #4 : 469864dda462567e
+[555000]  OK   #5 : 2fa9b2ab4813467a
+[575000]  OK   #6 : a76cdd61ff2fc849
+[595000]  OK   #7 : ee6ec81942e47408
+[615000]  OK   #8 : b07b7ca4335f0dc8
+[635000]  OK   #9 : 53368b8d708e5ee4
+[655000]  OK   #10 : 4bab265d7a39b801
+[675000]  OK   #11 : caadaef6587b315b
+[725000] 鍦烘櫙1 back-to-back  : push=12 pop=12 stall=0
+[1145000]  OK   #12 : 792e7994943f8f94
+[1155000]  OK   #13 : a5aec24b9fb6e300
+[1165000]  OK   #14 : ebaf8e826f241aa0
+[1175000]  OK   #15 : 8b764b91eafa8b03
+[1265000]  OK   #16 : db6710221ad2cdd2
+[1275000]  OK   #17 : 6c9fad67863bbce2
+[1285000]  OK   #18 : 2bfbad2e469ab6bf
+[1295000]  OK   #19 : 5cdcb8c0b22488e0
+[1450000] 鍦烘櫙2 backpressure  : push=20 pop=20 stall(绱)=16 鏈満鏅?16
+[1835000]  OK   #20 : 3a72d4b1480f3f06
+[1845000]  OK   #21 : 32c958e8619c8f74
+[1855000]  OK   #22 : 6ae9db93534de4aa
+[1915000]  OK   #23 : a18a081f2c8e940a
+[1925000]  OK   #24 : 2ea4acf0bce37c54
+[1935000]  OK   #25 : 8ff5d6af3b3ae26f
+[1995000]  OK   #26 : 53a271da27aaf79b
+[2005000]  OK   #27 : 51dae3ea1f31feed
+[2130000] 鍦烘櫙3 overflow      : push=28 pop=28 stall(绱)=31 鏈満鏅?15
+[2465000]  OK   #28 : 0123456789abcdef
+[2485000]  OK   #29 : 1111111111111111
+[2505000]  OK   #30 : 2222222222222222
+[2525000]  OK   #31 : 403ea380e1462ec4
+[2545000]  OK   #32 : 22219ecdaa908e70
+[2565000]  OK   #33 : 51c93607187547a7
+[2585000]  OK   #34 : e765c02f6c42b467
+[2605000]  OK   #35 : 7d036d84b8d514e0
+[2955000]  OK   #36 : 8d2f669ca765c403
+[2975000]  OK   #37 : cdff94a48dca01ae
+[2995000]  OK   #38 : 9e1219b14f5ba693
+[3015000]  OK   #39 : 5ff90dd362fb06dd
+[3035000]  OK   #40 : dce15a0756eea711
+[3055000]  OK   #41 : bb2f23f62e3a322e
+[3105000] 鍦烘櫙4 瑙ｅ瘑          : push=42 pop=42 stall=31
+
+==================== VERIFICATION SUMMARY ====================
+  pushed_total          : 42
+  popped_total          : 42
+  pass                  : 42
+  error                 : 0
+  key_schedule reloads  : 5
+  rekey-while-busy 杩濅緥 : 0  (搴斾负 0锛涙崲瀵嗛挜鍓嶅凡寮哄埗鎺掔┖)
+  stall  鍦烘櫙1 b2b       : 0
+  stall  鍦烘櫙2 bprs      : 16
+  stall  鍦烘櫙3 ovf       : 15
+  stall  鍦烘櫙4 dec       : 0
+  stall  鍚堣            : 31
+  cov 鎻℃墜鎴愬姛(valid&&ready): 42 鎷?
+  cov 涓嬫父鍘嬩綇(valid&&!ready): 31 鎷?
+  cov 杈撳嚭绌洪棽(!valid)      : 227 鎷?
+==============================================================
+
+**** PASS : 42/42 outputs match golden (enc+dec, 3 scenarios, key switching) ****
+$finish called at time : 3105 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_pipeline_fb_v2.v" Line 303
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 09:36:25 2026...

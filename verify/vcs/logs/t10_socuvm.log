@@ -1,0 +1,1016 @@
+=== compile t10_socuvm ===
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Fri Oct 30 21:22:19 2026
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_version_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_global_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_message_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_phase_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_object_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_printer_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_tlm_defines.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm_imps.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_tlm_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_sequence_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_callback_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_reg_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_deprecated_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_hdl.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_svcmd_dpi.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_regex.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_coreservice.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_version.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_object_globals.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_misc.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_object.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_pool.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_queue.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_factory.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_registry.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_spell_chkr.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_resource.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_resource_specializations.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_resource_db.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_config_db.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_printer.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_comparer.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_packer.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_links.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_tr_database.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_tr_stream.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_recorder.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_event_callback.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_event.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_barrier.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_callback.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_callback.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_message.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_handler.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_object.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_transaction.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_phase.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_domain.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_bottomup_phase.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_topdown_phase.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_task_phase.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_common_phases.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_runtime_phases.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_component.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_component.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_objection.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_heartbeat.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_globals.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_cmdline_processor.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_traversal.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_set_get_dap_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_simple_lock_dap.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_get_to_lock_dap.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_set_before_get_dap.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dap/uvm_dap.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm_ifs.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_sqr_ifs.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_port_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm_imps.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_imps.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_ports.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_exports.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_analysis_port.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm_fifo_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm_fifos.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm_req_rsp.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_sqr_connections.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_pair.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_policies.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_in_order_comparator.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_algorithmic_comparator.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_random_stimulus.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_subscriber.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_monitor.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_driver.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_push_driver.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_scoreboard.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_agent.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_env.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_test.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/comps/uvm_comps.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequence_item.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequencer_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequencer_analysis_fifo.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequencer_param_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequencer.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_push_sequencer.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequence_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequence.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequence_library.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_sequence_builtin.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/seq/uvm_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_defines.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_time.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_generic_payload.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_ifs.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_imps.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_ports.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_exports.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_sockets_base.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2_sockets.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_item.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_adapter.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_predictor.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_sequence.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_cbs.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_backdoor.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_field.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_vreg_field.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_indirect.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_fifo.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_file.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_mem_mam.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_vreg.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_mem.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_block.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_reg_hw_reset_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_reg_bit_bash_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_mem_walk_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_mem_access_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_reg_access_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_reg_mem_shared_access_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_reg_mem_built_in_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/snps_uvm_reg_bank.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Back to file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/des_pipe_round_fb.v'
+Parsing included file '/home/ICer/work/des_pipeline_soc_v2/sbox_funcs.v'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/des_pipe_round_fb.v'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/des_pipeline_fb.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/key_ram_gen.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/des_axis_wrap.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/des_axil_regs.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/des_soc_top.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/sv/axil_if.sv'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv'.
+Parsing included file '/home/ICer/work/des_pipeline_soc_v2/verify/params.vh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_axil_agent_pkg.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_axil_agent_pkg.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_ral_frontdoor.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_ral_frontdoor.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_ral_pkg.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_ral_pkg.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_ral_adapter.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_ral_adapter.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_env_pkg.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_env_pkg.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv'.
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/tb_des_soc_uvm.sv'
+Parsing included file '/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/home/ICer/work/des_pipeline_soc_v2/verify/uvm/tb_des_soc_uvm.sv'.
+Top Level Modules:
+       tb_des_soc_uvm
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+
+15 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository
+recompiling package _vcs_DPI_package
+recompiling package uvm_pkg
+recompiling module des_pipe_round_fb
+recompiling module des_soc_top
+recompiling module des_if
+recompiling module axil_if
+recompiling package des_uvm_pkg
+recompiling package des_axil_pkg
+recompiling package des_ral_frontdoor_pkg
+recompiling package des_ral_pkg
+recompiling package des_ral_adapter_pkg
+recompiling package des_soc_env_pkg
+recompiling package des_soc_test_pkg
+recompiling module tb_des_soc_uvm
+All of 15 modules done
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+g++ -w  -pipe -DVCS -DUVM_DPI_DO_TYPE_CHECK -fPIC -O -I/home/synopsys/vcs/O-2018.09-SP2/include    -c /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.cc
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  -Wl,-rpath=/home/synopsys/vcs/O-2018.09-SP2/linux64/lib -L/home/synopsys/vcs/O-2018.09-SP2/linux64/lib  /home/synopsys/vcs/O-2018.09-SP2/linux64/lib/vpdlogstub.o uvm_dpi.o   objs/amcQw_d.o   _65595_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/synopsys/vcs/O-2018.09-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive       ./../simv.daidir/vc_hdrs.o    /home/synopsys/vcs/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: 4.632 seconds to compile + .220 seconds to elab + .254 seconds to link
+=== run t10_socuvm ===
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Oct 30 21:22 2026
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test des_soc_override_test...
+
+Note-[FCICIO] Instance coverage is ON
+/home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv, 160
+des_uvm_pkg, "des_uvm_pkg::des_uvm_coverage::cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'des_uvm_pkg::des_uvm_coverage::cg'
+  
+  Covergroup Instance: tb_des_soc_uvm.me.obj.cg 
+  Design hierarchy: des_uvm_pkg
+
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_env_pkg.sv(131) @ 0: uvm_test_top.env [SOC_ENV] RAL map 绑定: ral=  ok map=  ok sqr=  ok adp=  ok
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               des_soc_override_test   -     @348 
+  env                      des_soc_env             -     @397 
+    axil_agent             axil_agent              -     @418 
+      drv                  axil_driver             -     @767 
+        rsp_port           uvm_analysis_port       -     @786 
+        seq_item_port      uvm_seq_item_pull_port  -     @776 
+      mon                  axil_monitor            -     @611 
+        ap                 uvm_analysis_port       -     @620 
+      sqr                  uvm_sequencer           -     @630 
+        rsp_export         uvm_analysis_export     -     @639 
+        seq_item_export    uvm_seq_item_pull_imp   -     @757 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    cov                    des_uvm_coverage        -     @593 
+    data_agent             des_agent               -     @409 
+      drv                  des_driver              -     @961 
+        ap_exp             uvm_analysis_port       -     @990 
+        rsp_port           uvm_analysis_port       -     @980 
+        seq_item_port      uvm_seq_item_pull_port  -     @970 
+      mon                  des_monitor             -     @805 
+        ap_obs             uvm_analysis_port       -     @814 
+      rdy                  des_ready_driver        -     @1000
+        rsp_port           uvm_analysis_port       -     @1019
+        seq_item_port      uvm_seq_item_pull_port  -     @1009
+      sqr                  uvm_sequencer           -     @824 
+        rsp_export         uvm_analysis_export     -     @833 
+        seq_item_export    uvm_seq_item_pull_imp   -     @951 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    sb                     des_uvm_scoreboard      -     @564 
+      exp_export           uvm_analysis_imp_exp    -     @573 
+      obs_export           uvm_analysis_imp_obs    -     @583 
+    vseqr                  des_virtual_sequencer   -     @427 
+      rsp_export           uvm_analysis_export     -     @436 
+      seq_item_export      uvm_seq_item_pull_imp   -     @554 
+      arbitration_queue    array                   0     -    
+      lock_queue           array                   0     -    
+      num_last_reqs        integral                32    'd1  
+      num_last_rsps        integral                32    'd1  
+--------------------------------------------------------------
+
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 95000ps failed at 95000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 95000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 105000ps failed at 105000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 105000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 115000ps failed at 115000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 115000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 125000ps failed at 125000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 125000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 135000ps failed at 135000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 135000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 145000ps failed at 145000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 145000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 155000ps failed at 155000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 155000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 165000ps failed at 165000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 165000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 175000ps failed at 175000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 175000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 185000ps failed at 185000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 185000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 195000ps failed at 195000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 195000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 205000ps failed at 205000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 205000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(162) @ 215000: uvm_test_top [TEST] === T5 factory override ===
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(89) @ 215000: uvm_test_top [TEST] === T1 RAL 基本读写 ===
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 215000: reporter [uvm_reg_map] Writing 'hdeadbeef at 'h0 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 215000ps failed at 215000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 215000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 225000] DO_WRITE addr=0 data=deadbeef strb=1111 key_r=0000000000000000
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 225000ps failed at 225000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 225000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 235000ps failed at 235000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 235000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 240000: reporter [uvm_reg_map] Wrote 'hdeadbeef at 'h0 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 240000: reporter [RegModel] Wrote register via map ral.default_map: ral.key_lo=0xdeadbeef
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2288) @ 240000: reporter [uvm_reg_map] Reading address 'h0 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 245000ps failed at 245000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 245000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 255000] AR_FIRE addr=0 key_r=00000000deadbeef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 255000ps failed at 255000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 255000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 265000ps failed at 265000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 265000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2361) @ 270000: reporter [uvm_reg_map] Read 'hdeadbeef at 'h0 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 270000: reporter [RegModel] Read  register via map ral.default_map: ral.key_lo=deadbeef
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(94) @ 270000: uvm_test_top [TEST] T1 DEBUG read: st=UVM_IS_OK v=0xdeadbeef mirrored=0xdeadbeef
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 270000: reporter [uvm_reg_map] Writing 'h89abcdef at 'h0 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 275000ps failed at 275000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 275000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 285000] DO_WRITE addr=0 data=89abcdef strb=1111 key_r=00000000deadbeef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 285000ps failed at 285000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 285000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 295000ps failed at 295000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 295000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 300000: reporter [uvm_reg_map] Wrote 'h89abcdef at 'h0 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 300000: reporter [RegModel] Wrote register via map ral.default_map: ral.key_lo=0x89abcdef
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 300000: reporter [uvm_reg_map] Writing 'h1234567 at 'h4 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 305000ps failed at 305000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 305000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 315000] DO_WRITE addr=1 data=01234567 strb=1111 key_r=0000000089abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 315000ps failed at 315000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 315000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 325000ps failed at 325000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 325000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 330000: reporter [uvm_reg_map] Wrote 'h1234567 at 'h4 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 330000: reporter [RegModel] Wrote register via map ral.default_map: ral.key_hi=0x1234567
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2288) @ 330000: reporter [uvm_reg_map] Reading address 'h0 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 335000ps failed at 335000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 335000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 345000] AR_FIRE addr=0 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 345000ps failed at 345000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 345000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 355000ps failed at 355000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 355000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2361) @ 360000: reporter [uvm_reg_map] Read 'h89abcdef at 'h0 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 360000: reporter [RegModel] Read  register via map ral.default_map: ral.key_lo=89abcdef
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2288) @ 360000: reporter [uvm_reg_map] Reading address 'h4 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 365000ps failed at 365000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 365000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 375000] AR_FIRE addr=1 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 375000ps failed at 375000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 375000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 385000ps failed at 385000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 385000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2361) @ 390000: reporter [uvm_reg_map] Read 'h1234567 at 'h4 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 390000: reporter [RegModel] Read  register via map ral.default_map: ral.key_hi=1234567
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 390000: reporter [uvm_reg_map] Writing 'h2 at 'h8 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 395000ps failed at 395000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 395000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 405000] DO_WRITE addr=2 data=00000002 strb=1111 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 405000ps failed at 405000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 405000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 415000ps failed at 415000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 415000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 420000: reporter [uvm_reg_map] Wrote 'h2 at 'h8 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 420000: reporter [RegModel] Wrote register via map ral.default_map: ral.ctrl=0x2
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2288) @ 420000: reporter [uvm_reg_map] Reading address 'h8 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 425000ps failed at 425000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 425000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 435000] AR_FIRE addr=2 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 435000ps failed at 435000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 435000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 445000ps failed at 445000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 445000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2361) @ 450000: reporter [uvm_reg_map] Read 'h2 at 'h8 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 450000: reporter [RegModel] Read  register via map ral.default_map: ral.ctrl=2
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 450000: reporter [uvm_reg_map] Writing 'h1 at 'h10 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 455000ps failed at 455000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 455000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 465000] DO_WRITE addr=4 data=00000001 strb=1111 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 465000ps failed at 465000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 465000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 475000ps failed at 475000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 475000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 480000: reporter [uvm_reg_map] Wrote 'h1 at 'h10 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 480000: reporter [RegModel] Wrote register via map ral.default_map: ral.guard=0x1
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2288) @ 480000: reporter [uvm_reg_map] Reading address 'h10 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 485000ps failed at 485000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 485000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 495000] AR_FIRE addr=4 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 495000ps failed at 495000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 495000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 505000ps failed at 505000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 505000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2361) @ 510000: reporter [uvm_reg_map] Read 'h1 at 'h10 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 510000: reporter [RegModel] Read  register via map ral.default_map: ral.guard=1
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 510000: reporter [uvm_reg_map] Writing 'h0 at 'h10 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 515000ps failed at 515000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 515000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 525000] DO_WRITE addr=4 data=00000000 strb=1111 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 525000ps failed at 525000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 525000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 535000ps failed at 535000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 535000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 540000: reporter [uvm_reg_map] Wrote 'h0 at 'h10 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 540000: reporter [RegModel] Wrote register via map ral.default_map: ral.guard=0x0
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(130) @ 540000: uvm_test_top [TEST] === T2 RAL 只读保护 ===
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 540000: reporter [uvm_reg_map] Writing 'hffffffff at 'hc via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 545000ps failed at 545000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 545000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 555000] DO_WRITE addr=3 data=ffffffff strb=1111 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 555000ps failed at 555000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 555000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 565000ps failed at 565000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 565000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 570000: reporter [uvm_reg_map] Wrote 'hffffffff at 'hc via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 570000: reporter [RegModel] Wrote register via map ral.default_map: ral.status=0xffffffff
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(139) @ 570000: uvm_test_top [TEST] T2 status 写被静默忽略（RAL 版本行为差异）
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(148) @ 570000: uvm_test_top [TEST] === T3 RAL mirror/update ===
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 570000: reporter [uvm_reg_map] Writing 'ha5a5a5a5 at 'h0 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 575000ps failed at 575000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 575000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 585000] DO_WRITE addr=0 data=a5a5a5a5 strb=1111 key_r=0123456789abcdef
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 585000ps failed at 585000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 585000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 595000ps failed at 595000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 595000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 600000: reporter [uvm_reg_map] Wrote 'ha5a5a5a5 at 'h0 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 600000: reporter [RegModel] Wrote register via map ral.default_map: ral.key_lo=0xa5a5a5a5
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2288) @ 600000: reporter [uvm_reg_map] Reading address 'h0 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 605000ps failed at 605000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 605000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 615000] AR_FIRE addr=0 key_r=01234567a5a5a5a5
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 615000ps failed at 615000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 615000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 625000ps failed at 625000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 625000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2361) @ 630000: reporter [uvm_reg_map] Read 'ha5a5a5a5 at 'h0 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 630000: reporter [RegModel] Read  register via map ral.default_map: ral.key_lo=a5a5a5a5
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 630000: reporter [uvm_reg_map] Writing 'h9bbcdff1 at 'h0 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 635000ps failed at 635000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 635000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 645000] DO_WRITE addr=0 data=9bbcdff1 strb=1111 key_r=01234567a5a5a5a5
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 645000ps failed at 645000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 645000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 655000ps failed at 655000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 655000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 660000: reporter [uvm_reg_map] Wrote 'h9bbcdff1 at 'h0 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 660000: reporter [RegModel] Wrote register via map ral.default_map: ral.key_lo=0x9bbcdff1
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 660000: reporter [uvm_reg_map] Writing 'h13345779 at 'h4 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 665000ps failed at 665000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 665000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 675000] DO_WRITE addr=1 data=13345779 strb=1111 key_r=012345679bbcdff1
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 675000ps failed at 675000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 675000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 685000ps failed at 685000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 685000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 690000: reporter [uvm_reg_map] Wrote 'h13345779 at 'h4 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 690000: reporter [RegModel] Wrote register via map ral.default_map: ral.key_hi=0x13345779
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2144) @ 690000: reporter [uvm_reg_map] Writing 'h1 at 'h8 via map "ral.default_map"...
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 695000ps failed at 695000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 695000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+[PROBE 705000] DO_WRITE addr=2 data=00000001 strb=1111 key_r=133457799bbcdff1
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 705000ps failed at 705000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 705000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 715000ps failed at 715000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 715000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/reg/uvm_reg_map.svh(2213) @ 720000: reporter [uvm_reg_map] Wrote 'h1 at 'h8 via map "ral.default_map": UVM_IS_OK...
+UVM_INFO @ 720000: reporter [RegModel] Wrote register via map ral.default_map: ral.ctrl=0x1
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_env_pkg.sv(163) @ 720000: uvm_test_top.env.vseqr@@vseq [VSEQ] 经 RAL 配置完成
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_env_pkg.sv(166) @ 720000: uvm_test_top.env.vseqr@@vseq [VSEQ] 控制面→数据面切换完成
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(190) @ 720000: uvm_test_top [TEST] === T4 virtual sequence 完成 ===
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 725000ps failed at 725000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 725000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 735000ps failed at 735000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 735000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 745000ps failed at 745000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 745000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 755000ps failed at 755000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 755000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 765000ps failed at 765000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 765000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 775000ps failed at 775000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 775000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 785000ps failed at 785000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 785000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 795000ps failed at 795000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 795000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 805000ps failed at 805000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 805000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 815000ps failed at 815000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 815000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 825000ps failed at 825000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 825000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 835000ps failed at 835000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 835000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 845000ps failed at 845000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 845000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 855000ps failed at 855000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 855000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 865000ps failed at 865000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 865000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 875000ps failed at 875000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 875000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 885000ps failed at 885000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 885000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 895000ps failed at 895000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 895000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 905000ps failed at 905000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 905000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 915000ps failed at 915000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 915000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 925000ps failed at 925000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 925000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 935000ps failed at 935000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 935000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 945000ps failed at 945000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 945000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 955000ps failed at 955000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 955000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 965000ps failed at 965000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 965000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 975000ps failed at 975000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 975000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 985000ps failed at 985000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 985000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 995000ps failed at 995000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 995000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1005000ps failed at 1005000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1005000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1015000ps failed at 1015000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1015000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1025000ps failed at 1025000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1025000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1035000ps failed at 1035000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1035000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1045000ps failed at 1045000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1045000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1055000ps failed at 1055000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1055000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1065000ps failed at 1065000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1065000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1075000ps failed at 1075000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1075000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1085000ps failed at 1085000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1085000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1095000ps failed at 1095000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1095000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1105000ps failed at 1105000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1105000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1115000ps failed at 1115000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1115000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1125000ps failed at 1125000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1125000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1135000ps failed at 1135000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1135000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1145000ps failed at 1145000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1145000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1155000ps failed at 1155000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1155000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1165000ps failed at 1165000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1165000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1175000ps failed at 1175000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1175000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1185000ps failed at 1185000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1185000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1195000ps failed at 1195000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1195000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1205000ps failed at 1205000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1205000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+"/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: started at 1215000ps failed at 1215000ps
+	Offending '(!$isunknown({valid_o, ready_o, ready_key_o}))'
+Error: "/home/ICer/work/des_pipeline_soc_v2/verify/sv/des_if.sv", 87: tb_des_soc_uvm.dif.a_ctrl_no_x: at time 1215000 ps
+[SVA A5] 控制信号 valid_o/ready_o/ready_key_o 出现 X/Z
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_soc_test_pkg.sv(196) @ 1220000: uvm_test_top [TEST] 寄存器测试汇总：pass=9 err=0
+
+**** SOC RAL TEST PASS : 9 checks ****
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(196) @ 1220000: uvm_test_top.env.cov [COV] ========== COVERAGE ==========
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(197) @ 1220000: uvm_test_top.env.cov [COV]   采样拍数 : 112
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(198) @ 1220000: uvm_test_top.env.cov [COV]   covergroup 总覆盖率 : 21.43%
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(146) @ 1220000: uvm_test_top.env.sb [SCB] ========== SCOREBOARD ==========
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(147) @ 1220000: uvm_test_top.env.sb [SCB]   push / cmp   : 0 / 0
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(148) @ 1220000: uvm_test_top.env.sb [SCB]   mismatch     : 0
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(149) @ 1220000: uvm_test_top.env.sb [SCB]   X/Z          : 0
+UVM_INFO /home/ICer/work/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(150) @ 1220000: uvm_test_top.env.sb [SCB]   extra output : 0
+UVM_INFO /home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 1220000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   73
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV]     3
+[RNTST]     1
+[RegModel]    17
+[SCB]     5
+[SOC_ENV]     1
+[TEST]     8
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[VSEQ]     2
+[uvm_reg_map]    34
+
+$finish called from file "/home/synopsys/vcs/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time              1220000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1220000 ps
+CPU Time:      0.160 seconds;       Data structure size:   0.5Mb
+Fri Oct 30 21:22:25 2026

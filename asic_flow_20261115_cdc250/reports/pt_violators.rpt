@@ -1,0 +1,114 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : des_axis_cdc_top
+Version: O-2018.06-SP1
+Date   : Sun Nov 15 19:02:20 2026
+****************************************
+
+
+
+
+
+   removal
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   u_fifo/rgray_sync1_reg[0]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync1_reg[1]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync1_reg[2]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync1_reg[3]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync1_reg[4]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync2_reg[0]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync2_reg[1]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync2_reg[2]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync2_reg[3]/RN                              -0.13  (VIOLATED)
+   u_fifo/rgray_sync2_reg[4]/RN                              -0.13  (VIOLATED)
+   u_fifo/wbin_reg[0]/RN                                     -0.13  (VIOLATED)
+   u_fifo/wbin_reg[1]/RN                                     -0.13  (VIOLATED)
+   u_fifo/wbin_reg[2]/RN                                     -0.13  (VIOLATED)
+   u_fifo/wbin_reg[3]/RN                                     -0.13  (VIOLATED)
+   u_fifo/wfull_r_reg/RN                                     -0.13  (VIOLATED)
+   u_fifo/wgray_reg[0]/RN                                    -0.13  (VIOLATED)
+   u_fifo/wgray_reg[1]/RN                                    -0.13  (VIOLATED)
+   u_fifo/wgray_reg[2]/RN                                    -0.13  (VIOLATED)
+   u_fifo/wgray_reg[3]/RN                                    -0.13  (VIOLATED)
+   u_fifo/wgray_reg[4]/RN                                    -0.13  (VIOLATED)
+   u_sync_rdykey_wclk/ff1_reg[0]/RN                          -0.13  (VIOLATED)
+   u_sync_rdykey_wclk/ff2_reg[0]/RN                          -0.13  (VIOLATED)
+   rdy_cool_sr_reg[0]/RN                                     -0.10  (VIOLATED)
+   rdy_cool_sr_reg[1]/RN                                     -0.10  (VIOLATED)
+   rdy_cool_sr_reg[2]/RN                                     -0.10  (VIOLATED)
+   rdy_cool_sr_reg[3]/RN                                     -0.10  (VIOLATED)
+   rdy_cool_sr_reg[4]/RN                                     -0.10  (VIOLATED)
+   rdy_cool_sr_reg[5]/RN                                     -0.10  (VIOLATED)
+   rdy_cool_sr_reg[6]/RN                                     -0.10  (VIOLATED)
+   rdy_cool_sr_reg[7]/RN                                     -0.10  (VIOLATED)
+   ready_key_f_hold_reg/RN                                   -0.10  (VIOLATED)
+   u_axis/last_count_reg[3]/RN                               -0.10  (VIOLATED)
+   u_axis/last_count_reg[4]/RN                               -0.10  (VIOLATED)
+   u_axis/last_count_reg[5]/RN                               -0.10  (VIOLATED)
+   u_axis/last_wr_ptr_reg[0]/RN                              -0.10  (VIOLATED)
+   u_axis/last_wr_ptr_reg[1]/RN                              -0.10  (VIOLATED)
+   u_axis/last_wr_ptr_reg[2]/RN                              -0.10  (VIOLATED)
+   u_axis/last_wr_ptr_reg[3]/RN                              -0.10  (VIOLATED)
+   u_axis/last_wr_ptr_reg[4]/RN                              -0.10  (VIOLATED)
+   u_regs/key_loaded_r_reg/RN                                -0.10  (VIOLATED)
+   u_regs/load_key_r_reg/RN                                  -0.10  (VIOLATED)
+   u_regs/rdata_r_reg[0]/RN                                  -0.10  (VIOLATED)
+   u_regs/rdata_r_reg[1]/RN                                  -0.10  (VIOLATED)
+   u_regs/rdata_r_reg[2]/RN                                  -0.10  (VIOLATED)
+   u_regs/rdata_r_reg[3]/RN                                  -0.10  (VIOLATED)
+   u_regs/rekey_err_r_reg/RN                                 -0.10  (VIOLATED)
+   u_axis/last_rd_ptr_reg[0]/RN                              -0.10  (VIOLATED)
+   u_axis/last_rd_ptr_reg[2]/RN                              -0.10  (VIOLATED)
+   u_axis/last_rd_ptr_reg[3]/RN                              -0.10  (VIOLATED)
+   u_axis/last_rd_ptr_reg[4]/RN                              -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[12].u_round/R_o_reg[1]/RN        -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[13].u_round/L_o_reg[15]/RN       -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[13].u_round/R_o_reg[5]/RN        -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[13].u_round/R_o_reg[18]/RN       -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[13].u_round/R_o_reg[22]/RN       -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[13].u_round/R_o_reg[24]/RN       -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[14].u_round/L_o_reg[6]/RN        -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[14].u_round/L_o_reg[18]/RN       -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[14].u_round/L_o_reg[24]/RN       -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[14].u_round/L_o_reg[26]/RN       -0.10  (VIOLATED)
+   u_axis/u_des/pipe_stages[15].u_round/L_o_reg[19]/RN       -0.10  (VIOLATED)
+   u_regs/aw_pend_reg/RN                                     -0.10  (VIOLATED)
+   u_regs/key_r_reg[0]/RN                                    -0.10  (VIOLATED)
+   u_regs/key_r_reg[2]/RN                                    -0.10  (VIOLATED)
+   u_regs/key_r_reg[3]/RN                                    -0.10  (VIOLATED)
+   u_regs/key_r_reg[9]/RN                                    -0.10  (VIOLATED)
+   u_regs/key_r_reg[11]/RN                                   -0.10  (VIOLATED)
+   u_regs/key_r_reg[19]/RN                                   -0.10  (VIOLATED)
+   u_regs/key_r_reg[31]/RN                                   -0.10  (VIOLATED)
+   u_regs/key_r_reg[35]/RN                                   -0.10  (VIOLATED)
+   u_regs/key_r_reg[45]/RN                                   -0.10  (VIOLATED)
+   u_regs/key_r_reg[60]/RN                                   -0.10  (VIOLATED)
+   u_regs/rvalid_r_reg/RN                                    -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[10]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[11]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[12]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[13]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[14]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[15]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[16]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[17]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[18]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[19]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[20]/RN                              -0.10  (VIOLATED)
+   u_regs/w_data_lat_reg[21]/RN                              -0.10  (VIOLATED)
+   u_regs/encrypt_r_reg/SN                                   -0.05  (VIOLATED)
+
+
+   max_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   u_regs/w_pend_reg/QN        60.27          60.98          -0.70  (VIOLATED)
+
+
+1

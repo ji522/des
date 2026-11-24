@@ -1,0 +1,83 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_uvm/xsim_script.tcl
+# xsim {tb_des_uvm} -autoloadwcfg -runall -sv_seed 20261019
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+UVM_INFO F:DeskTo?縟es_final_versiondes_pipeline_soc_v2erifyuvm_libuvm-1.2-gitsrc/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+  You are using a version of the UVM library that has been compiled
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+----------------------------------------------------------------
+(C) 2013-2014 NVIDIA Corporation
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2007-2014 Mentor Graphics Corporation
+
+
+----------------------------------------------------------------
+
+UVM_INFO @ 0: reporter [RNTST] Running test des_rand_test...
+UVM_INFO F:DeskTop?縟es_final_versiondes_pipeline_soc_v2erifyuvm_libuvm-1.2-gitsrc/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(564) @ 115000: uvm_test_top.env.agent.sqr@@seq [SEQ] === 闃舵1锛氬姞瀵嗗悜閲忥紙28 绗旓級 ===
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(569) @ 1760000: uvm_test_top.env.agent.sqr@@seq [SEQ] === 闃舵2锛氳В瀵嗗悜閲忥紙14 绗旓級 ===
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(573) @ 2720000: uvm_test_top.env.agent.sqr@@seq [SEQ] === 闃舵3锛氬姞瀵?脳 闅忔満鍙嶅帇锛? 绗旓級 ===
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(582) @ 3240000: uvm_test_top.env.agent.sqr@@seq [SEQ] === 闃舵4锛氳В瀵?脳 闅忔満鍙嶅帇锛? 绗旓級 ===
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(285) @ 4160000: uvm_test_top.env.cov [COV] ========== COVERAGE ==========
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(286) @ 4160000: uvm_test_top.env.cov [COV]   閲囨牱鎷嶆暟 : 406
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(287) @ 4160000: uvm_test_top.env.cov [COV]   covergroup 鎬昏鐩栫巼 : 100.00%
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(288) @ 4160000: uvm_test_top.env.cov [COV] ========== GAP DISTRIBUTION ==========
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(293) @ 4160000: uvm_test_top.env.cov [COV]   stage0 PHASE1 enc : gap=0:18  gap=1:3  gap=2-4:7  gap>4:0
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(293) @ 4160000: uvm_test_top.env.cov [COV]   stage1 PHASE2 dec : gap=0:11  gap=1:2  gap=2-4:1  gap>4:0
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(293) @ 4160000: uvm_test_top.env.cov [COV]   stage2 PHASE3 enc+stall : gap=0:5  gap=1:2  gap=2-4:1  gap>4:0
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(293) @ 4160000: uvm_test_top.env.cov [COV]   stage3 PHASE4 dec+stall : gap=0:3  gap=1:2  gap=2-4:3  gap>4:0
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(296) @ 4160000: uvm_test_top.env.cov [COV]   TOTAL           : gap=0:37  gap=1:9  gap=2:5  gap=3:3  gap=4:4  gap>4:0  (txns=58)
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(303) @ 4160000: uvm_test_top.env.cov [COV]   gap coverage : PASS (phases with all 3 bins: 4/4)
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(307) @ 4160000: uvm_test_top.env.cov [COV] ========== STALL / FREE DISTRIBUTION ==========
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(309) @ 4160000: uvm_test_top.env.cov [COV]   stall_len draws=7 : 4:7  
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(311) @ 4160000: uvm_test_top.env.cov [COV]   free_len  draws=7 : 0:0  1:3  2:4  3:0
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(149) @ 4160000: uvm_test_top.env.sb [SCB] ========== SCOREBOARD ==========
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(150) @ 4160000: uvm_test_top.env.sb [SCB]   push / cmp   : 58 / 58
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(151) @ 4160000: uvm_test_top.env.sb [SCB]   mismatch     : 0
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(152) @ 4160000: uvm_test_top.env.sb [SCB]   X/Z          : 0
+UVM_INFO F:/DeskTop/IC?des_final_version/des_pipeline_soc_v2/verify/uvm/des_uvm_pkg.sv(153) @ 4160000: uvm_test_top.env.sb [SCB]   extra output : 0
+
+**** UVM ENV PASS ****
+UVM_INFO F:DeskTop?縟es_final_versiondes_pipeline_soc_v2erifyuvm_libuvm-1.2-gitsrc/base/uvm_report_server.svh(847) @ 4160000: reporter [UVM/REPORT/SERVER] [UVM/RELNOTES]     1
+[UVM/COMP/NAMECHECK]     1
+[SEQ]     4
+[SCB]     5
+[RNTST]     1
+[COV]    13
+** Report counts by id
+UVM_FATAL :    0
+UVM_ERROR :    0
+UVM_WARNING :    0
+UVM_INFO :   25
+** Report counts by severity
+
+--- UVM Report Summary ---
+
+
+[SVA COV] A1 fail=0 fire=9
+[SVA COV] A2 fail=0 fire=9
+[SVA COV] A3 fail=0 fire=67
+[SVA COV] A4 fail=0 fire=0
+[SVA COV] A5 fail=0 fire=407
+$finish called at time : 4160 ns : File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_root.svh" Line 517
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 09:37:35 2026...

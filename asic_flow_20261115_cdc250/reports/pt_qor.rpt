@@ -1,0 +1,86 @@
+****************************************
+Report : qor
+Design : des_axis_cdc_top
+Version: O-2018.06-SP1
+Date   : Sun Nov 15 19:02:20 2026
+****************************************
+
+  Timing Path Group '**async_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11
+  Critical Path Length:                    2.52
+  Critical Path Slack:                     1.43
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'clk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           30
+  Critical Path Length:                    2.64
+  Critical Path Slack:                     1.23
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'wclk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11
+  Critical Path Length:                    2.99
+  Critical Path Slack:                     6.88
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.27
+  Critical Path Slack:                    -0.13
+  Total Negative Slack:                   -9.31
+  No. of Violating Paths:                    86
+  ---------------------------------------------
+
+  Timing Path Group 'clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.11
+  Critical Path Slack:                     0.04
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'wclk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.11
+  Critical Path Slack:                     0.04
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                    2
+  Hierarchical Port Count:                  339
+  Leaf Cell Count:                        20535
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:                   0.00
+  Total cell area:                     34218.34
+  Design Area:                         34218.34
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:            78947
+  max_capacitance Count:                      1
+  max_capacitance Cost:                   -0.70
+  Total DRC Cost:                         -0.70
+  ---------------------------------------------
+
+1

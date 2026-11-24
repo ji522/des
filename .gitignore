@@ -1,0 +1,26 @@
+# Simulation / EDA generated artifacts
+_sim_*/
+xsim.dir/
+csrc/
+*.pb
+*.wdb
+*.vcd
+*.fsdb
+*.shm
+*.jou
+*.str
+*.backup.*
+
+# Third-party / generated databases
+verify/uvm_lib/
+verify/vcs/cov/
+verify/wsl/
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# OS
+.DS_Store
+Thumbs.db

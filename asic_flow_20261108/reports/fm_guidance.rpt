@@ -1,0 +1,36 @@
+**************************************************
+Report         : guidance
+
+Reference      : r:/WORK/des_soc_top
+Implementation : i:/WORK/des_soc_top
+Version        : O-2018.06-SP1
+Date           : Sun Nov  8 17:42:51 2026
+**************************************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+architecture_netlist:          1          0          0          0          1
+boundary            :          1          0          0          0          1
+boundary_netlist    :          1          0          0          0          1
+change_names        :          5          1          0          0          6
+constant            :         12          0          0          0         12
+datapath            :          1          0          0          0          1
+environment         :          3          0          0          0          3
+instance_map        :          1          0          0          0          1
+inv_push            :          1          0          0          0          1
+mark                :          6          0          0          0          6
+merge               :          2          0          0          0          2
+replace             :          2          0          0          0          2
+ungroup             :         20          0          0          0         20
+uniquify            :          1          0          0          0          1
+ununiquify          :          1          0          0          0          1
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/ICer/work/des_frontend_run_20261108/outputs/des_soc_top.svf
+
+SVF files produced:
+  /home/ICer/work/des_frontend_run_20261108/formality_svf/
+    svf.txt
+1

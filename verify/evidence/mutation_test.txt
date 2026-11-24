@@ -1,0 +1,5 @@
+S5 鎹㈤挜鍓?STATUS=0x00000003 BUSY=1
+S5 鎹㈤挜鍚?STATUS=0x00000006 REKEY_ERR=0
+S5 FAIL: 鍦ㄩ€旀崲閽ュ簲缃?REKEY_ERR
+S5 鏁版嵁鏈彈褰卞搷锛歱opped=9 err=1
+  SOC TB FAIL : pass=18 err=1 extra=0 pushed=13 popped=13 tail=13

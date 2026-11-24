@@ -1,0 +1,47 @@
+# ============================================================================
+# fm_cdc.tcl —— des_axis_cdc_top RTL vs 网表等价性
+# ============================================================================
+set DESIGN des_axis_cdc_top
+set FLOW_ROOT [file normalize .]
+set RTL_DIR [file join $FLOW_ROOT rtl]
+set PDK_DIR [file join $FLOW_ROOT pdk nangate45]
+set OUT_DIR [file join $FLOW_ROOT outputs]
+set RPT_DIR [file join $FLOW_ROOT reports]
+
+set SVF [file join $OUT_DIR ${DESIGN}.svf]
+if {![file exists $SVF]} {
+    error "SVF missing: $SVF —— dc_cdc.tcl 里必须有 set_svf"
+}
+
+set synopsys_auto_setup true
+set search_path [list . $RTL_DIR [file join $RTL_DIR cdc] $PDK_DIR]
+read_db [file join $PDK_DIR NangateOpenCellLibrary_typical.db]
+set_svf $SVF
+
+set rtl_files [list \
+    [file join $RTL_DIR des_axis_cdc_top.v] \
+    [file join $RTL_DIR cdc async_fifo.v] \
+    [file join $RTL_DIR cdc cdc_sync.v] \
+    [file join $RTL_DIR des_axil_regs.v] \
+    [file join $RTL_DIR des_axis_wrap.v] \
+    [file join $RTL_DIR des_pipeline_fb.v] \
+    [file join $RTL_DIR des_pipe_round_fb.v] \
+    [file join $RTL_DIR key_ram_gen.v] \
+]
+
+read_verilog -container r -libname WORK -01 $rtl_files
+set_top r:/WORK/$DESIGN
+
+read_verilog -container i -libname WORK -01 [file join $OUT_DIR ${DESIGN}_netlist.v]
+set_top i:/WORK/$DESIGN
+
+match
+verify
+
+report_status                 > [file join $RPT_DIR fm_status.rpt]
+report_unread_endpoints -all  > [file join $RPT_DIR fm_unread_endpoints.rpt]
+report_unmatched_points       > [file join $RPT_DIR fm_unmatched_points.rpt]
+report_constants              > [file join $RPT_DIR fm_constants.rpt]
+report_black_boxes            > [file join $RPT_DIR fm_black_boxes.rpt]
+
+exit

@@ -1,0 +1,211 @@
+
+                                 Formality (R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 18, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version O-2018.06 **
+   - Improved default solver strategy for reducing inconclusive verifications
+   - Automatic analysis to detect UPF issues before verification
+   - Enhanced UPF features for consistency with the Synopsys low power flow
+   - Improved GUI report display and filtering
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 5103612
+Hostname: IC_EDA
+Current time: Tue Nov  3 11:01:41 2026
+
+Loading db file '/home/synopsys/fm/fm/O-2018.06-SP1/libraries/syn/gtech.db'
+# Formality equivalence check: RTL reference vs DC gate netlist.
+set DESIGN des_soc_top
+des_soc_top
+set FLOW_ROOT [file normalize .]
+/home/ICer/work/des_frontend_run_20261103
+set RTL_DIR [file join $FLOW_ROOT rtl]
+/home/ICer/work/des_frontend_run_20261103/rtl
+set PDK_DIR [file join $FLOW_ROOT pdk nangate45]
+/home/ICer/work/des_frontend_run_20261103/pdk/nangate45
+set OUT_DIR [file join $FLOW_ROOT outputs]
+/home/ICer/work/des_frontend_run_20261103/outputs
+set RPT_DIR [file join $FLOW_ROOT reports]
+/home/ICer/work/des_frontend_run_20261103/reports
+set synopsys_auto_setup true
+true
+set search_path [list . $RTL_DIR $PDK_DIR]
+. /home/ICer/work/des_frontend_run_20261103/rtl /home/ICer/work/des_frontend_run_20261103/pdk/nangate45
+read_db [file join $PDK_DIR NangateOpenCellLibrary_typical.db]
+Loading db file '/home/ICer/work/des_frontend_run_20261103/pdk/nangate45/NangateOpenCellLibrary_typical.db'
+1
+set_svf [file join $OUT_DIR ${DESIGN}.svf]
+SVF set to '/home/ICer/work/des_frontend_run_20261103/outputs/des_soc_top.svf'.
+1
+set rtl_files [list     [file join $RTL_DIR des_soc_top.v]     [file join $RTL_DIR des_axil_regs.v]     [file join $RTL_DIR des_axis_wrap.v]     [file join $RTL_DIR des_pipeline_fb.v]     [file join $RTL_DIR des_pipe_round_fb.v]     [file join $RTL_DIR key_ram_gen.v] ]
+/home/ICer/work/des_frontend_run_20261103/rtl/des_soc_top.v /home/ICer/work/des_frontend_run_20261103/rtl/des_axil_regs.v /home/ICer/work/des_frontend_run_20261103/rtl/des_axis_wrap.v /home/ICer/work/des_frontend_run_20261103/rtl/des_pipeline_fb.v /home/ICer/work/des_frontend_run_20261103/rtl/des_pipe_round_fb.v /home/ICer/work/des_frontend_run_20261103/rtl/key_ram_gen.v
+read_verilog -container r -libname WORK -01 $rtl_files
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/rtl/des_soc_top.v'
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/rtl/des_axil_regs.v'
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/rtl/des_axis_wrap.v'
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/rtl/des_pipeline_fb.v'
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/rtl/des_pipe_round_fb.v'
+Loading include file '/home/ICer/work/des_frontend_run_20261103/rtl/sbox_funcs.v'
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/rtl/key_ram_gen.v'
+Current container set to 'r'
+1
+set_top r:/WORK/$DESIGN
+Setting top design to 'r:/WORK/des_soc_top'
+Status:   Elaborating design des_soc_top   ...  
+Status:   Elaborating design des_axil_regs   ...  
+Status:   Elaborating design des_axis_wrap  LAST_FIFO_AW=5 ...  
+Information: Created design named 'des_axis_wrap_LAST_FIFO_AW5'. (FE-LINK-13)
+Status:   Elaborating design des_pipeline_fb   ...  
+Status:   Elaborating design key_ram_gen   ...  
+Status:   Elaborating design des_pipe_round_fb   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  127 unlinked power cell(s) with no power down functions on outputs.
+Warning:  29 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'r:/WORK/des_soc_top'
+Reference design set to 'r:/WORK/des_soc_top'
+1
+read_verilog -container i -libname WORK -01 [file join $OUT_DIR ${DESIGN}_netlist.v]
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/outputs/des_soc_top_netlist.v'
+Current container set to 'i'
+1
+set_top i:/WORK/$DESIGN
+Setting top design to 'i:/WORK/des_soc_top'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  127 unlinked power cell(s) with no power down functions on outputs.
+Warning:  29 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/des_soc_top'
+Implementation design set to 'i:/WORK/des_soc_top'
+1
+match
+Reference design is 'r:/WORK/des_soc_top'
+Implementation design is 'i:/WORK/des_soc_top'
+Status:  Checking designs...
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+architecture_netlist:          1          0          0          0          1
+boundary            :          1          0          0          0          1
+boundary_netlist    :          1          0          0          0          1
+change_names        :          5          1          0          0          6
+constant            :         12          0          0          0         12
+datapath            :          1          0          0          0          1
+environment         :          3          0          0          0          3
+instance_map        :          1          0          0          0          1
+inv_push            :          1          0          0          0          1
+mark                :          6          0          0          0          6
+merge               :          2          0          0          0          2
+replace             :          2          0          0          0          2
+ungroup             :         20          0          0          0         20
+uniquify            :          1          0          0          0          1
+ununiquify          :          1          0          0          0          1
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/ICer/work/des_frontend_run_20261103/outputs/des_soc_top.svf
+
+SVF files produced:
+  /home/ICer/work/des_frontend_run_20261103/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 2173 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 118 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 32(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+1
+verify
+Reference design is 'r:/WORK/des_soc_top'
+Implementation design is 'i:/WORK/des_soc_top'
+    
+*********************************** Matching Results ***********************************    
+ 2173 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 118 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 32(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: r:/WORK/des_soc_top
+ Implementation design: i:/WORK/des_soc_top
+ 2173 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0     108    2065       0    2173
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+report_status > [file join $RPT_DIR fm_status.rpt]
+exit
+
+Maximum memory usage for this session: 1275 MB
+CPU usage for this session: 45.26 seconds ( 0.01 hours )
+Current time: Tue Nov  3 11:02:27 2026
+Elapsed time: 46 seconds ( 0.01 hours )
+
+Thank you for using Formality (R)!

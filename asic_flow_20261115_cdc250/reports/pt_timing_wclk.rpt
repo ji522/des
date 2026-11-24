@@ -1,0 +1,424 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 100.0000
+	-max_paths 10
+	-sort_by slack
+Design : des_axis_cdc_top
+Version: O-2018.06-SP1
+Date   : Sun Nov 15 19:02:20 2026
+****************************************
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][51]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1959/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1960/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][51]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][51]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][54]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1859/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1860/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][54]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][54]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][13]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1993/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1994/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][13]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][13]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][17]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1879/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1880/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][17]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][17]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][20]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1871/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1872/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][20]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][20]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][32]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1861/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1862/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][32]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][32]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][0]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1873/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1874/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][0]/D (DFF_X1)                       0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][0]/CK (DFF_X1)                                 9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][2]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1887/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1888/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][2]/D (DFF_X1)                       0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][2]/CK (DFF_X1)                                 9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  ------------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8797
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][50]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1969/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1970/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][50]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][50]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0251     9.8749
+  data required time                                               9.8749
+  ------------------------------------------------------------------------------
+  data required time                                               9.8749
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8802
+
+
+  Startpoint: s_axis_tvalid
+               (input port clocked by wclk)
+  Endpoint: u_fifo/mem_reg[1][52]
+               (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock wclk (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s_axis_tvalid (in)                                    0.0017     2.0017 r
+  U538/ZN (AND2_X1)                                     0.0372     2.0389 r
+  u_fifo/U43/ZN (INV_X1)                                0.0203     2.0592 f
+  u_fifo/U44/ZN (NOR2_X1)                               0.0602     2.1194 r
+  u_fifo/U45/ZN (NAND2_X1)                              0.0447     2.1640 f
+  u_fifo/U46/ZN (INV_X1)                                0.0573     2.2213 r
+  u_fifo/U282/ZN (NAND2_X1)                             0.0683     2.2897 f
+  u_fifo/U283/ZN (NOR2_X4)                              0.2127     2.5024 r
+  u_fifo/U293/Z (CLKBUF_X1)                             0.2149     2.7173 r
+  u_fifo/U10/ZN (INV_X2)                                0.1614     2.8787 f
+  u_fifo/U1983/ZN (OAI22_X1)                            0.0862     2.9649 r
+  u_fifo/U1984/ZN (INV_X1)                              0.0212     2.9861 f
+  u_fifo/mem_reg[1][52]/D (DFF_X1)                      0.0086     2.9946 f
+  data arrival time                                                2.9946
+
+  clock wclk (rise edge)                               10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock reconvergence pessimism                         0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_fifo/mem_reg[1][52]/CK (DFF_X1)                                9.9000 r
+  library setup time                                   -0.0251     9.8749
+  data required time                                               9.8749
+  ------------------------------------------------------------------------------
+  data required time                                               9.8749
+  data arrival time                                               -2.9946
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      6.8802
+
+
+1

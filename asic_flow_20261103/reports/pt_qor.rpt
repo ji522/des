@@ -1,0 +1,48 @@
+****************************************
+Report : qor
+Design : des_soc_top
+Version: O-2018.06-SP1
+Date   : Tue Nov  3 11:01:42 2026
+****************************************
+
+  Timing Path Group 'clk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           18
+  Critical Path Length:                    2.91
+  Critical Path Slack:                     4.99
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2
+  Critical Path Length:                    0.10
+  Critical Path Slack:                    -0.00
+  Total Negative Slack:                   -2.79
+  No. of Violating Paths:                   771
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                    1
+  Hierarchical Port Count:                  201
+  Leaf Cell Count:                        16225
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:                   0.00
+  Total cell area:                     25723.55
+  Design Area:                         25723.55
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:            62475
+  Total DRC Cost:                          0.00
+  ---------------------------------------------
+
+1

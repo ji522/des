@@ -1,0 +1,75 @@
+=== xvlog -sv ===
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/des_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/des_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/tb_des_sv.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_sv
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_des_sv -s tb_des_sv 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.des_pkg
+WARNING: [XSIM 43-4333] File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/des_pkg.sv" Line 310 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/des_pkg.sv" Line 324 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+Compiling module work.des_if
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.tb_des_sv
+Built simulation snapshot tb_des_sv
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/_sim_tb_des_sv/xsim.dir/tb_des_sv/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 24 09:36:43 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_sv/xsim_script.tcl
+# xsim {tb_des_sv} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+[115000] === 闃舵1锛氬姞瀵嗗悜閲忥紙28 绗旓紝绾︽潫闅忔満闂撮殧锛?===
+[1865000] === 闃舵2锛氳В瀵嗗悜閲忥紙14 绗旓級 ===
+[2875000] === 闃舵3锛氱害鏉熼殢鏈哄弽鍘嬶紙8 绗旓級 ===
+[3575000] === 闃舵4锛氳В瀵?脳 绾︽潫闅忔満鍙嶅帇锛堣ˉ瑕嗙洊娲烇級 ===
+========== SCOREBOARD ==========
+  push / cmp        : 58 / 58
+  mismatch          : 0
+  X/Z               : 0
+  extra output      : 0
+=================================
+========== COVERAGE ==========
+  covergroup 鎬昏鐩栫巼 : 100.00%
+==============================
+  key schedule 閲嶈浇 : 7
+  椹卞姩浜嬪姟鏁?       : 58
+
+**** SV ENV PASS ****
+[SVA COV] A1 fail=0 fire=37
+[SVA COV] A2 fail=0 fire=37
+[SVA COV] A3 fail=0 fire=95
+[SVA COV] A4 fail=0 fire=0
+[SVA COV] A5 fail=0 fire=412
+$finish called at time : 4215 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/des_pkg.sv" Line 375
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 09:36:50 2026...

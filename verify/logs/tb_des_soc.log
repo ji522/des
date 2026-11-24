@@ -1,0 +1,82 @@
+=== xvlog ===
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_axis_wrap.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axis_wrap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_axil_regs.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axil_regs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_soc_top.v" into library work
+INFO: [VRFC 10-311] analyzing module des_soc_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/axis_protocol_check.sv" into library work
+INFO: [VRFC 10-311] analyzing module axis_protocol_check
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_soc.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_soc
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_des_soc -s tb_des_soc 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3645] port 'ready_key_o' remains unconnected for this instance [F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_soc.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.des_axil_regs
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.axis_protocol_check
+Compiling module work.des_axis_wrap_default
+Compiling module work.des_soc_top
+Compiling module work.tb_des_soc
+Built simulation snapshot tb_des_soc
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/_sim_tb_des_soc/xsim.dir/tb_des_soc/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 24 09:38:09 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_soc/xsim_script.tcl
+# xsim {tb_des_soc} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+S1 STATUS=0x00000000 (KEY_READY=0 BUSY=0)
+S2 STATUS=0x00000001 (KEY_READY=1)
+S4 鍔犲瘑锛歱ushed=1 popped=1
+S5 鎹㈤挜鍓?STATUS=0x00000003 BUSY=1
+S5 鎹㈤挜鍚?STATUS=0x0000000b REKEY_ERR=1
+S5 鏁版嵁鏈彈褰卞搷锛歱opped=9 err=0
+S6 鎺掔┖鍚庢崲閽?STATUS=0x00000009 KEY_READY=1
+S7 瑙ｅ瘑锛歱ushed=13 popped=13
+=================================================
+  pass       : 19
+  data err   : 0
+  extra      : 0
+  pushed/popped : 13 / 13
+  stalls     : 11
+  SOC TB PASS : 19/13
+=================================================
+[SVA COV] A6  fail=0 fire=11
+[SVA COV] A7  fail=0 fire=11
+[SVA COV] A8  fail=0 fire=13
+[SVA COV] A9  fail=0 fire=11
+[SVA COV] A10 fail=0 fire=0
+[SVA COV] A11 fail=0 fire=234
+$finish called at time : 2465 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_soc.v" Line 280
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 09:38:15 2026...

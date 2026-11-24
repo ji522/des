@@ -1,0 +1,52 @@
+# Design Compiler flow for the DES SoC top.
+set DESIGN des_soc_top
+set FLOW_ROOT [file normalize .]
+set RTL_DIR [file join $FLOW_ROOT rtl]
+set PDK_DIR [file join $FLOW_ROOT pdk nangate45]
+set OUT_DIR [file join $FLOW_ROOT outputs]
+set RPT_DIR [file join $FLOW_ROOT reports]
+
+if {![info exists synopsys_root]} {
+    set synopsys_root /home/synopsys/syn/O-2018.06-SP1
+}
+set DW_LIB [file join $synopsys_root libraries syn dw_foundation.sldb]
+set STD_DB [file join $PDK_DIR NangateOpenCellLibrary_typical.db]
+
+set search_path [list . $RTL_DIR $PDK_DIR]
+set target_library [list $STD_DB]
+set link_library [list "*" $STD_DB $DW_LIB]
+set synthetic_library [list $DW_LIB]
+
+set verilogout_no_tri true
+set verilogout_equation false
+set_svf [file join $OUT_DIR ${DESIGN}.svf]
+
+set rtl_files [list \
+    [file join $RTL_DIR des_soc_top.v] \
+    [file join $RTL_DIR des_axil_regs.v] \
+    [file join $RTL_DIR des_axis_wrap.v] \
+    [file join $RTL_DIR des_pipeline_fb.v] \
+    [file join $RTL_DIR des_pipe_round_fb.v] \
+    [file join $RTL_DIR key_ram_gen.v] \
+]
+
+read_file -format verilog $rtl_files
+current_design $DESIGN
+link
+source [file join $FLOW_ROOT constraints des.sdc]
+
+check_design > [file join $RPT_DIR dc_check_design.rpt]
+compile_ultra
+
+report_area -hierarchy > [file join $RPT_DIR dc_area.rpt]
+report_timing -max_paths 10 -significant_digits 4 > [file join $RPT_DIR dc_timing.rpt]
+report_qor > [file join $RPT_DIR dc_qor.rpt]
+report_clock > [file join $RPT_DIR dc_clock.rpt]
+report_power > [file join $RPT_DIR dc_power.rpt]
+
+write -format verilog -hierarchy -output [file join $OUT_DIR ${DESIGN}_netlist.v]
+write_sdc [file join $OUT_DIR ${DESIGN}.sdc]
+
+exit
+
+

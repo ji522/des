@@ -1,0 +1,68 @@
+=== xvlog -sv ===
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/async_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/cdc_sync.v" into library work
+INFO: [VRFC 10-311] analyzing module sync_2ff
+INFO: [VRFC 10-311] analyzing module toggle_sync
+INFO: [VRFC 10-311] analyzing module reset_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/des_cdc_top.v" into library work
+INFO: [VRFC 10-311] analyzing module des_cdc_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_cdc/tb_des_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_cdc
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_des_cdc -s tb_des_cdc 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.reset_sync
+Compiling module work.sync_2ff
+Compiling module work.toggle_sync
+Compiling module work.async_fifo_default
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.des_cdc_top
+Compiling module work.tb_des_cdc
+Built simulation snapshot tb_des_cdc
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/_sim_tb_des_cdc/xsim.dir/tb_des_cdc/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 24 09:36:57 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_cdc/xsim_script.tcl
+# xsim {tb_des_cdc} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+========== CDC TB ==========
+  push / cmp        : 190 / 190
+  mismatch          : 0
+  X / extra output  : 0 / 0
+  rekey 娆℃暟        : 16
+  wfull 鍛ㄦ湡鏁?     : 313
+============================
+**** CDC TB PASS : 190/190 璺ㄥ煙鍏ㄥ锛堝惈 FIFO 婊¤妭娴?313 鎷嶏級****
+$finish called at time : 39910 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_cdc/tb_des_cdc.v" Line 187
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 09:37:02 2026...

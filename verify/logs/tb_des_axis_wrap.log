@@ -1,0 +1,76 @@
+=== xvlog ===
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_axis_wrap.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axis_wrap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/axis_protocol_check.sv" into library work
+INFO: [VRFC 10-311] analyzing module axis_protocol_check
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_axis_wrap.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_axis_wrap
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_des_axis_wrap -s tb_des_axis_wrap 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3645] port 'in_flight_o' remains unconnected for this instance [F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_axis_wrap.v:33]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.axis_protocol_check
+Compiling module work.des_axis_wrap_default
+Compiling module work.tb_des_axis_wrap
+Built simulation snapshot tb_des_axis_wrap
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/_sim_tb_des_axis_wrap/xsim.dir/tb_des_axis_wrap/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 24 09:37:45 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_axis_wrap/xsim_script.tcl
+# xsim {tb_des_axis_wrap} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+=== DES AXI4-Stream wrapper test : N_ENC=28 N_DEC=14 ===
+Encryption done : pushed=28 popped=28
+Decryption done : pushed=42 popped=42
+================ AXI4-STREAM WRAPPER SUMMARY ================
+  pass          : 42
+  data errors   : 0
+  TLAST errors  : 0
+  extra outputs : 0
+  pushed/popped : 42 / 42
+  stalls        : 175 cycles
+  key reloads   : 5
+  rekey busy    : 0
+  SVA A6..A11 fail : 0 0 0 0 0 0
+  SVA A6..A11 fire : 175 175 42 175 0 413
+==============================================================
+AXIS TB PASS : 42/42
+[SVA COV] A6  fail=0 fire=175
+[SVA COV] A7  fail=0 fire=175
+[SVA COV] A8  fail=0 fire=42
+[SVA COV] A9  fail=0 fire=175
+[SVA COV] A10 fail=0 fire=0
+[SVA COV] A11 fail=0 fire=413
+$finish called at time : 4235 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_axis_wrap.v" Line 294
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 09:37:51 2026...

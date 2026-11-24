@@ -1,0 +1,345 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-slack_lesser_than 0.0000
+	-max_paths 10
+	-sort_by slack
+Design : des_soc_top
+Version: O-2018.06-SP1
+Date   : Sun Nov  8 17:56:31 2026
+****************************************
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/rvalid_r_reg
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/rvalid_r_reg/RN (DFFR_X1)                      0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/rvalid_r_reg/CK (DFFR_X1)                                 0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/w_data_lat_reg[9]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/w_data_lat_reg[9]/RN (DFFR_X1)                 0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/w_data_lat_reg[9]/CK (DFFR_X1)                            0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/w_data_lat_reg[12]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/w_data_lat_reg[12]/RN (DFFR_X1)                0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/w_data_lat_reg[12]/CK (DFFR_X1)                           0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/w_data_lat_reg[14]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/w_data_lat_reg[14]/RN (DFFR_X1)                0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/w_data_lat_reg[14]/CK (DFFR_X1)                           0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/w_data_lat_reg[17]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/w_data_lat_reg[17]/RN (DFFR_X1)                0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/w_data_lat_reg[17]/CK (DFFR_X1)                           0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/last_rd_ptr_reg[0]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_axis/last_rd_ptr_reg[0]/RN (DFFR_X1)                0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/last_rd_ptr_reg[0]/CK (DFFR_X1)                           0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/w_data_lat_reg[18]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/w_data_lat_reg[18]/RN (DFFR_X1)                0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/w_data_lat_reg[18]/CK (DFFR_X1)                           0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/w_data_lat_reg[19]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/w_data_lat_reg[19]/RN (DFFR_X1)                0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/w_data_lat_reg[19]/CK (DFFR_X1)                           0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/rdata_r_reg[17]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/rdata_r_reg[17]/RN (DFFR_X1)                   0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/rdata_r_reg[17]/CK (DFFR_X1)                              0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+
+  Startpoint: rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/rdata_r_reg[18]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.9500
+  Min Clock Paths Derating Factor : 0.9500
+  Max Clock Paths Derating Factor : 1.0500
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  rst_sync_r_reg/CK (DFFR_X2)                           0.0000     0.0000 r
+  rst_sync_r_reg/Q (DFFR_X2)                            0.2458     0.2458 r
+  u_regs/rdata_r_reg[18]/RN (DFFR_X1)                   0.0375     0.2833 r
+  data arrival time                                                0.2833
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_regs/rdata_r_reg[18]/CK (DFFR_X1)                              0.0500 r
+  library removal time                                  0.3480     0.3980
+  data required time                                               0.3980
+  ------------------------------------------------------------------------------
+  data required time                                               0.3980
+  data arrival time                                               -0.2833
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.1147
+
+Warning: report_timing has satisfied the max_paths criteria. There are 233 further endpoints which have paths of interest with slack less than   0.0000 that were not considered when generating this report. (UITE-502)
+
+1

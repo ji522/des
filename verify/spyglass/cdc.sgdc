@@ -1,0 +1,12 @@
+// =====================================================================
+// cdc.sgdc —— des_cdc_top 的 SpyGlass CDC 约束（调研用，不改进源码）
+// 依据 cdc.xdc：wclk 10ns(100MHz) / clk 4ns(250MHz)，两域异步
+// =====================================================================
+current_design des_cdc_top
+
+clock -name wclk -period 10
+clock -name clk  -period 4
+
+// 两路复位都是低有效异步复位
+reset -name wrst_n -async -value 0
+reset -name rst_n  -async -value 0

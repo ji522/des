@@ -1,0 +1,60 @@
+# PrimeTime signoff-style timing analysis for the DC netlist.
+set DESIGN des_soc_top
+des_soc_top
+set FLOW_ROOT [file normalize .]
+/home/ICer/work/des_frontend_run_20261103
+set PDK_DIR [file join $FLOW_ROOT pdk nangate45]
+/home/ICer/work/des_frontend_run_20261103/pdk/nangate45
+set OUT_DIR [file join $FLOW_ROOT outputs]
+/home/ICer/work/des_frontend_run_20261103/outputs
+set RPT_DIR [file join $FLOW_ROOT reports]
+/home/ICer/work/des_frontend_run_20261103/reports
+if {![info exists synopsys_root]} {
+    set synopsys_root /home/synopsys/pts/O-2018.06-SP1
+}
+set DW_LIB [file join $synopsys_root libraries syn dw_foundation.sldb]
+/home/synopsys/pts/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+set STD_DB [file join $PDK_DIR NangateOpenCellLibrary_typical.db]
+/home/ICer/work/des_frontend_run_20261103/pdk/nangate45/NangateOpenCellLibrary_typical.db
+set search_path [list . $PDK_DIR]
+. /home/ICer/work/des_frontend_run_20261103/pdk/nangate45
+set link_path [list "*" $STD_DB $DW_LIB]
+* /home/ICer/work/des_frontend_run_20261103/pdk/nangate45/NangateOpenCellLibrary_typical.db /home/synopsys/pts/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+read_verilog [file join $OUT_DIR ${DESIGN}_netlist.v]
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading db file '/home/ICer/work/des_frontend_run_20261103/pdk/nangate45/NangateOpenCellLibrary_typical.db'
+Loading verilog file '/home/ICer/work/des_frontend_run_20261103/outputs/des_soc_top_netlist.v'
+Loading db file '/home/synopsys/pts/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Linking design des_soc_top...
+Information: Removing 1 unneeded designs..... (LNK-034)
+Information: 96 (71.11%) library cells are unused in library NangateOpenCellLibrary..... (LNK-045)
+Information: total 96 library cells are unused (LNK-046)
+Design 'des_soc_top' was successfully linked.
+Information: There are 16509 leaf cells, ports, hiers and 17964 nets in the design (LNK-047)
+1
+read_sdc [file join $OUT_DIR ${DESIGN}.sdc]
+
+Reading SDC version 2.1...
+1
+1
+redirect -file [file join $RPT_DIR pt_timing.rpt] {report_timing -max_paths 10 -nworst 1 -slack_lesser_than 100 -significant_digits 4}
+redirect -file [file join $RPT_DIR pt_hold.rpt] {report_timing -delay_type min -max_paths 10 -nworst 1 -slack_lesser_than 100 -significant_digits 4}
+redirect -file [file join $RPT_DIR pt_qor.rpt] {report_qor}
+redirect -file [file join $RPT_DIR pt_clock.rpt] {report_clock}
+exit
+Information: Defining new variable 'DW_LIB'. (CMD-041)
+Information: Defining new variable 'OUT_DIR'. (CMD-041)
+Information: Defining new variable 'PDK_DIR'. (CMD-041)
+Information: Defining new variable 'FLOW_ROOT'. (CMD-041)
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'RPT_DIR'. (CMD-041)
+Information: Defining new variable 'STD_DB'. (CMD-041)
+Maximum memory usage for this session: 889.62 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 2 seconds
+Diagnostics summary: 1 error, 3 warnings, 12 informationals
+
+Thank you for using pt_shell!

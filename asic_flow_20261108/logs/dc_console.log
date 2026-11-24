@@ -1,0 +1,894 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# ============================================================================
+# dc.tcl —— DES SoC 逻辑综合（2026-11-08 修订版）
+#
+# 相比 10-31 版：
+#   1. 补 set_svf —— 原来是靠手工拷 default.svf 才让 Formality 过的，
+#      脚本本身跑完根本不会生成 outputs/des_soc_top.svf，Formality 必报 FM-203
+#   2. 增加 reg2reg / in2reg / reg2out / in2out 分类时序报告
+#   3. 增加 check_timing / report_constraint -all_violators
+# ============================================================================
+set DESIGN des_soc_top
+des_soc_top
+set FLOW_ROOT [file normalize .]
+/home/ICer/work/des_frontend_run_20261108
+set RTL_DIR [file join $FLOW_ROOT rtl]
+/home/ICer/work/des_frontend_run_20261108/rtl
+set PDK_DIR [file join $FLOW_ROOT pdk nangate45]
+/home/ICer/work/des_frontend_run_20261108/pdk/nangate45
+set OUT_DIR [file join $FLOW_ROOT outputs]
+/home/ICer/work/des_frontend_run_20261108/outputs
+set RPT_DIR [file join $FLOW_ROOT reports]
+/home/ICer/work/des_frontend_run_20261108/reports
+if {![info exists synopsys_root]} {
+    set synopsys_root /home/synopsys/syn/O-2018.06-SP1
+}
+set DW_LIB [file join $synopsys_root libraries syn dw_foundation.sldb]
+/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+set STD_DB [file join $PDK_DIR NangateOpenCellLibrary_typical.db]
+/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db
+set search_path [list . $RTL_DIR $PDK_DIR]
+. /home/ICer/work/des_frontend_run_20261108/rtl /home/ICer/work/des_frontend_run_20261108/pdk/nangate45
+set target_library [list $STD_DB]
+/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db
+set link_library [list "*" $STD_DB $DW_LIB]
+* /home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+set synthetic_library [list $DW_LIB]
+/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+set verilogout_no_tri true
+true
+set verilogout_equation false
+false
+# Formality 指导文件必须由同一次 DC 会话产生
+set_svf [file join $OUT_DIR ${DESIGN}.svf]
+1
+set rtl_files [list     [file join $RTL_DIR des_soc_top.v]     [file join $RTL_DIR des_axil_regs.v]     [file join $RTL_DIR des_axis_wrap.v]     [file join $RTL_DIR des_pipeline_fb.v]     [file join $RTL_DIR des_pipe_round_fb.v]     [file join $RTL_DIR key_ram_gen.v] ]
+/home/ICer/work/des_frontend_run_20261108/rtl/des_soc_top.v /home/ICer/work/des_frontend_run_20261108/rtl/des_axil_regs.v /home/ICer/work/des_frontend_run_20261108/rtl/des_axis_wrap.v /home/ICer/work/des_frontend_run_20261108/rtl/des_pipeline_fb.v /home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v /home/ICer/work/des_frontend_run_20261108/rtl/key_ram_gen.v
+read_file -format verilog $rtl_files
+Loading db file '/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Loading verilog files: '/home/ICer/work/des_frontend_run_20261108/rtl/des_soc_top.v' '/home/ICer/work/des_frontend_run_20261108/rtl/des_axil_regs.v' '/home/ICer/work/des_frontend_run_20261108/rtl/des_axis_wrap.v' '/home/ICer/work/des_frontend_run_20261108/rtl/des_pipeline_fb.v' '/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v' '/home/ICer/work/des_frontend_run_20261108/rtl/key_ram_gen.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file /home/ICer/work/des_frontend_run_20261108/rtl/sbox_funcs.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/work/des_frontend_run_20261108/rtl/des_soc_top.v
+Compiling source file /home/ICer/work/des_frontend_run_20261108/rtl/des_axil_regs.v
+Compiling source file /home/ICer/work/des_frontend_run_20261108/rtl/des_axis_wrap.v
+Compiling source file /home/ICer/work/des_frontend_run_20261108/rtl/des_pipeline_fb.v
+Compiling source file /home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v
+Opening include file /home/ICer/work/des_frontend_run_20261108/rtl/sbox_funcs.v
+Compiling source file /home/ICer/work/des_frontend_run_20261108/rtl/key_ram_gen.v
+
+Inferred memory devices in process
+	in routine des_soc_top line 67 in file
+		'/home/ICer/work/des_frontend_run_20261108/rtl/des_soc_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rst_sync_r_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   rst_meta_r_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 104 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_axil_regs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           144            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 194 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_axil_regs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           200            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine des_axil_regs line 104 in file
+		'/home/ICer/work/des_frontend_run_20261108/rtl/des_axil_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   w_data_lat_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  key_loaded_r_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   rekey_err_r_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   w_strb_lat_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    bvalid_r_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  rekey_guard_r_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    encrypt_r_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   load_key_r_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    enable_r_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      key_r_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     aw_pend_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     w_pend_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   aw_addr_lat_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine des_axil_regs line 194 in file
+		'/home/ICer/work/des_frontend_run_20261108/rtl/des_axil_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rdata_r_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rvalid_r_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 98 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_axis_wrap.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           113            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine des_axis_wrap line 98 in file
+		'/home/ICer/work/des_frontend_run_20261108/rtl/des_axis_wrap.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   last_wr_ptr_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    last_fifo_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   last_count_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   last_rd_ptr_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+| des_axis_wrap/75 |   32   |    1    |      5       |
+======================================================
+Warning:  /home/ICer/work/des_frontend_run_20261108/rtl/des_pipeline_fb.v:62: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 32 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            3             |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 33 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            74            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 34 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           145            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 35 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           217            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 36 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           289            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 37 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           361            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 38 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           433            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 39 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           505            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine des_pipe_round_fb line 56 in file
+		'/home/ICer/work/des_frontend_run_20261108/rtl/des_pipe_round_fb.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       R_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       L_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     valid_o_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 60 in file
+	'/home/ICer/work/des_frontend_run_20261108/rtl/key_ram_gen.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            68            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine key_ram_gen line 60 in file
+		'/home/ICer/work/des_frontend_run_20261108/rtl/key_ram_gen.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      D_reg_reg      | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      C_reg_reg      | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  keys_ready_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    round_cnt_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_ram_reg     | Flip-flop |  768  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/work/des_frontend_run_20261108/rtl/des_soc_top.db:des_soc_top'
+Loaded 6 designs.
+Current design is 'des_soc_top'.
+des_soc_top des_axil_regs des_axis_wrap des_pipeline_fb des_pipe_round_fb key_ram_gen
+current_design $DESIGN
+Current design is 'des_soc_top'.
+{des_soc_top}
+link
+
+  Linking design 'des_soc_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (6 designs)               /home/ICer/work/des_frontend_run_20261108/rtl/des_soc_top.db, etc
+  NangateOpenCellLibrary (library) /home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+1
+source [file join $FLOW_ROOT constraints des.sdc]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Current design is 'des_soc_top'.
+1
+check_design > [file join $RPT_DIR dc_check_design.rpt]
+check_timing   > [file join $RPT_DIR dc_check_timing.rpt]
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 76 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 16 instances of design 'des_pipe_round_fb'. (OPT-1056)
+  Simplifying Design 'des_soc_top'
+
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy u_regs before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/u_key_ram_gen before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[0].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[15].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[14].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[13].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[12].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[11].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[10].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[9].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[8].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[7].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[6].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[5].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[4].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[3].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[2].u_round before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_axis/u_des/pipe_stages[1].u_round before Pass 1 (OPT-776)
+Information: Ungrouping 19 of 21 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'des_pipeline_fb'
+Information: Added key list 'DesignWare' to design 'des_pipeline_fb'. (DDB-72)
+  Processing 'des_soc_top'
+ Implement Synthetic for 'des_soc_top'.
+Memory usage for J1 task 313 Mbytes -- main task 252 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Complementing port 'rst_n' in design 'des_pipeline_fb'.
+	 The new name of the port is 'rst_n_BAR'. (OPT-319)
+Information: Complementing port 'encrypt_i' in design 'des_pipeline_fb'.
+	 The new name of the port is 'encrypt_i_BAR'. (OPT-319)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'des_soc_top'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'des_soc_top_RSOP_50'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:35   26060.6      0.00       0.0     704.8                           551094.9375
+    0:00:35   26060.6      0.00       0.0     704.8                           551094.9375
+    0:00:35   26060.6      0.00       0.0     704.8                           551094.9375
+    0:00:36   26060.0      0.00       0.0     704.6                           551104.1875
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:40   25772.5      0.00       0.0     695.4                           539000.1250
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:41   25756.5      0.00       0.0     692.1                           537219.9375
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+    0:00:41   25811.0      0.00       0.0       0.0                           538773.5625
+    0:00:41   25811.0      0.00       0.0       0.0                           538773.5625
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:41   25811.0      0.00       0.0       0.0                           538773.5625
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:43   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:44   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:44   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:44   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:44   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:45   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:45   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:45   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:45   25796.1      0.00       0.0       0.0                           538218.0625
+    0:00:45   25795.6      0.00       0.0       0.0                           538223.8125
+Loading db file '/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'des_soc_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 2067 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+# ---- 汇总报告 ----
+report_area   -hierarchy > [file join $RPT_DIR dc_area.rpt]
+report_qor                > [file join $RPT_DIR dc_qor.rpt]
+report_clock              > [file join $RPT_DIR dc_clock.rpt]
+report_power              > [file join $RPT_DIR dc_power.rpt]
+report_constraint -all_violators > [file join $RPT_DIR dc_violators.rpt]
+# ---- 分类时序：别再只盯一条 IO 直通路径 ----
+set clk_coll    [get_ports clk]
+{clk}
+set data_in     [remove_from_collection [remove_from_collection [all_inputs] $clk_coll] [get_ports rst_n]]
+{s_axis_tvalid s_axis_tdata[63] s_axis_tdata[62] s_axis_tdata[61] s_axis_tdata[60] s_axis_tdata[59] s_axis_tdata[58] s_axis_tdata[57] s_axis_tdata[56] s_axis_tdata[55] s_axis_tdata[54] s_axis_tdata[53] s_axis_tdata[52] s_axis_tdata[51] s_axis_tdata[50] s_axis_tdata[49] s_axis_tdata[48] s_axis_tdata[47] s_axis_tdata[46] s_axis_tdata[45] s_axis_tdata[44] s_axis_tdata[43] s_axis_tdata[42] s_axis_tdata[41] s_axis_tdata[40] s_axis_tdata[39] s_axis_tdata[38] s_axis_tdata[37] s_axis_tdata[36] s_axis_tdata[35] s_axis_tdata[34] s_axis_tdata[33] s_axis_tdata[32] s_axis_tdata[31] s_axis_tdata[30] s_axis_tdata[29] s_axis_tdata[28] s_axis_tdata[27] s_axis_tdata[26] s_axis_tdata[25] s_axis_tdata[24] s_axis_tdata[23] s_axis_tdata[22] s_axis_tdata[21] s_axis_tdata[20] s_axis_tdata[19] s_axis_tdata[18] s_axis_tdata[17] s_axis_tdata[16] s_axis_tdata[15] s_axis_tdata[14] s_axis_tdata[13] s_axis_tdata[12] s_axis_tdata[11] s_axis_tdata[10] s_axis_tdata[9] s_axis_tdata[8] s_axis_tdata[7] s_axis_tdata[6] s_axis_tdata[5] s_axis_tdata[4] s_axis_tdata[3] s_axis_tdata[2] s_axis_tdata[1] s_axis_tdata[0] s_axis_tlast m_axis_tready s_axil_awvalid s_axil_awaddr[31] s_axil_awaddr[30] s_axil_awaddr[29] s_axil_awaddr[28] s_axil_awaddr[27] s_axil_awaddr[26] s_axil_awaddr[25] s_axil_awaddr[24] s_axil_awaddr[23] s_axil_awaddr[22] s_axil_awaddr[21] s_axil_awaddr[20] s_axil_awaddr[19] s_axil_awaddr[18] s_axil_awaddr[17] s_axil_awaddr[16] s_axil_awaddr[15] s_axil_awaddr[14] s_axil_awaddr[13] s_axil_awaddr[12] s_axil_awaddr[11] s_axil_awaddr[10] s_axil_awaddr[9] s_axil_awaddr[8] s_axil_awaddr[7] s_axil_awaddr[6] s_axil_awaddr[5] s_axil_awaddr[4] s_axil_awaddr[3] s_axil_awaddr[2] s_axil_awaddr[1] s_axil_awaddr[0] ...}
+set ff_ck       [all_registers -clock_pins]
+{rst_sync_r_reg/CK u_axis/last_fifo_reg[0]/CK u_axis/last_fifo_reg[1]/CK u_axis/last_fifo_reg[2]/CK u_axis/last_fifo_reg[3]/CK u_axis/last_fifo_reg[4]/CK u_axis/last_fifo_reg[5]/CK u_axis/last_fifo_reg[6]/CK u_axis/last_fifo_reg[7]/CK u_axis/last_fifo_reg[8]/CK u_axis/last_fifo_reg[9]/CK u_axis/last_fifo_reg[10]/CK u_axis/last_fifo_reg[11]/CK u_axis/last_fifo_reg[12]/CK u_axis/last_fifo_reg[13]/CK u_axis/last_fifo_reg[14]/CK u_axis/last_fifo_reg[15]/CK u_axis/last_fifo_reg[16]/CK u_axis/last_fifo_reg[17]/CK u_axis/last_fifo_reg[18]/CK u_axis/last_fifo_reg[19]/CK u_axis/last_fifo_reg[20]/CK u_axis/last_fifo_reg[21]/CK u_axis/last_fifo_reg[22]/CK u_axis/last_fifo_reg[23]/CK u_axis/last_fifo_reg[24]/CK u_axis/last_fifo_reg[25]/CK u_axis/last_fifo_reg[26]/CK u_axis/last_fifo_reg[27]/CK u_axis/last_fifo_reg[28]/CK u_axis/last_fifo_reg[29]/CK u_axis/last_fifo_reg[30]/CK u_axis/last_fifo_reg[31]/CK u_axis/last_wr_ptr_reg[4]/CK u_axis/last_wr_ptr_reg[3]/CK u_axis/last_wr_ptr_reg[2]/CK u_axis/last_wr_ptr_reg[1]/CK u_axis/last_wr_ptr_reg[0]/CK u_axis/last_rd_ptr_reg[1]/CK u_axis/last_rd_ptr_reg[2]/CK u_axis/last_rd_ptr_reg[3]/CK u_axis/last_rd_ptr_reg[4]/CK u_axis/last_rd_ptr_reg[0]/CK u_regs/encrypt_r_reg/CK u_regs/rdata_r_reg[1]/CK u_regs/rdata_r_reg[2]/CK u_regs/rdata_r_reg[0]/CK u_regs/load_key_r_reg/CK u_regs/key_loaded_r_reg/CK u_regs/rdata_r_reg[3]/CK u_regs/rekey_err_r_reg/CK u_axis/last_count_reg[4]/CK u_axis/last_count_reg[3]/CK u_axis/last_count_reg[2]/CK u_axis/last_count_reg[1]/CK u_axis/last_count_reg[0]/CK u_axis/last_count_reg[5]/CK u_regs/rdata_r_reg[31]/CK u_regs/key_r_reg[63]/CK u_regs/key_r_reg[31]/CK u_regs/w_data_lat_reg[31]/CK u_regs/rdata_r_reg[30]/CK u_regs/key_r_reg[62]/CK u_regs/key_r_reg[30]/CK u_regs/w_data_lat_reg[30]/CK u_regs/rdata_r_reg[29]/CK u_regs/key_r_reg[61]/CK u_regs/key_r_reg[29]/CK u_regs/w_data_lat_reg[29]/CK u_regs/rdata_r_reg[28]/CK u_regs/key_r_reg[60]/CK u_regs/key_r_reg[28]/CK u_regs/w_data_lat_reg[28]/CK u_regs/rdata_r_reg[27]/CK u_regs/key_r_reg[59]/CK u_regs/key_r_reg[27]/CK u_regs/w_data_lat_reg[27]/CK u_regs/rdata_r_reg[26]/CK u_regs/key_r_reg[58]/CK u_regs/key_r_reg[26]/CK u_regs/w_data_lat_reg[26]/CK u_regs/rdata_r_reg[25]/CK u_regs/key_r_reg[57]/CK u_regs/key_r_reg[25]/CK u_regs/w_data_lat_reg[25]/CK u_regs/rdata_r_reg[24]/CK u_regs/key_r_reg[56]/CK u_regs/key_r_reg[24]/CK u_regs/w_data_lat_reg[24]/CK u_regs/rdata_r_reg[23]/CK u_regs/key_r_reg[55]/CK u_regs/key_r_reg[23]/CK u_regs/w_data_lat_reg[23]/CK u_regs/rdata_r_reg[22]/CK u_regs/key_r_reg[54]/CK u_regs/key_r_reg[22]/CK u_regs/w_data_lat_reg[22]/CK u_regs/rdata_r_reg[21]/CK u_regs/key_r_reg[53]/CK u_regs/key_r_reg[21]/CK ...}
+set ff_d        [all_registers -data_pins]
+{rst_sync_r_reg/D u_axis/last_fifo_reg[0]/D u_axis/last_fifo_reg[1]/D u_axis/last_fifo_reg[2]/D u_axis/last_fifo_reg[3]/D u_axis/last_fifo_reg[4]/D u_axis/last_fifo_reg[5]/D u_axis/last_fifo_reg[6]/D u_axis/last_fifo_reg[7]/D u_axis/last_fifo_reg[8]/D u_axis/last_fifo_reg[9]/D u_axis/last_fifo_reg[10]/D u_axis/last_fifo_reg[11]/D u_axis/last_fifo_reg[12]/D u_axis/last_fifo_reg[13]/D u_axis/last_fifo_reg[14]/D u_axis/last_fifo_reg[15]/D u_axis/last_fifo_reg[16]/D u_axis/last_fifo_reg[17]/D u_axis/last_fifo_reg[18]/D u_axis/last_fifo_reg[19]/D u_axis/last_fifo_reg[20]/D u_axis/last_fifo_reg[21]/D u_axis/last_fifo_reg[22]/D u_axis/last_fifo_reg[23]/D u_axis/last_fifo_reg[24]/D u_axis/last_fifo_reg[25]/D u_axis/last_fifo_reg[26]/D u_axis/last_fifo_reg[27]/D u_axis/last_fifo_reg[28]/D u_axis/last_fifo_reg[29]/D u_axis/last_fifo_reg[30]/D u_axis/last_fifo_reg[31]/D u_axis/last_wr_ptr_reg[4]/D u_axis/last_wr_ptr_reg[3]/D u_axis/last_wr_ptr_reg[2]/D u_axis/last_wr_ptr_reg[1]/D u_axis/last_wr_ptr_reg[0]/D u_axis/last_rd_ptr_reg[1]/D u_axis/last_rd_ptr_reg[2]/D u_axis/last_rd_ptr_reg[3]/D u_axis/last_rd_ptr_reg[4]/D u_axis/last_rd_ptr_reg[0]/D u_regs/encrypt_r_reg/D u_regs/rdata_r_reg[1]/D u_regs/rdata_r_reg[2]/D u_regs/rdata_r_reg[0]/D u_regs/load_key_r_reg/D u_regs/key_loaded_r_reg/D u_regs/rdata_r_reg[3]/D u_regs/rekey_err_r_reg/D u_axis/last_count_reg[4]/D u_axis/last_count_reg[3]/D u_axis/last_count_reg[2]/D u_axis/last_count_reg[1]/D u_axis/last_count_reg[0]/D u_axis/last_count_reg[5]/D u_regs/rdata_r_reg[31]/D u_regs/key_r_reg[63]/D u_regs/key_r_reg[31]/D u_regs/w_data_lat_reg[31]/D u_regs/rdata_r_reg[30]/D u_regs/key_r_reg[62]/D u_regs/key_r_reg[30]/D u_regs/w_data_lat_reg[30]/D u_regs/rdata_r_reg[29]/D u_regs/key_r_reg[61]/D u_regs/key_r_reg[29]/D u_regs/w_data_lat_reg[29]/D u_regs/rdata_r_reg[28]/D u_regs/key_r_reg[60]/D u_regs/key_r_reg[28]/D u_regs/w_data_lat_reg[28]/D u_regs/rdata_r_reg[27]/D u_regs/key_r_reg[59]/D u_regs/key_r_reg[27]/D u_regs/w_data_lat_reg[27]/D u_regs/rdata_r_reg[26]/D u_regs/key_r_reg[58]/D u_regs/key_r_reg[26]/D u_regs/w_data_lat_reg[26]/D u_regs/rdata_r_reg[25]/D u_regs/key_r_reg[57]/D u_regs/key_r_reg[25]/D u_regs/w_data_lat_reg[25]/D u_regs/rdata_r_reg[24]/D u_regs/key_r_reg[56]/D u_regs/key_r_reg[24]/D u_regs/w_data_lat_reg[24]/D u_regs/rdata_r_reg[23]/D u_regs/key_r_reg[55]/D u_regs/key_r_reg[23]/D u_regs/w_data_lat_reg[23]/D u_regs/rdata_r_reg[22]/D u_regs/key_r_reg[54]/D u_regs/key_r_reg[22]/D u_regs/w_data_lat_reg[22]/D u_regs/rdata_r_reg[21]/D u_regs/key_r_reg[53]/D u_regs/key_r_reg[21]/D ...}
+report_timing -from $ff_ck -to $ff_d -max_paths 10 -significant_digits 4     > [file join $RPT_DIR dc_timing_reg2reg.rpt]
+report_timing -from $data_in -to $ff_d -max_paths 10 -significant_digits 4     > [file join $RPT_DIR dc_timing_in2reg.rpt]
+report_timing -from $ff_ck -to [all_outputs] -max_paths 10 -significant_digits 4     > [file join $RPT_DIR dc_timing_reg2out.rpt]
+report_timing -from $data_in -to [all_outputs] -max_paths 10 -significant_digits 4     > [file join $RPT_DIR dc_timing_in2out.rpt]
+report_timing -from $ff_ck -to $ff_d -delay_type min -max_paths 10 -significant_digits 4     > [file join $RPT_DIR dc_timing_hold.rpt]
+write -format verilog -hierarchy -output [file join $OUT_DIR ${DESIGN}_netlist.v]
+Writing verilog file '/home/ICer/work/des_frontend_run_20261108/outputs/des_soc_top_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc [file join $OUT_DIR ${DESIGN}.sdc]
+1
+exit
+
+Memory usage for main task 252 Mbytes.
+Memory usage for this session 313 Mbytes.
+CPU usage for this session 81 seconds ( 0.02 hours ).
+
+Thank you...

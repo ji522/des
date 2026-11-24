@@ -1,0 +1,18 @@
+#!SPYGLASS_PROJECT_FILE#!
+
+read_file -type verilog "/home/ICer/work/des_pipeline_soc_v2/cdc/des_cdc_top.v"
+read_file -type verilog "/home/ICer/work/des_pipeline_soc_v2/cdc/async_fifo.v"
+read_file -type verilog "/home/ICer/work/des_pipeline_soc_v2/cdc/cdc_sync.v"
+read_file -type verilog "/home/ICer/work/des_pipeline_soc_v2/des_pipeline_fb.v"
+read_file -type verilog "/home/ICer/work/des_pipeline_soc_v2/des_pipe_round_fb.v"
+read_file -type verilog "/home/ICer/work/des_pipeline_soc_v2/key_ram_gen.v"
+read_file -type verilog "/home/ICer/work/des_pipeline_soc_v2/sbox_funcs.v"
+
+read_file -type sgdc "cdc.sgdc"
+
+set_option top "des_cdc_top"
+set_option language_mode mixed
+set_option enableSV yes
+set_option projectwdir "/home/ICer/work/cdc_spyglass/wdir"
+set_option enable_save_restore no
+set_option incdir "/home/ICer/work/des_pipeline_soc_v2"

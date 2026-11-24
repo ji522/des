@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : area
+Design : des_soc_top
+Version: O-2018.06-SP1
+Date   : Tue Nov  3 10:59:11 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'des_soc_top' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/ICer/work/des_frontend_run_20261103/pdk/nangate45/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                          483
+Number of nets:                         17892
+Number of cells:                        16227
+Number of combinational cells:          14160
+Number of sequential cells:              2066
+Number of macros/black boxes:               0
+Number of buf/inv:                       2253
+Number of references:                      29
+
+Combinational area:              15375.066081
+Buf/Inv area:                     1235.570008
+Noncombinational area:           10347.400086
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 25722.466167
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------
+des_soc_top                       25722.4662    100.0    554.3440   1006.5440  0.0000  des_soc_top
+u_axis/u_des                      24161.5781     93.9  14820.7221   9340.8561  0.0000  des_pipeline_fb
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------
+Total                                                  15375.0661  10347.4001  0.0000
+
+1

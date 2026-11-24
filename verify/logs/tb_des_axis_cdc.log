@@ -1,0 +1,86 @@
+=== xvlog -sv ===
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_axis_wrap.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axis_wrap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_axil_regs.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axil_regs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/async_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/cdc_sync.v" into library work
+INFO: [VRFC 10-311] analyzing module sync_2ff
+INFO: [VRFC 10-311] analyzing module toggle_sync
+INFO: [VRFC 10-311] analyzing module reset_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/des_axis_cdc_top.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axis_cdc_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_cdc/tb_des_axis_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_axis_cdc
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_des_axis_cdc -s tb_des_axis_cdc 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.reset_sync
+Compiling module work.async_fifo(DATA_W=65)
+Compiling module work.des_axil_regs
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.des_axis_wrap_default
+Compiling module work.sync_2ff
+Compiling module work.des_axis_cdc_top
+Compiling module work.tb_des_axis_cdc
+Built simulation snapshot tb_des_axis_cdc
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/_sim_tb_des_axis_cdc/xsim.dir/tb_des_axis_cdc/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 11 12:56:38 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_axis_cdc/xsim_script.tcl
+# xsim {tb_des_axis_cdc} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+=== DES AXI4-Stream + CDC test : N_ENC=28 N_DEC=14 ===
+[MON 2000000] push=24 pop=20 wfull=0 mrdy=1 rv=0 infl=3 occ=1
+Encryption done : pushed=28 popped=28
+[MON 4000000] push=42 pop=42 wfull=0 mrdy=1 rv=0 infl=0 occ=0
+[MON 6000000] push=75 pop=42 wfull=1 mrdy=0 rv=1 infl=16 occ=16
+================ AXIS-CDC SUMMARY ================
+  pass          : 90
+  data errors   : 0
+  TLAST errors  : 0
+  extra outputs : 0
+  pushed/popped : 90 / 90
+  stalls        : 1069 cycles
+  wfull cycles  : 216
+  rekey busy    : 0
+  rdy_key wclk  : 700 cycles
+  s_tready low  : 216 cycles
+  fifo max occ  : 11 / 16
+  pipe max infl : 16
+  fifo fetch    : 90
+==================================================
+AXIS-CDC TB PASS : 90/90
+$finish called at time : 7810 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_cdc/tb_des_axis_cdc.v" Line 440
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Nov 11 12:56:44 2026...

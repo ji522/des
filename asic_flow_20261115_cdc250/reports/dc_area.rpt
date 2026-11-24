@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : des_axis_cdc_top
+Version: O-2018.06-SP1
+Date   : Sun Nov 15 18:59:45 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'des_axis_cdc_top' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/ICer/work/des_frontend_run_20261115_cdc250/pdk/nangate45/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                          624
+Number of nets:                         22606
+Number of cells:                        20539
+Number of combinational cells:          17309
+Number of sequential cells:              3228
+Number of macros/black boxes:               0
+Number of buf/inv:                       3497
+Number of references:                      31
+
+Combinational area:              18574.514158
+Buf/Inv area:                     1922.648014
+Noncombinational area:           15642.661914
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 34217.176073
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+des_axis_cdc_top                  34217.1761    100.0    571.9000   1092.1960  0.0000  des_axis_cdc_top
+u_axis/u_des                      24212.1181     70.8  14871.2621   9340.8561  0.0000  des_pipeline_fb
+u_fifo                             8340.9619     24.4   3131.3521   5209.6098  0.0000  async_fifo_DATA_W65_ADDR_W4
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+Total                                                  18574.5142  15642.6619  0.0000
+
+1

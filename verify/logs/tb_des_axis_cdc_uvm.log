@@ -1,0 +1,294 @@
+=== xvlog -sv ===
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/uvm_lib/uvm-1.2-git/src/uvm_pkg.sv" into library work
+WARNING: [VRFC 10-2838] mix of dynamic and non-dynamic array types in assignment context, target type is bit [packed dim count:1] [$], while source type is bit [packed dim count:1] [] [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_map.svh:1853]
+WARNING: [VRFC 10-2838] mix of dynamic and non-dynamic array types in assignment context, target type is bit [packed dim count:1] [$], while source type is bit [packed dim count:1] [] [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_map.svh:1996]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_axis_wrap.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axis_wrap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_axil_regs.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axil_regs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/async_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/cdc_sync.v" into library work
+INFO: [VRFC 10-311] analyzing module sync_2ff
+INFO: [VRFC 10-311] analyzing module toggle_sync
+INFO: [VRFC 10-311] analyzing module reset_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/cdc/des_axis_cdc_top.v" into library work
+INFO: [VRFC 10-311] analyzing module des_axis_cdc_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/sv/axil_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/uvm/des_axil_agent_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/tb_des_axis_cdc_uvm.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_axis_cdc_uvm
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog -timescale 1ns/1ps work.tb_des_axis_cdc_uvm -s tb_des_axis_cdc_uvm 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-2838] mix of dynamic and non-dynamic array types in assignment context, target type is bit [packed dim count:1] [$], while source type is bit [packed dim count:1] [] [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_map.svh:1853]
+WARNING: [VRFC 10-2838] mix of dynamic and non-dynamic array types in assignment context, target type is bit [packed dim count:1] [$], while source type is bit [packed dim count:1] [] [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_map.svh:1996]
+WARNING: [VRFC 10-3363] function 'get_factory' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_coreservice.svh:53]
+WARNING: [VRFC 10-3363] function 'get_report_server' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_coreservice.svh:62]
+WARNING: [VRFC 10-3363] function 'get_default_tr_database' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_coreservice.svh:70]
+WARNING: [VRFC 10-3363] function 'get_component_visitor' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_coreservice.svh:86]
+WARNING: [VRFC 10-3363] function 'get_root' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_coreservice.svh:91]
+WARNING: [VRFC 10-3363] function 'create_object_by_type' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:200]
+WARNING: [VRFC 10-3363] function 'create_component_by_type' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:207]
+WARNING: [VRFC 10-3363] function 'create_object_by_name' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:215]
+WARNING: [VRFC 10-3363] function 'create_component_by_name' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:256]
+WARNING: [VRFC 10-3363] function 'find_override_by_type' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:287]
+WARNING: [VRFC 10-3363] function 'find_override_by_name' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:298]
+WARNING: [VRFC 10-3363] function 'find_wrapper_by_name' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:306]
+WARNING: [VRFC 10-3363] function 'get_type_name' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_factory.svh:841]
+WARNING: [VRFC 10-3363] function 'get_type_handle' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_resource.svh:244]
+WARNING: [VRFC 10-3363] function 'do_get_lhs' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_links.svh:121]
+WARNING: [VRFC 10-3363] function 'do_get_rhs' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_links.svh:129]
+WARNING: [VRFC 10-3363] function 'do_open_db' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_tr_database.svh:268]
+WARNING: [VRFC 10-3363] function 'do_close_db' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_tr_database.svh:272]
+WARNING: [VRFC 10-3363] function 'do_open_stream' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_tr_database.svh:276]
+WARNING: [VRFC 10-3363] function 'get_stream' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_recorder.svh:149]
+WARNING: [VRFC 10-3363] function 'do_clone' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_message.svh:97]
+WARNING: [VRFC 10-3363] function 'catch' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_catcher.svh:427]
+WARNING: [VRFC 10-3363] function 'get_max_quit_count' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_server.svh:64]
+WARNING: [VRFC 10-3363] function 'get_quit_count' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_server.svh:72]
+WARNING: [VRFC 10-3363] function 'get_severity_count' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_server.svh:79]
+WARNING: [VRFC 10-3363] function 'get_id_count' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_server.svh:87]
+WARNING: [VRFC 10-3363] function 'get_message_database' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_server.svh:104]
+WARNING: [VRFC 10-3363] function 'compose_report_message' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_report_server.svh:160]
+WARNING: [VRFC 10-3363] function 'uvm_string_to_bits' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_globals.svh:421]
+WARNING: [VRFC 10-3363] function 'uvm_bits_to_string' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_globals.svh:434]
+WARNING: [VRFC 10-3363] function 'try_set' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/dap/uvm_set_get_dap_base.svh:64]
+WARNING: [VRFC 10-3363] function 'get' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/dap/uvm_set_get_dap_base.svh:71]
+WARNING: [VRFC 10-3363] function 'try_get' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/dap/uvm_set_get_dap_base.svh:80]
+WARNING: [VRFC 10-3363] function 'is_port' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_port_base.svh:75]
+WARNING: [VRFC 10-3363] function 'is_export' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_port_base.svh:79]
+WARNING: [VRFC 10-3363] function 'is_imp' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_port_base.svh:87]
+WARNING: [VRFC 10-3363] function 'get_type_handle' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/tlm2/uvm_tlm2_generic_payload.svh:960]
+WARNING: [VRFC 10-3363] function 'get_type_handle_name' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/tlm2/uvm_tlm2_generic_payload.svh:967]
+WARNING: [VRFC 10-3363] function 'reg2bus' has no return value assignment [F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_adapter.svh:86]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4328] File: F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh Line: 1983 : Sensitivity on input argument "state" of task "wait_for_state" may never get triggered.
+WARNING: [XSIM 43-3980] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh" Line 1983 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+WARNING: [XSIM 43-4328] File: F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh Line: 1984 : Sensitivity on input argument "state" of task "wait_for_state" may never get triggered.
+WARNING: [XSIM 43-3980] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh" Line 1984 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+WARNING: [XSIM 43-4328] File: F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh Line: 1985 : Sensitivity on input argument "state" of task "wait_for_state" may never get triggered.
+WARNING: [XSIM 43-3980] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh" Line 1985 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+WARNING: [XSIM 43-4328] File: F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh Line: 1986 : Sensitivity on input argument "state" of task "wait_for_state" may never get triggered.
+WARNING: [XSIM 43-3980] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh" Line 1986 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+WARNING: [XSIM 43-4328] File: F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh Line: 1987 : Sensitivity on input argument "state" of task "wait_for_state" may never get triggered.
+WARNING: [XSIM 43-3980] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh" Line 1987 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+WARNING: [XSIM 43-4328] File: F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh Line: 1988 : Sensitivity on input argument "state" of task "wait_for_state" may never get triggered.
+WARNING: [XSIM 43-3980] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_phase.svh" Line 1988 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+WARNING: [XSIM 43-4328] File: F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/seq/uvm_sequencer_base.svh Line: 1115 : Sensitivity on input argument "transaction_id" of task "wait_for_item_done" may never get triggered.
+WARNING: [XSIM 43-3980] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/seq/uvm_sequencer_base.svh" Line 1115 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.uvm_pkg
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_event.svh" Line 350 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_event.svh" Line 368 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_object.svh" Line 1086 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_callback.svh" Line 146 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-3373] "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_root.svh" Line 713. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_root.svh" Line 780 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_root.svh" Line 781 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_root.svh" Line 969 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 1825 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 2670 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3483 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3507 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3508 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3519 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3553 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3577 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3577 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3583 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_component.svh" Line 3586 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_objection.svh" Line 572 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_objection.svh" Line 770 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_objection.svh" Line 773 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/seq/uvm_sequencer_base.svh" Line 1634 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/seq/uvm_sequencer_base.svh" Line 1635 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/tlm2/uvm_tlm2_generic_payload.svh" Line 468 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/tlm2/uvm_tlm2_generic_payload.svh" Line 596 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_field.svh" Line 1761 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg.svh" Line 2746 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_mem_mam.svh" Line 782 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_mem.svh" Line 2087 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_map.svh" Line 771 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_map.svh" Line 912 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_block.svh" Line 1101 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_block.svh" Line 2043 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_field.svh" Line 1490 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg_field.svh" Line 1687 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+WARNING: [XSIM 43-4333] File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/reg/uvm_reg.svh" Line 2490 : Logical comparison involving System Verilog dynamic types not supported yet, can lead to incorrect simulation behaviour.
+Compiling package std.std
+Compiling package work.des_axil_pkg
+Compiling package work.axis_cdc_pkg
+Compiling module work.axis_cdc_if
+Compiling module work.axil_if
+Compiling module work.reset_sync
+Compiling module work.async_fifo(DATA_W=65)
+Compiling module work.des_axil_regs
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.des_axis_wrap_default
+Compiling module work.sync_2ff
+Compiling module work.des_axis_cdc_top
+Compiling module work.tb_des_axis_cdc_uvm
+Built simulation snapshot tb_des_axis_cdc_uvm
+=== xsim (axis_cdc_test) ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_axis_cdc_uvm/xsim_script.tcl
+# xsim {tb_des_axis_cdc_uvm} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+UVM_INFO F:DeskTo?縟es_final_versiondes_pipeline_soc_v2erifyuvm_libuvm-1.2-gitsrc/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+  You are using a version of the UVM library that has been compiled
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+----------------------------------------------------------------
+(C) 2013-2014 NVIDIA Corporation
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2007-2014 Mentor Graphics Corporation
+
+
+----------------------------------------------------------------
+
+UVM_INFO @ 0: reporter [RNTST] Running test axis_cdc_test...
+UVM_INFO F:DeskTo?縟es_final_versiondes_pipeline_soc_v2erifyuvm_libuvm-1.2-gitsrc/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               axis_cdc_test           -     @344 
+  env                      axis_cdc_env            -     @363 
+    agent                  axis_cdc_agent          -     @373 
+      drv                  axis_cdc_driver         -     @732 
+        ap_exp             uvm_analysis_port       -     @761 
+        rsp_port           uvm_analysis_port       -     @751 
+        seq_item_port      uvm_seq_item_pull_port  -     @741 
+      mon                  axis_cdc_monitor        -     @576 
+        ap_obs             uvm_analysis_port       -     @585 
+      sqr                  uvm_sequencer           -     @595 
+        rsp_export         uvm_analysis_export     -     @604 
+        seq_item_export    uvm_seq_item_pull_imp   -     @722 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    axil_agent             axil_agent              -     @382 
+      drv                  axil_driver             -     @935 
+        rsp_port           uvm_analysis_port       -     @954 
+        seq_item_port      uvm_seq_item_pull_port  -     @944 
+      mon                  axil_monitor            -     @779 
+        ap                 uvm_analysis_port       -     @788 
+      sqr                  uvm_sequencer           -     @798 
+        rsp_export         uvm_analysis_export     -     @807 
+        seq_item_export    uvm_seq_item_pull_imp   -     @925 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    cov                    axis_cdc_cov            -     @429 
+    rdy                    axis_cdc_rdy_driver     -     @391 
+    sb                     axis_cdc_scoreboard     -     @400 
+      exp_export           uvm_analysis_imp_exp    -     @409 
+      obs_export           uvm_analysis_imp_obs    -     @419 
+    vseqr                  axis_cdc_vseqr          -     @438 
+      rsp_export           uvm_analysis_export     -     @447 
+      seq_item_export      uvm_seq_item_pull_imp   -     @565 
+      arbitration_queue    array                   0     -    
+      lock_queue           array                   0     -    
+      num_last_reqs        integral                32    'd1  
+      num_last_rsps        integral                32    'd1  
+--------------------------------------------------------------
+
+UVM_INFO F:DeskTop?縟es_final_versiondes_pipeline_soc_v2erifyuvm_libuvm-1.2-gitsrc/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(699) @ 518000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] === ??細keys[0..11]坘ey 1334.級===
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(680) @ 842000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈靛紑濮嬶細base=0 n=12 mode=1 key=133457799bbcdff1
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(684) @ 1210000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫暟鎹畬鎴愶細base=0 n=12
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(687) @ 1458000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫帓绌哄畬鎴愶細base=0 n=12
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(704) @ 1495000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] =???歬eys[12..19]坘ey FFFF.級===
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(680) @ 1822000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈靛紑濮嬶細base=12 n=8 mode=1 key=ffffffffffffffff
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(684) @ 2060000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫暟鎹畬鎴愶細base=12 n=8
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(687) @ 2298000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫帓绌哄畬鎴愶細base=12 n=8
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(707) @ 2298000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] =???歬eys[20..27]坘ey 0123.級===
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(680) @ 2626000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈靛紑濮嬶細base=20 n=8 mode=1 key=0123456789abcdef
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(684) @ 2890000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫暟鎹畬鎴愶細base=20 n=8
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(687) @ 3138000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫帓绌哄畬鎴愶細base=20 n=8
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(710) @ 3138000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] === ??細dkeys[0..7]坘ey 1334.級===
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(680) @ 3466000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈靛紑濮嬶細base=0 n=8 mode=0 key=133457799bbcdff1
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(684) @ 3690000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫暟鎹畬鎴愶細base=0 n=8
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(687) @ 3930000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫帓绌哄畬鎴愶細base=0 n=8
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(713) @ 3930000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] =???歞keys[8..13]坘ey FFFF.級===
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(680) @ 4258000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈靛紑濮嬶細base=8 n=6 mode=0 key=ffffffffffffffff
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(684) @ 4440000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫暟鎹畬鎴愶細base=8 n=6
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(687) @ 4662000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] 娈垫帓绌哄畬鎴愶細base=8 n=6
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(716) @ 4662000: uvm_test_top.env.vseqr@@vseq [AXIS_CDC_VSEQ] === ??4????????===
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(419) @ 5862000: uvm_test_top.env.cov [AXIS_CDC_COV] samples=1416 coverage=100.00%
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(132) @ 5862000: uvm_test_top.env.sb [AXIS_CDC_SCB] ========== SCOREBOARD ==========
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(133) @ 5862000: uvm_test_top.env.sb [AXIS_CDC_SCB]   push / cmp   : 42 / 42
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(134) @ 5862000: uvm_test_top.env.sb [AXIS_CDC_SCB]   data errors  : 0
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(135) @ 5862000: uvm_test_top.env.sb [AXIS_CDC_SCB]   TLAST errors : 0
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(136) @ 5862000: uvm_test_top.env.sb [AXIS_CDC_SCB]   X/Z          : 0
+UVM_INFO F:/DeskTop/??des_final_version/des_pipeline_soc_v2/verify/uvm/axis_cdc/axis_cdc_pkg.sv(137) @ 5862000: uvm_test_top.env.sb [AXIS_CDC_SCB]   extra output : 0
+ 
+================ AXIS-CDC UVM SUMMARY ================
+  beats pushed/cmp : 42 / 42
+  data errors      : 0
+  TLAST errors     : 0
+  X/Z              : 0
+  extra outputs    : 0
+  output beats     : 42  (TLAST=1: 10)
+  stalls           : 69 cycles
+  idle cycles      : 1305
+  ready_key wclk   : 4 cycles / ok=1
+  coverage         : 100.00%  (samples=1416)
+  UVM errors       : 0
+======================================================
+**** AXIS CDC UVM PASS : 42 beats, data_err=0, tlast_err=0, pushed==cmp ****
+UVM_INFO F:DeskTop?縟es_final_versiondes_pipeline_soc_v2erifyuvm_libuvm-1.2-gitsrc/base/uvm_report_server.svh(847) @ 5862000: reporter [UVM/REPORT/SERVER] [UVMTOP]     1
+[UVM/RELNOTES]     1
+[UVM/COMP/NAMECHECK]     1
+[RNTST]     1
+[AXIS_CDC_VSEQ]    21
+[AXIS_CDC_SCB]     6
+[AXIS_CDC_COV]     1
+** Report counts by id
+UVM_FATAL :    0
+UVM_ERROR :    0
+UVM_WARNING :    0
+UVM_INFO :   32
+** Report counts by severity
+
+--- UVM Report Summary ---
+
+
+$finish called at time : 5862 ns : File "F:\DeskTop\IC项目\des_final_version\des_pipeline_soc_v2\verify\uvm_lib\uvm-1.2-git\src/base/uvm_root.svh" Line 517
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Nov 11 14:03:18 2026...
+SIM CHECK: PASS

@@ -1,0 +1,69 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : des_soc_top
+Version: O-2018.06-SP1
+Date   : Sun Nov  8 17:35:12 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: m_axis_tready
+              (input port clocked by clk)
+  Endpoint: s_axis_tready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 f
+  m_axis_tready (in)                                    0.0041     2.0041 f
+  u_axis/u_des/ready_i (des_pipeline_fb)                0.0000     2.0041 f
+  u_axis/u_des/U136/ZN (INV_X1)                         0.0249     2.0290 r
+  u_axis/u_des/U2/ZN (NAND2_X1)                         0.0349     2.0639 f
+  u_axis/u_des/U3/ZN (NOR2_X1)                          0.0587     2.1226 r
+  u_axis/u_des/U4/ZN (NAND2_X1)                         0.0476     2.1702 f
+  u_axis/u_des/U5/ZN (NOR2_X1)                          0.0603     2.2305 r
+  u_axis/u_des/U6/ZN (NAND2_X1)                         0.0477     2.2782 f
+  u_axis/u_des/U138/ZN (NOR2_X1)                        0.0603     2.3385 r
+  u_axis/u_des/U7/ZN (NAND2_X1)                         0.0477     2.3862 f
+  u_axis/u_des/U8/ZN (NOR2_X1)                          0.0603     2.4465 r
+  u_axis/u_des/U9/ZN (NAND2_X1)                         0.0477     2.4942 f
+  u_axis/u_des/U10/ZN (NOR2_X1)                         0.0603     2.5545 r
+  u_axis/u_des/U11/ZN (NAND2_X1)                        0.0477     2.6022 f
+  u_axis/u_des/U12/ZN (NOR2_X1)                         0.0603     2.6625 r
+  u_axis/u_des/U13/ZN (NAND2_X1)                        0.0477     2.7102 f
+  u_axis/u_des/U14/ZN (NOR2_X1)                         0.0603     2.7705 r
+  u_axis/u_des/U15/ZN (NAND2_X1)                        0.0466     2.8172 f
+  u_axis/u_des/U162/ZN (OR2_X1)                         0.0653     2.8824 f
+  u_axis/u_des/ready_o (des_pipeline_fb)                0.0000     2.8824 f
+  U595/ZN (AND2_X1)                                     0.0412     2.9236 f
+  s_axis_tready (out)                                   0.0026     2.9262 f
+  data arrival time                                                2.9262
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -2.9262
+  --------------------------------------------------------------------------
+  slack (MET)                                                      4.9738
+
+
+1

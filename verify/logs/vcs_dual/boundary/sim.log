@@ -1,0 +1,44 @@
+Command: /home/ICer/work/vcs_boundary/verify/./simv -l sim.log
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 15 16:35 2026
+=== DES boundary / equivalence-class regression : N=18 ===
+[455000]  OK   #0 : 8ca64de9c1b123a7
+[805000]  OK   #1 : 7359b2163e4edc58
+[1155000]  OK   #2 : 617b3a0ce8f07100
+[1505000]  OK   #3 : 6dce0dc9006556a3
+[1855000]  OK   #4 : 8a76c7a4f16d47ed
+[2205000]  OK   #5 : 343a09f9b2cb5cca
+[2555000]  OK   #6 : cbc5f6064d34a335
+[2905000]  OK   #7 : 8ca64de9c1b123a7
+[3255000]  OK   #8 : 87ab78d11e188df6
+[3275000]  OK   #9 : 948a43f98a834f7e
+[3295000]  OK   #10 : 5a3db304d64924fd
+[3315000]  OK   #11 : 85e813540f0ab405
+[3335000]  OK   #12 : 85e813540f0ab405
+[3355000]  OK   #13 : 85e813540f0ab405
+[3375000]  OK   #14 : 85e813540f0ab405
+[3395000]  OK   #15 : 4ab65b3d4b061518
+[3415000]  OK   #16 : 85e813540f0ab405
+[3765000]  OK   #17 : 7a17ecabf0f54bfa
+main : pass=18 err=0 x=0 extra=0
+[4155000]  PROP OK     : 0123456789abcdef
+[4525000]  PROP OK     : 0123456789abcdef
+[4895000]  PROP OK     : 0123456789abcdef
+  PROP OK     : complement E(~K,~P)==~E(K,P) : 7a17ecabf0f54bfa
+
+================ BOUNDARY SUMMARY ================
+  vectors             : 18
+  scoreboard pass     : 18
+  mismatch            : 0
+  X/Z                 : 0
+  extra output        : 0
+  property pass/fail  : 4/0
+==================================================
+BOUNDARY TB PASS : 18/18  (property 4/4)
+$finish called from file "/home/ICer/work/vcs_boundary/verify/tb_des_boundary.v", line 242.
+$finish at simulation time              4925000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4925000 ps
+CPU Time:      0.170 seconds;       Data structure size:   0.1Mb
+Sun Nov 15 16:35:32 2026

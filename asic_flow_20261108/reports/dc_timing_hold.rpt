@@ -1,0 +1,389 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : des_soc_top
+Version: O-2018.06-SP1
+Date   : Sun Nov  8 17:35:12 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: rst_meta_r_reg/CK
+              (internal path startpoint clocked by clk)
+  Endpoint: rst_sync_r_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0000     0.0000 r
+  rst_meta_r_reg/CK (DFFR_X1)            0.0000 #   0.0000 r
+  rst_meta_r_reg/Q (DFFR_X1)             0.0976     0.0976 f
+  rst_sync_r_reg/D (DFFR_X2)             0.0085     0.1061 f
+  data arrival time                                 0.1061
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  rst_sync_r_reg/CK (DFFR_X2)            0.0000     0.0500 r
+  library hold time                      0.0108     0.0608
+  data required time                                0.0608
+  -----------------------------------------------------------
+  data required time                                0.0608
+  data arrival time                                -0.1061
+  -----------------------------------------------------------
+  slack (MET)                                       0.0453
+
+
+  Startpoint: u_axis/u_des/pipe_stages[0].u_round/R_o_reg[12]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/pipe_stages[1].u_round/L_o_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/pipe_stages[0].u_round/R_o_reg[12]/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/pipe_stages[0].u_round/R_o_reg[12]/QN (DFFR_X1)
+                                                        0.0777     0.0777 f
+  u_axis/u_des/U2132/ZN (AOI22_X1)                      0.0354     0.1131 r
+  u_axis/u_des/pipe_stages[1].u_round/L_o_reg[12]/D (DFFR_X1)
+                                                        0.0090     0.1220 r
+  data arrival time                                                0.1220
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/pipe_stages[1].u_round/L_o_reg[12]/CK (DFFR_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0195     0.0695
+  data required time                                               0.0695
+  --------------------------------------------------------------------------
+  data required time                                               0.0695
+  data arrival time                                               -0.1220
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0525
+
+
+  Startpoint: u_regs/bvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_regs/bvalid_r_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  u_regs/bvalid_r_reg/CK (DFFR_X1)       0.0000 #   0.0000 r
+  u_regs/bvalid_r_reg/QN (DFFR_X1)       0.0796     0.0796 r
+  U629/ZN (OAI21_X1)                     0.0272     0.1068 f
+  u_regs/bvalid_r_reg/D (DFFR_X1)        0.0085     0.1153 f
+  data arrival time                                 0.1153
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  u_regs/bvalid_r_reg/CK (DFFR_X1)       0.0000     0.0500 r
+  library hold time                      0.0118     0.0618
+  data required time                                0.0618
+  -----------------------------------------------------------
+  data required time                                0.0618
+  data arrival time                                -0.1153
+  -----------------------------------------------------------
+  slack (MET)                                       0.0535
+
+
+  Startpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][40]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][40]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][40]/CK (DFF_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][40]/QN (DFF_X1)
+                                                        0.0775     0.0775 r
+  u_axis/u_des/U379/ZN (AOI22_X1)                       0.0285     0.1060 f
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][40]/D (DFF_X1)
+                                                        0.0086     0.1146 f
+  data arrival time                                                0.1146
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][40]/CK (DFF_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0109     0.0609
+  data required time                                               0.0609
+  --------------------------------------------------------------------------
+  data required time                                               0.0609
+  data arrival time                                               -0.1146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0537
+
+
+  Startpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][27]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][27]/CK (DFF_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][27]/QN (DFF_X1)
+                                                        0.0775     0.0775 r
+  u_axis/u_des/U427/ZN (AOI22_X1)                       0.0285     0.1060 f
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][27]/D (DFF_X1)
+                                                        0.0086     0.1146 f
+  data arrival time                                                0.1146
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][27]/CK (DFF_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0109     0.0609
+  data required time                                               0.0609
+  --------------------------------------------------------------------------
+  data required time                                               0.0609
+  data arrival time                                               -0.1146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0537
+
+
+  Startpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][31]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][31]/CK (DFF_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][31]/QN (DFF_X1)
+                                                        0.0775     0.0775 r
+  u_axis/u_des/U450/ZN (AOI22_X1)                       0.0285     0.1060 f
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][31]/D (DFF_X1)
+                                                        0.0086     0.1146 f
+  data arrival time                                                0.1146
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][31]/CK (DFF_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0109     0.0609
+  data required time                                               0.0609
+  --------------------------------------------------------------------------
+  data required time                                               0.0609
+  data arrival time                                               -0.1146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0537
+
+
+  Startpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][44]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][44]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][44]/CK (DFF_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][44]/QN (DFF_X1)
+                                                        0.0775     0.0775 r
+  u_axis/u_des/U475/ZN (AOI22_X1)                       0.0285     0.1060 f
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][44]/D (DFF_X1)
+                                                        0.0086     0.1146 f
+  data arrival time                                                0.1146
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][44]/CK (DFF_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0109     0.0609
+  data required time                                               0.0609
+  --------------------------------------------------------------------------
+  data required time                                               0.0609
+  data arrival time                                               -0.1146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0537
+
+
+  Startpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][35]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][35]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][35]/CK (DFF_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][35]/QN (DFF_X1)
+                                                        0.0775     0.0775 r
+  u_axis/u_des/U494/ZN (AOI22_X1)                       0.0285     0.1060 f
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][35]/D (DFF_X1)
+                                                        0.0086     0.1146 f
+  data arrival time                                                0.1146
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][35]/CK (DFF_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0109     0.0609
+  data required time                                               0.0609
+  --------------------------------------------------------------------------
+  data required time                                               0.0609
+  data arrival time                                               -0.1146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0537
+
+
+  Startpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][37]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][37]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][37]/CK (DFF_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][37]/QN (DFF_X1)
+                                                        0.0775     0.0775 r
+  u_axis/u_des/U516/ZN (AOI22_X1)                       0.0285     0.1060 f
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][37]/D (DFF_X1)
+                                                        0.0086     0.1146 f
+  data arrival time                                                0.1146
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][37]/CK (DFF_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0109     0.0609
+  data required time                                               0.0609
+  --------------------------------------------------------------------------
+  data required time                                               0.0609
+  data arrival time                                               -0.1146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0537
+
+
+  Startpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][26]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_axis/u_des/u_key_ram_gen/key_ram_reg[15][26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_soc_top        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][26]/CK (DFF_X1)
+                                                        0.0000 #   0.0000 r
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][26]/QN (DFF_X1)
+                                                        0.0775     0.0775 r
+  u_axis/u_des/U535/ZN (AOI22_X1)                       0.0285     0.1060 f
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][26]/D (DFF_X1)
+                                                        0.0086     0.1146 f
+  data arrival time                                                0.1146
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_axis/u_des/u_key_ram_gen/key_ram_reg[15][26]/CK (DFF_X1)
+                                                        0.0000     0.0500 r
+  library hold time                                     0.0109     0.0609
+  data required time                                               0.0609
+  --------------------------------------------------------------------------
+  data required time                                               0.0609
+  data arrival time                                               -0.1146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0537
+
+
+1

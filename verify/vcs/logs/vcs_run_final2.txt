@@ -1,0 +1,19 @@
+==============================================
+ DES 完整回归 (VCS O-2018.09-SP2)
+==============================================
+
+1 Verilog定向(42笔)           PASS
+2 换钥hazard专项             PASS
+3 SV约束随机(58笔)          PASS
+4 CDC多时钟(190笔)           PASS
+5 UVM回归(58笔)               PASS
+6 AXI4-Stream(42笔)             PASS
+7 AXI4-Lite(23项)               PASS
+8 SoC集成                      PASS
+9 SVA负向测试                PASS
+10 SoC UVM(双agent+RAL)         PASS
+
+==============================================
+ 结果: PASS=10  FAIL=0
+==============================================
+summary -> /home/ICer/work/vcs_regress/summary.md

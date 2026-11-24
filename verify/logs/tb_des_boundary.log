@@ -1,0 +1,81 @@
+=== xvlog ===
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_boundary.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_des_boundary
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_des_boundary -s tb_des_boundary 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.tb_des_boundary
+Built simulation snapshot tb_des_boundary
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/_sim_tb_des_boundary/xsim.dir/tb_des_boundary/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Nov 14 20:28:07 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_boundary/xsim_script.tcl
+# xsim {tb_des_boundary} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+=== DES boundary / equivalence-class regression : N=18 ===
+[455000]  OK   #0 : 8ca64de9c1b123a7
+[805000]  OK   #1 : 7359b2163e4edc58
+[1155000]  OK   #2 : 617b3a0ce8f07100
+[1505000]  OK   #3 : 6dce0dc9006556a3
+[1855000]  OK   #4 : 8a76c7a4f16d47ed
+[2205000]  OK   #5 : 343a09f9b2cb5cca
+[2555000]  OK   #6 : cbc5f6064d34a335
+[2905000]  OK   #7 : 8ca64de9c1b123a7
+[3255000]  OK   #8 : 87ab78d11e188df6
+[3275000]  OK   #9 : 948a43f98a834f7e
+[3295000]  OK   #10 : 5a3db304d64924fd
+[3315000]  OK   #11 : 85e813540f0ab405
+[3335000]  OK   #12 : 85e813540f0ab405
+[3355000]  OK   #13 : 85e813540f0ab405
+[3375000]  OK   #14 : 85e813540f0ab405
+[3395000]  OK   #15 : 4ab65b3d4b061518
+[3415000]  OK   #16 : 85e813540f0ab405
+[3765000]  OK   #17 : 7a17ecabf0f54bfa
+main : pass=18 err=0 x=0 extra=0
+[4155000]  PROP OK     : 0123456789abcdef
+[4525000]  PROP OK     : 0123456789abcdef
+[4895000]  PROP OK     : 0123456789abcdef
+  PROP OK     : complement E(~K,~P)==~E(K,P) : 7a17ecabf0f54bfa
+
+================ BOUNDARY SUMMARY ================
+  vectors             : 18
+  scoreboard pass     : 18
+  mismatch            : 0
+  X/Z                 : 0
+  extra output        : 0
+  property pass/fail  : 4/0
+==================================================
+BOUNDARY TB PASS : 18/18  (property 4/4)
+$finish called at time : 4925 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_des_boundary.v" Line 242
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Nov 14 20:28:13 2026...

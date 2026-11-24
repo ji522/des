@@ -1,0 +1,84 @@
+Error: Library Compiler executable path is not set. (PT-063)
+
+                                 PrimeTime (R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+# ============================================================================
+# pt_ocv.tcl —— OCV 降额时序分析（近似慢/快角）
+#
+# 说明：这台虚拟机的 Nangate45 只有 typical 一套库，没有 SS/FF corner 的
+# .lib/.db，所以做不了真正的多 corner 时序。这里用 set_timing_derate 做
+# on-chip variation 降额，作为"慢角 setup / 快角 hold"的近似：
+#   late  1.05 —— 近似慢角（延时变大，卡 setup）
+#   early 0.95 —— 近似快角（延时变小，卡 hold）
+# 这两个数字是经验值，不是 silicon 认可的 signoff 值。
+# ============================================================================
+set DESIGN des_soc_top
+des_soc_top
+set FLOW_ROOT [file normalize .]
+/home/ICer/work/des_frontend_run_20261108
+set PDK_DIR [file join $FLOW_ROOT pdk nangate45]
+/home/ICer/work/des_frontend_run_20261108/pdk/nangate45
+set OUT_DIR [file join $FLOW_ROOT outputs]
+/home/ICer/work/des_frontend_run_20261108/outputs
+set RPT_DIR [file join $FLOW_ROOT reports]
+/home/ICer/work/des_frontend_run_20261108/reports
+set STD_DB [file join $PDK_DIR NangateOpenCellLibrary_typical.db]
+/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db
+set link_path [list "*" $STD_DB]
+* /home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db
+set search_path [list . $PDK_DIR]
+. /home/ICer/work/des_frontend_run_20261108/pdk/nangate45
+read_verilog [file join $OUT_DIR ${DESIGN}_netlist.v]
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading verilog file '/home/ICer/work/des_frontend_run_20261108/outputs/des_soc_top_netlist.v'
+Loading db file '/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db'
+Linking design des_soc_top...
+Information: Removing 1 unneeded designs..... (LNK-034)
+Information: 93 (68.89%) library cells are unused in library NangateOpenCellLibrary..... (LNK-045)
+Information: total 93 library cells are unused (LNK-046)
+Design 'des_soc_top' was successfully linked.
+Information: There are 16607 leaf cells, ports, hiers and 18223 nets in the design (LNK-047)
+1
+read_sdc [file join $OUT_DIR ${DESIGN}.sdc]
+
+Reading SDC version 2.1...
+Information: Loading library 'NangateOpenCellLibrary' data due to accessing lib cells not linked in the current design. (LNK-041)
+1
+1
+set_timing_derate -late  1.05
+1
+set_timing_derate -early 0.95
+1
+set_timing_derate -late  1.05 -net_delay
+1
+set_timing_derate -early 0.95 -net_delay
+1
+redirect -file [file join $RPT_DIR pt_ocv_setup.rpt] {report_timing -max_paths 10 -significant_digits 4}
+redirect -file [file join $RPT_DIR pt_ocv_hold.rpt]  {report_timing -delay_type min -max_paths 10 -significant_digits 4}
+redirect -file [file join $RPT_DIR pt_ocv_qor.rpt]   {report_qor}
+exit
+Information: Defining new variable 'OUT_DIR'. (CMD-041)
+Information: Defining new variable 'PDK_DIR'. (CMD-041)
+Information: Defining new variable 'FLOW_ROOT'. (CMD-041)
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'RPT_DIR'. (CMD-041)
+Information: Defining new variable 'STD_DB'. (CMD-041)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 890.12 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 2 seconds
+Diagnostics summary: 1 error, 2 warnings, 12 informationals
+
+Thank you for using pt_shell!

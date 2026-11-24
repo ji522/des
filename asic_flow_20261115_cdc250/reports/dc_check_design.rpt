@@ -1,0 +1,95 @@
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Sun Nov 15 18:58:12 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     71
+    Unconnected ports (LINT-28)                                    64
+    Shorted outputs (LINT-31)                                       3
+    Constant outputs (LINT-52)                                      4
+
+Cells                                                               5
+    Cells do not drive (LINT-1)                                     5
+--------------------------------------------------------------------------------
+
+Warning: In design 'des_axis_wrap', cell 'C339' does not drive any nets. (LINT-1)
+Warning: In design 'des_axis_wrap', cell 'C341' does not drive any nets. (LINT-1)
+Warning: In design 'des_axis_wrap', cell 'C352' does not drive any nets. (LINT-1)
+Warning: In design 'des_axis_wrap', cell 'C353' does not drive any nets. (LINT-1)
+Warning: In design 'key_ram_gen', cell 'C3813' does not drive any nets. (LINT-1)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_awaddr[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', port 's_axil_araddr[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'key_ram_gen', port 'key_i[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'des_axil_regs', output port 's_axil_bresp[1]' is connected directly to output port 's_axil_rresp[0]'. (LINT-31)
+Warning: In design 'des_axil_regs', output port 's_axil_bresp[1]' is connected directly to output port 's_axil_rresp[1]'. (LINT-31)
+Warning: In design 'des_axil_regs', output port 's_axil_bresp[1]' is connected directly to output port 's_axil_bresp[0]'. (LINT-31)
+Warning: In design 'des_axil_regs', output port 's_axil_bresp[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'des_axil_regs', output port 's_axil_bresp[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'des_axil_regs', output port 's_axil_rresp[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'des_axil_regs', output port 's_axil_rresp[0]' is connected directly to 'logic 0'. (LINT-52)
+1

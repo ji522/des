@@ -1,0 +1,67 @@
+=== xvlog ===
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipe_round_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipe_round_fb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/des_pipeline_fb.v" into library work
+INFO: [VRFC 10-311] analyzing module des_pipeline_fb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/key_ram_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module key_ram_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_rekey_hazard.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_rekey_hazard
+=== xelab ===
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado2018.3/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe --nolog work.tb_rekey_hazard -s tb_rekey_hazard 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.key_ram_gen
+Compiling module work.des_pipe_round_fb
+Compiling module work.des_pipeline_fb_default
+Compiling module work.tb_rekey_hazard
+Built simulation snapshot tb_rekey_hazard
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/_sim_tb_rekey_hazard/xsim.dir/tb_rekey_hazard/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 24 09:36:31 2026...
+=== xsim ===
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_rekey_hazard/xsim_script.tcl
+# xsim {tb_rekey_hazard} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+[285000] === Phase H: 鍦ㄩ€旀暟鎹湭鎺掔┖灏遍噸绠?key schedule ===
+[360000]   -- 4 绗斾粛鍦ㄦ祦姘寸嚎涓紝绔嬪嵆 load_key(KEY2) --
+[455000]  phase1 MISMATCH #0 : DUT=ddf67197c4cd6df6 expect=0123456789abcdef
+[475000]  phase1 MISMATCH #1 : DUT=53513db01819243d expect=1111111111111111
+[495000]  phase1 MISMATCH #2 : DUT=0c2648be73f39232 expect=2222222222222222
+[515000]  phase1 MISMATCH #3 : DUT=f0908466be8b3a2c expect=403ea380e1462ec4
+[575000] Phase H 缁撴灉: mismatch=4 / 4
+[865000] === Phase S: 鍏堟妸 4 绗旀敹瀹屽啀閲嶇畻 key schedule ===
+[1035000]  phase2   OK   #0 : 0123456789abcdef
+[1055000]  phase2   OK   #1 : 1111111111111111
+[1075000]  phase2   OK   #2 : 2222222222222222
+[1095000]  phase2   OK   #3 : 403ea380e1462ec4
+[1095000]   -- 娴佹按绾垮凡鎺掔┖锛岀幇鍦?load_key(KEY2) --
+[1305000] Phase S 缁撴灉: mismatch=0 / 4
+
+==================== REKEY HAZARD SUMMARY ====================
+  Phase H (涓嶆帓绌烘崲瀵嗛挜) mismatch : 4 / 4
+  Phase S (鎺掔┖鍚庢崲瀵嗛挜) mismatch : 0 / 4
+  >> 缁撹锛氱‘璁ゅ瓨鍦ㄣ€愭崲瀵嗛挜蹇呴』鎺掔┖娴佹按绾裤€戠害鏉燂紙鍔犲瘑鏂瑰悜纰板阀瀹夊叏锛岃В瀵嗘柟鍚戜細鎾烇級
+=============================================================
+$finish called at time : 1305 ns : File "F:/DeskTop/IC项目/des_final_version/des_pipeline_soc_v2/verify/tb_rekey_hazard.v" Line 152
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 09:36:36 2026...

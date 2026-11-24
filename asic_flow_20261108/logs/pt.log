@@ -1,0 +1,90 @@
+# ============================================================================
+# pt.tcl —— PrimeTime 时序分析（2026-11-08 修订版）
+#
+# 相比 10-31 版：
+#   1. reg2reg / in2reg / reg2out / in2out 分类报告（原来只报一条 IO 直通路径）
+#   2. check_timing + report_analysis_coverage（暴露 recovery/removal 覆盖率）
+#   3. report_constraint -all_violators
+# ============================================================================
+set DESIGN des_soc_top
+des_soc_top
+set FLOW_ROOT [file normalize .]
+/home/ICer/work/des_frontend_run_20261108
+set PDK_DIR [file join $FLOW_ROOT pdk nangate45]
+/home/ICer/work/des_frontend_run_20261108/pdk/nangate45
+set OUT_DIR [file join $FLOW_ROOT outputs]
+/home/ICer/work/des_frontend_run_20261108/outputs
+set RPT_DIR [file join $FLOW_ROOT reports]
+/home/ICer/work/des_frontend_run_20261108/reports
+if {![info exists synopsys_root]} {
+    set synopsys_root /home/synopsys/pts/O-2018.06-SP1
+}
+set DW_LIB [file join $synopsys_root libraries syn dw_foundation.sldb]
+/home/synopsys/pts/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+set STD_DB [file join $PDK_DIR NangateOpenCellLibrary_typical.db]
+/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db
+set search_path [list . $PDK_DIR]
+. /home/ICer/work/des_frontend_run_20261108/pdk/nangate45
+set link_path [list "*" $STD_DB $DW_LIB]
+* /home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db /home/synopsys/pts/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+read_verilog [file join $OUT_DIR ${DESIGN}_netlist.v]
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading verilog file '/home/ICer/work/des_frontend_run_20261108/outputs/des_soc_top_netlist.v'
+Loading db file '/home/ICer/work/des_frontend_run_20261108/pdk/nangate45/NangateOpenCellLibrary_typical.db'
+Loading db file '/home/synopsys/pts/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Linking design des_soc_top...
+Information: Removing 1 unneeded designs..... (LNK-034)
+Information: 93 (68.89%) library cells are unused in library NangateOpenCellLibrary..... (LNK-045)
+Information: total 93 library cells are unused (LNK-046)
+Design 'des_soc_top' was successfully linked.
+Information: There are 16607 leaf cells, ports, hiers and 18223 nets in the design (LNK-047)
+1
+read_sdc [file join $OUT_DIR ${DESIGN}.sdc]
+
+Reading SDC version 2.1...
+Information: Loading library 'NangateOpenCellLibrary' data due to accessing lib cells not linked in the current design. (LNK-041)
+1
+1
+redirect -file [file join $RPT_DIR pt_check_timing.rpt] {check_timing -verbose}
+redirect -file [file join $RPT_DIR pt_coverage.rpt]     {report_analysis_coverage}
+redirect -file [file join $RPT_DIR pt_violators.rpt]    {report_constraint -all_violators}
+redirect -file [file join $RPT_DIR pt_qor.rpt]          {report_qor}
+redirect -file [file join $RPT_DIR pt_clock.rpt]        {report_clock}
+# ---- 分类时序 ----
+set clk_coll [get_ports clk]
+{"clk"}
+set data_in  [remove_from_collection [remove_from_collection [all_inputs] $clk_coll] [get_ports rst_n]]
+{"s_axis_tdata[51]", "s_axis_tdata[22]", "s_axil_awaddr[8]", "s_axil_wdata[30]", "s_axil_awaddr[27]", "s_axil_araddr[27]", "s_axis_tdata[61]", "s_axis_tdata[32]", "s_axil_wdata[11]", "s_axis_tdata[4]", "s_axis_tdata[42]", "s_axis_tdata[13]", "s_axil_wdata[0]", "s_axil_wdata[21]", "s_axil_araddr[4]", "s_axil_awaddr[18]", "s_axil_arvalid", "s_axil_araddr[18]", "s_axis_tdata[52]", "s_axis_tdata[23]", "s_axil_awaddr[9]", "s_axil_wdata[31]", "s_axil_awaddr[28]", "s_axil_araddr[28]", "s_axis_tdata[62]", "s_axis_tdata[33]", "s_axil_wdata[12]", "s_axis_tdata[5]", "s_axis_tdata[43]", "s_axis_tdata[14]", "s_axil_wdata[1]", "s_axil_rready", "s_axil_wdata[22]", "s_axil_araddr[5]", "s_axil_awaddr[19]", "s_axil_araddr[19]", "s_axis_tdata[53]", "s_axis_tdata[24]", "s_axil_awaddr[29]", "s_axil_araddr[29]", "s_axis_tdata[63]", "s_axis_tdata[34]", "s_axil_awaddr[0]", "s_axil_wdata[13]", "s_axis_tdata[6]", "s_axis_tdata[44]", "s_axis_tdata[15]", "s_axil_wdata[2]", "s_axil_wdata[23]", "s_axil_araddr[6]", "s_axis_tdata[54]", "s_axis_tdata[25]", "s_axil_awaddr[10]", "s_axil_araddr[10]", "s_axil_awaddr[1]", "s_axis_tdata[35]", "s_axil_awaddr[20]", "s_axil_wdata[14]", "s_axil_araddr[20]", "s_axis_tdata[7]", "s_axis_tdata[45]", "s_axis_tdata[16]", "s_axil_awaddr[30]", "s_axil_wdata[3]", "s_axil_wdata[24]", "s_axil_araddr[7]", "s_axil_araddr[30]", "s_axis_tdata[55]", "s_axis_tdata[26]", "s_axil_awaddr[11]", "s_axil_araddr[11]", "s_axis_tdata[36]", "s_axil_awaddr[2]", "s_axil_awaddr[21]", "s_axil_wdata[15]", "s_axil_araddr[21]", "s_axis_tdata[8]", "s_axil_wvalid", "s_axis_tdata[46]", "s_axis_tdata[17]", "s_axis_tvalid", "s_axil_wdata[4]", "s_axil_awaddr[31]", "s_axil_wdata[25]", "s_axil_araddr[8]", "s_axil_araddr[31]", "s_axis_tdata[56]", "s_axis_tdata[27]", "s_axil_awaddr[12]", "s_axil_araddr[12]", "s_axis_tdata[37]", "s_axil_awaddr[3]", "s_axil_awaddr[22]", "s_axil_wdata[16]", "s_axil_araddr[22]", "s_axis_tdata[9]", "s_axis_tdata[47]", "s_axis_tdata[18]", "s_axil_wdata[5]", "s_axil_wdata[26]"...}
+set ff_ck    [all_registers -clock_pins]
+{"u_axis/last_fifo_reg[6]/CK", "u_regs/key_r_reg[51]/CK", "u_regs/key_r_reg[32]/CK", "u_regs/key_r_reg[13]/CK", "u_regs/w_data_lat_reg[31]/CK", "u_regs/w_data_lat_reg[12]/CK", "u_axis/last_fifo_reg[28]/CK", "u_regs/load_key_r_reg/CK", "u_regs/rdata_r_reg[18]/CK", "u_axis/last_fifo_reg[7]/CK", "u_regs/key_r_reg[52]/CK", "u_regs/key_r_reg[33]/CK", "u_regs/key_r_reg[14]/CK", "u_regs/w_data_lat_reg[13]/CK", "u_regs/key_r_reg[0]/CK", "u_axis/last_fifo_reg[29]/CK", "u_regs/rdata_r_reg[19]/CK", "u_axis/last_fifo_reg[8]/CK", "u_regs/key_r_reg[53]/CK", "u_regs/key_r_reg[34]/CK", "u_regs/key_r_reg[15]/CK", "u_axis/last_fifo_reg[10]/CK", "u_regs/w_data_lat_reg[14]/CK", "u_regs/key_r_reg[1]/CK", "u_axis/last_fifo_reg[9]/CK", "u_regs/key_r_reg[54]/CK", "u_regs/key_r_reg[35]/CK", "u_axis/last_fifo_reg[30]/CK", "u_axis/last_fifo_reg[11]/CK", "u_regs/key_r_reg[16]/CK", "u_regs/rdata_r_reg[20]/CK", "u_regs/w_data_lat_reg[15]/CK", "u_regs/enable_r_reg/CK", "u_regs/key_r_reg[2]/CK", "rst_sync_r_reg/CK", "u_regs/key_r_reg[55]/CK", "u_regs/key_r_reg[36]/CK", "u_axis/last_fifo_reg[31]/CK", "u_regs/key_r_reg[17]/CK", "u_axis/last_fifo_reg[12]/CK", "u_regs/rdata_r_reg[21]/CK", "u_regs/w_data_lat_reg[16]/CK", "u_regs/key_r_reg[3]/CK", "u_regs/key_r_reg[56]/CK", "u_regs/key_r_reg[37]/CK", "u_regs/key_r_reg[18]/CK", "u_axis/last_fifo_reg[13]/CK", "u_regs/bvalid_r_reg/CK", "u_regs/key_loaded_r_reg/CK", "u_regs/w_data_lat_reg[17]/CK", "u_regs/rdata_r_reg[22]/CK", "u_regs/key_r_reg[4]/CK", "u_regs/rdata_r_reg[0]/CK", "u_regs/key_r_reg[57]/CK", "u_regs/key_r_reg[38]/CK", "u_regs/key_r_reg[19]/CK", "u_axis/last_fifo_reg[14]/CK", "u_regs/w_data_lat_reg[18]/CK", "u_regs/rdata_r_reg[23]/CK", "rst_meta_r_reg/CK", "u_regs/key_r_reg[5]/CK", "u_regs/rdata_r_reg[1]/CK", "u_regs/key_r_reg[58]/CK", "u_regs/key_r_reg[39]/CK", "u_axis/last_fifo_reg[15]/CK", "u_regs/w_data_lat_reg[19]/CK", "u_regs/rdata_r_reg[24]/CK", "u_regs/key_r_reg[6]/CK", "u_regs/rdata_r_reg[2]/CK", "u_regs/w_strb_lat_reg[0]/CK", "u_regs/key_r_reg[20]/CK", "u_regs/aw_addr_lat_reg[0]/CK", "u_regs/w_data_lat_reg[0]/CK", "u_regs/key_r_reg[59]/CK", "u_axis/last_fifo_reg[16]/CK", "u_regs/rdata_r_reg[25]/CK", "u_regs/key_r_reg[7]/CK", "u_regs/rdata_r_reg[3]/CK", "u_regs/w_strb_lat_reg[1]/CK", "u_regs/key_r_reg[40]/CK", "u_regs/key_r_reg[21]/CK", "u_regs/aw_addr_lat_reg[1]/CK", "u_regs/w_data_lat_reg[1]/CK", "u_regs/w_data_lat_reg[20]/CK", "u_axis/last_fifo_reg[17]/CK", "u_regs/rdata_r_reg[26]/CK", "u_regs/key_r_reg[8]/CK", "u_regs/rdata_r_reg[4]/CK", "u_regs/key_r_reg[60]/CK", "u_regs/w_strb_lat_reg[2]/CK", "u_regs/key_r_reg[41]/CK", "u_regs/key_r_reg[22]/CK", "u_regs/aw_addr_lat_reg[2]/CK", "u_regs/w_data_lat_reg[2]/CK", "u_regs/w_data_lat_reg[21]/CK", "u_axis/last_fifo_reg[18]/CK", "u_regs/rdata_r_reg[27]/CK", "u_regs/key_r_reg[9]/CK", "u_regs/rdata_r_reg[5]/CK", "u_regs/key_r_reg[61]/CK"...}
+set ff_d     [all_registers -data_pins]
+{"u_axis/last_fifo_reg[6]/D", "u_regs/key_r_reg[51]/D", "u_regs/key_r_reg[32]/D", "u_regs/key_r_reg[13]/D", "u_regs/w_data_lat_reg[31]/D", "u_regs/w_data_lat_reg[12]/D", "u_axis/last_fifo_reg[28]/D", "u_regs/load_key_r_reg/D", "u_regs/rdata_r_reg[18]/D", "u_axis/last_fifo_reg[7]/D", "u_regs/key_r_reg[52]/D", "u_regs/key_r_reg[33]/D", "u_regs/key_r_reg[14]/D", "u_regs/w_data_lat_reg[13]/D", "u_regs/key_r_reg[0]/D", "u_axis/last_fifo_reg[29]/D", "u_regs/rdata_r_reg[19]/D", "u_axis/last_fifo_reg[8]/D", "u_regs/key_r_reg[53]/D", "u_regs/key_r_reg[34]/D", "u_regs/key_r_reg[15]/D", "u_axis/last_fifo_reg[10]/D", "u_regs/w_data_lat_reg[14]/D", "u_regs/key_r_reg[1]/D", "u_axis/last_fifo_reg[9]/D", "u_regs/key_r_reg[54]/D", "u_regs/key_r_reg[35]/D", "u_axis/last_fifo_reg[30]/D", "u_axis/last_fifo_reg[11]/D", "u_regs/key_r_reg[16]/D", "u_regs/rdata_r_reg[20]/D", "u_regs/w_data_lat_reg[15]/D", "u_regs/enable_r_reg/D", "u_regs/key_r_reg[2]/D", "rst_sync_r_reg/D", "u_regs/key_r_reg[55]/D", "u_regs/key_r_reg[36]/D", "u_axis/last_fifo_reg[31]/D", "u_regs/key_r_reg[17]/D", "u_axis/last_fifo_reg[12]/D", "u_regs/rdata_r_reg[21]/D", "u_regs/w_data_lat_reg[16]/D", "u_regs/key_r_reg[3]/D", "u_regs/key_r_reg[56]/D", "u_regs/key_r_reg[37]/D", "u_regs/key_r_reg[18]/D", "u_axis/last_fifo_reg[13]/D", "u_regs/bvalid_r_reg/D", "u_regs/key_loaded_r_reg/D", "u_regs/w_data_lat_reg[17]/D", "u_regs/rdata_r_reg[22]/D", "u_regs/key_r_reg[4]/D", "u_regs/rdata_r_reg[0]/D", "u_regs/key_r_reg[57]/D", "u_regs/key_r_reg[38]/D", "u_regs/key_r_reg[19]/D", "u_axis/last_fifo_reg[14]/D", "u_regs/w_data_lat_reg[18]/D", "u_regs/rdata_r_reg[23]/D", "rst_meta_r_reg/D", "u_regs/key_r_reg[5]/D", "u_regs/rdata_r_reg[1]/D", "u_regs/key_r_reg[58]/D", "u_regs/key_r_reg[39]/D", "u_axis/last_fifo_reg[15]/D", "u_regs/w_data_lat_reg[19]/D", "u_regs/rdata_r_reg[24]/D", "u_regs/key_r_reg[6]/D", "u_regs/rdata_r_reg[2]/D", "u_regs/w_strb_lat_reg[0]/D", "u_regs/key_r_reg[20]/D", "u_regs/aw_addr_lat_reg[0]/D", "u_regs/w_data_lat_reg[0]/D", "u_regs/key_r_reg[59]/D", "u_axis/last_fifo_reg[16]/D", "u_regs/rdata_r_reg[25]/D", "u_regs/key_r_reg[7]/D", "u_regs/rdata_r_reg[3]/D", "u_regs/w_strb_lat_reg[1]/D", "u_regs/key_r_reg[40]/D", "u_regs/key_r_reg[21]/D", "u_regs/aw_addr_lat_reg[1]/D", "u_regs/w_data_lat_reg[1]/D", "u_regs/w_data_lat_reg[20]/D", "u_axis/last_fifo_reg[17]/D", "u_regs/rdata_r_reg[26]/D", "u_regs/key_r_reg[8]/D", "u_regs/rdata_r_reg[4]/D", "u_regs/key_r_reg[60]/D", "u_regs/w_strb_lat_reg[2]/D", "u_regs/key_r_reg[41]/D", "u_regs/key_r_reg[22]/D", "u_regs/aw_addr_lat_reg[2]/D", "u_regs/w_data_lat_reg[2]/D", "u_regs/w_data_lat_reg[21]/D", "u_axis/last_fifo_reg[18]/D", "u_regs/rdata_r_reg[27]/D", "u_regs/key_r_reg[9]/D", "u_regs/rdata_r_reg[5]/D", "u_regs/key_r_reg[61]/D"...}
+redirect -file [file join $RPT_DIR pt_timing_reg2reg.rpt]  {report_timing -from $ff_ck -to $ff_d -max_paths 10 -slack_lesser_than 100 -significant_digits 4}
+redirect -file [file join $RPT_DIR pt_timing_in2reg.rpt]   {report_timing -from $data_in -to $ff_d -max_paths 10 -slack_lesser_than 100 -significant_digits 4}
+redirect -file [file join $RPT_DIR pt_timing_reg2out.rpt]  {report_timing -from $ff_ck -to [all_outputs] -max_paths 10 -slack_lesser_than 100 -significant_digits 4}
+redirect -file [file join $RPT_DIR pt_timing_in2out.rpt]   {report_timing -from $data_in -to [all_outputs] -max_paths 10 -slack_lesser_than 100 -significant_digits 4}
+# hold
+redirect -file [file join $RPT_DIR pt_hold.rpt] {report_timing -delay_type min -from $ff_ck -to $ff_d -max_paths 10 -nworst 1 -slack_lesser_than 100 -significant_digits 4}
+# 兼容旧报告名（综合视角的整条路径，含 IO）
+redirect -file [file join $RPT_DIR pt_timing.rpt] {report_timing -max_paths 10 -nworst 1 -slack_lesser_than 100 -significant_digits 4}
+exit
+Information: Defining new variable 'DW_LIB'. (CMD-041)
+Information: Defining new variable 'OUT_DIR'. (CMD-041)
+Information: Defining new variable 'PDK_DIR'. (CMD-041)
+Information: Defining new variable 'clk_coll'. (CMD-041)
+Information: Defining new variable 'ff_d'. (CMD-041)
+Information: Defining new variable 'ff_ck'. (CMD-041)
+Information: Defining new variable 'FLOW_ROOT'. (CMD-041)
+Information: Defining new variable 'data_in'. (CMD-041)
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'RPT_DIR'. (CMD-041)
+Information: Defining new variable 'STD_DB'. (CMD-041)
+Maximum memory usage for this session: 890.07 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 2 seconds
+Diagnostics summary: 1 error, 5 warnings, 17 informationals
+
+Thank you for using pt_shell!

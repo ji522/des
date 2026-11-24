@@ -1,0 +1,4 @@
+
+current_design "des_cdc_top"
+clock -name des_cdc_top.clk -period 4.00 -domain clk
+clock -name des_cdc_top.wclk -period 10.00 -domain wclk

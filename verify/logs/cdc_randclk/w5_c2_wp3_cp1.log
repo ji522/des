@@ -1,0 +1,18 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_des_cdc_randclk/xsim_script.tcl
+# xsim {tb_des_cdc_randclk} -testplusarg W_HALF=5 -testplusarg C_HALF=2 -testplusarg W_PHASE=3 -testplusarg C_PHASE=1 -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+RANDCLK CFG w_half=5 c_half=2 w_phase=3 c_phase=1
+========== CDC RANDCLK TB ==========
+RANDCLK STAT push=190 cmp=190 mismatch=0 x=0 extra=0 rekey=16 wfull=404
+RANDCLK PASS push=190/cmp=190/mismatch=0/x=0/extra=0 wfull=404
+$finish called at time : 39779 ns : File "F:/DeskTop/ICÏîÄ¿/des_final_version/des_pipeline_soc_v2/verify/tb_cdc/tb_des_cdc_randclk.v" Line 230
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Nov 15 15:05:04 2026...
