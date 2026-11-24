@@ -1,0 +1,48 @@
+=== compile tb_axis_arb2 ===
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Tue Nov 24 22:09:53 2026
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/sync_fifo.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/axis_arb2.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/axis_arb_regs.v'
+Parsing design file '/home/ICer/work/des_pipeline_soc_v2/verify/tb_axis_arb2.v'
+Top Level Modules:
+       tb_axis_arb2
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+
+1 module and 0 UDP read.
+recompiling module tb_axis_arb2
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  -Wl,-rpath=/home/synopsys/vcs/O-2018.09-SP2/linux64/lib -L/home/synopsys/vcs/O-2018.09-SP2/linux64/lib   objs/amcQw_d.o   _5132_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/synopsys/vcs/O-2018.09-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive          /home/synopsys/vcs/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .201 seconds to compile + .131 seconds to elab + .130 seconds to link
+=== run tb_axis_arb2 ===
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 24 22:09 2026
+[70000] reset released
+[105000] cfg enable done, arb_enable=1
+[145000] cfg thresh done
+[145000] send ch0 pkt0
+[225000] send ch0 pkt1
+[305000] send ch0 pkt2
+[385000] send ch1 pkt0
+[465000] send ch1 pkt1
+[545000] send ch1 pkt2
+[625000] all packets sent, exp_pkt=0
+[625000] output enabled
+AXIS ARB PASS : beats=24 packets=6
+$finish called from file "/home/ICer/work/des_pipeline_soc_v2/verify/tb_axis_arb2.v", line 434.
+$finish at simulation time              1965000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1965000 ps
+CPU Time:      0.180 seconds;       Data structure size:   0.0Mb
+Tue Nov 24 22:09:53 2026
