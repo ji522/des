@@ -12,3 +12,4 @@
 | 10 SoC UVM(双agent+RAL) | t10_socuvm | PASS | logs/t10_socuvm.log |
 | 11 2通道AXIS仲裁 | t11_arb | PASS | logs/t11_arb.log |
 | 12 2通道AXIS+DES集成 | t12_arb_soc | PASS | logs/t12_arb_soc.log |
+| 13 2通道AXIS corner | t13_arb_corner | PASS | logs/t13_arb_corner.log |

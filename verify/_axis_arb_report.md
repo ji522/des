@@ -2,7 +2,7 @@
 
 日期：2026-11-24  
 工具：VCS O-2018.09-SP2（CentOS7 VM）  
-结论：VCS 全量回归 **12/12 PASS**（原 10 组 + 新增 2 组）
+结论：VCS 全量回归 **13/13 PASS**（原 10 组 + 新增 3 组：standalone / corner / DES 集成）
 
 ---
 
@@ -48,17 +48,45 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 - 计数器：ch0/ch1 各 12 beats in、3 packets in、12 beats out、3 packets out；ch0 stall > 0。
 - 中断：阈值置 1 后 almost_full 事件置位、`irq_o=1`；W1C 后 `irq_o=0`。
 - 通过标志：`AXIS ARB PASS : beats=24 packets=6`
+- 功能覆盖率：73.33%（只走主路径，未覆盖 fixed / len1 / len8+ / FIFO full；由 corner 用例补齐）。
 
-### 3.2 集成（`tb_des_arb_soc.v`）
+### 3.2 corner（`tb_axis_arb_corner.v`）
+
+三个 phase：
+1. **固定优先 ch0**：包长 1/2/5（ch0）+ 1/2/5（ch1），ch0 全部先出；
+2. **FIFO 压满**：ch0 单包 20 beat、ch1 单包 20 beat，先不 ready，`blocked` 计数增加，释放后全出；
+3. **单拍包**：ch0 len1、ch1 len1，覆盖 lock 旁路路径。
+
+- **58 beats / 10 packets**，0 错误。
+- 功能覆盖率：**100.00%**（ch/last/len/stall/mode/occ0/occ1/cross 全部 100%）。
+- 通过标志：`AXIS ARB CORNER PASS : beats=58 packets=10`
+
+### 3.3 集成（`tb_des_arb_soc.v`）
 
 - ch0 发 `ins[0..3]`，ch1 发 `ins[4..7]`，经仲裁后进 DES 加密。
 - **8 beats / 2 packets**，输出与 `exps[0..7]` 逐拍一致，TLAST 在第 4/8 拍对齐。
 - 计数器：ch0/ch1 各 1 packet out、4 beats out。
 - 通过标志：`DES ARB SOC PASS : 8 beats, 2 packets, TLAST aligned`
+- 功能覆盖率：58.89%（集成用例只走单包路径，不做 100% 声明；覆盖率闭环看 corner）。
 
-### 3.3 全量回归
+### 3.4 全量回归
 
-`verify/vcs/run_all_vcs.sh`：**PASS=12 FAIL=0**（新增 t11_arb、t12_arb_soc）。
+`verify/vcs/run_all_vcs.sh`：**PASS=13 FAIL=0**（新增 t11_arb、t12_arb_soc、t13_arb_corner）。
+
+### 3.5 SVA（bind 到 `axis_arb2`，`verify/sv/axis_arb_check.sv`）
+
+| 断言 | 检查 |
+|---|---|
+| A1/A2 | FIFO 满时不得给 tready |
+| A3/A4 | FIFO 空时不得读 |
+| A5/A6 | 不出现 overflow / underflow 脉冲 |
+| A7 | 输出反压期间 valid/data/tlast/tuser 保持 |
+| A8 | enable=0 时无输出、无输入 ready |
+| A9 | lock 时输出通道 = cur_ch |
+| A10 | FIFO count 不越界 |
+| A11 | 包内不得切换通道 |
+
+三组用例（standalone / corner / 集成）均未出现 `[ARB A*]` 断言失败。
 
 ---
 
@@ -84,7 +112,9 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 - `axis_arb2.v` — 2 通道仲裁/交换器
 - `axis_arb_regs.v` — AXI4-Lite 控制/状态/计数器
 - `des_arb_soc_top.v` — 与 `des_soc_top` 集成
+- `verify/sv/axis_arb_check.sv` — SVA（A1–A11）+ covergroup（bind 到 axis_arb2）
 - `verify/tb_axis_arb2.v` — standalone 自检
+- `verify/tb_axis_arb_corner.v` — corner 用例（fixed / FIFO full / 单拍包）
 - `verify/tb_des_arb_soc.v` — DES 集成自检
-- `verify/vcs/run_axis_arb_vcs.sh` — 新增 2 组 VCS 回归
-- `verify/vcs/run_all_vcs.sh` — 已并入第 11、12 组
+- `verify/vcs/run_axis_arb_vcs.sh` — 新增 3 组 VCS 回归
+- `verify/vcs/run_all_vcs.sh` — 已并入第 11、12、13 组

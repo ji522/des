@@ -52,11 +52,15 @@ echo " 2-channel AXIS arbiter (VCS O-2018.09-SP2)"
 echo "=============================================="
 
 run_case "standalone" "tb_axis_arb2" \
-    "$PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $VER/tb_axis_arb2.v" \
+    "$PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $VER/sv/axis_arb_check.sv $VER/tb_axis_arb2.v" \
     "AXIS ARB PASS"
 
+run_case "corner" "tb_axis_arb_corner" \
+    "$PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $VER/sv/axis_arb_check.sv $VER/tb_axis_arb_corner.v" \
+    "AXIS ARB CORNER PASS"
+
 run_case "des_soc" "tb_des_arb_soc" \
-    "$PROJ/des_pipe_round_fb.v $PROJ/des_pipeline_fb.v $PROJ/key_ram_gen.v $PROJ/des_axis_wrap.v $PROJ/des_axil_regs.v $PROJ/des_soc_top.v $PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $PROJ/des_arb_soc_top.v $VER/tb_des_arb_soc.v" \
+    "$PROJ/des_pipe_round_fb.v $PROJ/des_pipeline_fb.v $PROJ/key_ram_gen.v $PROJ/des_axis_wrap.v $PROJ/des_axil_regs.v $PROJ/des_soc_top.v $PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $PROJ/des_arb_soc_top.v $VER/sv/axis_arb_check.sv $VER/tb_des_arb_soc.v" \
     "DES ARB SOC PASS"
 
 echo "----------------------------------------------"

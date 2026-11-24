@@ -1,7 +1,7 @@
 #!/bin/bash
 # ============================================================================
-# run_all_vcs.sh —— DES 工程完整回归（VCS 版）
-# 对应 Windows 的 run_all.ps1（XSim 版，11 组）
+# run_all_vcs.sh —— DES 工程完整回归（VCS 版，13 组）
+# XSim 版 run_all.ps1 仅作历史参考，新回归一律以本脚本为准
 #
 # 用法：./run_all_vcs.sh
 # 结果：$HOME/work/vcs_regress/summary.md
@@ -103,12 +103,16 @@ run_case "10 SoC UVM(双agent+RAL)" "t10_socuvm" "tb_des_soc_uvm" \
     "SOC RAL TEST PASS"
 
 run_case "11 2通道AXIS仲裁"       "t11_arb"  "tb_axis_arb2" \
-    "$PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $VER/tb_axis_arb2.v" \
+    "$PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $VER/sv/axis_arb_check.sv $VER/tb_axis_arb2.v" \
     "AXIS ARB PASS"
 
 run_case "12 2通道AXIS+DES集成"   "t12_arb_soc" "tb_des_arb_soc" \
-    "$PROJ/des_pipe_round_fb.v $PROJ/des_pipeline_fb.v $PROJ/key_ram_gen.v $PROJ/des_axis_wrap.v $PROJ/des_axil_regs.v $PROJ/des_soc_top.v $PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $PROJ/des_arb_soc_top.v $VER/tb_des_arb_soc.v" \
+    "$PROJ/des_pipe_round_fb.v $PROJ/des_pipeline_fb.v $PROJ/key_ram_gen.v $PROJ/des_axis_wrap.v $PROJ/des_axil_regs.v $PROJ/des_soc_top.v $PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $PROJ/des_arb_soc_top.v $VER/sv/axis_arb_check.sv $VER/tb_des_arb_soc.v" \
     "DES ARB SOC PASS"
+
+run_case "13 2通道AXIS corner"    "t13_arb_corner" "tb_axis_arb_corner" \
+    "$PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $VER/sv/axis_arb_check.sv $VER/tb_axis_arb_corner.v" \
+    "AXIS ARB CORNER PASS"
 
 echo ""
 echo "=============================================="
