@@ -114,6 +114,10 @@ run_case "13 2通道AXIS corner"    "t13_arb_corner" "tb_axis_arb_corner" \
     "$PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $VER/sv/axis_arb_check.sv $VER/tb_axis_arb_corner.v" \
     "AXIS ARB CORNER PASS"
 
+run_case "14 多时钟2通道AXIS+DES" "t14_arb_cdc" "tb_des_arb_cdc_soc" \
+    "$PROJ/des_pipe_round_fb.v $PROJ/des_pipeline_fb.v $PROJ/key_ram_gen.v $PROJ/des_axis_wrap.v $PROJ/des_axil_regs.v $PROJ/des_soc_top.v $PROJ/sync_fifo.v $PROJ/axis_arb2.v $PROJ/axis_arb_regs.v $PROJ/axil_2to1_demux.v $PROJ/des_arb_soc_top.v $PROJ/cdc/async_fifo.v $PROJ/cdc/cdc_sync.v $PROJ/cdc/async_axis_fifo.v $PROJ/des_arb_cdc_top.v $VER/sv/axis_arb_check.sv $VER/tb_des_arb_cdc_soc.v" \
+    "DES ARB CDC PASS"
+
 echo ""
 echo "=============================================="
 printf " 结果: PASS=%d  FAIL=%d\n" "$PASS" "$FAIL"

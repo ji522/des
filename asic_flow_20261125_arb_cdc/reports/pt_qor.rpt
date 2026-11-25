@@ -1,0 +1,104 @@
+****************************************
+Report : qor
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 17:46:02 2026
+****************************************
+
+  Timing Path Group '**async_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           12
+  Critical Path Length:                    2.75
+  Critical Path Slack:                     1.20
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'clk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            7
+  Critical Path Length:                    0.50
+  Critical Path Slack:                     1.40
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'wclk0' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11
+  Critical Path Length:                    2.99
+  Critical Path Slack:                     6.89
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'wclk1' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11
+  Critical Path Length:                    3.02
+  Critical Path Slack:                     3.86
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.25
+  Critical Path Slack:                    -0.13
+  Total Negative Slack:                  -23.65
+  No. of Violating Paths:                   271
+  ---------------------------------------------
+
+  Timing Path Group 'clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.11
+  Critical Path Slack:                     0.04
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'wclk0' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.11
+  Critical Path Slack:                     0.04
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'wclk1' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.11
+  Critical Path Slack:                     0.04
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                    5
+  Hierarchical Port Count:                  787
+  Leaf Cell Count:                        34981
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:                   0.00
+  Total cell area:                     62581.58
+  Design Area:                         62581.58
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           135199
+  max_capacitance Count:                      1
+  max_capacitance Cost:                   -3.55
+  Total DRC Cost:                         -3.55
+  ---------------------------------------------
+
+1

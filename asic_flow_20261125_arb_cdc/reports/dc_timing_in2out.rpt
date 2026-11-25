@@ -1,0 +1,84 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 17:45:58 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: s_axil_awaddr[8]
+              (input port clocked by clk)
+  Endpoint: s_axil_awready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   1.0000     1.0000 r
+  s_axil_awaddr[8] (in)                  0.0108     1.0108 r
+  U2382/ZN (NAND2_X1)                    0.0386     1.0494 f
+  U2921/ZN (AOI221_X1)                   0.0833     1.1327 r
+  s_axil_awready (out)                   0.0021     1.1347 r
+  data arrival time                                 1.1347
+
+  clock clk (rise edge)                  4.0000     4.0000
+  clock network delay (ideal)            0.0000     4.0000
+  clock uncertainty                     -0.1000     3.9000
+  output external delay                 -1.0000     2.9000
+  data required time                                2.9000
+  -----------------------------------------------------------
+  data required time                                2.9000
+  data arrival time                                -1.1347
+  -----------------------------------------------------------
+  slack (MET)                                       1.7653
+
+
+  Startpoint: s_axil_araddr[8]
+              (input port clocked by clk)
+  Endpoint: s_axil_arready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   1.0000     1.0000 f
+  s_axil_araddr[8] (in)                  0.0074     1.0074 f
+  U3892/ZN (AOI221_X1)                   0.0817     1.0891 r
+  s_axil_arready (out)                   0.0021     1.0912 r
+  data arrival time                                 1.0912
+
+  clock clk (rise edge)                  4.0000     4.0000
+  clock network delay (ideal)            0.0000     4.0000
+  clock uncertainty                     -0.1000     3.9000
+  output external delay                 -1.0000     2.9000
+  data required time                                2.9000
+  -----------------------------------------------------------
+  data required time                                2.9000
+  data arrival time                                -1.0912
+  -----------------------------------------------------------
+  slack (MET)                                       1.8088
+
+
+1

@@ -1,0 +1,328 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 100.0000
+	-max_paths 10
+	-sort_by slack
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 17:46:02 2026
+****************************************
+
+
+  Startpoint: u_core/u_des/u_axis/last_rd_ptr_reg[4]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tlast
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/last_rd_ptr_reg[4]/CK (DFFR_X1)   0.0000     0.0000 r
+  u_core/u_des/u_axis/last_rd_ptr_reg[4]/Q (DFFR_X1)    0.1118     0.1118 f
+  U2699/ZN (NOR2_X1)                                    0.1258     0.2376 r
+  U2700/ZN (AOI22_X1)                                   0.0554     0.2930 f
+  U2701/ZN (OAI211_X1)                                  0.0465     0.3395 r
+  U2707/ZN (OAI221_X1)                                  0.0470     0.3865 f
+  U2715/ZN (OAI221_X1)                                  0.0630     0.4495 r
+  U2729/ZN (AND3_X1)                                    0.0523     0.5018 r
+  m_axis_tlast (out)                                    0.0021     0.5039 r
+  data arrival time                                                0.5039
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.5039
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.3961
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tvalid
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
+                                                        0.1197     0.1197 r
+  m_axis_tvalid (out)                                   0.0031     0.1227 r
+  data arrival time                                                0.1227
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1227
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7773
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[63]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[24]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[24]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[63] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[62]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[24]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[24]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[62] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[16]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[61]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[16]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[16]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[61] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[16]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[60]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[16]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[16]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[60] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[8]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[59]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[8]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[8]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[59] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[8]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[58]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[8]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[8]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[58] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[0]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[57]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[0]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[0]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[57] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+  Startpoint: u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[0]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tdata[56]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[0]/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[0]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  m_axis_tdata[56] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  ------------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1111
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7889
+
+
+1

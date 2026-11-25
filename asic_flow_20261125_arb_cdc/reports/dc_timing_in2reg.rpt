@@ -1,0 +1,1383 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 17:45:58 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2935/ZN (AOI22_X1)                                   0.0556     1.9146 f
+  U2936/ZN (OAI21_X1)                                   0.0371     1.9517 r
+  u_core/u_arb_regs/af_thresh1_o_reg[0]/D (DFFR_X1)     0.0090     1.9607 r
+  data arrival time                                                1.9607
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[0]/CK (DFFR_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0316     3.8684
+  data required time                                               3.8684
+  --------------------------------------------------------------------------
+  data required time                                               3.8684
+  data arrival time                                               -1.9607
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9077
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2938/ZN (AOI22_X1)                                   0.0454     1.9045 f
+  U2939/ZN (OAI21_X1)                                   0.0365     1.9409 r
+  u_core/u_arb_regs/af_thresh1_o_reg[1]/D (DFFR_X1)     0.0090     1.9499 r
+  data arrival time                                                1.9499
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[1]/CK (DFFR_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0316     3.8684
+  data required time                                               3.8684
+  --------------------------------------------------------------------------
+  data required time                                               3.8684
+  data arrival time                                               -1.9499
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9185
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2947/ZN (AOI22_X1)                                   0.0454     1.9045 f
+  U2948/ZN (OAI21_X1)                                   0.0365     1.9409 r
+  u_core/u_arb_regs/af_thresh1_o_reg[4]/D (DFFR_X1)     0.0090     1.9499 r
+  data arrival time                                                1.9499
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[4]/CK (DFFR_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0316     3.8684
+  data required time                                               3.8684
+  --------------------------------------------------------------------------
+  data required time                                               3.8684
+  data arrival time                                               -1.9499
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9185
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2950/ZN (AOI22_X1)                                   0.0454     1.9045 f
+  U2951/ZN (OAI21_X1)                                   0.0365     1.9409 r
+  u_core/u_arb_regs/af_thresh1_o_reg[5]/D (DFFR_X1)     0.0090     1.9499 r
+  data arrival time                                                1.9499
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[5]/CK (DFFR_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0316     3.8684
+  data required time                                               3.8684
+  --------------------------------------------------------------------------
+  data required time                                               3.8684
+  data arrival time                                               -1.9499
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9185
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2953/ZN (AOI22_X1)                                   0.0454     1.9045 f
+  U2954/ZN (OAI21_X1)                                   0.0365     1.9409 r
+  u_core/u_arb_regs/af_thresh1_o_reg[6]/D (DFFR_X1)     0.0090     1.9499 r
+  data arrival time                                                1.9499
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[6]/CK (DFFR_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0316     3.8684
+  data required time                                               3.8684
+  --------------------------------------------------------------------------
+  data required time                                               3.8684
+  data arrival time                                               -1.9499
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9185
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2956/ZN (AOI22_X1)                                   0.0454     1.9045 f
+  U2957/ZN (OAI21_X1)                                   0.0365     1.9409 r
+  u_core/u_arb_regs/af_thresh1_o_reg[7]/D (DFFR_X1)     0.0090     1.9499 r
+  data arrival time                                                1.9499
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[7]/CK (DFFR_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0316     3.8684
+  data required time                                               3.8684
+  --------------------------------------------------------------------------
+  data required time                                               3.8684
+  data arrival time                                               -1.9499
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9185
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2941/ZN (AOI22_X1)                                   0.0454     1.9045 f
+  U2942/ZN (OAI21_X1)                                   0.0366     1.9410 r
+  u_core/u_arb_regs/af_thresh1_o_reg[2]/D (DFFS_X1)     0.0092     1.9502 r
+  data arrival time                                                1.9502
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[2]/CK (DFFS_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0281     3.8719
+  data required time                                               3.8719
+  --------------------------------------------------------------------------
+  data required time                                               3.8719
+  data arrival time                                               -1.9502
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9217
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/af_thresh1_o_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2930/ZN (OAI221_X1)                                  0.0459     1.5820 f
+  U2931/ZN (NOR3_X1)                                    0.0845     1.6665 r
+  U2933/ZN (INV_X1)                                     0.0568     1.7233 f
+  U2934/ZN (NOR2_X1)                                    0.1357     1.8590 r
+  U2944/ZN (AOI22_X1)                                   0.0454     1.9045 f
+  U2945/ZN (OAI21_X1)                                   0.0366     1.9410 r
+  u_core/u_arb_regs/af_thresh1_o_reg[3]/D (DFFS_X1)     0.0092     1.9502 r
+  data arrival time                                                1.9502
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/af_thresh1_o_reg[3]/CK (DFFS_X1)    0.0000     3.9000 r
+  library setup time                                   -0.0281     3.8719
+  data required time                                               3.8719
+  --------------------------------------------------------------------------
+  data required time                                               3.8719
+  data arrival time                                               -1.9502
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9217
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/irq_mask_r_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2784/ZN (OAI221_X1)                                  0.0636     1.5997 f
+  U2970/ZN (NOR3_X2)                                    0.1524     1.7522 r
+  U2971/ZN (INV_X1)                                     0.0708     1.8229 f
+  U2972/ZN (AOI22_X1)                                   0.0752     1.8982 r
+  u_core/u_arb_regs/irq_mask_r_reg[0]/D (DFFR_X1)       0.0090     1.9072 r
+  data arrival time                                                1.9072
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/irq_mask_r_reg[0]/CK (DFFR_X1)      0.0000     3.9000 r
+  library setup time                                   -0.0326     3.8674
+  data required time                                               3.8674
+  --------------------------------------------------------------------------
+  data required time                                               3.8674
+  data arrival time                                               -1.9072
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9602
+
+
+  Startpoint: s_axil_wvalid
+              (input port clocked by clk)
+  Endpoint: u_core/u_arb_regs/irq_mask_r_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  1.0000     1.0000 r
+  s_axil_wvalid (in)                                    0.0028     1.0028 r
+  U2173/ZN (INV_X1)                                     0.0255     1.0283 f
+  U2452/ZN (NOR2_X2)                                    0.1550     1.1832 r
+  U2453/ZN (INV_X1)                                     0.1217     1.3049 f
+  U2498/ZN (NAND2_X1)                                   0.0744     1.3793 r
+  U2780/ZN (INV_X1)                                     0.0255     1.4048 f
+  U2781/ZN (NOR2_X1)                                    0.0454     1.4502 r
+  U2782/ZN (OAI221_X1)                                  0.0501     1.5003 f
+  U2783/ZN (INV_X1)                                     0.0358     1.5361 r
+  U2784/ZN (OAI221_X1)                                  0.0636     1.5997 f
+  U2970/ZN (NOR3_X2)                                    0.1524     1.7522 r
+  U2971/ZN (INV_X1)                                     0.0708     1.8229 f
+  U2973/ZN (AOI22_X1)                                   0.0752     1.8982 r
+  u_core/u_arb_regs/irq_mask_r_reg[1]/D (DFFR_X1)       0.0090     1.9072 r
+  data arrival time                                                1.9072
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_arb_regs/irq_mask_r_reg[1]/CK (DFFR_X1)      0.0000     3.9000 r
+  library setup time                                   -0.0326     3.8674
+  data required time                                               3.8674
+  --------------------------------------------------------------------------
+  data required time                                               3.8674
+  data arrival time                                               -1.9072
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.9602
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][0]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1741/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1742/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][0]/D (DFF_X1)                 0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][0]/CK (DFF_X1)                0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][56]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U2009/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U2010/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][56]/D (DFF_X1)                0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][56]/CK (DFF_X1)               0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][54]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1733/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1734/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][54]/D (DFF_X1)                0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][54]/CK (DFF_X1)               0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][32]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1723/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1724/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][32]/D (DFF_X1)                0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][32]/CK (DFF_X1)               0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][26]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U2041/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U2042/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][26]/D (DFF_X1)                0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][26]/CK (DFF_X1)               0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][20]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1715/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1716/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][20]/D (DFF_X1)                0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][20]/CK (DFF_X1)               0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][17]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1711/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1712/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][17]/D (DFF_X1)                0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][17]/CK (DFF_X1)               0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[5][2]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U239/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U243/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U7/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1709/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1710/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[5][2]/D (DFF_X1)                 0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[5][2]/CK (DFF_X1)                0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[1][0]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U246/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U248/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U4/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1807/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1808/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[1][0]/D (DFF_X1)                 0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[1][0]/CK (DFF_X1)                0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s0_axis_tvalid
+              (input port clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[1][60]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s0_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2171/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af0/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_1)     0.0000     2.0389 r
+  u_af0/u_fifo/U45/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af0/u_fifo/U46/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af0/u_fifo/U47/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af0/u_fifo/U48/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af0/u_fifo/U235/ZN (NAND2_X1)                       0.0655     2.2817 f
+  u_af0/u_fifo/U246/ZN (NOR2_X4)                        0.2126     2.4943 r
+  u_af0/u_fifo/U248/Z (CLKBUF_X1)                       0.2149     2.7092 r
+  u_af0/u_fifo/U4/ZN (INV_X2)                           0.1614     2.8706 f
+  u_af0/u_fifo/U1921/ZN (OAI22_X1)                      0.0862     2.9568 r
+  u_af0/u_fifo/U1922/ZN (INV_X1)                        0.0212     2.9780 f
+  u_af0/u_fifo/mem_reg[1][60]/D (DFF_X1)                0.0086     2.9865 f
+  data arrival time                                                2.9865
+
+  clock wclk0 (rise edge)                              10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_af0/u_fifo/mem_reg[1][60]/CK (DFF_X1)               0.0000     9.9000 r
+  library setup time                                   -0.0257     9.8743
+  data required time                                               9.8743
+  --------------------------------------------------------------------------
+  data required time                                               9.8743
+  data arrival time                                               -2.9865
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8878
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][60]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2113/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2114/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][60]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][60]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][58]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2115/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2116/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][58]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][58]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][55]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2103/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2104/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][55]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][55]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][54]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2101/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2102/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][54]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][54]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][47]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2173/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2174/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][47]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][47]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][46]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2191/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2192/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][46]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][46]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][42]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2127/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2128/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][42]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][42]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][38]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2139/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2140/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][38]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][38]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][32]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2137/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2138/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][32]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][32]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+  Startpoint: s1_axis_tvalid
+              (input port clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[15][31]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  2.0000     2.0000 r
+  s1_axis_tvalid (in)                                   0.0017     2.0017 r
+  U2170/ZN (AND2_X1)                                    0.0372     2.0389 r
+  u_af1/u_fifo/winc (async_fifo_DATA_W65_ADDR_W4_0)     0.0000     2.0389 r
+  u_af1/u_fifo/U48/ZN (INV_X1)                          0.0203     2.0592 f
+  u_af1/u_fifo/U49/ZN (NOR2_X1)                         0.0602     2.1194 r
+  u_af1/u_fifo/U50/ZN (NAND2_X1)                        0.0447     2.1640 f
+  u_af1/u_fifo/U51/ZN (INV_X1)                          0.0522     2.2162 r
+  u_af1/u_fifo/U199/ZN (NAND2_X1)                       0.0764     2.2927 f
+  u_af1/u_fifo/U2062/ZN (NOR2_X4)                       0.2207     2.5134 r
+  u_af1/u_fifo/U2092/Z (CLKBUF_X1)                      0.2211     2.7344 r
+  u_af1/u_fifo/U7/ZN (INV_X2)                           0.1672     2.9017 f
+  u_af1/u_fifo/U2135/ZN (OAI22_X1)                      0.0876     2.9893 r
+  u_af1/u_fifo/U2136/ZN (INV_X1)                        0.0211     3.0104 f
+  u_af1/u_fifo/mem_reg[15][31]/D (DFF_X1)               0.0086     3.0190 f
+  data arrival time                                                3.0190
+
+  clock wclk1 (rise edge)                               7.0000     7.0000
+  clock network delay (ideal)                           0.0000     7.0000
+  clock uncertainty                                    -0.1000     6.9000
+  u_af1/u_fifo/mem_reg[15][31]/CK (DFF_X1)              0.0000     6.9000 r
+  library setup time                                   -0.0257     6.8743
+  data required time                                               6.8743
+  --------------------------------------------------------------------------
+  data required time                                               6.8743
+  data arrival time                                               -3.0190
+  --------------------------------------------------------------------------
+  slack (MET)                                                      3.8553
+
+
+1

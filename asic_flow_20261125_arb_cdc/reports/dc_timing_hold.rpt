@@ -1,0 +1,1019 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 17:45:58 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: u_af0/u_fifo/wgray_sync1_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af0/u_fifo/wgray_sync2_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wgray_sync1_reg[4]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/wgray_sync1_reg[4]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/wgray_sync2_reg[4]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wgray_sync2_reg[4]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/wgray_sync1_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af0/u_fifo/wgray_sync2_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wgray_sync1_reg[3]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/wgray_sync1_reg[3]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/wgray_sync2_reg[3]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wgray_sync2_reg[3]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/wgray_sync1_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af0/u_fifo/wgray_sync2_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wgray_sync1_reg[2]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/wgray_sync1_reg[2]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/wgray_sync2_reg[2]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wgray_sync2_reg[2]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/wgray_sync1_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af0/u_fifo/wgray_sync2_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wgray_sync1_reg[1]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/wgray_sync1_reg[1]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/wgray_sync2_reg[1]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wgray_sync2_reg[1]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/wgray_sync1_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af0/u_fifo/wgray_sync2_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wgray_sync1_reg[0]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/wgray_sync1_reg[0]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/wgray_sync2_reg[0]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wgray_sync2_reg[0]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/wgray_sync1_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af1/u_fifo/wgray_sync2_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wgray_sync1_reg[4]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/wgray_sync1_reg[4]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/wgray_sync2_reg[4]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wgray_sync2_reg[4]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/wgray_sync1_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af1/u_fifo/wgray_sync2_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wgray_sync1_reg[3]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/wgray_sync1_reg[3]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/wgray_sync2_reg[3]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wgray_sync2_reg[3]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/wgray_sync1_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af1/u_fifo/wgray_sync2_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wgray_sync1_reg[2]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/wgray_sync1_reg[2]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/wgray_sync2_reg[2]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wgray_sync2_reg[2]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/wgray_sync1_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af1/u_fifo/wgray_sync2_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wgray_sync1_reg[1]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/wgray_sync1_reg[1]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/wgray_sync2_reg[1]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wgray_sync2_reg[1]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/wgray_sync1_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_af1/u_fifo/wgray_sync2_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wgray_sync1_reg[0]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/wgray_sync1_reg[0]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/wgray_sync2_reg[0]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wgray_sync2_reg[0]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_rs0/sync_reg[0]/CK
+              (internal path startpoint clocked by wclk0)
+  Endpoint: u_rs0/sync_reg[1]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock wclk0 (rise edge)                0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0000     0.0000 r
+  u_rs0/sync_reg[0]/CK (DFFR_X1)         0.0000 #   0.0000 r
+  u_rs0/sync_reg[0]/Q (DFFR_X1)          0.0976     0.0976 f
+  u_rs0/sync_reg[1]/D (DFFR_X1)          0.0085     0.1061 f
+  data arrival time                                 0.1061
+
+  clock wclk0 (rise edge)                0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  u_rs0/sync_reg[1]/CK (DFFR_X1)         0.0000     0.0500 r
+  library hold time                      0.0118     0.0618
+  data required time                                0.0618
+  -----------------------------------------------------------
+  data required time                                0.0618
+  data arrival time                                -0.1061
+  -----------------------------------------------------------
+  slack (MET)                                       0.0443
+
+
+  Startpoint: u_af0/u_fifo/rgray_sync1_reg[4]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/rgray_sync2_reg[4]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/rgray_sync1_reg[4]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/rgray_sync1_reg[4]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/rgray_sync2_reg[4]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/rgray_sync2_reg[4]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/rgray_sync1_reg[3]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/rgray_sync2_reg[3]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/rgray_sync1_reg[3]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/rgray_sync1_reg[3]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/rgray_sync2_reg[3]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/rgray_sync2_reg[3]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/rgray_sync1_reg[2]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/rgray_sync2_reg[2]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/rgray_sync1_reg[2]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/rgray_sync1_reg[2]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/rgray_sync2_reg[2]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/rgray_sync2_reg[2]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/rgray_sync1_reg[1]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/rgray_sync2_reg[1]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/rgray_sync1_reg[1]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/rgray_sync1_reg[1]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/rgray_sync2_reg[1]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/rgray_sync2_reg[1]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/rgray_sync1_reg[0]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/rgray_sync2_reg[0]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/rgray_sync1_reg[0]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af0/u_fifo/rgray_sync1_reg[0]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af0/u_fifo/rgray_sync2_reg[0]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/rgray_sync2_reg[0]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af0/u_fifo/wbin_reg[0]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/wbin_reg[0]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wbin_reg[0]/CK (DFFR_X1)                 0.0000 #   0.0000 r
+  u_af0/u_fifo/wbin_reg[0]/QN (DFFR_X1)                 0.0856     0.0856 r
+  u_af0/u_fifo/U2199/ZN (OAI21_X1)                      0.0393     0.1249 f
+  u_af0/u_fifo/wbin_reg[0]/D (DFFR_X1)                  0.0110     0.1360 f
+  data arrival time                                                0.1360
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wbin_reg[0]/CK (DFFR_X1)                 0.0000     0.0500 r
+  library hold time                                     0.0115     0.0615
+  data required time                                               0.0615
+  --------------------------------------------------------------------------
+  data required time                                               0.0615
+  data arrival time                                               -0.1360
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0745
+
+
+  Startpoint: u_af0/u_fifo/wbin_reg[1]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/wbin_reg[1]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wbin_reg[1]/CK (DFFR_X1)                 0.0000 #   0.0000 r
+  u_af0/u_fifo/wbin_reg[1]/QN (DFFR_X1)                 0.0911     0.0911 r
+  u_af0/u_fifo/U2198/ZN (AOI22_X1)                      0.0397     0.1308 f
+  u_af0/u_fifo/wbin_reg[1]/D (DFFR_X1)                  0.0099     0.1407 f
+  data arrival time                                                0.1407
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wbin_reg[1]/CK (DFFR_X1)                 0.0000     0.0500 r
+  library hold time                                     0.0114     0.0614
+  data required time                                               0.0614
+  --------------------------------------------------------------------------
+  data required time                                               0.0614
+  data arrival time                                               -0.1407
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0793
+
+
+  Startpoint: u_af0/u_fifo/wbin_reg[3]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/wbin_reg[3]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/wbin_reg[3]/CK (DFFR_X1)                 0.0000 #   0.0000 r
+  u_af0/u_fifo/wbin_reg[3]/QN (DFFR_X1)                 0.0969     0.0969 r
+  u_af0/u_fifo/U2233/ZN (OAI21_X1)                      0.0427     0.1396 f
+  u_af0/u_fifo/wbin_reg[3]/D (DFFR_X1)                  0.0099     0.1495 f
+  data arrival time                                                0.1495
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/wbin_reg[3]/CK (DFFR_X1)                 0.0000     0.0500 r
+  library hold time                                     0.0111     0.0611
+  data required time                                               0.0611
+  --------------------------------------------------------------------------
+  data required time                                               0.0611
+  data arrival time                                               -0.1495
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0884
+
+
+  Startpoint: u_af0/u_fifo/mem_reg[13][64]
+              (rising edge-triggered flip-flop clocked by wclk0)
+  Endpoint: u_af0/u_fifo/mem_reg[13][64]
+            (rising edge-triggered flip-flop clocked by wclk0)
+  Path Group: wclk0
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af0/u_fifo/mem_reg[13][64]/CK (DFF_X1)              0.0000 #   0.0000 r
+  u_af0/u_fifo/mem_reg[13][64]/Q (DFF_X1)               0.1044     0.1044 r
+  u_af0/u_fifo/U1603/ZN (OAI22_X1)                      0.0300     0.1344 f
+  u_af0/u_fifo/U1604/ZN (INV_X1)                        0.0223     0.1568 r
+  u_af0/u_fifo/mem_reg[13][64]/D (DFF_X1)               0.0090     0.1658 r
+  data arrival time                                                0.1658
+
+  clock wclk0 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af0/u_fifo/mem_reg[13][64]/CK (DFF_X1)              0.0000     0.0500 r
+  library hold time                                     0.0177     0.0677
+  data required time                                               0.0677
+  --------------------------------------------------------------------------
+  data required time                                               0.0677
+  data arrival time                                               -0.1658
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0981
+
+
+  Startpoint: u_rs1/sync_reg[0]/CK
+              (internal path startpoint clocked by wclk1)
+  Endpoint: u_rs1/sync_reg[1]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock wclk1 (rise edge)                0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0000     0.0000 r
+  u_rs1/sync_reg[0]/CK (DFFR_X1)         0.0000 #   0.0000 r
+  u_rs1/sync_reg[0]/Q (DFFR_X1)          0.0976     0.0976 f
+  u_rs1/sync_reg[1]/D (DFFR_X1)          0.0085     0.1061 f
+  data arrival time                                 0.1061
+
+  clock wclk1 (rise edge)                0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  u_rs1/sync_reg[1]/CK (DFFR_X1)         0.0000     0.0500 r
+  library hold time                      0.0118     0.0618
+  data required time                                0.0618
+  -----------------------------------------------------------
+  data required time                                0.0618
+  data arrival time                                -0.1061
+  -----------------------------------------------------------
+  slack (MET)                                       0.0443
+
+
+  Startpoint: u_af1/u_fifo/rgray_sync1_reg[4]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/rgray_sync2_reg[4]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/rgray_sync1_reg[4]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/rgray_sync1_reg[4]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/rgray_sync2_reg[4]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/rgray_sync2_reg[4]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/rgray_sync1_reg[3]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/rgray_sync2_reg[3]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/rgray_sync1_reg[3]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/rgray_sync1_reg[3]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/rgray_sync2_reg[3]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/rgray_sync2_reg[3]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/rgray_sync1_reg[2]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/rgray_sync2_reg[2]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/rgray_sync1_reg[2]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/rgray_sync1_reg[2]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/rgray_sync2_reg[2]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/rgray_sync2_reg[2]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/rgray_sync1_reg[1]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/rgray_sync2_reg[1]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/rgray_sync1_reg[1]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/rgray_sync1_reg[1]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/rgray_sync2_reg[1]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/rgray_sync2_reg[1]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/rgray_sync1_reg[0]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/rgray_sync2_reg[0]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/rgray_sync1_reg[0]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_af1/u_fifo/rgray_sync1_reg[0]/Q (DFFR_X1)           0.0976     0.0976 f
+  u_af1/u_fifo/rgray_sync2_reg[0]/D (DFFR_X1)           0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/rgray_sync2_reg[0]/CK (DFFR_X1)          0.0000     0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  --------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1061
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0443
+
+
+  Startpoint: u_af1/u_fifo/wbin_reg[0]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/wbin_reg[0]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wbin_reg[0]/CK (DFFR_X1)                 0.0000 #   0.0000 r
+  u_af1/u_fifo/wbin_reg[0]/QN (DFFR_X1)                 0.0856     0.0856 r
+  u_af1/u_fifo/U2196/ZN (OAI21_X1)                      0.0393     0.1249 f
+  u_af1/u_fifo/wbin_reg[0]/D (DFFR_X1)                  0.0110     0.1360 f
+  data arrival time                                                0.1360
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wbin_reg[0]/CK (DFFR_X1)                 0.0000     0.0500 r
+  library hold time                                     0.0115     0.0615
+  data required time                                               0.0615
+  --------------------------------------------------------------------------
+  data required time                                               0.0615
+  data arrival time                                               -0.1360
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0745
+
+
+  Startpoint: u_af1/u_fifo/wbin_reg[1]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/wbin_reg[1]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wbin_reg[1]/CK (DFFR_X1)                 0.0000 #   0.0000 r
+  u_af1/u_fifo/wbin_reg[1]/QN (DFFR_X1)                 0.0911     0.0911 r
+  u_af1/u_fifo/U2195/ZN (AOI22_X1)                      0.0397     0.1308 f
+  u_af1/u_fifo/wbin_reg[1]/D (DFFR_X1)                  0.0099     0.1407 f
+  data arrival time                                                0.1407
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wbin_reg[1]/CK (DFFR_X1)                 0.0000     0.0500 r
+  library hold time                                     0.0114     0.0614
+  data required time                                               0.0614
+  --------------------------------------------------------------------------
+  data required time                                               0.0614
+  data arrival time                                               -0.1407
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0793
+
+
+  Startpoint: u_af1/u_fifo/wbin_reg[3]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/wbin_reg[3]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/wbin_reg[3]/CK (DFFR_X1)                 0.0000 #   0.0000 r
+  u_af1/u_fifo/wbin_reg[3]/QN (DFFR_X1)                 0.0969     0.0969 r
+  u_af1/u_fifo/U2230/ZN (OAI21_X1)                      0.0427     0.1396 f
+  u_af1/u_fifo/wbin_reg[3]/D (DFFR_X1)                  0.0099     0.1495 f
+  data arrival time                                                0.1495
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/wbin_reg[3]/CK (DFFR_X1)                 0.0000     0.0500 r
+  library hold time                                     0.0111     0.0611
+  data required time                                               0.0611
+  --------------------------------------------------------------------------
+  data required time                                               0.0611
+  data arrival time                                               -0.1495
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0884
+
+
+  Startpoint: u_af1/u_fifo/mem_reg[13][64]
+              (rising edge-triggered flip-flop clocked by wclk1)
+  Endpoint: u_af1/u_fifo/mem_reg[13][64]
+            (rising edge-triggered flip-flop clocked by wclk1)
+  Path Group: wclk1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_cdc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_af1/u_fifo/mem_reg[13][64]/CK (DFF_X1)              0.0000 #   0.0000 r
+  u_af1/u_fifo/mem_reg[13][64]/Q (DFF_X1)               0.1044     0.1044 r
+  u_af1/u_fifo/U1614/ZN (OAI22_X1)                      0.0300     0.1344 f
+  u_af1/u_fifo/U1615/ZN (INV_X1)                        0.0223     0.1568 r
+  u_af1/u_fifo/mem_reg[13][64]/D (DFF_X1)               0.0090     0.1658 r
+  data arrival time                                                0.1658
+
+  clock wclk1 (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_af1/u_fifo/mem_reg[13][64]/CK (DFF_X1)              0.0000     0.0500 r
+  library hold time                                     0.0177     0.0677
+  data required time                                               0.0677
+  --------------------------------------------------------------------------
+  data required time                                               0.0677
+  data arrival time                                               -0.1658
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0981
+
+
+1

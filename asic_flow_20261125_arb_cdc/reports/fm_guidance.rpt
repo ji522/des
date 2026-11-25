@@ -1,0 +1,37 @@
+**************************************************
+Report         : guidance
+
+Reference      : r:/WORK/des_arb_cdc_top
+Implementation : i:/WORK/des_arb_cdc_top
+Version        : O-2018.06-SP1
+Date           : Wed Nov 25 17:47:19 2026
+**************************************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+architecture_netlist:          2          0          0          0          2
+boundary            :          2          0          0          0          2
+boundary_netlist    :          2          0          0          0          2
+change_names        :         26          1          0          0         27
+constant            :        179          0          0          0        179
+datapath            :          2          0          0          0          2
+environment         :          3          0          0          0          3
+instance_map        :         15          0          0          0         15
+mark                :         14          0          0          0         14
+merge               :          3          0          0          0          3
+reg_constant        :          2          0          0          0          2
+reg_merging         :          4          0          0          0          4
+replace             :          4          0          0          0          4
+ungroup             :         30          0          0          0         30
+uniquify            :          3          0          0          0          3
+ununiquify          :          1          0          0          0          1
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/ICer/work/des_arb_cdc_flow_20261125/outputs/des_arb_cdc_top.svf
+
+SVF files produced:
+  /home/ICer/work/des_arb_cdc_flow_20261125/formality_svf/
+    svf.txt
+1

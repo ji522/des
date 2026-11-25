@@ -2,7 +2,7 @@
 
 日期：2026-11-24  
 工具：VCS O-2018.09-SP2（CentOS7 VM）；DC/PT/Formality O-2018.06-SP1  
-结论：VCS 全量回归 **13/13 PASS**（原 10 组 + 新增 3 组：standalone / corner / DES 集成）；DC/PT/Formality 见 `asic_flow_20261124_arb/前端流程报告_20261124.md`
+结论：VCS 全量回归 **14/14 PASS**（原 10 组 + 新增 4 组：standalone / corner / DES 集成 / 多时钟 CDC）；单时钟与多时钟两版 DC/PT/Formality 见 `asic_flow_20261124_arb/` 与 `asic_flow_20261125_arb_cdc/`
 
 ---
 
@@ -71,7 +71,7 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 
 ### 3.4 全量回归
 
-`verify/vcs/run_all_vcs.sh`：**PASS=13 FAIL=0**（新增 t11_arb、t12_arb_soc、t13_arb_corner）。
+`verify/vcs/run_all_vcs.sh`：**PASS=14 FAIL=0**（新增 t11_arb、t12_arb_soc、t13_arb_corner、t14_arb_cdc）。
 
 ### 3.5 SVA（bind 到 `axis_arb2`，`verify/sv/axis_arb_check.sv`）
 
@@ -112,6 +112,17 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 - 100MHz / 250MHz 都是干净的单角 setup/hold 结果；仍不是签核：typical 单角、理想时钟、WLM、pre-CTS、无 DFT/P&R。
 - 若统一按 2.0ns IO 预算，250MHz 还剩 2 条 `awaddr[8]→awready` / `araddr[8]→arready` 组合路径（约 −0.25/−0.19ns）；分层预算已明确写出，不藏。
 
+### 3.7 多时钟版本（`des_arb_cdc_top`，2026-11-25）
+
+详细报告：`asic_flow_20261125_arb_cdc/多时钟前端流程报告_20261125.md`
+
+- 两路输入分别在 `wclk0=100MHz`、`wclk1=142.8MHz`，经 65 位 `async_axis_fifo`（`{tlast,tdata}` 同字过域、show-ahead 同拍 refill）进 `clk=250MHz` 的仲裁 + DES。
+- `set_clock_groups -asynchronous`；每域独立 `reset_sync`；控制面仍是单 AXIL（`0x000`/`0x100`）。
+- VCS `t14_arb_cdc`：8 beats / 2 packets、TLAST 对齐，**全量 14/14 PASS**；功能覆盖 58.89%（单包路径，不做 100% 声明）。
+- DC/PT/Formality：**34,988 cells / 6,959 DFF / 62,580.22 µm²**；`clk` / `wclk0` / `wclk1` 三域 **setup 0 违例、hold 0 违例**；最差 reg2reg **+1.5054 ns @250MHz**；271 条 async removal（同沿悲观）；Formality **7,073/7,073**。
+- 面积：两个异步 FIFO 各 8,337 µm²（13.3%×2），两个同步 FIFO 各 7,771 µm²（12.4%×2），DES 24,196 µm²（38.7%）；**4 个 65×16 FIFO 合计 51.5%**。
+- 对比单时钟版：45,908 µm² / 4,663 DFF → 62,580 µm² / 6,959 DFF，面积 +36%、DFF +49%，主要来自两个异步 FIFO（各 1,040 FF）与复位/同步逻辑。
+
 ---
 
 ## 4. 边界（面试要主动说）
@@ -126,7 +137,7 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 
 ## 5. 面试 60 秒口径
 
-> “这是一个 2 通道 AXI4-Stream 仲裁器：每通道 16 深 FIFO，存 `{tlast, tdata}`；包级 round-robin，一旦开始一个包就锁到 TLAST，避免两路数据交错；输出反压时 FIFO 攒数，满了向上游反压，不丢数。控制面是单 AXI4-Lite 端口，内部 `0x000`/`0x100` 地址译码，有 almost_full 阈值、每通道 beats/packets/stall/blocked 计数器和中断。验证在 VCS 上跑：standalone 24 beats/6 packets 零错，corner 58 beats/10 packets、功能覆盖 100%，集成到 DES 后 8 beats/2 packets、TLAST 对齐，全量回归 13/13。综合用 Nangate45：100MHz 45,908 µm² / 4,663 DFF、reg2reg +7.44ns、setup/hold 0 违例；250MHz reg2reg +1.73ns、setup/hold 0 违例；Formality 4,773/4,773。两个 16×65 FIFO 占 34%，因为 Nangate45 没有 SRAM 宏。边界：typical 单角、理想时钟、pre-CTS、AXIL 控制面 IO 1.0ns 与 AXIS 数据面 2.0ns 的分层预算。”
+> “这是一个 2 通道 AXI4-Stream 仲裁器：每通道 16 深 FIFO，存 `{tlast, tdata}`；包级 round-robin，一旦开始一个包就锁到 TLAST，避免两路数据交错；输出反压时 FIFO 攒数，满了向上游反压，不丢数。控制面是单 AXI4-Lite 端口，内部 `0x000`/`0x100` 地址译码，有 almost_full 阈值、每通道 beats/packets/stall/blocked 计数器和中断。验证在 VCS 上跑：standalone 24 beats/6 packets 零错，corner 58 beats/10 packets、功能覆盖 100%，集成到 DES 后 8 beats/2 packets、TLAST 对齐，全量回归 14/14。综合用 Nangate45：单时钟版 100MHz 45,908 µm² / 4,663 DFF、reg2reg +7.44ns、setup/hold 0 违例；250MHz reg2reg +1.73ns、setup/hold 0 违例；Formality 4,773/4,773；两个 16×65 FIFO 占 34%。多时钟版把两路输入放到 100/142.8MHz 写域、250MHz 核心，62,580 µm² / 6,959 DFF，三域 setup/hold 0 违例，Formality 7,073/7,073，四个 65×16 FIFO 占 51.5%。边界：typical 单角、理想时钟、pre-CTS、控制面 IO 1.0ns 与数据面 2.0ns 分层预算，不是签核。”
 
 ---
 
@@ -137,9 +148,13 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 - `axis_arb_regs.v` — AXI4-Lite 控制/状态/计数器（读数据寄存器输出）
 - `axil_2to1_demux.v` — 单 AXIL 端口 → DES / 仲裁器地址译码（`0x000`/`0x100`）
 - `des_arb_soc_top.v` — 与 `des_soc_top` 集成（单 AXIL 控制端口）
+- `des_arb_cdc_top.v` — 多时钟版本：每通道异步 FIFO（100/142.8MHz 写域）+ 250MHz 核心
+- `cdc/async_axis_fifo.v` — 65 位异步 FIFO + show-ahead AXIS 适配
 - `verify/sv/axis_arb_check.sv` — SVA（A1–A11）+ covergroup（bind 到 axis_arb2）
 - `verify/tb_axis_arb2.v` — standalone 自检
 - `verify/tb_axis_arb_corner.v` — corner 用例（fixed / FIFO full / 单拍包）
-- `verify/tb_des_arb_soc.v` — DES 集成自检
-- `verify/vcs/run_axis_arb_vcs.sh` — 新增 3 组 VCS 回归
+- `verify/tb_des_arb_soc.v` — DES 集成自检（单时钟）
+- `verify/tb_des_arb_cdc_soc.v` — 多时钟 2 通道 + DES 自检
+- `verify/vcs/run_axis_arb_vcs.sh` — 单时钟 3 组 VCS 回归
+- `verify/vcs/run_arb_cdc_vcs.sh` — 多时钟 CDC 1 组 VCS 回归
 - `verify/vcs/run_all_vcs.sh` — 已并入第 11、12、13 组
