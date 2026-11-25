@@ -1,0 +1,475 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : des_arb_soc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 09:36:09 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: u_arb/u_fifo1/count_r_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[12]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
+  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
+  u_arb/u_fifo1/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
+  u_arb/u_fifo1/U5/ZN (NOR2_X1)                         0.0702     0.2268 r
+  u_arb/u_fifo1/empty (sync_fifo_DATA_W65_ADDR_W4_0)    0.0000     0.2268 r
+  U2241/ZN (INV_X1)                                     0.0296     0.2564 f
+  U2242/ZN (AND3_X1)                                    0.0407     0.2971 f
+  U2243/ZN (NOR2_X1)                                    0.0365     0.3337 r
+  U2244/Z (MUX2_X1)                                     0.1862     0.5199 r
+  U2245/ZN (INV_X1)                                     0.0924     0.6123 f
+  U2000/ZN (INV_X1)                                     0.1815     0.7937 r
+  U2012/ZN (OAI21_X1)                                   0.0851     0.8788 f
+  U2783/ZN (NAND4_X1)                                   0.0571     0.9359 r
+  U2789/ZN (AOI211_X1)                                  0.0331     0.9690 f
+  U2793/ZN (NAND4_X1)                                   0.0391     1.0081 r
+  s_axil_arb_rdata[12] (out)                            0.0021     1.0102 r
+  data arrival time                                                1.0102
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -1.0102
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.8898
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[13]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1400     0.1400 r
+  U2573/ZN (NAND2_X1)                                   0.0476     0.1876 f
+  U2574/ZN (OAI21_X1)                                   0.0582     0.2458 r
+  U2575/ZN (INV_X1)                                     0.0413     0.2871 f
+  U2592/ZN (NOR2_X1)                                    0.0540     0.3411 r
+  U2608/ZN (NAND2_X1)                                   0.0642     0.4052 f
+  U2609/ZN (INV_X1)                                     0.0724     0.4777 r
+  U2610/ZN (NAND2_X1)                                   0.0564     0.5341 f
+  U2611/ZN (INV_X1)                                     0.0820     0.6161 r
+  U2731/ZN (NAND2_X1)                                   0.0480     0.6641 f
+  U2732/ZN (INV_X1)                                     0.1343     0.7984 r
+  U2799/ZN (AOI22_X1)                                   0.0631     0.8615 f
+  U2800/ZN (OAI21_X1)                                   0.0393     0.9008 r
+  U2801/ZN (AOI211_X1)                                  0.0295     0.9303 f
+  U2802/ZN (NAND4_X1)                                   0.0360     0.9662 r
+  s_axil_arb_rdata[13] (out)                            0.0021     0.9683 r
+  data arrival time                                                0.9683
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9683
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9317
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[14]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1189     0.1189 f
+  U2573/ZN (NAND2_X1)                                   0.0538     0.1727 r
+  U2574/ZN (OAI21_X1)                                   0.0524     0.2251 f
+  U2575/ZN (INV_X1)                                     0.0529     0.2779 r
+  U2576/ZN (NAND2_X1)                                   0.0380     0.3160 f
+  U2615/ZN (INV_X1)                                     0.0277     0.3436 r
+  U2616/ZN (NAND2_X1)                                   0.0429     0.3865 f
+  U2617/ZN (INV_X1)                                     0.0793     0.4659 r
+  U2625/ZN (NAND2_X1)                                   0.0736     0.5394 f
+  U2738/ZN (NOR2_X1)                                    0.1614     0.7008 r
+  U2739/Z (CLKBUF_X1)                                   0.1141     0.8149 r
+  U2807/ZN (AOI22_X1)                                   0.0421     0.8571 f
+  U2810/ZN (NAND4_X1)                                   0.0410     0.8980 r
+  U2811/ZN (AOI211_X1)                                  0.0282     0.9263 f
+  U2812/ZN (AOI21_X1)                                   0.0383     0.9646 r
+  s_axil_arb_rdata[14] (out)                            0.0021     0.9667 r
+  data arrival time                                                0.9667
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9667
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9333
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[17]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1189     0.1189 f
+  U2573/ZN (NAND2_X1)                                   0.0538     0.1727 r
+  U2574/ZN (OAI21_X1)                                   0.0524     0.2251 f
+  U2575/ZN (INV_X1)                                     0.0529     0.2779 r
+  U2576/ZN (NAND2_X1)                                   0.0380     0.3160 f
+  U2615/ZN (INV_X1)                                     0.0277     0.3436 r
+  U2616/ZN (NAND2_X1)                                   0.0429     0.3865 f
+  U2617/ZN (INV_X1)                                     0.0793     0.4659 r
+  U2625/ZN (NAND2_X1)                                   0.0736     0.5394 f
+  U2738/ZN (NOR2_X1)                                    0.1614     0.7008 r
+  U2739/Z (CLKBUF_X1)                                   0.1141     0.8149 r
+  U2836/ZN (AOI22_X1)                                   0.0494     0.8644 f
+  U2837/ZN (NAND4_X1)                                   0.0416     0.9060 r
+  U2838/ZN (AOI211_X1)                                  0.0280     0.9340 f
+  U2839/ZN (NOR2_X1)                                    0.0305     0.9645 r
+  s_axil_arb_rdata[17] (out)                            0.0021     0.9665 r
+  data arrival time                                                0.9665
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9665
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9335
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[16]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1400     0.1400 r
+  U2573/ZN (NAND2_X1)                                   0.0476     0.1876 f
+  U2574/ZN (OAI21_X1)                                   0.0582     0.2458 r
+  U2575/ZN (INV_X1)                                     0.0413     0.2871 f
+  U2592/ZN (NOR2_X1)                                    0.0540     0.3411 r
+  U2608/ZN (NAND2_X1)                                   0.0642     0.4052 f
+  U2609/ZN (INV_X1)                                     0.0724     0.4777 r
+  U2610/ZN (NAND2_X1)                                   0.0564     0.5341 f
+  U2611/ZN (INV_X1)                                     0.0820     0.6161 r
+  U2731/ZN (NAND2_X1)                                   0.0480     0.6641 f
+  U2732/ZN (INV_X1)                                     0.1343     0.7984 r
+  U2827/ZN (AOI22_X1)                                   0.0631     0.8615 f
+  U2828/ZN (OAI21_X1)                                   0.0393     0.9008 r
+  U2829/ZN (AOI211_X1)                                  0.0295     0.9303 f
+  U2830/ZN (NAND4_X1)                                   0.0327     0.9630 r
+  s_axil_arb_rdata[16] (out)                            0.0021     0.9651 r
+  data arrival time                                                0.9651
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9651
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9349
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[8]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1189     0.1189 f
+  U2573/ZN (NAND2_X1)                                   0.0538     0.1727 r
+  U2574/ZN (OAI21_X1)                                   0.0524     0.2251 f
+  U2575/ZN (INV_X1)                                     0.0529     0.2779 r
+  U2576/ZN (NAND2_X1)                                   0.0380     0.3160 f
+  U2615/ZN (INV_X1)                                     0.0277     0.3436 r
+  U2616/ZN (NAND2_X1)                                   0.0429     0.3865 f
+  U2617/ZN (INV_X1)                                     0.0793     0.4659 r
+  U2625/ZN (NAND2_X1)                                   0.0736     0.5394 f
+  U2738/ZN (NOR2_X1)                                    0.1614     0.7008 r
+  U2739/Z (CLKBUF_X1)                                   0.1141     0.8149 r
+  U2742/ZN (AOI22_X1)                                   0.0421     0.8571 f
+  U2748/ZN (NAND4_X1)                                   0.0391     0.8962 r
+  U2749/ZN (AOI211_X1)                                  0.0281     0.9243 f
+  U2750/ZN (AOI21_X1)                                   0.0383     0.9626 r
+  s_axil_arb_rdata[8] (out)                             0.0021     0.9647 r
+  data arrival time                                                0.9647
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9647
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9353
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[29]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1400     0.1400 r
+  U2573/ZN (NAND2_X1)                                   0.0476     0.1876 f
+  U2574/ZN (OAI21_X1)                                   0.0582     0.2458 r
+  U2575/ZN (INV_X1)                                     0.0413     0.2871 f
+  U2592/ZN (NOR2_X1)                                    0.0540     0.3411 r
+  U2608/ZN (NAND2_X1)                                   0.0642     0.4052 f
+  U2609/ZN (INV_X1)                                     0.0724     0.4777 r
+  U2610/ZN (NAND2_X1)                                   0.0564     0.5341 f
+  U2611/ZN (INV_X1)                                     0.0820     0.6161 r
+  U2731/ZN (NAND2_X1)                                   0.0480     0.6641 f
+  U2732/ZN (INV_X1)                                     0.1343     0.7984 r
+  U2935/ZN (AOI22_X1)                                   0.0524     0.8508 f
+  U2938/ZN (NAND4_X1)                                   0.0427     0.8935 r
+  U2939/ZN (AOI211_X1)                                  0.0283     0.9218 f
+  U2940/ZN (NOR2_X1)                                    0.0316     0.9534 r
+  s_axil_arb_rdata[29] (out)                            0.0021     0.9554 r
+  data arrival time                                                0.9554
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9554
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9446
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[24]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1400     0.1400 r
+  U2573/ZN (NAND2_X1)                                   0.0476     0.1876 f
+  U2574/ZN (OAI21_X1)                                   0.0582     0.2458 r
+  U2575/ZN (INV_X1)                                     0.0413     0.2871 f
+  U2592/ZN (NOR2_X1)                                    0.0540     0.3411 r
+  U2608/ZN (NAND2_X1)                                   0.0642     0.4052 f
+  U2609/ZN (INV_X1)                                     0.0724     0.4777 r
+  U2610/ZN (NAND2_X1)                                   0.0564     0.5341 f
+  U2611/ZN (INV_X1)                                     0.0820     0.6161 r
+  U2731/ZN (NAND2_X1)                                   0.0480     0.6641 f
+  U2732/ZN (INV_X1)                                     0.1343     0.7984 r
+  U2891/ZN (AOI22_X1)                                   0.0524     0.8508 f
+  U2894/ZN (NAND4_X1)                                   0.0396     0.8904 r
+  U2896/ZN (NOR2_X1)                                    0.0228     0.9132 f
+  U2898/ZN (AOI21_X1)                                   0.0302     0.9434 r
+  s_axil_arb_rdata[24] (out)                            0.0021     0.9455 r
+  data arrival time                                                0.9455
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9455
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9545
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[20]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1400     0.1400 r
+  U2573/ZN (NAND2_X1)                                   0.0476     0.1876 f
+  U2574/ZN (OAI21_X1)                                   0.0582     0.2458 r
+  U2575/ZN (INV_X1)                                     0.0413     0.2871 f
+  U2592/ZN (NOR2_X1)                                    0.0540     0.3411 r
+  U2608/ZN (NAND2_X1)                                   0.0642     0.4052 f
+  U2609/ZN (INV_X1)                                     0.0724     0.4777 r
+  U2610/ZN (NAND2_X1)                                   0.0564     0.5341 f
+  U2611/ZN (INV_X1)                                     0.0820     0.6161 r
+  U2731/ZN (NAND2_X1)                                   0.0480     0.6641 f
+  U2732/ZN (INV_X1)                                     0.1343     0.7984 r
+  U2857/ZN (AOI22_X1)                                   0.0523     0.8507 f
+  U2861/ZN (NAND4_X1)                                   0.0367     0.8874 r
+  U2862/ZN (NOR2_X1)                                    0.0241     0.9115 f
+  U2864/ZN (AOI21_X1)                                   0.0299     0.9414 r
+  s_axil_arb_rdata[20] (out)                            0.0021     0.9435 r
+  data arrival time                                                0.9435
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9435
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9565
+
+
+  Startpoint: u_arb_regs/rvalid_r_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_axil_arb_rdata[23]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/rvalid_r_reg/CK (DFFR_X1)                  0.0000 #   0.0000 r
+  u_arb_regs/rvalid_r_reg/QN (DFFR_X1)                  0.1400     0.1400 r
+  U2573/ZN (NAND2_X1)                                   0.0476     0.1876 f
+  U2574/ZN (OAI21_X1)                                   0.0582     0.2458 r
+  U2575/ZN (INV_X1)                                     0.0413     0.2871 f
+  U2592/ZN (NOR2_X1)                                    0.0540     0.3411 r
+  U2608/ZN (NAND2_X1)                                   0.0642     0.4052 f
+  U2609/ZN (INV_X1)                                     0.0724     0.4777 r
+  U2610/ZN (NAND2_X1)                                   0.0564     0.5341 f
+  U2611/ZN (INV_X1)                                     0.0820     0.6161 r
+  U2731/ZN (NAND2_X1)                                   0.0480     0.6641 f
+  U2732/ZN (INV_X1)                                     0.1343     0.7984 r
+  U2886/ZN (AOI22_X1)                                   0.0605     0.8589 f
+  U2888/ZN (AND4_X1)                                    0.0517     0.9106 f
+  U2889/ZN (NAND4_X1)                                   0.0298     0.9404 r
+  s_axil_arb_rdata[23] (out)                            0.0021     0.9425 r
+  data arrival time                                                0.9425
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  output external delay                                -2.0000     7.9000
+  data required time                                               7.9000
+  --------------------------------------------------------------------------
+  data required time                                               7.9000
+  data arrival time                                               -0.9425
+  --------------------------------------------------------------------------
+  slack (MET)                                                      6.9575
+
+
+1

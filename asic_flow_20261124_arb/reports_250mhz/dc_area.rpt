@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : area
+Design : des_arb_soc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 09:40:09 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'des_arb_soc_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/ICer/work/des_arb_flow_20261124_250/pdk/nangate45/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                         1009
+Number of nets:                         29354
+Number of cells:                        26958
+Number of combinational cells:          22322
+Number of sequential cells:              4633
+Number of macros/black boxes:               0
+Number of buf/inv:                       4585
+Number of references:                      50
+
+Combinational area:              23795.296234
+Buf/Inv area:                     2542.428020
+Noncombinational area:           22339.743828
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 46135.040063
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------------
+des_arb_soc_top                   46135.0401    100.0   2968.2940   3454.8081  0.0000  des_arb_soc_top
+u_arb/u_fifo0                      7765.6039     16.8   2993.5641   4772.0398  0.0000  sync_fifo_DATA_W65_ADDR_W4_1
+u_arb/u_fifo1                      7767.4659     16.8   2995.4261   4772.0398  0.0000  sync_fifo_DATA_W65_ADDR_W4_0
+u_des/u_axis/u_des                24178.8681     52.4  14838.0121   9340.8561  0.0000  des_pipeline_fb
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------------
+Total                                                  23795.2962  22339.7438  0.0000
+
+1

@@ -1,0 +1,18 @@
+****************************************
+Report : clock
+Design : des_arb_soc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 09:40:13 2026
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock          Period   Waveform            Attrs     Sources        Voltage Config
+-----------------------------------------------------------------------------------
+clk              4.00   {0 2}                         {clk}
+
+1

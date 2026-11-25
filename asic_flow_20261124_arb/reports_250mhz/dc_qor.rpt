@@ -1,0 +1,84 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : qor
+Design : des_arb_soc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 09:40:09 2026
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              12.00
+  Critical Path Length:          0.86
+  Critical Path Slack:          -0.96
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:        -31.83
+  No. of Violating Paths:       52.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          3
+  Hierarchical Port Count:        511
+  Leaf Cell Count:              26953
+  Buf/Inv Cell Count:            4585
+  Buf Cell Count:                 153
+  Inv Cell Count:                4432
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     22322
+  Sequential Cell Count:         4631
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    23795.296234
+  Noncombinational Area: 22339.743828
+  Buf/Inv Area:           2542.428020
+  Total Buffer Area:           150.56
+  Total Inverter Area:        2391.87
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:             46135.040063
+  Design Area:           46135.040063
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         28867
+  Nets With Violations:             3
+  Max Trans Violations:             0
+  Max Cap Violations:               3
+  -----------------------------------
+
+
+  Hostname: IC_EDA
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    6.54
+  Logic Optimization:                 13.84
+  Mapping Optimization:               25.19
+  -----------------------------------------
+  Overall Compile Time:               86.69
+  Overall Compile Wall Clock Time:    91.81
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.96  TNS: 31.83  Number of Violating Paths: 52
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

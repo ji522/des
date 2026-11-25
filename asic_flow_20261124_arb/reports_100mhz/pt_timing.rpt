@@ -1,0 +1,442 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 100.0000
+	-max_paths 10
+	-sort_by slack
+Design : des_arb_soc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 09:38:22 2026
+****************************************
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[14]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 f
+  s_axil_arb_araddr[2] (in)              0.0020     2.0020 f
+  U2573/ZN (NAND2_X1)                    0.0296     2.0315 r
+  U2574/ZN (OAI21_X1)                    0.0524     2.0840 f
+  U2575/ZN (INV_X1)                      0.0529     2.1368 r
+  U2576/ZN (NAND2_X1)                    0.0380     2.1749 f
+  U2615/ZN (INV_X1)                      0.0277     2.2025 r
+  U2616/ZN (NAND2_X1)                    0.0429     2.2454 f
+  U2617/ZN (INV_X1)                      0.0793     2.3247 r
+  U2625/ZN (NAND2_X1)                    0.0736     2.3983 f
+  U2738/ZN (NOR2_X1)                     0.1614     2.5597 r
+  U2739/Z (CLKBUF_X1)                    0.1141     2.6738 r
+  U2807/ZN (AOI22_X1)                    0.0421     2.7160 f
+  U2810/ZN (NAND4_X1)                    0.0410     2.7569 r
+  U2811/ZN (AOI211_X1)                   0.0282     2.7852 f
+  U2812/ZN (AOI21_X1)                    0.0383     2.8235 r
+  s_axil_arb_rdata[14] (out)             0.0021     2.8255 r
+  data arrival time                                 2.8255
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.8255
+  ---------------------------------------------------------------
+  slack (MET)                                       5.0745
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[17]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 f
+  s_axil_arb_araddr[2] (in)              0.0020     2.0020 f
+  U2573/ZN (NAND2_X1)                    0.0296     2.0315 r
+  U2574/ZN (OAI21_X1)                    0.0524     2.0840 f
+  U2575/ZN (INV_X1)                      0.0529     2.1368 r
+  U2576/ZN (NAND2_X1)                    0.0380     2.1749 f
+  U2615/ZN (INV_X1)                      0.0277     2.2025 r
+  U2616/ZN (NAND2_X1)                    0.0429     2.2454 f
+  U2617/ZN (INV_X1)                      0.0793     2.3247 r
+  U2625/ZN (NAND2_X1)                    0.0736     2.3983 f
+  U2738/ZN (NOR2_X1)                     0.1614     2.5597 r
+  U2739/Z (CLKBUF_X1)                    0.1141     2.6738 r
+  U2836/ZN (AOI22_X1)                    0.0494     2.7233 f
+  U2837/ZN (NAND4_X1)                    0.0416     2.7649 r
+  U2838/ZN (AOI211_X1)                   0.0280     2.7928 f
+  U2839/ZN (NOR2_X1)                     0.0305     2.8233 r
+  s_axil_arb_rdata[17] (out)             0.0021     2.8254 r
+  data arrival time                                 2.8254
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.8254
+  ---------------------------------------------------------------
+  slack (MET)                                       5.0746
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[8]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 f
+  s_axil_arb_araddr[2] (in)              0.0020     2.0020 f
+  U2573/ZN (NAND2_X1)                    0.0296     2.0315 r
+  U2574/ZN (OAI21_X1)                    0.0524     2.0840 f
+  U2575/ZN (INV_X1)                      0.0529     2.1368 r
+  U2576/ZN (NAND2_X1)                    0.0380     2.1749 f
+  U2615/ZN (INV_X1)                      0.0277     2.2025 r
+  U2616/ZN (NAND2_X1)                    0.0429     2.2454 f
+  U2617/ZN (INV_X1)                      0.0793     2.3247 r
+  U2625/ZN (NAND2_X1)                    0.0736     2.3983 f
+  U2738/ZN (NOR2_X1)                     0.1614     2.5597 r
+  U2739/Z (CLKBUF_X1)                    0.1141     2.6738 r
+  U2742/ZN (AOI22_X1)                    0.0421     2.7160 f
+  U2748/ZN (NAND4_X1)                    0.0391     2.7551 r
+  U2749/ZN (AOI211_X1)                   0.0281     2.7832 f
+  U2750/ZN (AOI21_X1)                    0.0383     2.8215 r
+  s_axil_arb_rdata[8] (out)              0.0021     2.8235 r
+  data arrival time                                 2.8235
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.8235
+  ---------------------------------------------------------------
+  slack (MET)                                       5.0764
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[13]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 f
+  s_axil_arb_araddr[2] (in)              0.0020     2.0020 f
+  U2573/ZN (NAND2_X1)                    0.0296     2.0315 r
+  U2574/ZN (OAI21_X1)                    0.0524     2.0840 f
+  U2575/ZN (INV_X1)                      0.0529     2.1368 r
+  U2576/ZN (NAND2_X1)                    0.0380     2.1749 f
+  U2615/ZN (INV_X1)                      0.0277     2.2025 r
+  U2616/ZN (NAND2_X1)                    0.0429     2.2454 f
+  U2617/ZN (INV_X1)                      0.0793     2.3247 r
+  U2625/ZN (NAND2_X1)                    0.0736     2.3983 f
+  U2738/ZN (NOR2_X1)                     0.1614     2.5597 r
+  U2739/Z (CLKBUF_X1)                    0.1141     2.6738 r
+  U2799/ZN (AOI22_X1)                    0.0421     2.7159 f
+  U2800/ZN (OAI21_X1)                    0.0393     2.7552 r
+  U2801/ZN (AOI211_X1)                   0.0295     2.7846 f
+  U2802/ZN (NAND4_X1)                    0.0360     2.8206 r
+  s_axil_arb_rdata[13] (out)             0.0021     2.8227 r
+  data arrival time                                 2.8227
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.8227
+  ---------------------------------------------------------------
+  slack (MET)                                       5.0773
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[16]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 r
+  s_axil_arb_araddr[2] (in)              0.0026     2.0026 r
+  U2573/ZN (NAND2_X1)                    0.0272     2.0299 f
+  U2574/ZN (OAI21_X1)                    0.0582     2.0880 r
+  U2575/ZN (INV_X1)                      0.0413     2.1293 f
+  U2592/ZN (NOR2_X1)                     0.0540     2.1833 r
+  U2608/ZN (NAND2_X1)                    0.0642     2.2475 f
+  U2609/ZN (INV_X1)                      0.0724     2.3199 r
+  U2610/ZN (NAND2_X1)                    0.0564     2.3763 f
+  U2611/ZN (INV_X1)                      0.0820     2.4583 r
+  U2731/ZN (NAND2_X1)                    0.0480     2.5063 f
+  U2732/ZN (INV_X1)                      0.1343     2.6406 r
+  U2827/ZN (AOI22_X1)                    0.0631     2.7038 f
+  U2828/ZN (OAI21_X1)                    0.0393     2.7430 r
+  U2829/ZN (AOI211_X1)                   0.0295     2.7725 f
+  U2830/ZN (NAND4_X1)                    0.0327     2.8052 r
+  s_axil_arb_rdata[16] (out)             0.0021     2.8073 r
+  data arrival time                                 2.8073
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.8073
+  ---------------------------------------------------------------
+  slack (MET)                                       5.0927
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[23]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 f
+  s_axil_arb_araddr[2] (in)              0.0020     2.0020 f
+  U2573/ZN (NAND2_X1)                    0.0296     2.0315 r
+  U2574/ZN (OAI21_X1)                    0.0524     2.0840 f
+  U2575/ZN (INV_X1)                      0.0529     2.1368 r
+  U2576/ZN (NAND2_X1)                    0.0380     2.1749 f
+  U2615/ZN (INV_X1)                      0.0277     2.2025 r
+  U2616/ZN (NAND2_X1)                    0.0429     2.2454 f
+  U2617/ZN (INV_X1)                      0.0793     2.3247 r
+  U2625/ZN (NAND2_X1)                    0.0736     2.3983 f
+  U2738/ZN (NOR2_X1)                     0.1614     2.5597 r
+  U2739/Z (CLKBUF_X1)                    0.1141     2.6738 r
+  U2887/ZN (AOI22_X1)                    0.0397     2.7135 f
+  U2888/ZN (AND4_X1)                     0.0533     2.7667 f
+  U2889/ZN (NAND4_X1)                    0.0298     2.7966 r
+  s_axil_arb_rdata[23] (out)             0.0021     2.7986 r
+  data arrival time                                 2.7986
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.7986
+  ---------------------------------------------------------------
+  slack (MET)                                       5.1014
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[29]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 r
+  s_axil_arb_araddr[2] (in)              0.0026     2.0026 r
+  U2573/ZN (NAND2_X1)                    0.0272     2.0299 f
+  U2574/ZN (OAI21_X1)                    0.0582     2.0880 r
+  U2575/ZN (INV_X1)                      0.0413     2.1293 f
+  U2592/ZN (NOR2_X1)                     0.0540     2.1833 r
+  U2608/ZN (NAND2_X1)                    0.0642     2.2475 f
+  U2609/ZN (INV_X1)                      0.0724     2.3199 r
+  U2610/ZN (NAND2_X1)                    0.0564     2.3763 f
+  U2611/ZN (INV_X1)                      0.0820     2.4583 r
+  U2731/ZN (NAND2_X1)                    0.0480     2.5063 f
+  U2732/ZN (INV_X1)                      0.1343     2.6406 r
+  U2935/ZN (AOI22_X1)                    0.0524     2.6930 f
+  U2938/ZN (NAND4_X1)                    0.0427     2.7358 r
+  U2939/ZN (AOI211_X1)                   0.0283     2.7640 f
+  U2940/ZN (NOR2_X1)                     0.0316     2.7956 r
+  s_axil_arb_rdata[29] (out)             0.0021     2.7977 r
+  data arrival time                                 2.7977
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.7977
+  ---------------------------------------------------------------
+  slack (MET)                                       5.1023
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[22]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 f
+  s_axil_arb_araddr[2] (in)              0.0020     2.0020 f
+  U2573/ZN (NAND2_X1)                    0.0296     2.0315 r
+  U2574/ZN (OAI21_X1)                    0.0524     2.0840 f
+  U2575/ZN (INV_X1)                      0.0529     2.1368 r
+  U2576/ZN (NAND2_X1)                    0.0380     2.1749 f
+  U2580/ZN (NOR2_X1)                     0.1351     2.3100 r
+  U2622/ZN (NAND2_X1)                    0.0654     2.3754 f
+  U2632/ZN (INV_X1)                      0.0868     2.4621 r
+  U2743/ZN (NAND2_X1)                    0.0466     2.5087 f
+  U2744/ZN (INV_X1)                      0.1361     2.6448 r
+  U2875/ZN (AOI22_X1)                    0.0524     2.6972 f
+  U2877/ZN (NAND4_X1)                    0.0411     2.7383 r
+  U2879/ZN (NOR2_X1)                     0.0230     2.7613 f
+  U2881/ZN (AOI21_X1)                    0.0302     2.7915 r
+  s_axil_arb_rdata[22] (out)             0.0021     2.7936 r
+  data arrival time                                 2.7936
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.7936
+  ---------------------------------------------------------------
+  slack (MET)                                       5.1064
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[20]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 f
+  s_axil_arb_araddr[2] (in)              0.0020     2.0020 f
+  U2573/ZN (NAND2_X1)                    0.0296     2.0315 r
+  U2574/ZN (OAI21_X1)                    0.0524     2.0840 f
+  U2575/ZN (INV_X1)                      0.0529     2.1368 r
+  U2576/ZN (NAND2_X1)                    0.0380     2.1749 f
+  U2580/ZN (NOR2_X1)                     0.1351     2.3100 r
+  U2622/ZN (NAND2_X1)                    0.0654     2.3754 f
+  U2632/ZN (INV_X1)                      0.0868     2.4621 r
+  U2743/ZN (NAND2_X1)                    0.0466     2.5087 f
+  U2744/ZN (INV_X1)                      0.1361     2.6448 r
+  U2858/ZN (AOI22_X1)                    0.0524     2.6972 f
+  U2861/ZN (NAND4_X1)                    0.0383     2.7355 r
+  U2862/ZN (NOR2_X1)                     0.0241     2.7596 f
+  U2864/ZN (AOI21_X1)                    0.0299     2.7895 r
+  s_axil_arb_rdata[20] (out)             0.0021     2.7916 r
+  data arrival time                                 2.7916
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.7916
+  ---------------------------------------------------------------
+  slack (MET)                                       5.1084
+
+
+  Startpoint: s_axil_arb_araddr[2]
+               (input port clocked by clk)
+  Endpoint: s_axil_arb_rdata[24]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   2.0000     2.0000 r
+  s_axil_arb_araddr[2] (in)              0.0026     2.0026 r
+  U2573/ZN (NAND2_X1)                    0.0272     2.0299 f
+  U2574/ZN (OAI21_X1)                    0.0582     2.0880 r
+  U2575/ZN (INV_X1)                      0.0413     2.1293 f
+  U2592/ZN (NOR2_X1)                     0.0540     2.1833 r
+  U2608/ZN (NAND2_X1)                    0.0642     2.2475 f
+  U2609/ZN (INV_X1)                      0.0724     2.3199 r
+  U2610/ZN (NAND2_X1)                    0.0564     2.3763 f
+  U2611/ZN (INV_X1)                      0.0820     2.4583 r
+  U2731/ZN (NAND2_X1)                    0.0480     2.5063 f
+  U2732/ZN (INV_X1)                      0.1343     2.6406 r
+  U2891/ZN (AOI22_X1)                    0.0524     2.6930 f
+  U2894/ZN (NAND4_X1)                    0.0396     2.7327 r
+  U2896/ZN (NOR2_X1)                     0.0228     2.7554 f
+  U2898/ZN (AOI21_X1)                    0.0302     2.7857 r
+  s_axil_arb_rdata[24] (out)             0.0021     2.7877 r
+  data arrival time                                 2.7877
+
+  clock clk (rise edge)                 10.0000    10.0000
+  clock network delay (ideal)            0.0000    10.0000
+  clock reconvergence pessimism          0.0000    10.0000
+  clock uncertainty                     -0.1000     9.9000
+  output external delay                 -2.0000     7.9000
+  data required time                                7.9000
+  ---------------------------------------------------------------
+  data required time                                7.9000
+  data arrival time                                -2.7877
+  ---------------------------------------------------------------
+  slack (MET)                                       5.1123
+
+Warning: report_timing has satisfied the max_paths criteria. There are 6030 further endpoints which have paths of interest with slack less than 100.0000 that were not considered when generating this report. (UITE-502)
+
+1

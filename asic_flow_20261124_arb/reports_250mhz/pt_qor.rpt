@@ -1,0 +1,68 @@
+****************************************
+Report : qor
+Design : des_arb_soc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 09:40:13 2026
+****************************************
+
+  Timing Path Group '**async_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                    1.25
+  Critical Path Slack:                     2.70
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'clk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           12
+  Critical Path Length:                    2.86
+  Critical Path Slack:                    -0.96
+  Total Negative Slack:                  -31.83
+  No. of Violating Paths:                    52
+  ---------------------------------------------
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.31
+  Critical Path Slack:                    -0.10
+  Total Negative Slack:                  -15.48
+  No. of Violating Paths:                   184
+  ---------------------------------------------
+
+  Timing Path Group 'clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.11
+  Critical Path Slack:                     0.05
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                    3
+  Hierarchical Port Count:                  511
+  Leaf Cell Count:                        26953
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:                   0.00
+  Total cell area:                     46134.44
+  Design Area:                         46134.44
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           103398
+  max_capacitance Count:                      3
+  max_capacitance Cost:                   -7.73
+  Total DRC Cost:                         -7.73
+  ---------------------------------------------
+
+1

@@ -1,8 +1,8 @@
 # 2 通道 AXI4-Stream 仲裁/交换器 + DES SoC 集成
 
 日期：2026-11-24  
-工具：VCS O-2018.09-SP2（CentOS7 VM）  
-结论：VCS 全量回归 **13/13 PASS**（原 10 组 + 新增 3 组：standalone / corner / DES 集成）
+工具：VCS O-2018.09-SP2（CentOS7 VM）；DC/PT/Formality O-2018.06-SP1  
+结论：VCS 全量回归 **13/13 PASS**（原 10 组 + 新增 3 组：standalone / corner / DES 集成）；DC/PT/Formality 见 `asic_flow_20261124_arb/前端流程报告_20261124.md`
 
 ---
 
@@ -88,6 +88,24 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 
 三组用例（standalone / corner / 集成）均未出现 `[ARB A*]` 断言失败。
 
+### 3.6 DC / PT / Formality（2026-11-24）
+
+详细报告：`asic_flow_20261124_arb/前端流程报告_20261124.md`
+
+| 项目 | 100MHz（10ns） | 250MHz（4ns） |
+|---|---|---|
+| Cells / DFF | 26,467 / 4,633 | 26,958 / 4,633 |
+| Total area | 45,659.70 µm² | 46,135.04 µm² |
+| PT clk setup 违例 | 0 | 52（`s_axil_arb_rdata[*]`，WNS −0.96ns） |
+| PT reg2reg 最差 slack | +7.4234 ns | +1.5279 ns（MET） |
+| PT clk hold 违例 | 0 | 0 |
+| PT async removal | 227 条（同沿悲观） | 184 条（同沿悲观） |
+| Formality | 4,784/4,784 | 4,784/4,784 |
+
+- 两个 16×65 FIFO 各 7,777 µm²，合计 **15,554 µm² / 34%**：Nangate45 无 SRAM 宏，小 FIFO 只能堆触发器。
+- 250MHz 的 52 条违例在 **AXIL 读数据 mux → 输出端口**，不是 DES 数据通路；修法是给 `s_axil_rdata` 加一级寄存器输出，或放宽 IO 预算。
+- 100MHz 是干净的单角结果；两版都不是签核：typical 单角、理想时钟、WLM、pre-CTS、无 DFT/P&R。
+
 ---
 
 ## 4. 边界（面试要主动说）
@@ -102,7 +120,7 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 
 ## 5. 面试 60 秒口径
 
-> “这是一个 2 通道 AXI4-Stream 仲裁器：每通道 16 深 FIFO，存 `{tlast, tdata}`；包级 round-robin，一旦开始一个包就锁到 TLAST，避免两路数据交错；输出反压时 FIFO 攒数，满了向上游反压，不丢数。控制面是 AXI4-Lite，有 almost_full 阈值、每通道 beats/packets/stall/blocked 计数器和中断。验证在 VCS 上跑：standalone 24 beats/6 packets 零错，集成到 DES 后 8 beats/2 packets、TLAST 对齐，全量回归 12/12。”
+> “这是一个 2 通道 AXI4-Stream 仲裁器：每通道 16 深 FIFO，存 `{tlast, tdata}`；包级 round-robin，一旦开始一个包就锁到 TLAST，避免两路数据交错；输出反压时 FIFO 攒数，满了向上游反压，不丢数。控制面是 AXI4-Lite，有 almost_full 阈值、每通道 beats/packets/stall/blocked 计数器和中断。验证在 VCS 上跑：standalone 24 beats/6 packets 零错，corner 58 beats/10 packets、功能覆盖 100%，集成到 DES 后 8 beats/2 packets、TLAST 对齐，全量回归 13/13。综合用 Nangate45：100MHz 下 45,660 µm² / 4,633 DFF、setup/hold 0 违例，Formality 4,784/4,784；250MHz reg2reg +1.53ns，但 AXIL 读数据输出 mux 有 52 条 IO 违例。”
 
 ---
 

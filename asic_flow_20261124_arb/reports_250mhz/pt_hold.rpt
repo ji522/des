@@ -1,0 +1,327 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-slack_lesser_than 100.0000
+	-max_paths 10
+	-sort_by slack
+Design : des_arb_soc_top
+Version: O-2018.06-SP1
+Date   : Wed Nov 25 09:40:13 2026
+****************************************
+
+Warning: There is 1 invalid end point for constrained paths. (UITE-416)
+
+  Startpoint: u_des/rst_meta_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_des/rst_meta_r_reg/CK (DFFR_X1)                     0.0000     0.0000 r
+  u_des/rst_meta_r_reg/Q (DFFR_X1)                      0.0976     0.0976 f
+  u_des/rst_sync_r_reg/D (DFFR_X2)                      0.0085     0.1061 f
+  data arrival time                                                0.1061
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_des/rst_sync_r_reg/CK (DFFR_X2)                                0.0500 r
+  library hold time                                     0.0108     0.0608
+  data required time                                               0.0608
+  ------------------------------------------------------------------------------
+  data required time                                               0.0608
+  data arrival time                                               -0.1061
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0453
+
+
+  Startpoint: u_arb_regs/ar_addr_lat_reg[4]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb_regs/ar_addr_lat_reg[4]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/ar_addr_lat_reg[4]/CK (DFFR_X1)            0.0000     0.0000 r
+  u_arb_regs/ar_addr_lat_reg[4]/QN (DFFR_X1)            0.0777     0.0777 f
+  U4020/ZN (AOI22_X1)                                   0.0354     0.1131 r
+  u_arb_regs/ar_addr_lat_reg[4]/D (DFFR_X1)             0.0090     0.1220 r
+  data arrival time                                                0.1220
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb_regs/ar_addr_lat_reg[4]/CK (DFFR_X1)                       0.0500 r
+  library hold time                                     0.0224     0.0724
+  data required time                                               0.0724
+  ------------------------------------------------------------------------------
+  data required time                                               0.0724
+  data arrival time                                               -0.1220
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0497
+
+
+  Startpoint: u_arb/ch1_stall_o_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch1_stall_o_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/ch1_stall_o_reg[9]/CK (DFFR_X1)                 0.0000     0.0000 r
+  u_arb/ch1_stall_o_reg[9]/QN (DFFR_X1)                 0.0797     0.0797 r
+  U3639/ZN (OAI22_X1)                                   0.0247     0.1043 f
+  u_arb/ch1_stall_o_reg[9]/D (DFFR_X1)                  0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb/ch1_stall_o_reg[9]/CK (DFFR_X1)                            0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0510
+
+
+  Startpoint: u_arb/ch0_stall_o_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_stall_o_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/ch0_stall_o_reg[9]/CK (DFFR_X1)                 0.0000     0.0000 r
+  u_arb/ch0_stall_o_reg[9]/QN (DFFR_X1)                 0.0797     0.0797 r
+  U3899/ZN (OAI22_X1)                                   0.0247     0.1043 f
+  u_arb/ch0_stall_o_reg[9]/D (DFFR_X1)                  0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb/ch0_stall_o_reg[9]/CK (DFFR_X1)                            0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0510
+
+
+  Startpoint: u_arb/ch0_blocked_o_reg[1]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_blocked_o_reg[1]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/ch0_blocked_o_reg[1]/CK (DFFR_X1)               0.0000     0.0000 r
+  u_arb/ch0_blocked_o_reg[1]/QN (DFFR_X1)               0.0797     0.0797 r
+  U3846/ZN (OAI22_X1)                                   0.0247     0.1043 f
+  u_arb/ch0_blocked_o_reg[1]/D (DFFR_X1)                0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb/ch0_blocked_o_reg[1]/CK (DFFR_X1)                          0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0510
+
+
+  Startpoint: u_arb/ch0_stall_o_reg[5]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_stall_o_reg[5]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/ch0_stall_o_reg[5]/CK (DFFR_X1)                 0.0000     0.0000 r
+  u_arb/ch0_stall_o_reg[5]/QN (DFFR_X1)                 0.0797     0.0797 r
+  U3891/ZN (OAI22_X1)                                   0.0247     0.1043 f
+  u_arb/ch0_stall_o_reg[5]/D (DFFR_X1)                  0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb/ch0_stall_o_reg[5]/CK (DFFR_X1)                            0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0510
+
+
+  Startpoint: u_arb/ch0_stall_o_reg[7]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_stall_o_reg[7]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/ch0_stall_o_reg[7]/CK (DFFR_X1)                 0.0000     0.0000 r
+  u_arb/ch0_stall_o_reg[7]/QN (DFFR_X1)                 0.0797     0.0797 r
+  U3895/ZN (OAI22_X1)                                   0.0247     0.1043 f
+  u_arb/ch0_stall_o_reg[7]/D (DFFR_X1)                  0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb/ch0_stall_o_reg[7]/CK (DFFR_X1)                            0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0510
+
+
+  Startpoint: u_arb/ch1_stall_o_reg[3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch1_stall_o_reg[3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/ch1_stall_o_reg[3]/CK (DFFR_X1)                 0.0000     0.0000 r
+  u_arb/ch1_stall_o_reg[3]/QN (DFFR_X1)                 0.0797     0.0797 r
+  U3627/ZN (OAI22_X1)                                   0.0247     0.1043 f
+  u_arb/ch1_stall_o_reg[3]/D (DFFR_X1)                  0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb/ch1_stall_o_reg[3]/CK (DFFR_X1)                            0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0510
+
+
+  Startpoint: u_arb/ch0_stall_o_reg[3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_stall_o_reg[3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/ch0_stall_o_reg[3]/CK (DFFR_X1)                 0.0000     0.0000 r
+  u_arb/ch0_stall_o_reg[3]/QN (DFFR_X1)                 0.0797     0.0797 r
+  U3887/ZN (OAI22_X1)                                   0.0247     0.1043 f
+  u_arb/ch0_stall_o_reg[3]/D (DFFR_X1)                  0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_arb/ch0_stall_o_reg[3]/CK (DFFR_X1)                            0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0510
+
+
+  Startpoint: u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg/CK (DFFR_X1)
+                                                        0.0000     0.0000 r
+  u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg/QN (DFFR_X1)
+                                                        0.0797     0.0797 r
+  u_des/u_axis/u_des/U968/ZN (OAI22_X1)                 0.0247     0.1043 f
+  u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg/D (DFFR_X1)
+                                                        0.0085     0.1128 f
+  data arrival time                                                0.1128
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock reconvergence pessimism                         0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg/CK (DFFR_X1)   0.0500 r
+  library hold time                                     0.0118     0.0618
+  data required time                                               0.0618
+  ------------------------------------------------------------------------------
+  data required time                                               0.0618
+  data arrival time                                               -0.1128
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0511
+
+
+1
