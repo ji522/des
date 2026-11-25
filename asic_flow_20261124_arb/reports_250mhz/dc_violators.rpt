@@ -1,91 +1,11 @@
-Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
  
 ****************************************
 Report : constraint
         -all_violators
 Design : des_arb_soc_top
 Version: O-2018.06-SP1
-Date   : Wed Nov 25 09:40:09 2026
+Date   : Wed Nov 25 10:14:34 2026
 ****************************************
-
-
-   max_delay/setup ('clk' group)
-
-                             Required        Actual
-   Endpoint                 Path Delay     Path Delay        Slack
-   -----------------------------------------------------------------
-   s_axil_arb_rdata[20]         1.90           2.86 r        -0.96  (VIOLATED)
-   s_axil_arb_rdata[29]         1.90           2.86 r        -0.96  (VIOLATED)
-   s_axil_arb_rdata[17]         1.90           2.85 r        -0.95  (VIOLATED)
-   s_axil_arb_rdata[22]         1.90           2.85 r        -0.95  (VIOLATED)
-   s_axil_arb_rdata[1]          1.90           2.84 r        -0.94  (VIOLATED)
-   s_axil_arb_rdata[18]         1.90           2.84 r        -0.94  (VIOLATED)
-   s_axil_arb_rdata[21]         1.90           2.84 r        -0.94  (VIOLATED)
-   s_axil_arb_rdata[19]         1.90           2.84 r        -0.94  (VIOLATED)
-   s_axil_arb_rdata[8]          1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[24]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[7]          1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[23]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[25]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[16]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[13]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[26]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[3]          1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[15]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[27]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[28]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[30]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[31]         1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[0]          1.90           2.83 r        -0.93  (VIOLATED)
-   s_axil_arb_rdata[14]         1.90           2.72 r        -0.82  (VIOLATED)
-   s_axil_arb_rdata[4]          1.90           2.69 r        -0.79  (VIOLATED)
-   s_axil_arb_rdata[5]          1.90           2.69 r        -0.79  (VIOLATED)
-   s_axil_arb_rdata[6]          1.90           2.69 r        -0.79  (VIOLATED)
-   s_axil_arb_rdata[2]          1.90           2.68 r        -0.78  (VIOLATED)
-   s_axil_arb_rdata[10]         1.90           2.55 r        -0.65  (VIOLATED)
-   s_axil_arb_rdata[11]         1.90           2.55 r        -0.65  (VIOLATED)
-   s_axil_arb_rdata[9]          1.90           2.55 r        -0.65  (VIOLATED)
-   s_axil_arb_rdata[12]         1.90           2.55 r        -0.65  (VIOLATED)
-   u_arb/ch0_stall_o_reg[31]/D
-                                3.87           4.25 r        -0.38  (VIOLATED)
-   u_arb/ch0_stall_o_reg[30]/D
-                                3.87           4.22 f        -0.35  (VIOLATED)
-   u_arb/ch0_stall_o_reg[29]/D
-                                3.87           4.20 f        -0.33  (VIOLATED)
-   u_arb/ch0_stall_o_reg[28]/D
-                                3.87           4.17 f        -0.29  (VIOLATED)
-   u_arb/ch1_stall_o_reg[31]/D
-                                3.87           4.13 r        -0.27  (VIOLATED)
-   u_arb/ch0_beats_out_o_reg[31]/D
-                                3.87           4.13 r        -0.26  (VIOLATED)
-   u_arb/ch0_stall_o_reg[27]/D
-                                3.87           4.13 f        -0.26  (VIOLATED)
-   u_arb/ch1_stall_o_reg[30]/D
-                                3.87           4.10 f        -0.23  (VIOLATED)
-   u_arb/ch0_beats_out_o_reg[30]/D
-                                3.87           4.10 f        -0.22  (VIOLATED)
-   u_arb/ch0_stall_o_reg[26]/D
-                                3.87           4.06 r        -0.19  (VIOLATED)
-   u_arb/ch1_stall_o_reg[29]/D
-                                3.87           4.04 r        -0.17  (VIOLATED)
-   u_arb/ch0_beats_out_o_reg[29]/D
-                                3.87           4.03 r        -0.17  (VIOLATED)
-   u_arb/ch0_stall_o_reg[25]/D
-                                3.87           4.02 f        -0.14  (VIOLATED)
-   u_arb/ch1_stall_o_reg[28]/D
-                                3.87           4.00 f        -0.12  (VIOLATED)
-   u_arb/ch0_beats_out_o_reg[28]/D
-                                3.87           3.97 f        -0.10  (VIOLATED)
-   u_arb/ch0_stall_o_reg[24]/D
-                                3.87           3.95 r        -0.08  (VIOLATED)
-   u_arb/ch1_stall_o_reg[27]/D
-                                3.87           3.93 r        -0.06  (VIOLATED)
-   u_arb/ch0_beats_out_o_reg[27]/D
-                                3.87           3.93 f        -0.06  (VIOLATED)
-   u_arb/ch0_stall_o_reg[23]/D
-                                3.87           3.91 f        -0.05  (VIOLATED)
-   u_arb/ch0_stall_o_reg[22]/D
-                                3.87           3.89 f        -0.01  (VIOLATED)
 
 
    max_capacitance
@@ -93,13 +13,12 @@ Date   : Wed Nov 25 09:40:09 2026
                              Required        Actual
    Net                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
-   u_des/u_axis/u_des/n42      59.36          63.56          -4.20  (VIOLATED)
-   u_des/u_axis/u_des/n15367
-                              242.31         244.11          -1.80  (VIOLATED)
-   u_des/u_axis/u_des/n15366
-                              121.46         123.19          -1.73  (VIOLATED)
+   n1160                       60.27          63.29          -3.02  (VIOLATED)
+   u_des/rst_sync_r           120.85         121.41          -0.56  (VIOLATED)
+   u_des/u_axis/u_des/n15388
+                              121.46         121.94          -0.48  (VIOLATED)
 
    -----------------------------------------------------------------
-   Total                      3                  -7.73  
+   Total                      3                  -4.06  
 
 1

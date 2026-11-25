@@ -4,7 +4,7 @@ Report         : status
 Reference      : r:/WORK/des_arb_soc_top
 Implementation : i:/WORK/des_arb_soc_top
 Version        : O-2018.06-SP1
-Date           : Wed Nov 25 09:41:13 2026
+Date           : Wed Nov 25 10:15:50 2026
 **************************************************
 
 ***************************** Synopsys Auto Setup Summary ******************************
@@ -37,11 +37,11 @@ Verification SUCCEEDED
 ----------------------------------------------------------
  Reference design: r:/WORK/des_arb_soc_top
  Implementation design: i:/WORK/des_arb_soc_top
- 4784 Passing compare points
+ 4773 Passing compare points
 ----------------------------------------------------------------------------------------
 Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
 ----------------------------------------------------------------------------------------
-Passing (equivalent)           0       0       0       0     153    4631       0    4784
+Passing (equivalent)           0       0       0       0     112    4661       0    4773
 Failing (not equivalent)       0       0       0       0       0       0       0       0
 ****************************************************************************************
 1

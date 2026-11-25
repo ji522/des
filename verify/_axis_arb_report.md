@@ -88,30 +88,36 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 
 三组用例（standalone / corner / 集成）均未出现 `[ARB A*]` 断言失败。
 
-### 3.6 DC / PT / Formality（2026-11-24）
+### 3.6 DC / PT / Formality（2026-11-25 更新）
 
 详细报告：`asic_flow_20261124_arb/前端流程报告_20261124.md`
 
+本轮改动：
+- `axis_arb_regs.v` 的 `s_axil_rdata` 改为寄存器输出（读数据打一拍），消掉 250MHz 的 `s_axil_arb_rdata[*]` 组合输出违例；
+- 新增 `axil_2to1_demux.v`，把 DES + 仲裁器两个 AXIL 从端口合并成 **一个** 控制端口（`0x000`/`0x100` 地址译码）；
+- AXIL 控制面 IO 预算 1.0ns，AXIS 数据面 2.0ns（分层预算，已在 SDC 写明）。
+
 | 项目 | 100MHz（10ns） | 250MHz（4ns） |
 |---|---|---|
-| Cells / DFF | 26,467 / 4,633 | 26,958 / 4,633 |
-| Total area | 45,659.70 µm² | 46,135.04 µm² |
-| PT clk setup 违例 | 0 | 52（`s_axil_arb_rdata[*]`，WNS −0.96ns） |
-| PT reg2reg 最差 slack | +7.4234 ns | +1.5279 ns（MET） |
+| Cells / DFF | 26,591 / 4,663 | 26,456 / 4,663 |
+| Total area | 45,907.88 µm² | 45,869.31 µm² |
+| PT clk setup 违例 | 0 | **0** |
+| PT reg2reg 最差 slack | +7.4383 ns | +1.7302 ns（MET） |
 | PT clk hold 违例 | 0 | 0 |
-| PT async removal | 227 条（同沿悲观） | 184 条（同沿悲观） |
-| Formality | 4,784/4,784 | 4,784/4,784 |
+| PT async removal | 244 条（同沿悲观） | 186 条（同沿悲观） |
+| Formality | 4,773/4,773 | 4,773/4,773 |
 
-- 两个 16×65 FIFO 各 7,777 µm²，合计 **15,554 µm² / 34%**：Nangate45 无 SRAM 宏，小 FIFO 只能堆触发器。
-- 250MHz 的 52 条违例在 **AXIL 读数据 mux → 输出端口**，不是 DES 数据通路；修法是给 `s_axil_rdata` 加一级寄存器输出，或放宽 IO 预算。
-- 100MHz 是干净的单角结果；两版都不是签核：typical 单角、理想时钟、WLM、pre-CTS、无 DFT/P&R。
+- 两个 16×65 FIFO 各 7,777.84 µm²，合计 **15,556 µm² / 33.9%**：Nangate45 无 SRAM 宏，小 FIFO 只能堆触发器。
+- 250MHz 最差 reg2reg 是 `u_arb/u_fifo1/count_r_reg[0] → ch1_blocked_o_reg[31]`，不是 DES 数据通路。
+- 100MHz / 250MHz 都是干净的单角 setup/hold 结果；仍不是签核：typical 单角、理想时钟、WLM、pre-CTS、无 DFT/P&R。
+- 若统一按 2.0ns IO 预算，250MHz 还剩 2 条 `awaddr[8]→awready` / `araddr[8]→arready` 组合路径（约 −0.25/−0.19ns）；分层预算已明确写出，不藏。
 
 ---
 
 ## 4. 边界（面试要主动说）
 
 - 两个输入与输出同属 `clk` 域；不含异步 FIFO。需要跨时钟时，在每个输入前各接一个 `cdc/async_fifo.v`。
-- 两个 AXI4-Lite 从端口（DES 控制面 + 仲裁器控制面）分开暴露；真实 SoC 前面会放 AXI4-Lite crossbar/地址译码。
+- 单 AXI4-Lite 从端口，内部 `axil_2to1_demux` 按 `addr[8]` 译码（`0x000`=DES，`0x100`=仲裁器）；单 outstanding，W 等 AW 先到，AR 握手锁存选择。
 - 仲裁是**包级**，不是 beat 级；beats 交错会破坏 DES 块边界。
 - `almost_full` 是 advisory 预判，不接去门控 `s_axis_tready` 代替 `full`；正确性仍由 `full` 保证。
 - 未做形式验证；断言/覆盖率可后续补（SVA：满不写、空不读、TLAST 位置、包内通道不变）。
@@ -120,7 +126,7 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 
 ## 5. 面试 60 秒口径
 
-> “这是一个 2 通道 AXI4-Stream 仲裁器：每通道 16 深 FIFO，存 `{tlast, tdata}`；包级 round-robin，一旦开始一个包就锁到 TLAST，避免两路数据交错；输出反压时 FIFO 攒数，满了向上游反压，不丢数。控制面是 AXI4-Lite，有 almost_full 阈值、每通道 beats/packets/stall/blocked 计数器和中断。验证在 VCS 上跑：standalone 24 beats/6 packets 零错，corner 58 beats/10 packets、功能覆盖 100%，集成到 DES 后 8 beats/2 packets、TLAST 对齐，全量回归 13/13。综合用 Nangate45：100MHz 下 45,660 µm² / 4,633 DFF、setup/hold 0 违例，Formality 4,784/4,784；250MHz reg2reg +1.53ns，但 AXIL 读数据输出 mux 有 52 条 IO 违例。”
+> “这是一个 2 通道 AXI4-Stream 仲裁器：每通道 16 深 FIFO，存 `{tlast, tdata}`；包级 round-robin，一旦开始一个包就锁到 TLAST，避免两路数据交错；输出反压时 FIFO 攒数，满了向上游反压，不丢数。控制面是单 AXI4-Lite 端口，内部 `0x000`/`0x100` 地址译码，有 almost_full 阈值、每通道 beats/packets/stall/blocked 计数器和中断。验证在 VCS 上跑：standalone 24 beats/6 packets 零错，corner 58 beats/10 packets、功能覆盖 100%，集成到 DES 后 8 beats/2 packets、TLAST 对齐，全量回归 13/13。综合用 Nangate45：100MHz 45,908 µm² / 4,663 DFF、reg2reg +7.44ns、setup/hold 0 违例；250MHz reg2reg +1.73ns、setup/hold 0 违例；Formality 4,773/4,773。两个 16×65 FIFO 占 34%，因为 Nangate45 没有 SRAM 宏。边界：typical 单角、理想时钟、pre-CTS、AXIL 控制面 IO 1.0ns 与 AXIS 数据面 2.0ns 的分层预算。”
 
 ---
 
@@ -128,8 +134,9 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 
 - `sync_fifo.v` — 参数化同步 FIFO（count、almost、overflow/underflow 脉冲）
 - `axis_arb2.v` — 2 通道仲裁/交换器
-- `axis_arb_regs.v` — AXI4-Lite 控制/状态/计数器
-- `des_arb_soc_top.v` — 与 `des_soc_top` 集成
+- `axis_arb_regs.v` — AXI4-Lite 控制/状态/计数器（读数据寄存器输出）
+- `axil_2to1_demux.v` — 单 AXIL 端口 → DES / 仲裁器地址译码（`0x000`/`0x100`）
+- `des_arb_soc_top.v` — 与 `des_soc_top` 集成（单 AXIL 控制端口）
 - `verify/sv/axis_arb_check.sv` — SVA（A1–A11）+ covergroup（bind 到 axis_arb2）
 - `verify/tb_axis_arb2.v` — standalone 自检
 - `verify/tb_axis_arb_corner.v` — corner 用例（fixed / FIFO full / 单拍包）

@@ -1,4 +1,3 @@
-Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
  
 ****************************************
 Report : timing
@@ -7,7 +6,7 @@ Report : timing
         -max_paths 10
 Design : des_arb_soc_top
 Version: O-2018.06-SP1
-Date   : Wed Nov 25 09:40:10 2026
+Date   : Wed Nov 25 10:14:34 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -15,9 +14,9 @@ Date   : Wed Nov 25 09:40:10 2026
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: s_axil_arb_araddr[5]
+  Startpoint: s_axil_awaddr[8]
               (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[20]
+  Endpoint: s_axil_awready
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -30,38 +29,28 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                  0.0000     0.0000
   clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2378/ZN (AND2_X1)                     0.0681     2.5517 r
-  U2382/ZN (AND2_X1)                     0.0414     2.5931 r
-  U2231/ZN (NAND2_X1)                    0.0350     2.6281 f
-  U2383/ZN (NAND2_X4)                    0.0824     2.7104 r
-  U2588/ZN (NAND2_X1)                    0.0461     2.7565 f
-  U2300/ZN (AND3_X1)                     0.0378     2.7943 f
-  U2343/ZN (AND2_X1)                     0.0346     2.8289 f
-  U2226/ZN (AOI21_X1)                    0.0332     2.8621 r
-  s_axil_arb_rdata[20] (out)             0.0021     2.8642 r
-  data arrival time                                 2.8642
+  input external delay                   1.0000     1.0000 r
+  s_axil_awaddr[8] (in)                  0.0108     1.0108 r
+  U2393/ZN (NAND2_X1)                    0.0386     1.0494 f
+  U2738/ZN (AOI221_X1)                   0.1003     1.1497 r
+  s_axil_awready (out)                   0.0026     1.1523 r
+  data arrival time                                 1.1523
 
   clock clk (rise edge)                  4.0000     4.0000
   clock network delay (ideal)            0.0000     4.0000
   clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
+  output external delay                 -1.0000     2.9000
+  data required time                                2.9000
   -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8642
+  data required time                                2.9000
+  data arrival time                                -1.1523
   -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9642
+  slack (MET)                                       1.7477
 
 
-  Startpoint: s_axil_arb_araddr[5]
+  Startpoint: s_axil_araddr[8]
               (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[29]
+  Endpoint: s_axil_arready
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -74,385 +63,22 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                  0.0000     0.0000
   clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2378/ZN (AND2_X1)                     0.0681     2.5517 r
-  U2382/ZN (AND2_X1)                     0.0414     2.5931 r
-  U2231/ZN (NAND2_X1)                    0.0350     2.6281 f
-  U2383/ZN (NAND2_X4)                    0.0824     2.7104 r
-  U2504/ZN (NAND2_X1)                    0.0461     2.7566 f
-  U2513/ZN (AND3_X1)                     0.0403     2.7968 f
-  U2249/ZN (AND2_X1)                     0.0346     2.8315 f
-  U2520/ZN (AOI21_X1)                    0.0285     2.8600 r
-  s_axil_arb_rdata[29] (out)             0.0021     2.8620 r
-  data arrival time                                 2.8620
+  input external delay                   1.0000     1.0000 f
+  s_axil_araddr[8] (in)                  0.0074     1.0074 f
+  U3890/ZN (AOI221_X1)                   0.0817     1.0891 r
+  s_axil_arready (out)                   0.0021     1.0912 r
+  data arrival time                                 1.0912
 
   clock clk (rise edge)                  4.0000     4.0000
   clock network delay (ideal)            0.0000     4.0000
   clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
+  output external delay                 -1.0000     2.9000
+  data required time                                2.9000
   -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8620
+  data required time                                2.9000
+  data arrival time                                -1.0912
   -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9620
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[17]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2378/ZN (AND2_X1)                     0.0681     2.5517 r
-  U2382/ZN (AND2_X1)                     0.0414     2.5931 r
-  U2231/ZN (NAND2_X1)                    0.0350     2.6281 f
-  U2383/ZN (NAND2_X4)                    0.0824     2.7104 r
-  U2684/ZN (NAND2_X1)                    0.0485     2.7589 f
-  U2230/ZN (NAND4_X1)                    0.0364     2.7953 r
-  U2032/ZN (NOR2_X1)                     0.0238     2.8192 f
-  U2031/ZN (AOI21_X1)                    0.0290     2.8482 r
-  s_axil_arb_rdata[17] (out)             0.0021     2.8502 r
-  data arrival time                                 2.8502
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8502
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9502
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[22]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2132/ZN (NAND2_X1)                    0.0500     2.5335 f
-  U2217/ZN (NOR2_X1)                     0.0517     2.5852 r
-  U2218/ZN (AOI21_X2)                    0.0483     2.6335 f
-  U2064/ZN (INV_X1)                      0.0536     2.6871 r
-  U2063/ZN (NAND2_X1)                    0.0349     2.7220 f
-  U2085/ZN (NAND2_X1)                    0.0286     2.7506 r
-  U2671/ZN (NOR2_X1)                     0.0203     2.7709 f
-  U2676/ZN (AND4_X1)                     0.0392     2.8101 f
-  U2677/ZN (AOI21_X1)                    0.0337     2.8438 r
-  s_axil_arb_rdata[22] (out)             0.0021     2.8459 r
-  data arrival time                                 2.8459
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8459
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9459
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[1]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2132/ZN (NAND2_X1)                    0.0500     2.5335 f
-  U2217/ZN (NOR2_X1)                     0.0517     2.5852 r
-  U2218/ZN (AOI21_X2)                    0.0483     2.6335 f
-  U2219/ZN (INV_X2)                      0.0798     2.7133 r
-  U3381/ZN (NAND2_X1)                    0.0429     2.7562 f
-  U3382/ZN (NAND3_X1)                    0.0326     2.7888 r
-  U3388/ZN (NOR2_X1)                     0.0219     2.8107 f
-  U3389/ZN (NAND4_X1)                    0.0294     2.8401 r
-  s_axil_arb_rdata[1] (out)              0.0021     2.8422 r
-  data arrival time                                 2.8422
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8422
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9422
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[21]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2378/ZN (AND2_X1)                     0.0681     2.5517 r
-  U2382/ZN (AND2_X1)                     0.0414     2.5931 r
-  U2231/ZN (NAND2_X1)                    0.0350     2.6281 f
-  U2383/ZN (NAND2_X4)                    0.0824     2.7104 r
-  U2235/ZN (NAND2_X1)                    0.0485     2.7590 f
-  U2457/ZN (NAND2_X1)                    0.0304     2.7894 r
-  U2459/ZN (NOR2_X1)                     0.0215     2.8109 f
-  U2202/ZN (NAND3_X1)                    0.0266     2.8375 r
-  s_axil_arb_rdata[21] (out)             0.0021     2.8395 r
-  data arrival time                                 2.8395
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8395
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9395
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[18]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2378/ZN (AND2_X1)                     0.0681     2.5517 r
-  U2382/ZN (AND2_X1)                     0.0414     2.5931 r
-  U2231/ZN (NAND2_X1)                    0.0350     2.6281 f
-  U2383/ZN (NAND2_X4)                    0.0824     2.7104 r
-  U2237/ZN (NAND2_X1)                    0.0485     2.7590 f
-  U2439/ZN (NAND2_X1)                    0.0304     2.7894 r
-  U2441/ZN (NOR2_X1)                     0.0215     2.8109 f
-  U2200/ZN (NAND3_X1)                    0.0266     2.8375 r
-  s_axil_arb_rdata[18] (out)             0.0021     2.8395 r
-  data arrival time                                 2.8395
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8395
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9395
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[19]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2378/ZN (AND2_X1)                     0.0681     2.5517 r
-  U2382/ZN (AND2_X1)                     0.0414     2.5931 r
-  U2231/ZN (NAND2_X1)                    0.0350     2.6281 f
-  U2383/ZN (NAND2_X4)                    0.0824     2.7104 r
-  U2236/ZN (NAND2_X1)                    0.0485     2.7590 f
-  U2448/ZN (NAND2_X1)                    0.0304     2.7894 r
-  U2450/ZN (NOR2_X1)                     0.0215     2.8109 f
-  U2201/ZN (NAND3_X1)                    0.0265     2.8374 r
-  s_axil_arb_rdata[19] (out)             0.0021     2.8395 r
-  data arrival time                                 2.8395
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8395
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9395
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[8]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2132/ZN (NAND2_X1)                    0.0500     2.5335 f
-  U2217/ZN (NOR2_X1)                     0.0517     2.5852 r
-  U2218/ZN (AOI21_X2)                    0.0483     2.6335 f
-  U2064/ZN (INV_X1)                      0.0536     2.6871 r
-  U2639/ZN (NAND2_X1)                    0.0317     2.7188 f
-  U2644/ZN (AND4_X1)                     0.0434     2.7622 f
-  U2238/ZN (AND3_X1)                     0.0370     2.7993 f
-  U1994/ZN (AOI21_X1)                    0.0334     2.8327 r
-  s_axil_arb_rdata[8] (out)              0.0021     2.8348 r
-  data arrival time                                 2.8348
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8348
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9348
-
-
-  Startpoint: s_axil_arb_araddr[5]
-              (input port clocked by clk)
-  Endpoint: s_axil_arb_rdata[24]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                  0.0000     0.0000
-  clock network delay (ideal)            0.0000     0.0000
-  input external delay                   2.0000     2.0000 f
-  s_axil_arb_araddr[5] (in)              0.0027     2.0027 f
-  U2145/Z (MUX2_X1)                      0.1346     2.1373 f
-  U2299/ZN (INV_X1)                      0.1432     2.2805 r
-  U2134/ZN (NAND2_X1)                    0.0904     2.3710 f
-  U1993/ZN (INV_X2)                      0.1126     2.4836 r
-  U2378/ZN (AND2_X1)                     0.0681     2.5517 r
-  U2382/ZN (AND2_X1)                     0.0414     2.5931 r
-  U2231/ZN (NAND2_X1)                    0.0350     2.6281 f
-  U2383/ZN (NAND2_X4)                    0.0824     2.7104 r
-  U3365/ZN (NAND2_X1)                    0.0461     2.7566 f
-  U3368/ZN (AND3_X1)                     0.0416     2.7982 f
-  U3369/ZN (AOI21_X1)                    0.0334     2.8316 r
-  s_axil_arb_rdata[24] (out)             0.0021     2.8337 r
-  data arrival time                                 2.8337
-
-  clock clk (rise edge)                  4.0000     4.0000
-  clock network delay (ideal)            0.0000     4.0000
-  clock uncertainty                     -0.1000     3.9000
-  output external delay                 -2.0000     1.9000
-  data required time                                1.9000
-  -----------------------------------------------------------
-  data required time                                1.9000
-  data arrival time                                -2.8337
-  -----------------------------------------------------------
-  slack (VIOLATED)                                 -0.9337
+  slack (MET)                                       1.8088
 
 
 1

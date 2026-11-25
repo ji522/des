@@ -23,6 +23,7 @@ set rtl_files [list \
     [file join $RTL_DIR axis_arb2.v] \
     [file join $RTL_DIR axis_arb_regs.v] \
     [file join $RTL_DIR sync_fifo.v] \
+    [file join $RTL_DIR axil_2to1_demux.v] \
     [file join $RTL_DIR des_soc_top.v] \
     [file join $RTL_DIR des_axil_regs.v] \
     [file join $RTL_DIR des_axis_wrap.v] \

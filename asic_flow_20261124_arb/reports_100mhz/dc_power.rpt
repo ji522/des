@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : des_arb_soc_top
 Version: O-2018.06-SP1
-Date   : Wed Nov 25 09:36:08 2026
+Date   : Wed Nov 25 10:11:41 2026
 ****************************************
 
 
@@ -30,12 +30,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =   2.9853 mW   (98%)
-  Net Switching Power  =  48.2888 uW    (2%)
+  Cell Internal Power  =   3.2691 mW   (99%)
+  Net Switching Power  =  37.8722 uW    (1%)
                          ---------
-Total Dynamic Power    =   3.0336 mW  (100%)
+Total Dynamic Power    =   3.3070 mW  (100%)
 
-Cell Leakage Power     = 922.2721 uW
+Cell Leakage Power     = 925.4589 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -45,9 +45,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register       2.9673e+03            4.3806        3.6323e+05        3.3349e+03  (  84.30%)
+register       3.2578e+03            3.0790        3.6319e+05        3.6241e+03  (  85.63%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational     17.9784           43.9090        5.5904e+05          620.9265  (  15.70%)
+combinational     11.2568           34.7941        5.6227e+05          608.3167  (  14.37%)
 --------------------------------------------------------------------------------------------------
-Total          2.9853e+03 uW        48.2896 uW     9.2227e+05 nW     3.9559e+03 uW
+Total          3.2691e+03 uW        37.8731 uW     9.2546e+05 nW     4.2324e+03 uW
 1

@@ -13,7 +13,7 @@ mkdir -p "$ROOT"/{rtl,constraints,scripts,outputs,reports,logs,pdk/nangate45}
 
 # RTL
 cp "$PROJ"/des_arb_soc_top.v "$PROJ"/axis_arb2.v "$PROJ"/axis_arb_regs.v \
-   "$PROJ"/sync_fifo.v "$PROJ"/des_soc_top.v "$PROJ"/des_axil_regs.v \
+   "$PROJ"/axil_2to1_demux.v "$PROJ"/sync_fifo.v "$PROJ"/des_soc_top.v "$PROJ"/des_axil_regs.v \
    "$PROJ"/des_axis_wrap.v "$PROJ"/des_pipeline_fb.v "$PROJ"/des_pipe_round_fb.v \
    "$PROJ"/key_ram_gen.v "$PROJ"/sbox_funcs.v "$ROOT/rtl/"
 

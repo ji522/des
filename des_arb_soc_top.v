@@ -10,13 +10,11 @@
 //                                  └─> m_axis
 //
 // 控制面：
-//   s_axil_des_*  -> des_soc_top 内部 5 个寄存器（key/mode/enable/status/guard）
-//   s_axil_arb_*  -> axis_arb_regs（enable/mode/threshold/irq/counters）
+//   s_axil_* -> axil_2to1_demux 地址译码（单 AXI4-Lite 从端口）
+//               0x0000-0x00FF -> DES 5 个寄存器（key/mode/enable/status/guard）
+//               0x0100-0x01FF -> 仲裁器寄存器（enable/mode/threshold/irq/counters）
 //
-// 说明：本 demo 把两套控制面暴露成两个 AXI4-Lite 从端口，便于分模块验证；
-// 真实 SoC 会在前面放一个 AXI4-Lite crossbar/地址译码，把两者映射到同一
-// 控制总线。数据面两个输入同属 clk 域，不含跨时钟；如需跨域，可在
-// axis_arb2 前各接一个 async_fifo。
+// 数据面两个输入同属 clk 域；如需跨域，可在 axis_arb2 前各接一个 async_fifo。
 // ============================================================================
 module des_arb_soc_top (
     input  wire        clk,
@@ -40,43 +38,24 @@ module des_arb_soc_top (
     output wire [63:0] m_axis_tdata,
     output wire        m_axis_tlast,
 
-    // ---- DES control plane (AXI4-Lite) ----
-    input  wire        s_axil_des_awvalid,
-    output wire        s_axil_des_awready,
-    input  wire [31:0] s_axil_des_awaddr,
-    input  wire        s_axil_des_wvalid,
-    output wire        s_axil_des_wready,
-    input  wire [31:0] s_axil_des_wdata,
-    input  wire [3:0]  s_axil_des_wstrb,
-    output wire        s_axil_des_bvalid,
-    input  wire        s_axil_des_bready,
-    output wire [1:0]  s_axil_des_bresp,
-    input  wire        s_axil_des_arvalid,
-    output wire        s_axil_des_arready,
-    input  wire [31:0] s_axil_des_araddr,
-    input  wire        s_axil_des_rready,
-    output wire        s_axil_des_rvalid,
-    output wire [31:0] s_axil_des_rdata,
-    output wire [1:0]  s_axil_des_rresp,
-
-    // ---- arbiter control plane (AXI4-Lite) ----
-    input  wire        s_axil_arb_awvalid,
-    output wire        s_axil_arb_awready,
-    input  wire [31:0] s_axil_arb_awaddr,
-    input  wire        s_axil_arb_wvalid,
-    output wire        s_axil_arb_wready,
-    input  wire [31:0] s_axil_arb_wdata,
-    input  wire [3:0]  s_axil_arb_wstrb,
-    output wire        s_axil_arb_bvalid,
-    input  wire        s_axil_arb_bready,
-    output wire [1:0]  s_axil_arb_bresp,
-    input  wire        s_axil_arb_arvalid,
-    output wire        s_axil_arb_arready,
-    input  wire [31:0] s_axil_arb_araddr,
-    input  wire        s_axil_arb_rready,
-    output wire        s_axil_arb_rvalid,
-    output wire [31:0] s_axil_arb_rdata,
-    output wire [1:0]  s_axil_arb_rresp,
+    // ---- AXI4-Lite control plane（单端口，内部 1->2 地址译码）----
+    input  wire        s_axil_awvalid,
+    output wire        s_axil_awready,
+    input  wire [31:0] s_axil_awaddr,
+    input  wire        s_axil_wvalid,
+    output wire        s_axil_wready,
+    input  wire [31:0] s_axil_wdata,
+    input  wire [3:0]  s_axil_wstrb,
+    output wire        s_axil_bvalid,
+    input  wire        s_axil_bready,
+    output wire [1:0]  s_axil_bresp,
+    input  wire        s_axil_arvalid,
+    output wire        s_axil_arready,
+    input  wire [31:0] s_axil_araddr,
+    input  wire        s_axil_rready,
+    output wire        s_axil_rvalid,
+    output wire [31:0] s_axil_rdata,
+    output wire [1:0]  s_axil_rresp,
 
     // ---- observability ----
     output wire        irq_o,
@@ -119,6 +98,94 @@ module des_arb_soc_top (
     wire [31:0] ch0_stall, ch0_blocked;
     wire [31:0] ch1_beats_in, ch1_packets_in, ch1_beats_out, ch1_packets_out;
     wire [31:0] ch1_stall, ch1_blocked;
+
+    // ------------------------------------------------------------------
+    // 单 AXIL 端口 -> DES(0x000-0x0FF) / arbiter(0x100-0x1FF)
+    // ------------------------------------------------------------------
+    wire        d_axil_awvalid, d_axil_awready;
+    wire [31:0] d_axil_awaddr;
+    wire        d_axil_wvalid,  d_axil_wready;
+    wire [31:0] d_axil_wdata;
+    wire [3:0]  d_axil_wstrb;
+    wire        d_axil_bvalid,  d_axil_bready;
+    wire [1:0]  d_axil_bresp;
+    wire        d_axil_arvalid, d_axil_arready;
+    wire [31:0] d_axil_araddr;
+    wire        d_axil_rvalid,  d_axil_rready;
+    wire [31:0] d_axil_rdata;
+    wire [1:0]  d_axil_rresp;
+
+    wire        a_axil_awvalid, a_axil_awready;
+    wire [31:0] a_axil_awaddr;
+    wire        a_axil_wvalid,  a_axil_wready;
+    wire [31:0] a_axil_wdata;
+    wire [3:0]  a_axil_wstrb;
+    wire        a_axil_bvalid,  a_axil_bready;
+    wire [1:0]  a_axil_bresp;
+    wire        a_axil_arvalid, a_axil_arready;
+    wire [31:0] a_axil_araddr;
+    wire        a_axil_rvalid,  a_axil_rready;
+    wire [31:0] a_axil_rdata;
+    wire [1:0]  a_axil_rresp;
+
+    axil_2to1_demux u_axil_demux (
+        .clk            (clk),
+        .rst_n          (rst_n),
+
+        .s_axil_awvalid (s_axil_awvalid),
+        .s_axil_awready (s_axil_awready),
+        .s_axil_awaddr  (s_axil_awaddr),
+        .s_axil_wvalid  (s_axil_wvalid),
+        .s_axil_wready  (s_axil_wready),
+        .s_axil_wdata   (s_axil_wdata),
+        .s_axil_wstrb   (s_axil_wstrb),
+        .s_axil_bvalid  (s_axil_bvalid),
+        .s_axil_bready  (s_axil_bready),
+        .s_axil_bresp   (s_axil_bresp),
+        .s_axil_arvalid (s_axil_arvalid),
+        .s_axil_arready (s_axil_arready),
+        .s_axil_araddr  (s_axil_araddr),
+        .s_axil_rvalid  (s_axil_rvalid),
+        .s_axil_rready  (s_axil_rready),
+        .s_axil_rdata   (s_axil_rdata),
+        .s_axil_rresp   (s_axil_rresp),
+
+        .m0_awvalid     (d_axil_awvalid),
+        .m0_awready     (d_axil_awready),
+        .m0_awaddr      (d_axil_awaddr),
+        .m0_wvalid      (d_axil_wvalid),
+        .m0_wready      (d_axil_wready),
+        .m0_wdata       (d_axil_wdata),
+        .m0_wstrb       (d_axil_wstrb),
+        .m0_bvalid      (d_axil_bvalid),
+        .m0_bready      (d_axil_bready),
+        .m0_bresp       (d_axil_bresp),
+        .m0_arvalid     (d_axil_arvalid),
+        .m0_arready     (d_axil_arready),
+        .m0_araddr      (d_axil_araddr),
+        .m0_rvalid      (d_axil_rvalid),
+        .m0_rready      (d_axil_rready),
+        .m0_rdata       (d_axil_rdata),
+        .m0_rresp       (d_axil_rresp),
+
+        .m1_awvalid     (a_axil_awvalid),
+        .m1_awready     (a_axil_awready),
+        .m1_awaddr      (a_axil_awaddr),
+        .m1_wvalid      (a_axil_wvalid),
+        .m1_wready      (a_axil_wready),
+        .m1_wdata       (a_axil_wdata),
+        .m1_wstrb       (a_axil_wstrb),
+        .m1_bvalid      (a_axil_bvalid),
+        .m1_bready      (a_axil_bready),
+        .m1_bresp       (a_axil_bresp),
+        .m1_arvalid     (a_axil_arvalid),
+        .m1_arready     (a_axil_arready),
+        .m1_araddr      (a_axil_araddr),
+        .m1_rvalid      (a_axil_rvalid),
+        .m1_rready      (a_axil_rready),
+        .m1_rdata       (a_axil_rdata),
+        .m1_rresp       (a_axil_rresp)
+    );
 
     assign arb_busy_o = arb_busy;
 
@@ -191,23 +258,23 @@ module des_arb_soc_top (
         .clk                    (clk),
         .rst_n                  (rst_n),
 
-        .s_axil_awvalid         (s_axil_arb_awvalid),
-        .s_axil_awready         (s_axil_arb_awready),
-        .s_axil_awaddr          (s_axil_arb_awaddr),
-        .s_axil_wvalid          (s_axil_arb_wvalid),
-        .s_axil_wready          (s_axil_arb_wready),
-        .s_axil_wdata           (s_axil_arb_wdata),
-        .s_axil_wstrb           (s_axil_arb_wstrb),
-        .s_axil_bvalid          (s_axil_arb_bvalid),
-        .s_axil_bready          (s_axil_arb_bready),
-        .s_axil_bresp           (s_axil_arb_bresp),
-        .s_axil_arvalid         (s_axil_arb_arvalid),
-        .s_axil_arready         (s_axil_arb_arready),
-        .s_axil_araddr          (s_axil_arb_araddr),
-        .s_axil_rready          (s_axil_arb_rready),
-        .s_axil_rvalid          (s_axil_arb_rvalid),
-        .s_axil_rdata           (s_axil_arb_rdata),
-        .s_axil_rresp           (s_axil_arb_rresp),
+        .s_axil_awvalid         (a_axil_awvalid),
+        .s_axil_awready         (a_axil_awready),
+        .s_axil_awaddr          (a_axil_awaddr),
+        .s_axil_wvalid          (a_axil_wvalid),
+        .s_axil_wready          (a_axil_wready),
+        .s_axil_wdata           (a_axil_wdata),
+        .s_axil_wstrb           (a_axil_wstrb),
+        .s_axil_bvalid          (a_axil_bvalid),
+        .s_axil_bready          (a_axil_bready),
+        .s_axil_bresp           (a_axil_bresp),
+        .s_axil_arvalid         (a_axil_arvalid),
+        .s_axil_arready         (a_axil_arready),
+        .s_axil_araddr          (a_axil_araddr),
+        .s_axil_rready          (a_axil_rready),
+        .s_axil_rvalid          (a_axil_rvalid),
+        .s_axil_rdata           (a_axil_rdata),
+        .s_axil_rresp           (a_axil_rresp),
 
         .enable_o               (arb_enable),
         .arb_mode_o             (arb_mode),
@@ -260,23 +327,23 @@ module des_arb_soc_top (
         .m_axis_tdata     (des_m_tdata),
         .m_axis_tlast     (des_m_tlast),
 
-        .s_axil_awvalid   (s_axil_des_awvalid),
-        .s_axil_awready   (s_axil_des_awready),
-        .s_axil_awaddr    (s_axil_des_awaddr),
-        .s_axil_wvalid    (s_axil_des_wvalid),
-        .s_axil_wready    (s_axil_des_wready),
-        .s_axil_wdata     (s_axil_des_wdata),
-        .s_axil_wstrb     (s_axil_des_wstrb),
-        .s_axil_bvalid    (s_axil_des_bvalid),
-        .s_axil_bready    (s_axil_des_bready),
-        .s_axil_bresp     (s_axil_des_bresp),
-        .s_axil_arvalid   (s_axil_des_arvalid),
-        .s_axil_arready   (s_axil_des_arready),
-        .s_axil_araddr    (s_axil_des_araddr),
-        .s_axil_rvalid    (s_axil_des_rvalid),
-        .s_axil_rready    (s_axil_des_rready),
-        .s_axil_rdata     (s_axil_des_rdata),
-        .s_axil_rresp     (s_axil_des_rresp),
+        .s_axil_awvalid   (d_axil_awvalid),
+        .s_axil_awready   (d_axil_awready),
+        .s_axil_awaddr    (d_axil_awaddr),
+        .s_axil_wvalid    (d_axil_wvalid),
+        .s_axil_wready    (d_axil_wready),
+        .s_axil_wdata     (d_axil_wdata),
+        .s_axil_wstrb     (d_axil_wstrb),
+        .s_axil_bvalid    (d_axil_bvalid),
+        .s_axil_bready    (d_axil_bready),
+        .s_axil_bresp     (d_axil_bresp),
+        .s_axil_arvalid   (d_axil_arvalid),
+        .s_axil_arready   (d_axil_arready),
+        .s_axil_araddr    (d_axil_araddr),
+        .s_axil_rvalid    (d_axil_rvalid),
+        .s_axil_rready    (d_axil_rready),
+        .s_axil_rdata     (d_axil_rdata),
+        .s_axil_rresp     (d_axil_rresp),
 
         .ready_key_o      (ready_key_o)
     );

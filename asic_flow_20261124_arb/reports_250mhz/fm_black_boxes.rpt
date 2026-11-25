@@ -4,7 +4,7 @@ Report         : black_boxes
 Reference      : r:/WORK/des_arb_soc_top
 Implementation : i:/WORK/des_arb_soc_top
 Version        : O-2018.06-SP1
-Date           : Wed Nov 25 09:41:13 2026
+Date           : Wed Nov 25 10:15:50 2026
 **************************************************
 Information: Reporting black boxes for current reference and implementation designs. (FM-184)
 Information: No 'black boxes' matched current 'reference and implementation designs'. (FM-249)

@@ -145,6 +145,7 @@ module axis_arb_regs #(
     // ------------------------------------------------------------------
     reg        rvalid_r;
     reg [5:0]  ar_addr_lat;
+    reg [31:0] rdata_r;      // 读数据打一拍：切断 rdata mux 到输出端口的组合路径
 
     assign s_axil_arready = !rvalid_r;
     assign s_axil_rvalid  = rvalid_r;
@@ -260,7 +261,7 @@ module axis_arb_regs #(
         endcase
     end
 
-    assign s_axil_rdata = rdata_mux;
+    assign s_axil_rdata = rdata_r;
 
     // ------------------------------------------------------------------
     // AXI-Lite handshake state
@@ -295,6 +296,7 @@ module axis_arb_regs #(
 
             if (ar_fire) begin
                 ar_addr_lat <= s_axil_araddr[7:2];
+                rdata_r     <= rdata_mux;
                 rvalid_r    <= 1'b1;
             end else if (rvalid_r && s_axil_rready) begin
                 rvalid_r    <= 1'b0;

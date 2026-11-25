@@ -6,7 +6,7 @@ Report : timing
         -max_paths 10
 Design : des_arb_soc_top
 Version: O-2018.06-SP1
-Date   : Wed Nov 25 09:36:08 2026
+Date   : Wed Nov 25 10:11:41 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -33,54 +33,52 @@ Wire Load Model Mode: top
                                                         0.0000 #   0.0000 r
   u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
                                                         0.1198     0.1198 r
-  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0426     0.1624 f
-  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0589     0.2213 r
-  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0477     0.2690 f
-  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0565     0.3256 r
-  u_des/u_axis/u_des/U176/ZN (NAND2_X1)                 0.0465     0.3721 f
-  u_des/u_axis/u_des/U177/ZN (NOR2_X1)                  0.0562     0.4282 r
-  u_des/u_axis/u_des/U178/ZN (NAND2_X1)                 0.0465     0.4747 f
-  u_des/u_axis/u_des/U104/ZN (NOR2_X1)                  0.0602     0.5349 r
-  u_des/u_axis/u_des/U179/ZN (NAND2_X1)                 0.0477     0.5826 f
-  u_des/u_axis/u_des/U180/ZN (NOR2_X1)                  0.0606     0.6432 r
-  u_des/u_axis/u_des/U181/ZN (NAND2_X1)                 0.0478     0.6909 f
-  u_des/u_axis/u_des/U182/ZN (NOR2_X1)                  0.0604     0.7513 r
-  u_des/u_axis/u_des/U186/ZN (NAND2_X1)                 0.0477     0.7990 f
-  u_des/u_axis/u_des/U187/ZN (NOR2_X1)                  0.0606     0.8596 r
-  u_des/u_axis/u_des/U188/ZN (NAND2_X1)                 0.0425     0.9022 f
-  u_des/u_axis/u_des/U103/ZN (OR2_X1)                   0.0643     0.9664 f
-  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9664 f
-  U2247/ZN (NAND2_X1)                                   0.0389     1.0053 r
-  U2329/ZN (NAND2_X1)                                   0.0425     1.0478 f
-  U2395/ZN (NOR2_X1)                                    0.0682     1.1160 r
-  U2396/ZN (NAND2_X1)                                   0.0396     1.1557 f
-  U2397/ZN (NOR2_X1)                                    0.0595     1.2152 r
-  U2398/ZN (NAND2_X1)                                   0.0445     1.2597 f
-  U2399/ZN (NOR2_X1)                                    0.0630     1.3227 r
-  U2400/ZN (NAND2_X1)                                   0.0445     1.3672 f
-  U2401/ZN (NOR2_X1)                                    0.0630     1.4302 r
-  U2402/ZN (NAND2_X1)                                   0.0445     1.4747 f
-  U2403/ZN (NOR2_X1)                                    0.0630     1.5377 r
-  U2404/ZN (NAND2_X1)                                   0.0445     1.5823 f
-  U2405/ZN (NOR2_X1)                                    0.0630     1.6452 r
-  U2406/ZN (NAND2_X1)                                   0.0445     1.6898 f
-  U2407/ZN (NOR2_X1)                                    0.0529     1.7426 r
-  U2408/ZN (INV_X1)                                     0.0283     1.7709 f
-  U2409/ZN (NOR2_X1)                                    0.0579     1.8288 r
-  U2410/ZN (NAND2_X1)                                   0.0447     1.8735 f
-  U2430/ZN (INV_X1)                                     0.0379     1.9114 r
-  U2431/ZN (NAND2_X1)                                   0.0330     1.9444 f
-  U2432/ZN (NOR2_X1)                                    0.0645     2.0089 r
-  U2433/ZN (NAND2_X1)                                   0.0502     2.0591 f
-  U2436/ZN (NOR2_X1)                                    0.0604     2.1195 r
-  U2437/ZN (NAND2_X1)                                   0.0403     2.1598 f
-  U3343/ZN (NOR2_X1)                                    0.0615     2.2213 r
-  U3345/ZN (NAND2_X1)                                   0.0445     2.2658 f
-  U3348/ZN (NOR2_X1)                                    0.0633     2.3291 r
-  U3350/ZN (NOR2_X1)                                    0.0299     2.3590 f
-  U3351/ZN (AOI211_X1)                                  0.0729     2.4319 r
-  u_arb/ch1_stall_o_reg[31]/D (DFFR_X1)                 0.0090     2.4409 r
-  data arrival time                                                2.4409
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U3121/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U3157/ZN (NAND2_X1)                                   0.0386     1.1218 f
+  U3158/ZN (NOR2_X1)                                    0.0660     1.1878 r
+  U3160/ZN (NAND2_X1)                                   0.0446     1.2324 f
+  U3163/ZN (NOR2_X1)                                    0.0680     1.3004 r
+  U3165/ZN (NAND2_X1)                                   0.0446     1.3450 f
+  U3168/ZN (NOR2_X1)                                    0.0680     1.4130 r
+  U3170/ZN (NAND2_X1)                                   0.0446     1.4576 f
+  U3173/ZN (NOR2_X1)                                    0.0680     1.5256 r
+  U3175/ZN (NAND2_X1)                                   0.0446     1.5702 f
+  U3178/ZN (NOR2_X1)                                    0.0680     1.6382 r
+  U3180/ZN (NAND2_X1)                                   0.0446     1.6828 f
+  U3183/ZN (NOR2_X1)                                    0.0680     1.7508 r
+  U3185/ZN (NAND2_X1)                                   0.0446     1.7953 f
+  U3188/ZN (NOR2_X1)                                    0.0680     1.8634 r
+  U3190/ZN (NAND2_X1)                                   0.0446     1.9079 f
+  U3193/ZN (NOR2_X1)                                    0.0680     1.9760 r
+  U3195/ZN (NAND2_X1)                                   0.0446     2.0205 f
+  U3198/ZN (NOR2_X1)                                    0.0680     2.0886 r
+  U3200/ZN (NAND2_X1)                                   0.0446     2.1331 f
+  U3203/ZN (NOR2_X1)                                    0.0680     2.2012 r
+  U3205/ZN (NAND2_X1)                                   0.0446     2.2457 f
+  U3208/ZN (NOR2_X1)                                    0.0685     2.3142 r
+  U3210/ZN (NOR2_X1)                                    0.0299     2.3441 f
+  U3211/ZN (AOI211_X1)                                  0.0729     2.4170 r
+  u_arb/ch1_stall_o_reg[31]/D (DFFR_X1)                 0.0090     2.4260 r
+  data arrival time                                                2.4260
 
   clock clk (rise edge)                                10.0000    10.0000
   clock network delay (ideal)                           0.0000    10.0000
@@ -90,9 +88,88 @@ Wire Load Model Mode: top
   data required time                                               9.8643
   --------------------------------------------------------------------------
   data required time                                               9.8643
-  data arrival time                                               -2.4409
+  data arrival time                                               -2.4260
   --------------------------------------------------------------------------
-  slack (MET)                                                      7.4234
+  slack (MET)                                                      7.4383
+
+
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_stall_o_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
+                                                        0.1198     0.1198 r
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U2580/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U2589/ZN (NAND2_X1)                                   0.0415     1.1246 f
+  U2590/ZN (NOR2_X1)                                    0.0676     1.1922 r
+  U2591/ZN (NAND2_X1)                                   0.0446     1.2367 f
+  U2592/ZN (NOR2_X1)                                    0.0680     1.3048 r
+  U2593/ZN (NAND2_X1)                                   0.0446     1.3493 f
+  U2594/ZN (NOR2_X1)                                    0.0680     1.4174 r
+  U2595/ZN (NAND2_X1)                                   0.0446     1.4619 f
+  U2596/ZN (NOR2_X1)                                    0.0680     1.5300 r
+  U2597/ZN (NAND2_X1)                                   0.0446     1.5745 f
+  U2598/ZN (NOR2_X1)                                    0.0678     1.6423 r
+  U2599/ZN (NAND2_X1)                                   0.0495     1.6918 f
+  U2602/ZN (NOR2_X1)                                    0.0596     1.7514 r
+  U2603/ZN (NAND2_X1)                                   0.0406     1.7920 f
+  U3544/ZN (NOR2_X1)                                    0.0676     1.8595 r
+  U3546/ZN (NAND2_X1)                                   0.0446     1.9041 f
+  U3549/ZN (NOR2_X1)                                    0.0680     1.9721 r
+  U3551/ZN (NAND2_X1)                                   0.0446     2.0167 f
+  U3554/ZN (NOR2_X1)                                    0.0680     2.0847 r
+  U3556/ZN (NAND2_X1)                                   0.0446     2.1293 f
+  U3559/ZN (NOR2_X1)                                    0.0680     2.1973 r
+  U3561/ZN (NAND2_X1)                                   0.0446     2.2419 f
+  U3564/ZN (NOR2_X1)                                    0.0685     2.3104 r
+  U3566/ZN (NOR2_X1)                                    0.0299     2.3403 f
+  U3567/ZN (AOI211_X1)                                  0.0729     2.4131 r
+  u_arb/ch0_stall_o_reg[31]/D (DFFR_X1)                 0.0090     2.4221 r
+  data arrival time                                                2.4221
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_arb/ch0_stall_o_reg[31]/CK (DFFR_X1)                0.0000     9.9000 r
+  library setup time                                   -0.0358     9.8642
+  data required time                                               9.8642
+  --------------------------------------------------------------------------
+  data required time                                               9.8642
+  data arrival time                                               -2.4221
+  --------------------------------------------------------------------------
+  slack (MET)                                                      7.4421
 
 
   Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
@@ -114,200 +191,141 @@ Wire Load Model Mode: top
                                                         0.0000 #   0.0000 r
   u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
                                                         0.1198     0.1198 r
-  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0426     0.1624 f
-  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0589     0.2213 r
-  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0477     0.2690 f
-  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0565     0.3256 r
-  u_des/u_axis/u_des/U176/ZN (NAND2_X1)                 0.0465     0.3721 f
-  u_des/u_axis/u_des/U177/ZN (NOR2_X1)                  0.0562     0.4282 r
-  u_des/u_axis/u_des/U178/ZN (NAND2_X1)                 0.0465     0.4747 f
-  u_des/u_axis/u_des/U104/ZN (NOR2_X1)                  0.0602     0.5349 r
-  u_des/u_axis/u_des/U179/ZN (NAND2_X1)                 0.0477     0.5826 f
-  u_des/u_axis/u_des/U180/ZN (NOR2_X1)                  0.0606     0.6432 r
-  u_des/u_axis/u_des/U181/ZN (NAND2_X1)                 0.0478     0.6909 f
-  u_des/u_axis/u_des/U182/ZN (NOR2_X1)                  0.0604     0.7513 r
-  u_des/u_axis/u_des/U186/ZN (NAND2_X1)                 0.0477     0.7990 f
-  u_des/u_axis/u_des/U187/ZN (NOR2_X1)                  0.0606     0.8596 r
-  u_des/u_axis/u_des/U188/ZN (NAND2_X1)                 0.0425     0.9022 f
-  u_des/u_axis/u_des/U103/ZN (OR2_X1)                   0.0643     0.9664 f
-  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9664 f
-  U2247/ZN (NAND2_X1)                                   0.0389     1.0053 r
-  U2329/ZN (NAND2_X1)                                   0.0425     1.0478 f
-  U2395/ZN (NOR2_X1)                                    0.0682     1.1160 r
-  U2396/ZN (NAND2_X1)                                   0.0396     1.1557 f
-  U2397/ZN (NOR2_X1)                                    0.0595     1.2152 r
-  U2398/ZN (NAND2_X1)                                   0.0445     1.2597 f
-  U2399/ZN (NOR2_X1)                                    0.0630     1.3227 r
-  U2400/ZN (NAND2_X1)                                   0.0445     1.3672 f
-  U2401/ZN (NOR2_X1)                                    0.0630     1.4302 r
-  U2402/ZN (NAND2_X1)                                   0.0445     1.4747 f
-  U2403/ZN (NOR2_X1)                                    0.0630     1.5377 r
-  U2404/ZN (NAND2_X1)                                   0.0445     1.5823 f
-  U2405/ZN (NOR2_X1)                                    0.0630     1.6452 r
-  U2406/ZN (NAND2_X1)                                   0.0445     1.6898 f
-  U2407/ZN (NOR2_X1)                                    0.0529     1.7426 r
-  U2408/ZN (INV_X1)                                     0.0283     1.7709 f
-  U2409/ZN (NOR2_X1)                                    0.0579     1.8288 r
-  U2410/ZN (NAND2_X1)                                   0.0447     1.8735 f
-  U2430/ZN (INV_X1)                                     0.0379     1.9114 r
-  U2431/ZN (NAND2_X1)                                   0.0330     1.9444 f
-  U2432/ZN (NOR2_X1)                                    0.0645     2.0089 r
-  U2433/ZN (NAND2_X1)                                   0.0502     2.0591 f
-  U2436/ZN (NOR2_X1)                                    0.0604     2.1195 r
-  U2437/ZN (NAND2_X1)                                   0.0403     2.1598 f
-  U3343/ZN (NOR2_X1)                                    0.0615     2.2213 r
-  U3345/ZN (NAND2_X1)                                   0.0445     2.2658 f
-  U3348/ZN (NOR2_X1)                                    0.0633     2.3291 r
-  U3349/ZN (AOI211_X1)                                  0.0345     2.3636 f
-  u_arb/ch1_stall_o_reg[30]/D (DFFR_X1)                 0.0085     2.3721 f
-  data arrival time                                                2.3721
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U3121/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U3157/ZN (NAND2_X1)                                   0.0386     1.1218 f
+  U3158/ZN (NOR2_X1)                                    0.0660     1.1878 r
+  U3160/ZN (NAND2_X1)                                   0.0446     1.2324 f
+  U3163/ZN (NOR2_X1)                                    0.0680     1.3004 r
+  U3165/ZN (NAND2_X1)                                   0.0446     1.3450 f
+  U3168/ZN (NOR2_X1)                                    0.0680     1.4130 r
+  U3170/ZN (NAND2_X1)                                   0.0446     1.4576 f
+  U3173/ZN (NOR2_X1)                                    0.0680     1.5256 r
+  U3175/ZN (NAND2_X1)                                   0.0446     1.5702 f
+  U3178/ZN (NOR2_X1)                                    0.0680     1.6382 r
+  U3180/ZN (NAND2_X1)                                   0.0446     1.6828 f
+  U3183/ZN (NOR2_X1)                                    0.0680     1.7508 r
+  U3185/ZN (NAND2_X1)                                   0.0446     1.7953 f
+  U3188/ZN (NOR2_X1)                                    0.0680     1.8634 r
+  U3190/ZN (NAND2_X1)                                   0.0446     1.9079 f
+  U3193/ZN (NOR2_X1)                                    0.0680     1.9760 r
+  U3195/ZN (NAND2_X1)                                   0.0446     2.0205 f
+  U3198/ZN (NOR2_X1)                                    0.0680     2.0886 r
+  U3200/ZN (NAND2_X1)                                   0.0446     2.1331 f
+  U3203/ZN (NOR2_X1)                                    0.0680     2.2012 r
+  U3205/ZN (NAND2_X1)                                   0.0446     2.2457 f
+  U3208/ZN (NOR2_X1)                                    0.0685     2.3142 r
+  U3209/ZN (AOI211_X1)                                  0.0345     2.3487 f
+  u_arb/ch1_stall_o_reg[30]/D (DFFR_X1)                 0.0085     2.3572 f
+  data arrival time                                                2.3572
 
   clock clk (rise edge)                                10.0000    10.0000
   clock network delay (ideal)                           0.0000    10.0000
   clock uncertainty                                    -0.1000     9.9000
   u_arb/ch1_stall_o_reg[30]/CK (DFFR_X1)                0.0000     9.9000 r
+  library setup time                                   -0.0360     9.8640
+  data required time                                               9.8640
+  --------------------------------------------------------------------------
+  data required time                                               9.8640
+  data arrival time                                               -2.3572
+  --------------------------------------------------------------------------
+  slack (MET)                                                      7.5067
+
+
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_stall_o_reg[30]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
+                                                        0.1198     0.1198 r
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U2580/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U2589/ZN (NAND2_X1)                                   0.0415     1.1246 f
+  U2590/ZN (NOR2_X1)                                    0.0676     1.1922 r
+  U2591/ZN (NAND2_X1)                                   0.0446     1.2367 f
+  U2592/ZN (NOR2_X1)                                    0.0680     1.3048 r
+  U2593/ZN (NAND2_X1)                                   0.0446     1.3493 f
+  U2594/ZN (NOR2_X1)                                    0.0680     1.4174 r
+  U2595/ZN (NAND2_X1)                                   0.0446     1.4619 f
+  U2596/ZN (NOR2_X1)                                    0.0680     1.5300 r
+  U2597/ZN (NAND2_X1)                                   0.0446     1.5745 f
+  U2598/ZN (NOR2_X1)                                    0.0678     1.6423 r
+  U2599/ZN (NAND2_X1)                                   0.0495     1.6918 f
+  U2602/ZN (NOR2_X1)                                    0.0596     1.7514 r
+  U2603/ZN (NAND2_X1)                                   0.0406     1.7920 f
+  U3544/ZN (NOR2_X1)                                    0.0676     1.8595 r
+  U3546/ZN (NAND2_X1)                                   0.0446     1.9041 f
+  U3549/ZN (NOR2_X1)                                    0.0680     1.9721 r
+  U3551/ZN (NAND2_X1)                                   0.0446     2.0167 f
+  U3554/ZN (NOR2_X1)                                    0.0680     2.0847 r
+  U3556/ZN (NAND2_X1)                                   0.0446     2.1293 f
+  U3559/ZN (NOR2_X1)                                    0.0680     2.1973 r
+  U3561/ZN (NAND2_X1)                                   0.0446     2.2419 f
+  U3564/ZN (NOR2_X1)                                    0.0685     2.3104 r
+  U3565/ZN (AOI211_X1)                                  0.0345     2.3449 f
+  u_arb/ch0_stall_o_reg[30]/D (DFFR_X1)                 0.0085     2.3534 f
+  data arrival time                                                2.3534
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_arb/ch0_stall_o_reg[30]/CK (DFFR_X1)                0.0000     9.9000 r
   library setup time                                   -0.0362     9.8638
   data required time                                               9.8638
   --------------------------------------------------------------------------
   data required time                                               9.8638
-  data arrival time                                               -2.3721
+  data arrival time                                               -2.3534
   --------------------------------------------------------------------------
-  slack (MET)                                                      7.4917
-
-
-  Startpoint: u_arb/u_fifo1/count_r_reg[0]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_arb/ch0_beats_out_o_reg[31]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
-  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
-  u_arb/u_fifo1/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
-  u_arb/u_fifo1/U5/ZN (NOR2_X1)                         0.0702     0.2268 r
-  u_arb/u_fifo1/empty (sync_fifo_DATA_W65_ADDR_W4_0)    0.0000     0.2268 r
-  U2241/ZN (INV_X1)                                     0.0296     0.2564 f
-  U2242/ZN (AND3_X1)                                    0.0407     0.2971 f
-  U2243/ZN (NOR2_X1)                                    0.0365     0.3337 r
-  U2244/Z (MUX2_X1)                                     0.1862     0.5199 r
-  U2245/ZN (INV_X1)                                     0.0924     0.6123 f
-  U2000/ZN (INV_X1)                                     0.1815     0.7937 r
-  U2012/ZN (OAI21_X1)                                   0.0851     0.8788 f
-  U1994/ZN (AOI21_X1)                                   0.0878     0.9666 r
-  U2249/ZN (INV_X1)                                     0.0266     0.9932 f
-  U2250/ZN (NOR2_X1)                                    0.1386     1.1318 r
-  U2253/ZN (NAND2_X1)                                   0.0626     1.1945 f
-  U3774/ZN (OR2_X1)                                     0.0734     1.2679 f
-  U3775/ZN (NOR2_X1)                                    0.0916     1.3594 r
-  U3777/ZN (INV_X1)                                     0.0453     1.4048 f
-  U3792/ZN (NOR3_X1)                                    0.0879     1.4927 r
-  U3795/ZN (NAND2_X1)                                   0.0485     1.5411 f
-  U3798/ZN (NOR2_X1)                                    0.0653     1.6065 r
-  U3800/ZN (NAND2_X1)                                   0.0446     1.6510 f
-  U3803/ZN (NOR2_X1)                                    0.0630     1.7140 r
-  U3805/ZN (NAND2_X1)                                   0.0445     1.7586 f
-  U3808/ZN (NOR2_X1)                                    0.0630     1.8216 r
-  U3810/ZN (NAND2_X1)                                   0.0445     1.8661 f
-  U3813/ZN (NOR2_X1)                                    0.0630     1.9291 r
-  U3815/ZN (NAND2_X1)                                   0.0445     1.9736 f
-  U3818/ZN (NOR2_X1)                                    0.0630     2.0366 r
-  U3820/ZN (NAND2_X1)                                   0.0445     2.0811 f
-  U3823/ZN (NOR2_X1)                                    0.0630     2.1441 r
-  U3825/ZN (NAND2_X1)                                   0.0445     2.1887 f
-  U3828/ZN (NOR2_X1)                                    0.0633     2.2520 r
-  U3830/ZN (NOR2_X1)                                    0.0299     2.2819 f
-  U3831/ZN (AOI211_X1)                                  0.0729     2.3548 r
-  u_arb/ch0_beats_out_o_reg[31]/D (DFFR_X1)             0.0090     2.3637 r
-  data arrival time                                                2.3637
-
-  clock clk (rise edge)                                10.0000    10.0000
-  clock network delay (ideal)                           0.0000    10.0000
-  clock uncertainty                                    -0.1000     9.9000
-  u_arb/ch0_beats_out_o_reg[31]/CK (DFFR_X1)            0.0000     9.9000 r
-  library setup time                                   -0.0357     9.8643
-  data required time                                               9.8643
-  --------------------------------------------------------------------------
-  data required time                                               9.8643
-  data arrival time                                               -2.3637
-  --------------------------------------------------------------------------
-  slack (MET)                                                      7.5005
-
-
-  Startpoint: u_arb/u_fifo1/count_r_reg[0]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_arb/ch0_packets_out_o_reg[31]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
-  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
-  u_arb/u_fifo1/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
-  u_arb/u_fifo1/U5/ZN (NOR2_X1)                         0.0702     0.2268 r
-  u_arb/u_fifo1/empty (sync_fifo_DATA_W65_ADDR_W4_0)    0.0000     0.2268 r
-  U2241/ZN (INV_X1)                                     0.0296     0.2564 f
-  U2242/ZN (AND3_X1)                                    0.0407     0.2971 f
-  U2243/ZN (NOR2_X1)                                    0.0365     0.3337 r
-  U2244/Z (MUX2_X1)                                     0.1862     0.5199 r
-  U2245/ZN (INV_X1)                                     0.0924     0.6123 f
-  U2000/ZN (INV_X1)                                     0.1815     0.7937 r
-  U2012/ZN (OAI21_X1)                                   0.0851     0.8788 f
-  U1994/ZN (AOI21_X1)                                   0.0878     0.9666 r
-  U2249/ZN (INV_X1)                                     0.0266     0.9932 f
-  U2250/ZN (NOR2_X1)                                    0.1386     1.1318 r
-  U2253/ZN (NAND2_X1)                                   0.0626     1.1945 f
-  U2254/ZN (NOR2_X1)                                    0.0787     1.2731 r
-  U2312/ZN (NAND2_X1)                                   0.0447     1.3178 f
-  U2314/ZN (NOR2_X1)                                    0.0631     1.3809 r
-  U2315/ZN (NAND2_X1)                                   0.0445     1.4254 f
-  U2316/ZN (NOR2_X1)                                    0.0627     1.4881 r
-  U2317/ZN (NAND2_X1)                                   0.0447     1.5328 f
-  U2357/ZN (NOR2_X1)                                    0.0688     1.6015 r
-  U2358/ZN (NAND2_X1)                                   0.0442     1.6457 f
-  U3673/ZN (NOR2_X1)                                    0.0619     1.7076 r
-  U3674/ZN (NAND2_X1)                                   0.0445     1.7522 f
-  U3675/ZN (NOR2_X1)                                    0.0630     1.8151 r
-  U3676/ZN (NAND2_X1)                                   0.0445     1.8597 f
-  U3677/ZN (NOR2_X1)                                    0.0630     1.9227 r
-  U3678/ZN (NAND2_X1)                                   0.0445     1.9672 f
-  U3679/ZN (NOR2_X1)                                    0.0630     2.0302 r
-  U3680/ZN (NAND2_X1)                                   0.0445     2.0747 f
-  U3681/ZN (NOR2_X1)                                    0.0630     2.1377 r
-  U3682/ZN (NAND2_X1)                                   0.0445     2.1822 f
-  U3683/ZN (NOR2_X1)                                    0.0635     2.2458 r
-  U3684/ZN (NOR2_X1)                                    0.0275     2.2733 f
-  U3685/ZN (AOI211_X1)                                  0.0726     2.3459 r
-  u_arb/ch0_packets_out_o_reg[31]/D (DFFR_X1)           0.0090     2.3548 r
-  data arrival time                                                2.3548
-
-  clock clk (rise edge)                                10.0000    10.0000
-  clock network delay (ideal)                           0.0000    10.0000
-  clock uncertainty                                    -0.1000     9.9000
-  u_arb/ch0_packets_out_o_reg[31]/CK (DFFR_X1)          0.0000     9.9000 r
-  library setup time                                   -0.0358     9.8642
-  data required time                                               9.8642
-  --------------------------------------------------------------------------
-  data required time                                               9.8642
-  data arrival time                                               -2.3548
-  --------------------------------------------------------------------------
-  slack (MET)                                                      7.5094
+  slack (MET)                                                      7.5104
 
 
   Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
@@ -329,53 +347,51 @@ Wire Load Model Mode: top
                                                         0.0000 #   0.0000 r
   u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
                                                         0.1198     0.1198 r
-  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0426     0.1624 f
-  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0589     0.2213 r
-  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0477     0.2690 f
-  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0565     0.3256 r
-  u_des/u_axis/u_des/U176/ZN (NAND2_X1)                 0.0465     0.3721 f
-  u_des/u_axis/u_des/U177/ZN (NOR2_X1)                  0.0562     0.4282 r
-  u_des/u_axis/u_des/U178/ZN (NAND2_X1)                 0.0465     0.4747 f
-  u_des/u_axis/u_des/U104/ZN (NOR2_X1)                  0.0602     0.5349 r
-  u_des/u_axis/u_des/U179/ZN (NAND2_X1)                 0.0477     0.5826 f
-  u_des/u_axis/u_des/U180/ZN (NOR2_X1)                  0.0606     0.6432 r
-  u_des/u_axis/u_des/U181/ZN (NAND2_X1)                 0.0478     0.6909 f
-  u_des/u_axis/u_des/U182/ZN (NOR2_X1)                  0.0604     0.7513 r
-  u_des/u_axis/u_des/U186/ZN (NAND2_X1)                 0.0477     0.7990 f
-  u_des/u_axis/u_des/U187/ZN (NOR2_X1)                  0.0606     0.8596 r
-  u_des/u_axis/u_des/U188/ZN (NAND2_X1)                 0.0425     0.9022 f
-  u_des/u_axis/u_des/U103/ZN (OR2_X1)                   0.0643     0.9664 f
-  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9664 f
-  U2247/ZN (NAND2_X1)                                   0.0389     1.0053 r
-  U2329/ZN (NAND2_X1)                                   0.0425     1.0478 f
-  U2395/ZN (NOR2_X1)                                    0.0682     1.1160 r
-  U2396/ZN (NAND2_X1)                                   0.0396     1.1557 f
-  U2397/ZN (NOR2_X1)                                    0.0595     1.2152 r
-  U2398/ZN (NAND2_X1)                                   0.0445     1.2597 f
-  U2399/ZN (NOR2_X1)                                    0.0630     1.3227 r
-  U2400/ZN (NAND2_X1)                                   0.0445     1.3672 f
-  U2401/ZN (NOR2_X1)                                    0.0630     1.4302 r
-  U2402/ZN (NAND2_X1)                                   0.0445     1.4747 f
-  U2403/ZN (NOR2_X1)                                    0.0630     1.5377 r
-  U2404/ZN (NAND2_X1)                                   0.0445     1.5823 f
-  U2405/ZN (NOR2_X1)                                    0.0630     1.6452 r
-  U2406/ZN (NAND2_X1)                                   0.0445     1.6898 f
-  U2407/ZN (NOR2_X1)                                    0.0529     1.7426 r
-  U2408/ZN (INV_X1)                                     0.0283     1.7709 f
-  U2409/ZN (NOR2_X1)                                    0.0579     1.8288 r
-  U2410/ZN (NAND2_X1)                                   0.0447     1.8735 f
-  U2430/ZN (INV_X1)                                     0.0379     1.9114 r
-  U2431/ZN (NAND2_X1)                                   0.0330     1.9444 f
-  U2432/ZN (NOR2_X1)                                    0.0645     2.0089 r
-  U2433/ZN (NAND2_X1)                                   0.0502     2.0591 f
-  U2436/ZN (NOR2_X1)                                    0.0604     2.1195 r
-  U2437/ZN (NAND2_X1)                                   0.0403     2.1598 f
-  U3343/ZN (NOR2_X1)                                    0.0615     2.2213 r
-  U3345/ZN (NAND2_X1)                                   0.0445     2.2658 f
-  U3346/ZN (OAI21_X1)                                   0.0399     2.3056 r
-  U3347/ZN (NOR2_X1)                                    0.0239     2.3296 f
-  u_arb/ch1_stall_o_reg[29]/D (DFFR_X1)                 0.0085     2.3381 f
-  data arrival time                                                2.3381
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U3121/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U3157/ZN (NAND2_X1)                                   0.0386     1.1218 f
+  U3158/ZN (NOR2_X1)                                    0.0660     1.1878 r
+  U3160/ZN (NAND2_X1)                                   0.0446     1.2324 f
+  U3163/ZN (NOR2_X1)                                    0.0680     1.3004 r
+  U3165/ZN (NAND2_X1)                                   0.0446     1.3450 f
+  U3168/ZN (NOR2_X1)                                    0.0680     1.4130 r
+  U3170/ZN (NAND2_X1)                                   0.0446     1.4576 f
+  U3173/ZN (NOR2_X1)                                    0.0680     1.5256 r
+  U3175/ZN (NAND2_X1)                                   0.0446     1.5702 f
+  U3178/ZN (NOR2_X1)                                    0.0680     1.6382 r
+  U3180/ZN (NAND2_X1)                                   0.0446     1.6828 f
+  U3183/ZN (NOR2_X1)                                    0.0680     1.7508 r
+  U3185/ZN (NAND2_X1)                                   0.0446     1.7953 f
+  U3188/ZN (NOR2_X1)                                    0.0680     1.8634 r
+  U3190/ZN (NAND2_X1)                                   0.0446     1.9079 f
+  U3193/ZN (NOR2_X1)                                    0.0680     1.9760 r
+  U3195/ZN (NAND2_X1)                                   0.0446     2.0205 f
+  U3198/ZN (NOR2_X1)                                    0.0680     2.0886 r
+  U3200/ZN (NAND2_X1)                                   0.0446     2.1331 f
+  U3203/ZN (NOR2_X1)                                    0.0680     2.2012 r
+  U3205/ZN (NAND2_X1)                                   0.0446     2.2457 f
+  U3206/ZN (OAI21_X1)                                   0.0387     2.2844 r
+  U3207/ZN (NOR2_X1)                                    0.0239     2.3084 f
+  u_arb/ch1_stall_o_reg[29]/D (DFFR_X1)                 0.0085     2.3168 f
+  data arrival time                                                2.3168
 
   clock clk (rise edge)                                10.0000    10.0000
   clock network delay (ideal)                           0.0000    10.0000
@@ -385,14 +401,14 @@ Wire Load Model Mode: top
   data required time                                               9.8673
   --------------------------------------------------------------------------
   data required time                                               9.8673
-  data arrival time                                               -2.3381
+  data arrival time                                               -2.3168
   --------------------------------------------------------------------------
-  slack (MET)                                                      7.5292
+  slack (MET)                                                      7.5504
 
 
-  Startpoint: u_arb/u_fifo1/count_r_reg[0]
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_arb/ch1_beats_out_o_reg[31]
+  Endpoint: u_arb/ch0_stall_o_reg[29]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -405,60 +421,151 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
-  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
-  u_arb/u_fifo1/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
-  u_arb/u_fifo1/U5/ZN (NOR2_X1)                         0.0702     0.2268 r
-  u_arb/u_fifo1/empty (sync_fifo_DATA_W65_ADDR_W4_0)    0.0000     0.2268 r
-  U2241/ZN (INV_X1)                                     0.0296     0.2564 f
-  U2242/ZN (AND3_X1)                                    0.0407     0.2971 f
-  U2243/ZN (NOR2_X1)                                    0.0365     0.3337 r
-  U2244/Z (MUX2_X1)                                     0.1862     0.5199 r
-  U2245/ZN (INV_X1)                                     0.0924     0.6123 f
-  U2000/ZN (INV_X1)                                     0.1815     0.7937 r
-  U2012/ZN (OAI21_X1)                                   0.0851     0.8788 f
-  U1994/ZN (AOI21_X1)                                   0.0878     0.9666 r
-  U2249/ZN (INV_X1)                                     0.0266     0.9932 f
-  U2250/ZN (NOR2_X1)                                    0.1386     1.1318 r
-  U1996/ZN (NAND2_X1)                                   0.0828     1.2147 f
-  U2293/ZN (NOR2_X1)                                    0.0701     1.2848 r
-  U2294/ZN (NAND2_X1)                                   0.0450     1.3298 f
-  U3425/ZN (NOR4_X1)                                    0.1106     1.4404 r
-  U3427/ZN (NAND2_X1)                                   0.0517     1.4921 f
-  U3430/ZN (NOR2_X1)                                    0.0679     1.5600 r
-  U3432/ZN (NAND2_X1)                                   0.0446     1.6046 f
-  U3435/ZN (NOR2_X1)                                    0.0630     1.6677 r
-  U3437/ZN (NAND2_X1)                                   0.0445     1.7122 f
-  U3440/ZN (NOR2_X1)                                    0.0630     1.7752 r
-  U3442/ZN (NAND2_X1)                                   0.0445     1.8197 f
-  U3445/ZN (NOR2_X1)                                    0.0630     1.8827 r
-  U3447/ZN (NAND2_X1)                                   0.0445     1.9272 f
-  U3450/ZN (NOR2_X1)                                    0.0630     1.9902 r
-  U3452/ZN (NAND2_X1)                                   0.0445     2.0347 f
-  U3455/ZN (NOR2_X1)                                    0.0630     2.0977 r
-  U3457/ZN (NAND2_X1)                                   0.0445     2.1423 f
-  U3460/ZN (NOR2_X1)                                    0.0633     2.2056 r
-  U3462/ZN (NOR2_X1)                                    0.0299     2.2355 f
-  U3463/ZN (AOI211_X1)                                  0.0729     2.3084 r
-  u_arb/ch1_beats_out_o_reg[31]/D (DFFR_X1)             0.0090     2.3173 r
-  data arrival time                                                2.3173
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
+                                                        0.1198     0.1198 r
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U2580/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U2589/ZN (NAND2_X1)                                   0.0415     1.1246 f
+  U2590/ZN (NOR2_X1)                                    0.0676     1.1922 r
+  U2591/ZN (NAND2_X1)                                   0.0446     1.2367 f
+  U2592/ZN (NOR2_X1)                                    0.0680     1.3048 r
+  U2593/ZN (NAND2_X1)                                   0.0446     1.3493 f
+  U2594/ZN (NOR2_X1)                                    0.0680     1.4174 r
+  U2595/ZN (NAND2_X1)                                   0.0446     1.4619 f
+  U2596/ZN (NOR2_X1)                                    0.0680     1.5300 r
+  U2597/ZN (NAND2_X1)                                   0.0446     1.5745 f
+  U2598/ZN (NOR2_X1)                                    0.0678     1.6423 r
+  U2599/ZN (NAND2_X1)                                   0.0495     1.6918 f
+  U2602/ZN (NOR2_X1)                                    0.0596     1.7514 r
+  U2603/ZN (NAND2_X1)                                   0.0406     1.7920 f
+  U3544/ZN (NOR2_X1)                                    0.0676     1.8595 r
+  U3546/ZN (NAND2_X1)                                   0.0446     1.9041 f
+  U3549/ZN (NOR2_X1)                                    0.0680     1.9721 r
+  U3551/ZN (NAND2_X1)                                   0.0446     2.0167 f
+  U3554/ZN (NOR2_X1)                                    0.0680     2.0847 r
+  U3556/ZN (NAND2_X1)                                   0.0446     2.1293 f
+  U3559/ZN (NOR2_X1)                                    0.0680     2.1973 r
+  U3561/ZN (NAND2_X1)                                   0.0446     2.2419 f
+  U3562/ZN (OAI21_X1)                                   0.0387     2.2806 r
+  U3563/ZN (NOR2_X1)                                    0.0239     2.3045 f
+  u_arb/ch0_stall_o_reg[29]/D (DFFR_X1)                 0.0085     2.3130 f
+  data arrival time                                                2.3130
 
   clock clk (rise edge)                                10.0000    10.0000
   clock network delay (ideal)                           0.0000    10.0000
   clock uncertainty                                    -0.1000     9.9000
-  u_arb/ch1_beats_out_o_reg[31]/CK (DFFR_X1)            0.0000     9.9000 r
+  u_arb/ch0_stall_o_reg[29]/CK (DFFR_X1)                0.0000     9.9000 r
+  library setup time                                   -0.0329     9.8671
+  data required time                                               9.8671
+  --------------------------------------------------------------------------
+  data required time                                               9.8671
+  data arrival time                                               -2.3130
+  --------------------------------------------------------------------------
+  slack (MET)                                                      7.5542
+
+
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_arb/ch0_packets_out_o_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
+                                                        0.1027     0.1027 f
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0455     0.1482 r
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0319     0.1801 f
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0437     0.2237 r
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0329     0.2567 f
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0439     0.3006 r
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0319     0.3324 f
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0437     0.3761 r
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0319     0.4079 f
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0437     0.4516 r
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0319     0.4835 f
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0437     0.5271 r
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0329     0.5601 f
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0439     0.6040 r
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0319     0.6358 f
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0386     0.6744 r
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0457     0.7201 r
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.7201 r
+  U2463/ZN (NAND2_X1)                                   0.0339     0.7541 f
+  U2158/ZN (OR2_X1)                                     0.0729     0.8270 f
+  U2151/ZN (NOR2_X1)                                    0.0942     0.9212 r
+  U2783/ZN (NAND2_X1)                                   0.0578     0.9790 f
+  U3582/ZN (NOR2_X1)                                    0.0560     1.0350 r
+  U3583/ZN (NAND2_X1)                                   0.0408     1.0758 f
+  U3584/ZN (NOR2_X1)                                    0.0676     1.1434 r
+  U3585/ZN (NAND2_X1)                                   0.0446     1.1880 f
+  U3586/ZN (NOR2_X1)                                    0.0680     1.2560 r
+  U3587/ZN (NAND2_X1)                                   0.0446     1.3005 f
+  U3588/ZN (NOR2_X1)                                    0.0680     1.3686 r
+  U3589/ZN (NAND2_X1)                                   0.0446     1.4131 f
+  U3590/ZN (NOR2_X1)                                    0.0680     1.4812 r
+  U3591/ZN (NAND2_X1)                                   0.0446     1.5257 f
+  U3592/ZN (NOR2_X1)                                    0.0680     1.5938 r
+  U3593/ZN (NAND2_X1)                                   0.0446     1.6383 f
+  U3594/ZN (NOR2_X1)                                    0.0680     1.7064 r
+  U3595/ZN (NAND2_X1)                                   0.0446     1.7509 f
+  U3596/ZN (NOR2_X1)                                    0.0680     1.8190 r
+  U3597/ZN (NAND2_X1)                                   0.0446     1.8635 f
+  U3598/ZN (NOR2_X1)                                    0.0680     1.9316 r
+  U3599/ZN (NAND2_X1)                                   0.0446     1.9761 f
+  U3600/ZN (NOR2_X1)                                    0.0680     2.0442 r
+  U3601/ZN (NAND2_X1)                                   0.0446     2.0887 f
+  U3602/ZN (NOR2_X1)                                    0.0685     2.1572 r
+  U3603/ZN (NOR2_X1)                                    0.0299     2.1871 f
+  U3604/ZN (AOI211_X1)                                  0.0729     2.2600 r
+  u_arb/ch0_packets_out_o_reg[31]/D (DFFR_X1)           0.0090     2.2690 r
+  data arrival time                                                2.2690
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.1000     9.9000
+  u_arb/ch0_packets_out_o_reg[31]/CK (DFFR_X1)          0.0000     9.9000 r
   library setup time                                   -0.0358     9.8642
   data required time                                               9.8642
   --------------------------------------------------------------------------
   data required time                                               9.8642
-  data arrival time                                               -2.3173
+  data arrival time                                               -2.2690
   --------------------------------------------------------------------------
-  slack (MET)                                                      7.5469
+  slack (MET)                                                      7.5953
 
 
-  Startpoint: u_arb/u_fifo1/count_r_reg[0]
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_arb/ch0_beats_out_o_reg[30]
+  Endpoint: u_arb/ch0_beats_out_o_reg[31]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -471,122 +578,68 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
-  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
-  u_arb/u_fifo1/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
-  u_arb/u_fifo1/U5/ZN (NOR2_X1)                         0.0702     0.2268 r
-  u_arb/u_fifo1/empty (sync_fifo_DATA_W65_ADDR_W4_0)    0.0000     0.2268 r
-  U2241/ZN (INV_X1)                                     0.0296     0.2564 f
-  U2242/ZN (AND3_X1)                                    0.0407     0.2971 f
-  U2243/ZN (NOR2_X1)                                    0.0365     0.3337 r
-  U2244/Z (MUX2_X1)                                     0.1862     0.5199 r
-  U2245/ZN (INV_X1)                                     0.0924     0.6123 f
-  U2000/ZN (INV_X1)                                     0.1815     0.7937 r
-  U2012/ZN (OAI21_X1)                                   0.0851     0.8788 f
-  U1994/ZN (AOI21_X1)                                   0.0878     0.9666 r
-  U2249/ZN (INV_X1)                                     0.0266     0.9932 f
-  U2250/ZN (NOR2_X1)                                    0.1386     1.1318 r
-  U2253/ZN (NAND2_X1)                                   0.0626     1.1945 f
-  U3774/ZN (OR2_X1)                                     0.0734     1.2679 f
-  U3775/ZN (NOR2_X1)                                    0.0916     1.3594 r
-  U3777/ZN (INV_X1)                                     0.0453     1.4048 f
-  U3792/ZN (NOR3_X1)                                    0.0879     1.4927 r
-  U3795/ZN (NAND2_X1)                                   0.0485     1.5411 f
-  U3798/ZN (NOR2_X1)                                    0.0653     1.6065 r
-  U3800/ZN (NAND2_X1)                                   0.0446     1.6510 f
-  U3803/ZN (NOR2_X1)                                    0.0630     1.7140 r
-  U3805/ZN (NAND2_X1)                                   0.0445     1.7586 f
-  U3808/ZN (NOR2_X1)                                    0.0630     1.8216 r
-  U3810/ZN (NAND2_X1)                                   0.0445     1.8661 f
-  U3813/ZN (NOR2_X1)                                    0.0630     1.9291 r
-  U3815/ZN (NAND2_X1)                                   0.0445     1.9736 f
-  U3818/ZN (NOR2_X1)                                    0.0630     2.0366 r
-  U3820/ZN (NAND2_X1)                                   0.0445     2.0811 f
-  U3823/ZN (NOR2_X1)                                    0.0630     2.1441 r
-  U3825/ZN (NAND2_X1)                                   0.0445     2.1887 f
-  U3828/ZN (NOR2_X1)                                    0.0633     2.2520 r
-  U3829/ZN (AOI211_X1)                                  0.0345     2.2865 f
-  u_arb/ch0_beats_out_o_reg[30]/D (DFFR_X1)             0.0085     2.2950 f
-  data arrival time                                                2.2950
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
+                                                        0.1027     0.1027 f
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0455     0.1482 r
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0319     0.1801 f
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0437     0.2237 r
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0329     0.2567 f
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0439     0.3006 r
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0319     0.3324 f
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0437     0.3761 r
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0319     0.4079 f
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0437     0.4516 r
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0319     0.4835 f
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0437     0.5271 r
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0329     0.5601 f
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0439     0.6040 r
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0319     0.6358 f
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0386     0.6744 r
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0457     0.7201 r
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.7201 r
+  U2463/ZN (NAND2_X1)                                   0.0339     0.7541 f
+  U2158/ZN (OR2_X1)                                     0.0729     0.8270 f
+  U2151/ZN (NOR2_X1)                                    0.0942     0.9212 r
+  U2487/ZN (NAND2_X1)                                   0.0453     0.9665 f
+  U2488/ZN (NOR2_X1)                                    0.0687     1.0353 r
+  U2489/ZN (NAND2_X1)                                   0.0495     1.0848 f
+  U2496/ZN (NOR2_X1)                                    0.0596     1.1444 r
+  U2497/ZN (NAND2_X1)                                   0.0406     1.1850 f
+  U3690/ZN (NOR2_X1)                                    0.0676     1.2525 r
+  U3692/ZN (NAND2_X1)                                   0.0446     1.2971 f
+  U3695/ZN (NOR2_X1)                                    0.0680     1.3651 r
+  U3697/ZN (NAND2_X1)                                   0.0446     1.4097 f
+  U3700/ZN (NOR2_X1)                                    0.0680     1.4777 r
+  U3702/ZN (NAND2_X1)                                   0.0446     1.5223 f
+  U3705/ZN (NOR2_X1)                                    0.0680     1.5903 r
+  U3707/ZN (NAND2_X1)                                   0.0446     1.6349 f
+  U3710/ZN (NOR2_X1)                                    0.0680     1.7029 r
+  U3712/ZN (NAND2_X1)                                   0.0446     1.7475 f
+  U3715/ZN (NOR2_X1)                                    0.0680     1.8155 r
+  U3717/ZN (NAND2_X1)                                   0.0446     1.8601 f
+  U3720/ZN (NOR2_X1)                                    0.0680     1.9281 r
+  U3722/ZN (NAND2_X1)                                   0.0446     1.9727 f
+  U3725/ZN (NOR2_X1)                                    0.0680     2.0407 r
+  U3727/ZN (NAND2_X1)                                   0.0446     2.0852 f
+  U3730/ZN (NOR2_X1)                                    0.0685     2.1538 r
+  U3732/ZN (NOR2_X1)                                    0.0299     2.1837 f
+  U3733/ZN (AOI211_X1)                                  0.0729     2.2565 r
+  u_arb/ch0_beats_out_o_reg[31]/D (DFFR_X1)             0.0090     2.2655 r
+  data arrival time                                                2.2655
 
   clock clk (rise edge)                                10.0000    10.0000
   clock network delay (ideal)                           0.0000    10.0000
   clock uncertainty                                    -0.1000     9.9000
-  u_arb/ch0_beats_out_o_reg[30]/CK (DFFR_X1)            0.0000     9.9000 r
-  library setup time                                   -0.0362     9.8638
-  data required time                                               9.8638
+  u_arb/ch0_beats_out_o_reg[31]/CK (DFFR_X1)            0.0000     9.9000 r
+  library setup time                                   -0.0356     9.8644
+  data required time                                               9.8644
   --------------------------------------------------------------------------
-  data required time                                               9.8638
-  data arrival time                                               -2.2950
+  data required time                                               9.8644
+  data arrival time                                               -2.2655
   --------------------------------------------------------------------------
-  slack (MET)                                                      7.5688
-
-
-  Startpoint: u_arb/u_fifo1/count_r_reg[0]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_arb/ch0_packets_out_o_reg[30]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
-  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
-  u_arb/u_fifo1/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
-  u_arb/u_fifo1/U5/ZN (NOR2_X1)                         0.0702     0.2268 r
-  u_arb/u_fifo1/empty (sync_fifo_DATA_W65_ADDR_W4_0)    0.0000     0.2268 r
-  U2241/ZN (INV_X1)                                     0.0296     0.2564 f
-  U2242/ZN (AND3_X1)                                    0.0407     0.2971 f
-  U2243/ZN (NOR2_X1)                                    0.0365     0.3337 r
-  U2244/Z (MUX2_X1)                                     0.1862     0.5199 r
-  U2245/ZN (INV_X1)                                     0.0924     0.6123 f
-  U2000/ZN (INV_X1)                                     0.1815     0.7937 r
-  U2012/ZN (OAI21_X1)                                   0.0851     0.8788 f
-  U1994/ZN (AOI21_X1)                                   0.0878     0.9666 r
-  U2249/ZN (INV_X1)                                     0.0266     0.9932 f
-  U2250/ZN (NOR2_X1)                                    0.1386     1.1318 r
-  U2253/ZN (NAND2_X1)                                   0.0626     1.1945 f
-  U2254/ZN (NOR2_X1)                                    0.0787     1.2731 r
-  U2312/ZN (NAND2_X1)                                   0.0447     1.3178 f
-  U2314/ZN (NOR2_X1)                                    0.0631     1.3809 r
-  U2315/ZN (NAND2_X1)                                   0.0445     1.4254 f
-  U2316/ZN (NOR2_X1)                                    0.0627     1.4881 r
-  U2317/ZN (NAND2_X1)                                   0.0447     1.5328 f
-  U2357/ZN (NOR2_X1)                                    0.0688     1.6015 r
-  U2358/ZN (NAND2_X1)                                   0.0442     1.6457 f
-  U3673/ZN (NOR2_X1)                                    0.0619     1.7076 r
-  U3674/ZN (NAND2_X1)                                   0.0445     1.7522 f
-  U3675/ZN (NOR2_X1)                                    0.0630     1.8151 r
-  U3676/ZN (NAND2_X1)                                   0.0445     1.8597 f
-  U3677/ZN (NOR2_X1)                                    0.0630     1.9227 r
-  U3678/ZN (NAND2_X1)                                   0.0445     1.9672 f
-  U3679/ZN (NOR2_X1)                                    0.0630     2.0302 r
-  U3680/ZN (NAND2_X1)                                   0.0445     2.0747 f
-  U3681/ZN (NOR2_X1)                                    0.0630     2.1377 r
-  U3682/ZN (NAND2_X1)                                   0.0445     2.1822 f
-  U3683/ZN (NOR2_X1)                                    0.0635     2.2458 r
-  U3686/ZN (AOI211_X1)                                  0.0345     2.2803 f
-  u_arb/ch0_packets_out_o_reg[30]/D (DFFR_X1)           0.0085     2.2888 f
-  data arrival time                                                2.2888
-
-  clock clk (rise edge)                                10.0000    10.0000
-  clock network delay (ideal)                           0.0000    10.0000
-  clock uncertainty                                    -0.1000     9.9000
-  u_arb/ch0_packets_out_o_reg[30]/CK (DFFR_X1)          0.0000     9.9000 r
-  library setup time                                   -0.0362     9.8638
-  data required time                                               9.8638
-  --------------------------------------------------------------------------
-  data required time                                               9.8638
-  data arrival time                                               -2.2888
-  --------------------------------------------------------------------------
-  slack (MET)                                                      7.5750
+  slack (MET)                                                      7.5988
 
 
   Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
@@ -608,68 +661,66 @@ Wire Load Model Mode: top
                                                         0.0000 #   0.0000 r
   u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
                                                         0.1198     0.1198 r
-  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0426     0.1624 f
-  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0589     0.2213 r
-  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0477     0.2690 f
-  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0565     0.3256 r
-  u_des/u_axis/u_des/U176/ZN (NAND2_X1)                 0.0465     0.3721 f
-  u_des/u_axis/u_des/U177/ZN (NOR2_X1)                  0.0562     0.4282 r
-  u_des/u_axis/u_des/U178/ZN (NAND2_X1)                 0.0465     0.4747 f
-  u_des/u_axis/u_des/U104/ZN (NOR2_X1)                  0.0602     0.5349 r
-  u_des/u_axis/u_des/U179/ZN (NAND2_X1)                 0.0477     0.5826 f
-  u_des/u_axis/u_des/U180/ZN (NOR2_X1)                  0.0606     0.6432 r
-  u_des/u_axis/u_des/U181/ZN (NAND2_X1)                 0.0478     0.6909 f
-  u_des/u_axis/u_des/U182/ZN (NOR2_X1)                  0.0604     0.7513 r
-  u_des/u_axis/u_des/U186/ZN (NAND2_X1)                 0.0477     0.7990 f
-  u_des/u_axis/u_des/U187/ZN (NOR2_X1)                  0.0606     0.8596 r
-  u_des/u_axis/u_des/U188/ZN (NAND2_X1)                 0.0425     0.9022 f
-  u_des/u_axis/u_des/U103/ZN (OR2_X1)                   0.0643     0.9664 f
-  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9664 f
-  U2247/ZN (NAND2_X1)                                   0.0389     1.0053 r
-  U2329/ZN (NAND2_X1)                                   0.0425     1.0478 f
-  U2395/ZN (NOR2_X1)                                    0.0682     1.1160 r
-  U2396/ZN (NAND2_X1)                                   0.0396     1.1557 f
-  U2397/ZN (NOR2_X1)                                    0.0595     1.2152 r
-  U2398/ZN (NAND2_X1)                                   0.0445     1.2597 f
-  U2399/ZN (NOR2_X1)                                    0.0630     1.3227 r
-  U2400/ZN (NAND2_X1)                                   0.0445     1.3672 f
-  U2401/ZN (NOR2_X1)                                    0.0630     1.4302 r
-  U2402/ZN (NAND2_X1)                                   0.0445     1.4747 f
-  U2403/ZN (NOR2_X1)                                    0.0630     1.5377 r
-  U2404/ZN (NAND2_X1)                                   0.0445     1.5823 f
-  U2405/ZN (NOR2_X1)                                    0.0630     1.6452 r
-  U2406/ZN (NAND2_X1)                                   0.0445     1.6898 f
-  U2407/ZN (NOR2_X1)                                    0.0529     1.7426 r
-  U2408/ZN (INV_X1)                                     0.0283     1.7709 f
-  U2409/ZN (NOR2_X1)                                    0.0579     1.8288 r
-  U2410/ZN (NAND2_X1)                                   0.0447     1.8735 f
-  U2430/ZN (INV_X1)                                     0.0379     1.9114 r
-  U2431/ZN (NAND2_X1)                                   0.0330     1.9444 f
-  U2432/ZN (NOR2_X1)                                    0.0645     2.0089 r
-  U2433/ZN (NAND2_X1)                                   0.0502     2.0591 f
-  U2436/ZN (NOR2_X1)                                    0.0604     2.1195 r
-  U2437/ZN (NAND2_X1)                                   0.0403     2.1598 f
-  U3343/ZN (NOR2_X1)                                    0.0615     2.2213 r
-  U3344/ZN (AOI211_X1)                                  0.0344     2.2557 f
-  u_arb/ch1_stall_o_reg[28]/D (DFFR_X1)                 0.0085     2.2642 f
-  data arrival time                                                2.2642
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U3121/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U3157/ZN (NAND2_X1)                                   0.0386     1.1218 f
+  U3158/ZN (NOR2_X1)                                    0.0660     1.1878 r
+  U3160/ZN (NAND2_X1)                                   0.0446     1.2324 f
+  U3163/ZN (NOR2_X1)                                    0.0680     1.3004 r
+  U3165/ZN (NAND2_X1)                                   0.0446     1.3450 f
+  U3168/ZN (NOR2_X1)                                    0.0680     1.4130 r
+  U3170/ZN (NAND2_X1)                                   0.0446     1.4576 f
+  U3173/ZN (NOR2_X1)                                    0.0680     1.5256 r
+  U3175/ZN (NAND2_X1)                                   0.0446     1.5702 f
+  U3178/ZN (NOR2_X1)                                    0.0680     1.6382 r
+  U3180/ZN (NAND2_X1)                                   0.0446     1.6828 f
+  U3183/ZN (NOR2_X1)                                    0.0680     1.7508 r
+  U3185/ZN (NAND2_X1)                                   0.0446     1.7953 f
+  U3188/ZN (NOR2_X1)                                    0.0680     1.8634 r
+  U3190/ZN (NAND2_X1)                                   0.0446     1.9079 f
+  U3193/ZN (NOR2_X1)                                    0.0680     1.9760 r
+  U3195/ZN (NAND2_X1)                                   0.0446     2.0205 f
+  U3198/ZN (NOR2_X1)                                    0.0680     2.0886 r
+  U3200/ZN (NAND2_X1)                                   0.0446     2.1331 f
+  U3203/ZN (NOR2_X1)                                    0.0680     2.2012 r
+  U3204/ZN (AOI211_X1)                                  0.0344     2.2356 f
+  u_arb/ch1_stall_o_reg[28]/D (DFFR_X1)                 0.0085     2.2441 f
+  data arrival time                                                2.2441
 
   clock clk (rise edge)                                10.0000    10.0000
   clock network delay (ideal)                           0.0000    10.0000
   clock uncertainty                                    -0.1000     9.9000
   u_arb/ch1_stall_o_reg[28]/CK (DFFR_X1)                0.0000     9.9000 r
-  library setup time                                   -0.0362     9.8638
-  data required time                                               9.8638
+  library setup time                                   -0.0360     9.8640
+  data required time                                               9.8640
   --------------------------------------------------------------------------
-  data required time                                               9.8638
-  data arrival time                                               -2.2642
+  data required time                                               9.8640
+  data arrival time                                               -2.2441
   --------------------------------------------------------------------------
-  slack (MET)                                                      7.5996
+  slack (MET)                                                      7.6199
 
 
-  Startpoint: u_arb/u_fifo1/count_r_reg[0]
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_arb/ch0_beats_out_o_reg[29]
+  Endpoint: u_arb/ch0_stall_o_reg[28]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -682,55 +733,65 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
-  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
-  u_arb/u_fifo1/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
-  u_arb/u_fifo1/U5/ZN (NOR2_X1)                         0.0702     0.2268 r
-  u_arb/u_fifo1/empty (sync_fifo_DATA_W65_ADDR_W4_0)    0.0000     0.2268 r
-  U2241/ZN (INV_X1)                                     0.0296     0.2564 f
-  U2242/ZN (AND3_X1)                                    0.0407     0.2971 f
-  U2243/ZN (NOR2_X1)                                    0.0365     0.3337 r
-  U2244/Z (MUX2_X1)                                     0.1862     0.5199 r
-  U2245/ZN (INV_X1)                                     0.0924     0.6123 f
-  U2000/ZN (INV_X1)                                     0.1815     0.7937 r
-  U2012/ZN (OAI21_X1)                                   0.0851     0.8788 f
-  U1994/ZN (AOI21_X1)                                   0.0878     0.9666 r
-  U2249/ZN (INV_X1)                                     0.0266     0.9932 f
-  U2250/ZN (NOR2_X1)                                    0.1386     1.1318 r
-  U2253/ZN (NAND2_X1)                                   0.0626     1.1945 f
-  U3774/ZN (OR2_X1)                                     0.0734     1.2679 f
-  U3775/ZN (NOR2_X1)                                    0.0916     1.3594 r
-  U3777/ZN (INV_X1)                                     0.0453     1.4048 f
-  U3792/ZN (NOR3_X1)                                    0.0879     1.4927 r
-  U3795/ZN (NAND2_X1)                                   0.0485     1.5411 f
-  U3798/ZN (NOR2_X1)                                    0.0653     1.6065 r
-  U3800/ZN (NAND2_X1)                                   0.0446     1.6510 f
-  U3803/ZN (NOR2_X1)                                    0.0630     1.7140 r
-  U3805/ZN (NAND2_X1)                                   0.0445     1.7586 f
-  U3808/ZN (NOR2_X1)                                    0.0630     1.8216 r
-  U3810/ZN (NAND2_X1)                                   0.0445     1.8661 f
-  U3813/ZN (NOR2_X1)                                    0.0630     1.9291 r
-  U3815/ZN (NAND2_X1)                                   0.0445     1.9736 f
-  U3818/ZN (NOR2_X1)                                    0.0630     2.0366 r
-  U3820/ZN (NAND2_X1)                                   0.0445     2.0811 f
-  U3823/ZN (NOR2_X1)                                    0.0630     2.1441 r
-  U3825/ZN (NAND2_X1)                                   0.0445     2.1887 f
-  U3826/ZN (OAI21_X1)                                   0.0399     2.2285 r
-  U3827/ZN (NOR2_X1)                                    0.0239     2.2524 f
-  u_arb/ch0_beats_out_o_reg[29]/D (DFFR_X1)             0.0085     2.2609 f
-  data arrival time                                                2.2609
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/valid_o_reg/Q (DFFR_X1)
+                                                        0.1198     0.1198 r
+  u_des/u_axis/u_des/U164/ZN (NAND2_X1)                 0.0426     0.1624 f
+  u_des/u_axis/u_des/U165/ZN (NOR2_X1)                  0.0549     0.2173 r
+  u_des/u_axis/u_des/U166/ZN (NAND2_X1)                 0.0464     0.2637 f
+  u_des/u_axis/u_des/U167/ZN (NOR2_X1)                  0.0602     0.3239 r
+  u_des/u_axis/u_des/U168/ZN (NAND2_X1)                 0.0477     0.3716 f
+  u_des/u_axis/u_des/U169/ZN (NOR2_X1)                  0.0565     0.4282 r
+  u_des/u_axis/u_des/U170/ZN (NAND2_X1)                 0.0465     0.4747 f
+  u_des/u_axis/u_des/U171/ZN (NOR2_X1)                  0.0562     0.5308 r
+  u_des/u_axis/u_des/U172/ZN (NAND2_X1)                 0.0465     0.5773 f
+  u_des/u_axis/u_des/U173/ZN (NOR2_X1)                  0.0561     0.6334 r
+  u_des/u_axis/u_des/U174/ZN (NAND2_X1)                 0.0465     0.6799 f
+  u_des/u_axis/u_des/U175/ZN (NOR2_X1)                  0.0600     0.7399 r
+  u_des/u_axis/u_des/U95/ZN (NAND2_X1)                  0.0477     0.7876 f
+  u_des/u_axis/u_des/U179/ZN (NOR2_X1)                  0.0565     0.8441 r
+  u_des/u_axis/u_des/U180/ZN (NAND2_X1)                 0.0415     0.8857 f
+  u_des/u_axis/u_des/U94/ZN (OR2_X1)                    0.0639     0.9496 f
+  u_des/u_axis/u_des/ready_o (des_pipeline_fb)          0.0000     0.9496 f
+  U2463/ZN (NAND2_X1)                                   0.0371     0.9866 r
+  U2579/ZN (NAND2_X1)                                   0.0335     1.0202 f
+  U2580/ZN (NOR2_X1)                                    0.0630     1.0831 r
+  U2589/ZN (NAND2_X1)                                   0.0415     1.1246 f
+  U2590/ZN (NOR2_X1)                                    0.0676     1.1922 r
+  U2591/ZN (NAND2_X1)                                   0.0446     1.2367 f
+  U2592/ZN (NOR2_X1)                                    0.0680     1.3048 r
+  U2593/ZN (NAND2_X1)                                   0.0446     1.3493 f
+  U2594/ZN (NOR2_X1)                                    0.0680     1.4174 r
+  U2595/ZN (NAND2_X1)                                   0.0446     1.4619 f
+  U2596/ZN (NOR2_X1)                                    0.0680     1.5300 r
+  U2597/ZN (NAND2_X1)                                   0.0446     1.5745 f
+  U2598/ZN (NOR2_X1)                                    0.0678     1.6423 r
+  U2599/ZN (NAND2_X1)                                   0.0495     1.6918 f
+  U2602/ZN (NOR2_X1)                                    0.0596     1.7514 r
+  U2603/ZN (NAND2_X1)                                   0.0406     1.7920 f
+  U3544/ZN (NOR2_X1)                                    0.0676     1.8595 r
+  U3546/ZN (NAND2_X1)                                   0.0446     1.9041 f
+  U3549/ZN (NOR2_X1)                                    0.0680     1.9721 r
+  U3551/ZN (NAND2_X1)                                   0.0446     2.0167 f
+  U3554/ZN (NOR2_X1)                                    0.0680     2.0847 r
+  U3556/ZN (NAND2_X1)                                   0.0446     2.1293 f
+  U3559/ZN (NOR2_X1)                                    0.0680     2.1973 r
+  U3560/ZN (AOI211_X1)                                  0.0344     2.2317 f
+  u_arb/ch0_stall_o_reg[28]/D (DFFR_X1)                 0.0085     2.2402 f
+  data arrival time                                                2.2402
 
   clock clk (rise edge)                                10.0000    10.0000
   clock network delay (ideal)                           0.0000    10.0000
   clock uncertainty                                    -0.1000     9.9000
-  u_arb/ch0_beats_out_o_reg[29]/CK (DFFR_X1)            0.0000     9.9000 r
-  library setup time                                   -0.0294     9.8706
-  data required time                                               9.8706
+  u_arb/ch0_stall_o_reg[28]/CK (DFFR_X1)                0.0000     9.9000 r
+  library setup time                                   -0.0362     9.8638
+  data required time                                               9.8638
   --------------------------------------------------------------------------
-  data required time                                               9.8706
-  data arrival time                                               -2.2609
+  data required time                                               9.8638
+  data arrival time                                               -2.2402
   --------------------------------------------------------------------------
-  slack (MET)                                                      7.6096
+  slack (MET)                                                      7.6236
 
 
 1

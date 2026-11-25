@@ -1,4 +1,3 @@
-Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
  
 ****************************************
 Report : timing
@@ -7,7 +6,7 @@ Report : timing
         -max_paths 10
 Design : des_arb_soc_top
 Version: O-2018.06-SP1
-Date   : Wed Nov 25 09:40:10 2026
+Date   : Wed Nov 25 10:14:34 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -15,9 +14,50 @@ Date   : Wed Nov 25 09:40:10 2026
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_arb/u_fifo0/count_r_reg[0]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[20]
+  Endpoint: arb_busy_o (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb/u_fifo0/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
+  u_arb/u_fifo0/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
+  u_arb/u_fifo0/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
+  u_arb/u_fifo0/U14/ZN (NOR2_X1)                        0.0699     0.2264 r
+  u_arb/u_fifo0/empty (sync_fifo_DATA_W65_ADDR_W4_1)    0.0000     0.2264 r
+  U2275/ZN (INV_X1)                                     0.0315     0.2580 f
+  U2277/ZN (OAI211_X1)                                  0.0433     0.3013 r
+  U2162/ZN (NAND2_X1)                                   0.0599     0.3612 f
+  U2196/ZN (INV_X4)                                     0.1822     0.5434 r
+  U2278/ZN (AOI21_X1)                                   0.0801     0.6235 f
+  U2957/ZN (INV_X1)                                     0.0413     0.6649 r
+  U4164/ZN (NAND4_X1)                                   0.0472     0.7120 f
+  arb_busy_o (out)                                      0.0026     0.7146 f
+  data arrival time                                                0.7146
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  --------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.7146
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.1854
+
+
+  Startpoint: u_des/u_axis/last_rd_ptr_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: m_axis_tlast
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -30,22 +70,16 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2378/ZN (AND2_X1)                                    0.0681     0.7640 r
-  U2382/ZN (AND2_X1)                                    0.0414     0.8054 r
-  U2231/ZN (NAND2_X1)                                   0.0350     0.8404 f
-  U2383/ZN (NAND2_X4)                                   0.0824     0.9228 r
-  U2588/ZN (NAND2_X1)                                   0.0461     0.9688 f
-  U2300/ZN (AND3_X1)                                    0.0378     1.0066 f
-  U2343/ZN (AND2_X1)                                    0.0346     1.0412 f
-  U2226/ZN (AOI21_X1)                                   0.0332     1.0744 r
-  s_axil_arb_rdata[20] (out)                            0.0021     1.0765 r
-  data arrival time                                                1.0765
+  u_des/u_axis/last_rd_ptr_reg[4]/CK (DFFR_X1)          0.0000 #   0.0000 r
+  u_des/u_axis/last_rd_ptr_reg[4]/Q (DFFR_X1)           0.1060     0.1060 f
+  U2493/ZN (NOR2_X1)                                    0.1224     0.2284 r
+  U2512/ZN (AOI22_X1)                                   0.0554     0.2838 f
+  U2513/ZN (OAI211_X1)                                  0.0465     0.3302 r
+  U2517/ZN (OAI221_X1)                                  0.0470     0.3773 f
+  U2524/ZN (OAI221_X1)                                  0.0647     0.4420 r
+  U2270/ZN (AND3_X1)                                    0.0506     0.4925 r
+  m_axis_tlast (out)                                    0.0021     0.4946 r
+  data arrival time                                                0.4946
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -54,14 +88,14 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0765
+  data arrival time                                               -0.4946
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8235
+  slack (MET)                                                      1.4054
 
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_arb/u_fifo0/count_r_reg[0]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[29]
+  Endpoint: s0_axis_tready
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -74,22 +108,14 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2378/ZN (AND2_X1)                                    0.0681     0.7640 r
-  U2382/ZN (AND2_X1)                                    0.0414     0.8054 r
-  U2231/ZN (NAND2_X1)                                   0.0350     0.8404 f
-  U2383/ZN (NAND2_X4)                                   0.0824     0.9228 r
-  U2504/ZN (NAND2_X1)                                   0.0461     0.9689 f
-  U2513/ZN (AND3_X1)                                    0.0403     1.0092 f
-  U2249/ZN (AND2_X1)                                    0.0346     1.0438 f
-  U2520/ZN (AOI21_X1)                                   0.0285     1.0723 r
-  s_axil_arb_rdata[29] (out)                            0.0021     1.0744 r
-  data arrival time                                                1.0744
+  u_arb/u_fifo0/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
+  u_arb/u_fifo0/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
+  u_arb/u_fifo0/U23/ZN (NAND4_X1)                       0.0581     0.1566 f
+  u_arb/u_fifo0/U140/ZN (NOR2_X1)                       0.0787     0.2353 r
+  u_arb/u_fifo0/full (sync_fifo_DATA_W65_ADDR_W4_1)     0.0000     0.2353 r
+  U2381/ZN (NOR2_X1)                                    0.0358     0.2712 f
+  s0_axis_tready (out)                                  0.0031     0.2743 f
+  data arrival time                                                0.2743
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -98,14 +124,14 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0744
+  data arrival time                                               -0.2743
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8256
+  slack (MET)                                                      1.6257
 
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_arb/u_fifo1/count_r_reg[0]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[17]
+  Endpoint: s1_axis_tready
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -118,22 +144,14 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2378/ZN (AND2_X1)                                    0.0681     0.7640 r
-  U2382/ZN (AND2_X1)                                    0.0414     0.8054 r
-  U2231/ZN (NAND2_X1)                                   0.0350     0.8404 f
-  U2383/ZN (NAND2_X4)                                   0.0824     0.9228 r
-  U2684/ZN (NAND2_X1)                                   0.0485     0.9712 f
-  U2230/ZN (NAND4_X1)                                   0.0364     1.0077 r
-  U2032/ZN (NOR2_X1)                                    0.0238     1.0315 f
-  U2031/ZN (AOI21_X1)                                   0.0290     1.0605 r
-  s_axil_arb_rdata[17] (out)                            0.0021     1.0625 r
-  data arrival time                                                1.0625
+  u_arb/u_fifo1/count_r_reg[0]/CK (DFFR_X1)             0.0000 #   0.0000 r
+  u_arb/u_fifo1/count_r_reg[0]/QN (DFFR_X1)             0.0985     0.0985 r
+  u_arb/u_fifo1/U27/ZN (NAND4_X1)                       0.0581     0.1566 f
+  u_arb/u_fifo1/U28/ZN (NOR2_X1)                        0.0787     0.2353 r
+  u_arb/u_fifo1/full (sync_fifo_DATA_W65_ADDR_W4_0)     0.0000     0.2353 r
+  U2387/ZN (NOR2_X1)                                    0.0358     0.2712 f
+  s1_axis_tready (out)                                  0.0031     0.2743 f
+  data arrival time                                                0.2743
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -142,14 +160,47 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0625
+  data arrival time                                               -0.2743
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8375
+  slack (MET)                                                      1.6257
 
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_arb_regs/irq_status_r_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[22]
+  Endpoint: irq_o (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_arb_regs/irq_status_r_reg[4]/CK (DFFR_X1)           0.0000 #   0.0000 r
+  u_arb_regs/irq_status_r_reg[4]/Q (DFFR_X1)            0.1052     0.1052 f
+  U2601/ZN (AOI22_X1)                                   0.0577     0.1629 r
+  U2602/ZN (NAND3_X1)                                   0.0309     0.1938 f
+  irq_o (out)                                           0.0021     0.1959 f
+  data arrival time                                                0.1959
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  output external delay                                -2.0000     1.9000
+  data required time                                               1.9000
+  --------------------------------------------------------------------------
+  data required time                                               1.9000
+  data arrival time                                               -0.1959
+  --------------------------------------------------------------------------
+  slack (MET)                                                      1.7041
+
+
+  Startpoint: u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ready_key_o
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -162,23 +213,13 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2132/ZN (NAND2_X1)                                   0.0500     0.7459 f
-  U2217/ZN (NOR2_X1)                                    0.0517     0.7975 r
-  U2218/ZN (AOI21_X2)                                   0.0483     0.8458 f
-  U2064/ZN (INV_X1)                                     0.0536     0.8994 r
-  U2063/ZN (NAND2_X1)                                   0.0349     0.9344 f
-  U2085/ZN (NAND2_X1)                                   0.0286     0.9629 r
-  U2671/ZN (NOR2_X1)                                    0.0203     0.9832 f
-  U2676/ZN (AND4_X1)                                    0.0392     1.0224 f
-  U2677/ZN (AOI21_X1)                                   0.0337     1.0561 r
-  s_axil_arb_rdata[22] (out)                            0.0021     1.0582 r
-  data arrival time                                                1.0582
+  u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/u_key_ram_gen/keys_ready_o_reg/Q (DFFR_X1)
+                                                        0.1194     0.1194 r
+  u_des/u_axis/u_des/ready_key_o (des_pipeline_fb)      0.0000     0.1194 r
+  ready_key_o (out)                                     0.0031     0.1225 r
+  data arrival time                                                0.1225
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -187,14 +228,14 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0582
+  data arrival time                                               -0.1225
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8418
+  slack (MET)                                                      1.7775
 
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[24]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[1]
+  Endpoint: m_axis_tdata[63]
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -207,22 +248,13 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2132/ZN (NAND2_X1)                                   0.0500     0.7459 f
-  U2217/ZN (NOR2_X1)                                    0.0517     0.7975 r
-  U2218/ZN (AOI21_X2)                                   0.0483     0.8458 f
-  U2219/ZN (INV_X2)                                     0.0798     0.9256 r
-  U3381/ZN (NAND2_X1)                                   0.0429     0.9685 f
-  U3382/ZN (NAND3_X1)                                   0.0326     1.0011 r
-  U3388/ZN (NOR2_X1)                                    0.0219     1.0230 f
-  U3389/ZN (NAND4_X1)                                   0.0294     1.0525 r
-  s_axil_arb_rdata[1] (out)                             0.0021     1.0545 r
-  data arrival time                                                1.0545
+  u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[24]/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[24]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  u_des/u_axis/u_des/data_o[63] (des_pipeline_fb)       0.0000     0.1091 r
+  m_axis_tdata[63] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -231,14 +263,14 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0545
+  data arrival time                                               -0.1111
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8455
+  slack (MET)                                                      1.7889
 
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[24]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[21]
+  Endpoint: m_axis_tdata[62]
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -251,22 +283,13 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2378/ZN (AND2_X1)                                    0.0681     0.7640 r
-  U2382/ZN (AND2_X1)                                    0.0414     0.8054 r
-  U2231/ZN (NAND2_X1)                                   0.0350     0.8404 f
-  U2383/ZN (NAND2_X4)                                   0.0824     0.9228 r
-  U2235/ZN (NAND2_X1)                                   0.0485     0.9713 f
-  U2457/ZN (NAND2_X1)                                   0.0304     1.0017 r
-  U2459/ZN (NOR2_X1)                                    0.0215     1.0232 f
-  U2202/ZN (NAND3_X1)                                   0.0266     1.0498 r
-  s_axil_arb_rdata[21] (out)                            0.0021     1.0518 r
-  data arrival time                                                1.0518
+  u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[24]/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[24]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  u_des/u_axis/u_des/data_o[62] (des_pipeline_fb)       0.0000     0.1091 r
+  m_axis_tdata[62] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -275,14 +298,14 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0518
+  data arrival time                                               -0.1111
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8482
+  slack (MET)                                                      1.7889
 
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[16]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[18]
+  Endpoint: m_axis_tdata[61]
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -295,22 +318,13 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2378/ZN (AND2_X1)                                    0.0681     0.7640 r
-  U2382/ZN (AND2_X1)                                    0.0414     0.8054 r
-  U2231/ZN (NAND2_X1)                                   0.0350     0.8404 f
-  U2383/ZN (NAND2_X4)                                   0.0824     0.9228 r
-  U2237/ZN (NAND2_X1)                                   0.0485     0.9713 f
-  U2439/ZN (NAND2_X1)                                   0.0304     1.0017 r
-  U2441/ZN (NOR2_X1)                                    0.0215     1.0232 f
-  U2200/ZN (NAND3_X1)                                   0.0266     1.0498 r
-  s_axil_arb_rdata[18] (out)                            0.0021     1.0518 r
-  data arrival time                                                1.0518
+  u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[16]/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[16]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  u_des/u_axis/u_des/data_o[61] (des_pipeline_fb)       0.0000     0.1091 r
+  m_axis_tdata[61] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -319,14 +333,14 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0518
+  data arrival time                                               -0.1111
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8482
+  slack (MET)                                                      1.7889
 
 
-  Startpoint: u_arb_regs/rvalid_r_reg
+  Startpoint: u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[16]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[19]
+  Endpoint: m_axis_tdata[60]
             (output port clocked by clk)
   Path Group: clk
   Path Type: max
@@ -339,22 +353,13 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2378/ZN (AND2_X1)                                    0.0681     0.7640 r
-  U2382/ZN (AND2_X1)                                    0.0414     0.8054 r
-  U2231/ZN (NAND2_X1)                                   0.0350     0.8404 f
-  U2383/ZN (NAND2_X4)                                   0.0824     0.9228 r
-  U2236/ZN (NAND2_X1)                                   0.0485     0.9713 f
-  U2448/ZN (NAND2_X1)                                   0.0304     1.0017 r
-  U2450/ZN (NOR2_X1)                                    0.0215     1.0232 f
-  U2201/ZN (NAND3_X1)                                   0.0265     1.0498 r
-  s_axil_arb_rdata[19] (out)                            0.0021     1.0518 r
-  data arrival time                                                1.0518
+  u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[16]/CK (DFFR_X1)
+                                                        0.0000 #   0.0000 r
+  u_des/u_axis/u_des/pipe_stages[15].u_round/R_o_reg[16]/Q (DFFR_X1)
+                                                        0.1091     0.1091 r
+  u_des/u_axis/u_des/data_o[60] (des_pipeline_fb)       0.0000     0.1091 r
+  m_axis_tdata[60] (out)                                0.0021     0.1111 r
+  data arrival time                                                0.1111
 
   clock clk (rise edge)                                 4.0000     4.0000
   clock network delay (ideal)                           0.0000     4.0000
@@ -363,96 +368,9 @@ Wire Load Model Mode: top
   data required time                                               1.9000
   --------------------------------------------------------------------------
   data required time                                               1.9000
-  data arrival time                                               -1.0518
+  data arrival time                                               -0.1111
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.8482
-
-
-  Startpoint: u_arb_regs/rvalid_r_reg
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[8]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2132/ZN (NAND2_X1)                                   0.0500     0.7459 f
-  U2217/ZN (NOR2_X1)                                    0.0517     0.7975 r
-  U2218/ZN (AOI21_X2)                                   0.0483     0.8458 f
-  U2064/ZN (INV_X1)                                     0.0536     0.8994 r
-  U2639/ZN (NAND2_X1)                                   0.0317     0.9312 f
-  U2644/ZN (AND4_X1)                                    0.0434     0.9746 f
-  U2238/ZN (AND3_X1)                                    0.0370     1.0116 f
-  U1994/ZN (AOI21_X1)                                   0.0334     1.0450 r
-  s_axil_arb_rdata[8] (out)                             0.0021     1.0471 r
-  data arrival time                                                1.0471
-
-  clock clk (rise edge)                                 4.0000     4.0000
-  clock network delay (ideal)                           0.0000     4.0000
-  clock uncertainty                                    -0.1000     3.9000
-  output external delay                                -2.0000     1.9000
-  data required time                                               1.9000
-  --------------------------------------------------------------------------
-  data required time                                               1.9000
-  data arrival time                                               -1.0471
-  --------------------------------------------------------------------------
-  slack (MET)                                                      0.8529
-
-
-  Startpoint: u_arb_regs/rvalid_r_reg
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: s_axil_arb_rdata[24]
-            (output port clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  des_arb_soc_top    5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  u_arb_regs/rvalid_r_reg/CK (DFFR_X2)                  0.0000 #   0.0000 r
-  u_arb_regs/rvalid_r_reg/Q (DFFR_X2)                   0.1840     0.1840 r
-  U2145/Z (MUX2_X1)                                     0.1656     0.3496 f
-  U2299/ZN (INV_X1)                                     0.1432     0.4929 r
-  U2134/ZN (NAND2_X1)                                   0.0904     0.5833 f
-  U1993/ZN (INV_X2)                                     0.1126     0.6959 r
-  U2378/ZN (AND2_X1)                                    0.0681     0.7640 r
-  U2382/ZN (AND2_X1)                                    0.0414     0.8054 r
-  U2231/ZN (NAND2_X1)                                   0.0350     0.8404 f
-  U2383/ZN (NAND2_X4)                                   0.0824     0.9228 r
-  U3365/ZN (NAND2_X1)                                   0.0461     0.9689 f
-  U3368/ZN (AND3_X1)                                    0.0416     1.0105 f
-  U3369/ZN (AOI21_X1)                                   0.0334     1.0439 r
-  s_axil_arb_rdata[24] (out)                            0.0021     1.0460 r
-  data arrival time                                                1.0460
-
-  clock clk (rise edge)                                 4.0000     4.0000
-  clock network delay (ideal)                           0.0000     4.0000
-  clock uncertainty                                    -0.1000     3.9000
-  output external delay                                -2.0000     1.9000
-  data required time                                               1.9000
-  --------------------------------------------------------------------------
-  data required time                                               1.9000
-  data arrival time                                               -1.0460
-  --------------------------------------------------------------------------
-  slack (MET)                                                      0.8540
+  slack (MET)                                                      1.7889
 
 
 1

@@ -28,43 +28,24 @@ module tb_des_arb_soc;
     wire [63:0] m_tdata;
     wire        m_tlast;
 
-    // DES AXI-Lite
-    reg         d_awvalid;
-    wire        d_awready;
-    reg  [31:0] d_awaddr;
-    reg         d_wvalid;
-    wire        d_wready;
-    reg  [31:0] d_wdata;
-    reg  [3:0]  d_wstrb;
-    wire        d_bvalid;
-    reg         d_bready;
-    wire [1:0]  d_bresp;
-    reg         d_arvalid;
-    wire        d_arready;
-    reg  [31:0] d_araddr;
-    reg         d_rready;
-    wire        d_rvalid;
-    wire [31:0] d_rdata;
-    wire [1:0]  d_rresp;
-
-    // arbiter AXI-Lite
-    reg         a_awvalid;
-    wire        a_awready;
-    reg  [31:0] a_awaddr;
-    reg         a_wvalid;
-    wire        a_wready;
-    reg  [31:0] a_wdata;
-    reg  [3:0]  a_wstrb;
-    wire        a_bvalid;
-    reg         a_bready;
-    wire [1:0]  a_bresp;
-    reg         a_arvalid;
-    wire        a_arready;
-    reg  [31:0] a_araddr;
-    reg         a_rready;
-    wire        a_rvalid;
-    wire [31:0] a_rdata;
-    wire [1:0]  a_rresp;
+    // AXI4-Lite（单控制端口）
+    reg         axil_awvalid;
+    wire        axil_awready;
+    reg  [31:0] axil_awaddr;
+    reg         axil_wvalid;
+    wire        axil_wready;
+    reg  [31:0] axil_wdata;
+    reg  [3:0]  axil_wstrb;
+    wire        axil_bvalid;
+    reg         axil_bready;
+    wire [1:0]  axil_bresp;
+    reg         axil_arvalid;
+    wire        axil_arready;
+    reg  [31:0] axil_araddr;
+    reg         axil_rready;
+    wire        axil_rvalid;
+    wire [31:0] axil_rdata;
+    wire [1:0]  axil_rresp;
 
     wire        irq;
     wire        arb_busy;
@@ -97,41 +78,23 @@ module tb_des_arb_soc;
         .m_axis_tdata         (m_tdata),
         .m_axis_tlast         (m_tlast),
 
-        .s_axil_des_awvalid   (d_awvalid),
-        .s_axil_des_awready   (d_awready),
-        .s_axil_des_awaddr    (d_awaddr),
-        .s_axil_des_wvalid    (d_wvalid),
-        .s_axil_des_wready    (d_wready),
-        .s_axil_des_wdata     (d_wdata),
-        .s_axil_des_wstrb     (d_wstrb),
-        .s_axil_des_bvalid    (d_bvalid),
-        .s_axil_des_bready    (d_bready),
-        .s_axil_des_bresp     (d_bresp),
-        .s_axil_des_arvalid   (d_arvalid),
-        .s_axil_des_arready   (d_arready),
-        .s_axil_des_araddr    (d_araddr),
-        .s_axil_des_rready    (d_rready),
-        .s_axil_des_rvalid    (d_rvalid),
-        .s_axil_des_rdata     (d_rdata),
-        .s_axil_des_rresp     (d_rresp),
-
-        .s_axil_arb_awvalid   (a_awvalid),
-        .s_axil_arb_awready   (a_awready),
-        .s_axil_arb_awaddr    (a_awaddr),
-        .s_axil_arb_wvalid    (a_wvalid),
-        .s_axil_arb_wready    (a_wready),
-        .s_axil_arb_wdata     (a_wdata),
-        .s_axil_arb_wstrb     (a_wstrb),
-        .s_axil_arb_bvalid    (a_bvalid),
-        .s_axil_arb_bready    (a_bready),
-        .s_axil_arb_bresp     (a_bresp),
-        .s_axil_arb_arvalid   (a_arvalid),
-        .s_axil_arb_arready   (a_arready),
-        .s_axil_arb_araddr    (a_araddr),
-        .s_axil_arb_rready    (a_rready),
-        .s_axil_arb_rvalid    (a_rvalid),
-        .s_axil_arb_rdata     (a_rdata),
-        .s_axil_arb_rresp     (a_rresp),
+        .s_axil_awvalid       (axil_awvalid),
+        .s_axil_awready       (axil_awready),
+        .s_axil_awaddr        (axil_awaddr),
+        .s_axil_wvalid        (axil_wvalid),
+        .s_axil_wready        (axil_wready),
+        .s_axil_wdata         (axil_wdata),
+        .s_axil_wstrb         (axil_wstrb),
+        .s_axil_bvalid        (axil_bvalid),
+        .s_axil_bready        (axil_bready),
+        .s_axil_bresp         (axil_bresp),
+        .s_axil_arvalid       (axil_arvalid),
+        .s_axil_arready       (axil_arready),
+        .s_axil_araddr        (axil_araddr),
+        .s_axil_rready        (axil_rready),
+        .s_axil_rvalid        (axil_rvalid),
+        .s_axil_rdata         (axil_rdata),
+        .s_axil_rresp         (axil_rresp),
 
         .irq_o                (irq),
         .arb_busy_o           (arb_busy),
@@ -145,73 +108,50 @@ module tb_des_arb_soc;
     always #5 clk = ~clk;
 
     // ------------------------------------------------------------------
-    // AXI4-Lite helpers (DES / arbiter)
+    // AXI4-Lite helpers（单端口；DES=0x0xx，arbiter=0x1xx）
     // ------------------------------------------------------------------
-    task des_write;
-        input [7:0]  addr;
+    task axil_write;
+        input [15:0] addr;
         input [31:0] data;
+        integer aw_done, w_done;
         begin
             @(posedge clk);
-            d_awvalid <= 1'b1; d_awaddr <= {24'h0, addr};
-            d_wvalid  <= 1'b1; d_wdata  <= data; d_wstrb <= 4'hF;
+            axil_awvalid <= 1'b1; axil_awaddr <= {16'h0, addr};
+            axil_wvalid  <= 1'b1; axil_wdata  <= data; axil_wstrb <= 4'hF;
+            aw_done = 0;
+            w_done  = 0;
+            while (!(aw_done && w_done)) begin
+                @(posedge clk);
+                if (!aw_done && axil_awvalid && axil_awready) begin
+                    axil_awvalid <= 1'b0;
+                    aw_done = 1;
+                end
+                if (!w_done && axil_wvalid && axil_wready) begin
+                    axil_wvalid <= 1'b0;
+                    w_done = 1;
+                end
+            end
+            while (!axil_bvalid) @(posedge clk);
+            axil_bready <= 1'b1;
             @(posedge clk);
-            while (!(d_awready && d_wready)) @(posedge clk);
-            d_awvalid <= 1'b0; d_wvalid <= 1'b0;
-            while (!d_bvalid) @(posedge clk);
-            d_bready <= 1'b1;
-            @(posedge clk);
-            d_bready <= 1'b0;
+            axil_bready <= 1'b0;
         end
     endtask
 
-    task des_read;
-        input  [7:0]  addr;
+    task axil_read;
+        input  [15:0] addr;
         output [31:0] data;
         begin
             @(posedge clk);
-            d_arvalid <= 1'b1; d_araddr <= {24'h0, addr};
+            axil_arvalid <= 1'b1; axil_araddr <= {16'h0, addr};
             @(posedge clk);
-            while (!d_arready) @(posedge clk);
-            d_arvalid <= 1'b0;
-            while (!d_rvalid) @(posedge clk);
-            data = d_rdata;
-            d_rready <= 1'b1;
+            while (!axil_arready) @(posedge clk);
+            axil_arvalid <= 1'b0;
+            while (!axil_rvalid) @(posedge clk);
+            data = axil_rdata;
+            axil_rready <= 1'b1;
             @(posedge clk);
-            d_rready <= 1'b0;
-        end
-    endtask
-
-    task arb_write;
-        input [7:0]  addr;
-        input [31:0] data;
-        begin
-            @(posedge clk);
-            a_awvalid <= 1'b1; a_awaddr <= {24'h0, addr};
-            a_wvalid  <= 1'b1; a_wdata  <= data; a_wstrb <= 4'hF;
-            @(posedge clk);
-            while (!(a_awready && a_wready)) @(posedge clk);
-            a_awvalid <= 1'b0; a_wvalid <= 1'b0;
-            while (!a_bvalid) @(posedge clk);
-            a_bready <= 1'b1;
-            @(posedge clk);
-            a_bready <= 1'b0;
-        end
-    endtask
-
-    task arb_read;
-        input  [7:0]  addr;
-        output [31:0] data;
-        begin
-            @(posedge clk);
-            a_arvalid <= 1'b1; a_araddr <= {24'h0, addr};
-            @(posedge clk);
-            while (!a_arready) @(posedge clk);
-            a_arvalid <= 1'b0;
-            while (!a_rvalid) @(posedge clk);
-            data = a_rdata;
-            a_rready <= 1'b1;
-            @(posedge clk);
-            a_rready <= 1'b0;
+            axil_rready <= 1'b0;
         end
     endtask
 
@@ -296,15 +236,10 @@ module tb_des_arb_soc;
         s1_tvalid = 1'b0; s1_tdata = 64'h0; s1_tlast = 1'b0;
         m_tready  = 1'b1;
 
-        d_awvalid = 1'b0; d_awaddr = 32'h0;
-        d_wvalid  = 1'b0; d_wdata  = 32'h0; d_wstrb = 4'h0;
-        d_bready  = 1'b0;
-        d_arvalid = 1'b0; d_araddr = 32'h0; d_rready = 1'b0;
-
-        a_awvalid = 1'b0; a_awaddr = 32'h0;
-        a_wvalid  = 1'b0; a_wdata  = 32'h0; a_wstrb = 4'h0;
-        a_bready  = 1'b0;
-        a_arvalid = 1'b0; a_araddr = 32'h0; a_rready = 1'b0;
+        axil_awvalid = 1'b0; axil_awaddr = 32'h0;
+        axil_wvalid  = 1'b0; axil_wdata  = 32'h0; axil_wstrb = 4'h0;
+        axil_bready  = 1'b0;
+        axil_arvalid = 1'b0; axil_araddr = 32'h0; axil_rready = 1'b0;
 
         out_cnt = 0;
         err     = 0;
@@ -317,14 +252,14 @@ module tb_des_arb_soc;
         #20;
 
         // DES: key + mode + enable
-        des_write(8'h00, keys[0][31:0]);
-        des_write(8'h04, keys[0][63:32]);
+        axil_write(16'h0000, keys[0][31:0]);
+        axil_write(16'h0004, keys[0][63:32]);
         wait (ready_key === 1'b1);
-        des_write(8'h08, 32'h0000_0003);   // MODE=1 (encrypt), ENABLE=1
+        axil_write(16'h0008, 32'h0000_0003);   // MODE=1 (encrypt), ENABLE=1
 
-        // arbiter enable, round-robin
-        arb_write(8'h00, 32'h0000_0001);
-        arb_write(8'h0C, 32'h0000_0008);
+        // arbiter: 0x100 起的地址
+        axil_write(16'h0100, 32'h0000_0001);
+        axil_write(16'h010C, 32'h0000_0008);
 
         // ch0 packet = ins[0..3], ch1 packet = ins[4..7]
         send0(4, 0);
@@ -338,13 +273,13 @@ module tb_des_arb_soc;
             $display("ERROR: out_cnt=%0d expected 8", out_cnt);
         end
 
-        arb_read(8'h1C, rd);   // ch0 packets_out
+        axil_read(16'h011C, rd);   // ch0 packets_out
         if (rd !== 32'd1) begin err = err + 1; $display("ERROR ch0 pkts_out=%0d", rd); end
-        arb_read(8'h34, rd);   // ch1 packets_out
+        axil_read(16'h0134, rd);   // ch1 packets_out
         if (rd !== 32'd1) begin err = err + 1; $display("ERROR ch1 pkts_out=%0d", rd); end
-        arb_read(8'h18, rd);   // ch0 beats_out
+        axil_read(16'h0118, rd);   // ch0 beats_out
         if (rd !== 32'd4) begin err = err + 1; $display("ERROR ch0 beats_out=%0d", rd); end
-        arb_read(8'h30, rd);   // ch1 beats_out
+        axil_read(16'h0130, rd);   // ch1 beats_out
         if (rd !== 32'd4) begin err = err + 1; $display("ERROR ch1 beats_out=%0d", rd); end
 
         #100;

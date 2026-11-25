@@ -4,7 +4,7 @@ Report         : guidance
 Reference      : r:/WORK/des_arb_soc_top
 Implementation : i:/WORK/des_arb_soc_top
 Version        : O-2018.06-SP1
-Date           : Wed Nov 25 09:41:13 2026
+Date           : Wed Nov 25 10:15:50 2026
 **************************************************
                                          Status
 Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
@@ -13,16 +13,15 @@ architecture_netlist:          2          0          0          0          2
 boundary            :          2          0          0          0          2
 boundary_netlist    :          2          0          0          0          2
 change_names        :         22          1          0          0         23
-constant            :         37          0          0          0         37
+constant            :        175          0          0          0        175
 datapath            :          2          0          0          0          2
 environment         :          3          0          0          0          3
-instance_map        :         10          0          0          0         10
-inv_push            :          1          0          0          0          1
+instance_map        :         11          0          0          0         11
 mark                :         12          0          0          0         12
 merge               :          3          0          0          0          3
 reg_constant        :          2          0          0          0          2
 replace             :          4          0          0          0          4
-ungroup             :         23          0          0          0         23
+ungroup             :         24          0          0          0         24
 uniquify            :          3          0          0          0          3
 ununiquify          :          1          0          0          0          1
 
