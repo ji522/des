@@ -1,0 +1,455 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 100.0000
+	-max_paths 10
+	-sort_by slack
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 14:37:04 2026
+****************************************
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[3]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U58/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U59/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[3]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[3]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[1]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U61/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U62/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[1]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[1]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[3].u_round/L_o_reg[9]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U58/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U59/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[3].u_round/L_o_reg[9]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[3].u_round/L_o_reg[9]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/L_o_reg[22]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U61/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U62/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/L_o_reg[22]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/L_o_reg[22]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[15]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U61/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U62/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[15]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[15]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/L_o_reg[31]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U58/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U59/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/L_o_reg[31]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/L_o_reg[31]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[10]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U58/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U59/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[10]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[10]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[13]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U58/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U59/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[13]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[13]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[21]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U58/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U59/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[21]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[21]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+
+  Startpoint: u_core/u_des/rst_sync_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[12].u_round/L_o_reg[10]
+               (recovery check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/rst_sync_r_reg/CK (DFFR_X1)              0.0000     0.0000 r
+  u_core/u_des/rst_sync_r_reg/QN (DFFR_X1)              0.0882     0.0882 f
+  U1410/ZN (INV_X4)                                     0.1959     0.2840 r
+  u_core/u_des/u_axis/u_des/U33/Z (CLKBUF_X1)           0.2289     0.5129 r
+  u_core/u_des/u_axis/u_des/U41/Z (CLKBUF_X1)           0.2222     0.7351 r
+  u_core/u_des/u_axis/u_des/U42/Z (CLKBUF_X1)           0.2222     0.9573 r
+  u_core/u_des/u_axis/u_des/U34/Z (CLKBUF_X1)           0.2222     1.1795 r
+  u_core/u_des/u_axis/u_des/U43/Z (CLKBUF_X1)           0.2198     1.3993 r
+  u_core/u_des/u_axis/u_des/U54/Z (CLKBUF_X1)           0.2219     1.6212 r
+  u_core/u_des/u_axis/u_des/U55/Z (CLKBUF_X1)           0.2222     1.8434 r
+  u_core/u_des/u_axis/u_des/U56/Z (CLKBUF_X1)           0.2222     2.0656 r
+  u_core/u_des/u_axis/u_des/U57/Z (CLKBUF_X1)           0.2198     2.2853 r
+  u_core/u_des/u_axis/u_des/U61/Z (CLKBUF_X1)           0.2219     2.5072 r
+  u_core/u_des/u_axis/u_des/U62/Z (CLKBUF_X1)           0.2182     2.7254 r
+  u_core/u_des/u_axis/u_des/pipe_stages[12].u_round/L_o_reg[10]/RN (DFFR_X1)
+                                                        0.0337     2.7591 r
+  data arrival time                                                2.7591
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[12].u_round/L_o_reg[10]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library recovery time                                 0.0453     3.9453
+  data required time                                               3.9453
+  ------------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -2.7591
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.1861
+
+Warning: report_timing has satisfied the max_paths criteria. There are 8531 further endpoints which have paths of interest with slack less than 100.0000 that were not considered when generating this report. (UITE-502)
+
+1

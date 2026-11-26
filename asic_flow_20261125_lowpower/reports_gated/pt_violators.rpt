@@ -1,0 +1,232 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 14:37:04 2026
+****************************************
+
+
+
+
+
+   removal
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   u_af0/u_fifo/rgray_sync1_reg[0]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync1_reg[1]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync1_reg[2]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync1_reg[3]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync1_reg[4]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync2_reg[0]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync2_reg[1]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync2_reg[2]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync2_reg[3]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/rgray_sync2_reg[4]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wbin_reg[0]/RN                               -0.13  (VIOLATED)
+   u_af0/u_fifo/wbin_reg[1]/RN                               -0.13  (VIOLATED)
+   u_af0/u_fifo/wbin_reg[2]/RN                               -0.13  (VIOLATED)
+   u_af0/u_fifo/wbin_reg[3]/RN                               -0.13  (VIOLATED)
+   u_af0/u_fifo/wfull_r_reg/RN                               -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_reg[0]/RN                              -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_reg[1]/RN                              -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_reg[2]/RN                              -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_reg[3]/RN                              -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_reg[4]/RN                              -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync1_reg[0]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync1_reg[1]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync1_reg[2]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync1_reg[3]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync1_reg[4]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync2_reg[0]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync2_reg[1]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync2_reg[2]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync2_reg[3]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/rgray_sync2_reg[4]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/wbin_reg[0]/RN                               -0.13  (VIOLATED)
+   u_af1/u_fifo/wbin_reg[1]/RN                               -0.13  (VIOLATED)
+   u_af1/u_fifo/wbin_reg[2]/RN                               -0.13  (VIOLATED)
+   u_af1/u_fifo/wbin_reg[3]/RN                               -0.13  (VIOLATED)
+   u_af1/u_fifo/wfull_r_reg/RN                               -0.13  (VIOLATED)
+   u_af1/u_fifo/wgray_reg[0]/RN                              -0.13  (VIOLATED)
+   u_af1/u_fifo/wgray_reg[1]/RN                              -0.13  (VIOLATED)
+   u_af1/u_fifo/wgray_reg[2]/RN                              -0.13  (VIOLATED)
+   u_af1/u_fifo/wgray_reg[3]/RN                              -0.13  (VIOLATED)
+   u_af1/u_fifo/wgray_reg[4]/RN                              -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync1_reg[0]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync1_reg[1]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync1_reg[2]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync1_reg[3]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync1_reg[4]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync2_reg[1]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync2_reg[2]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync2_reg[3]/RN                        -0.13  (VIOLATED)
+   u_af0/u_fifo/wgray_sync2_reg[4]/RN                        -0.13  (VIOLATED)
+   u_af1/u_fifo/wgray_sync1_reg[3]/RN                        -0.13  (VIOLATED)
+   u_core/u_des/u_regs/aw_addr_lat_reg[0]/RN                 -0.13  (VIOLATED)
+   u_core/u_des/u_regs/aw_addr_lat_reg[1]/RN                 -0.13  (VIOLATED)
+   u_core/u_des/u_regs/aw_addr_lat_reg[2]/RN                 -0.13  (VIOLATED)
+   u_core/u_des/u_regs/aw_addr_lat_reg[3]/RN                 -0.13  (VIOLATED)
+   u_core/u_des/u_regs/bvalid_r_reg/RN                       -0.13  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[18]/RN                      -0.13  (VIOLATED)
+   u_core/u_des/u_regs/rvalid_r_reg/RN                       -0.13  (VIOLATED)
+   u_core/u_des/u_regs/w_strb_lat_reg[0]/RN                  -0.13  (VIOLATED)
+   u_core/u_des/u_regs/w_strb_lat_reg[1]/RN                  -0.13  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[3].u_round/L_o_reg[15]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[4].u_round/R_o_reg[12]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/R_o_reg[16]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/L_o_reg[11]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/L_o_reg[19]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[0]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[10]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[13]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[21]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[28]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[0]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[2]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[10]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[13]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[21]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/L_o_reg[28]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/L_o_reg[2]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/L_o_reg[7]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/L_o_reg[10]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/L_o_reg[28]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/R_o_reg[20]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[1]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[2]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[12]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[16]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[25]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/L_o_reg[29]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/R_o_reg[1]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/R_o_reg[9]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/R_o_reg[14]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/R_o_reg[15]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[14]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[18]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[24]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/L_o_reg[27]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[0]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[2]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[4]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[5]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[7]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[11]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[14]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[16]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[17]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[18]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[21]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[24]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[29]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[0]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[2]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[5]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[7]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[11]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[14]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[16]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[17]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[18]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/L_o_reg[30]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/R_o_reg[6]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/R_o_reg[25]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[12].u_round/L_o_reg[25]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[12].u_round/L_o_reg[29]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[14].u_round/L_o_reg[1]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/L_o_reg[5]/RN
+                                                             -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[5]/RN                       -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[6]/RN                       -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[7]/RN                       -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[8]/RN                       -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[15]/RN                      -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[38]/RN                      -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[39]/RN                      -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[40]/RN                      -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[41]/RN                      -0.09  (VIOLATED)
+   u_core/u_des/u_regs/key_r_reg[49]/RN                      -0.09  (VIOLATED)
+   u_core/u_des/u_regs/rdata_r_reg[5]/RN                     -0.09  (VIOLATED)
+   u_core/u_des/u_regs/rdata_r_reg[6]/RN                     -0.09  (VIOLATED)
+   u_core/u_des/u_regs/rdata_r_reg[7]/RN                     -0.09  (VIOLATED)
+   u_core/u_des/u_regs/rdata_r_reg[8]/RN                     -0.09  (VIOLATED)
+   u_core/u_des/u_regs/rdata_r_reg[10]/RN                    -0.09  (VIOLATED)
+   u_core/u_des/u_regs/rdata_r_reg[16]/RN                    -0.09  (VIOLATED)
+   u_core/u_des/u_regs/w_data_lat_reg[7]/RN                  -0.09  (VIOLATED)
+   u_core/u_des/u_regs/w_data_lat_reg[8]/RN                  -0.09  (VIOLATED)
+   u_core/u_des/u_regs/w_data_lat_reg[9]/RN                  -0.09  (VIOLATED)
+   u_core/u_des/u_regs/w_data_lat_reg[10]/RN                 -0.09  (VIOLATED)
+   u_core/u_des/u_regs/w_data_lat_reg[12]/RN                 -0.09  (VIOLATED)
+   u_core/u_des/u_regs/w_data_lat_reg[16]/RN                 -0.09  (VIOLATED)
+   u_af0/u_fifo/rempty_r_reg/SN                              -0.08  (VIOLATED)
+
+
+
+
+1

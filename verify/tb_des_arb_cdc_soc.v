@@ -257,10 +257,19 @@ module tb_des_arb_cdc_soc;
     // ------------------------------------------------------------------
     integer out_cnt;
     integer err;
+    reg     pwr_mode;
+
+    initial pwr_mode = $test$plusargs("PWR_MODE");
 
     always @(posedge clk) begin
         if (rst_n && m_tvalid && m_tready) begin
-            if (out_cnt < 8) begin
+            if (pwr_mode) begin
+                // 长流量功耗模式：只查 TLAST 每 4 拍一次，不做 DES 数据对拍
+                if (m_tlast !== ((out_cnt % 4) == 3)) begin
+                    err = err + 1;
+                    $display("[%0t] ERROR pwr out[%0d] tlast=%b", $time, out_cnt, m_tlast);
+                end
+            end else if (out_cnt < 8) begin
                 if (m_tdata !== exps[out_cnt]) begin
                     err = err + 1;
                     $display("[%0t] ERROR out[%0d]=%h exp=%h", $time, out_cnt, m_tdata, exps[out_cnt]);
@@ -282,6 +291,7 @@ module tb_des_arb_cdc_soc;
     // ------------------------------------------------------------------
     reg [31:0] rd;
     integer i;
+    integer p0, p1;
 
     initial begin
         s0_tvalid = 1'b0; s0_tdata = 64'h0; s0_tlast = 1'b0;
@@ -313,6 +323,31 @@ module tb_des_arb_cdc_soc;
         axil_write(16'h0100, 32'h0000_0001);
         axil_write(16'h010C, 32'h0000_0008);
 
+        // ---- 长流量功耗模式：32 包/通道，共 256 beat ----
+        if (pwr_mode) begin
+            fork
+                begin
+                    for (p0 = 0; p0 < 32; p0 = p0 + 1)
+                        send0_w(4, 0);
+                end
+                begin
+                    for (p1 = 0; p1 < 32; p1 = p1 + 1)
+                        send1_w(4, 4);
+                end
+                begin
+                    #200;
+                    release_output();
+                end
+            join
+            wait (out_cnt == 256);
+            #500;
+            if (err == 0)
+                $display("DES ARB CDC PWR PASS : 256 beats, 64 packets, 3 clocks");
+            else
+                $display("DES ARB CDC PWR FAIL : err=%0d", err);
+            $finish;
+        end
+
         // keep output held while filling both async FIFOs
         send0_w(4, 0);
         #100;
@@ -343,6 +378,21 @@ module tb_des_arb_cdc_soc;
         #1000000;
         $display("DES ARB CDC FAIL : TIMEOUT");
         $finish;
+    end
+
+    // 可选 VCD dump（低功耗 SAIF 流程用）：+DUMP_VCD
+    initial begin
+        if ($test$plusargs("DUMP_VCD")) begin
+            $dumpfile("tb_des_arb_cdc_soc.vcd");
+            $dumpvars(0, tb_des_arb_cdc_soc.dut);
+            $dumpoff;
+            wait (rst_n === 1'b1);
+            #200;
+            $dumpon;
+            if (pwr_mode) #8000;
+            else          #3000;
+            $dumpoff;
+        end
     end
 
 endmodule

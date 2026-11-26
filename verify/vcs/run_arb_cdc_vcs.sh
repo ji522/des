@@ -35,10 +35,13 @@ mkdir -p "$DIR"
         exit 1
     fi
     echo "=== run tb_des_arb_cdc_soc ==="
-    ./simv -l sim.log 2>&1
+    ARGS=""
+    [ "${DUMP_VCD:-0}" = "1" ] && ARGS="$ARGS +DUMP_VCD"
+    [ "${PWR_MODE:-0}" = "1" ] && ARGS="$ARGS +PWR_MODE"
+    ./simv $ARGS -l sim.log 2>&1
 ) > "$OUT/logs/tb_des_arb_cdc_soc.log" 2>&1
 
-if [ -f "$DIR/sim.log" ] && grep -qaE "DES ARB CDC PASS" "$DIR/sim.log"; then
+if [ -f "$DIR/sim.log" ] && grep -qaE "DES ARB CDC (PWR )?PASS" "$DIR/sim.log"; then
     echo "arb_cdc PASS"
     exit 0
 else

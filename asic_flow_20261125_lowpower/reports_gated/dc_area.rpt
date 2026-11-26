@@ -1,0 +1,299 @@
+ 
+****************************************
+Report : area
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 14:36:25 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/ICer/work/des_arb_cdc_lp_20261125/pdk/nangate45/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                         1447
+Number of nets:                         25763
+Number of cells:                        24393
+Number of combinational cells:          17132
+Number of sequential cells:              7114
+Number of macros/black boxes:               0
+Number of buf/inv:                       2452
+Number of references:                     110
+
+Combinational area:              18729.858115
+Buf/Inv area:                     1379.742006
+Noncombinational area:           33531.693477
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 52261.551592
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------------------------------------
+des_arb_cdc_top                   52261.5516    100.0   4257.3301  14072.1977  0.0000  des_arb_cdc_top
+u_af0/u_fifo/clk_gate_mem_reg[0]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_33
+u_af0/u_fifo/clk_gate_mem_reg[10]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_23
+u_af0/u_fifo/clk_gate_mem_reg[11]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_22
+u_af0/u_fifo/clk_gate_mem_reg[12]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_21
+u_af0/u_fifo/clk_gate_mem_reg[13]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_20
+u_af0/u_fifo/clk_gate_mem_reg[14]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_19
+u_af0/u_fifo/clk_gate_mem_reg[15]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_18
+u_af0/u_fifo/clk_gate_mem_reg[1]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_32
+u_af0/u_fifo/clk_gate_mem_reg[2]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_31
+u_af0/u_fifo/clk_gate_mem_reg[3]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_30
+u_af0/u_fifo/clk_gate_mem_reg[4]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_29
+u_af0/u_fifo/clk_gate_mem_reg[5]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_28
+u_af0/u_fifo/clk_gate_mem_reg[6]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_27
+u_af0/u_fifo/clk_gate_mem_reg[7]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_26
+u_af0/u_fifo/clk_gate_mem_reg[8]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_25
+u_af0/u_fifo/clk_gate_mem_reg[9]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_24
+u_af0/u_fifo/clk_gate_rdata_r_reg     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_17
+u_af0/u_fifo/clk_gate_wbin_reg        3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_1_0
+u_af1/u_fifo/clk_gate_mem_reg[0]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_0
+u_af1/u_fifo/clk_gate_mem_reg[10]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_7
+u_af1/u_fifo/clk_gate_mem_reg[11]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_6
+u_af1/u_fifo/clk_gate_mem_reg[12]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_5
+u_af1/u_fifo/clk_gate_mem_reg[13]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_4
+u_af1/u_fifo/clk_gate_mem_reg[14]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_3
+u_af1/u_fifo/clk_gate_mem_reg[15]     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_2
+u_af1/u_fifo/clk_gate_mem_reg[1]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_16
+u_af1/u_fifo/clk_gate_mem_reg[2]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_15
+u_af1/u_fifo/clk_gate_mem_reg[3]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_14
+u_af1/u_fifo/clk_gate_mem_reg[4]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_13
+u_af1/u_fifo/clk_gate_mem_reg[5]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_12
+u_af1/u_fifo/clk_gate_mem_reg[6]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_11
+u_af1/u_fifo/clk_gate_mem_reg[7]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_10
+u_af1/u_fifo/clk_gate_mem_reg[8]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_9
+u_af1/u_fifo/clk_gate_mem_reg[9]      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_8
+u_af1/u_fifo/clk_gate_rdata_r_reg     3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_1
+u_af1/u_fifo/clk_gate_wbin_reg        3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_async_fifo_DATA_W65_ADDR_W4_0_0_2
+u_core/u_arb/clk_gate_ch0_beats_in_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_0
+u_core/u_arb/clk_gate_ch0_beats_out_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_6
+u_core/u_arb/clk_gate_ch0_blocked_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_4
+u_core/u_arb/clk_gate_ch0_packets_in_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_1
+u_core/u_arb/clk_gate_ch0_packets_out_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_8
+u_core/u_arb/clk_gate_ch0_stall_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_5
+u_core/u_arb/clk_gate_ch1_beats_in_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_10
+u_core/u_arb/clk_gate_ch1_beats_out_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_7
+u_core/u_arb/clk_gate_ch1_blocked_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_11
+u_core/u_arb/clk_gate_ch1_packets_in_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_9
+u_core/u_arb/clk_gate_ch1_packets_out_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_3
+u_core/u_arb/clk_gate_ch1_stall_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb2_DATA_W64_FIFO_AW4_2
+u_core/u_arb/u_fifo0               5901.4759     11.3   1057.6160   4772.0398  0.0000  sync_fifo_DATA_W65_ADDR_W4_1
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[0]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_18
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[10]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_8
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[11]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_7
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[12]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_6
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[13]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_5
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[14]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_4
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[15]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_3
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[1]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_17
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[2]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_16
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[3]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_15
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[4]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_14
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[5]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_13
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[6]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_12
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[7]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_11
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[8]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_10
+u_core/u_arb/u_fifo0/clk_gate_mem_reg[9]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_9
+u_core/u_arb/u_fifo0/clk_gate_rd_ptr_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_2
+u_core/u_arb/u_fifo0/clk_gate_wr_ptr_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_1
+u_core/u_arb/u_fifo1               5901.4759     11.3   1057.6160   4772.0398  0.0000  sync_fifo_DATA_W65_ADDR_W4_0
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[0]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_0
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[10]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_26
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[11]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_25
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[12]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_24
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[13]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_23
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[14]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_22
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[15]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_21
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[1]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_35
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[2]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_34
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[3]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_33
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[4]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_32
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[5]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_31
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[6]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_30
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[7]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_29
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[8]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_28
+u_core/u_arb/u_fifo1/clk_gate_mem_reg[9]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_27
+u_core/u_arb/u_fifo1/clk_gate_rd_ptr_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_20
+u_core/u_arb/u_fifo1/clk_gate_wr_ptr_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_sync_fifo_DATA_W65_ADDR_W4_0_19
+u_core/u_arb_regs/clk_gate_af_thresh0_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_0
+u_core/u_arb_regs/clk_gate_af_thresh1_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_3
+u_core/u_arb_regs/clk_gate_ar_addr_lat_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_5
+u_core/u_arb_regs/clk_gate_arb_mode_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_1
+u_core/u_arb_regs/clk_gate_aw_addr_lat_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_7
+u_core/u_arb_regs/clk_gate_irq_mask_r_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_2
+u_core/u_arb_regs/clk_gate_irq_status_r_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_8
+u_core/u_arb_regs/clk_gate_rdata_r_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_6
+u_core/u_arb_regs/clk_gate_w_strb_lat_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_axis_arb_regs_FIFO_AW4_4
+u_core/u_des/u_axis/clk_gate_last_count_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axis_wrap_LAST_FIFO_AW5_1
+u_core/u_des/u_axis/clk_gate_last_rd_ptr_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axis_wrap_LAST_FIFO_AW5_2
+u_core/u_des/u_axis/clk_gate_last_wr_ptr_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axis_wrap_LAST_FIFO_AW5_0
+u_core/u_des/u_axis/u_des         21837.8021     41.8  12357.2960   9340.8561  0.0000  des_pipeline_fb
+u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_15
+u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_5
+u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_4
+u_core/u_des/u_axis/u_des/pipe_stages[12].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_3
+u_core/u_des/u_axis/u_des/pipe_stages[13].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_2
+u_core/u_des/u_axis/u_des/pipe_stages[14].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_1
+u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_0
+u_core/u_des/u_axis/u_des/pipe_stages[1].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_14
+u_core/u_des/u_axis/u_des/pipe_stages[2].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_13
+u_core/u_des/u_axis/u_des/pipe_stages[3].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_12
+u_core/u_des/u_axis/u_des/pipe_stages[4].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_11
+u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_10
+u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_9
+u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_8
+u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_7
+u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/clk_gate_R_o_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_pipe_round_fb_0_6
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_D_reg_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_1
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[0]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_3
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[10]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_13
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[11]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_14
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[12]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_15
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[13]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_16
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[14]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_17
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[15]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_18
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[1]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_4
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[2]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_5
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[3]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_6
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[4]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_7
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[5]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_8
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[6]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_9
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[7]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_10
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[8]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_11
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[9]
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_12
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_round_cnt_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_2
+u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_state_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_key_ram_gen_0
+u_core/u_des/u_regs/clk_gate_aw_addr_lat_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_10
+u_core/u_des/u_regs/clk_gate_encrypt_r_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_1
+u_core/u_des/u_regs/clk_gate_key_loaded_r_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_12
+u_core/u_des/u_regs/clk_gate_key_r_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_2
+u_core/u_des/u_regs/clk_gate_key_r_reg_0
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_3
+u_core/u_des/u_regs/clk_gate_key_r_reg_1
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_4
+u_core/u_des/u_regs/clk_gate_key_r_reg_2
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_5
+u_core/u_des/u_regs/clk_gate_key_r_reg_3
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_6
+u_core/u_des/u_regs/clk_gate_key_r_reg_4
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_7
+u_core/u_des/u_regs/clk_gate_key_r_reg_5
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_8
+u_core/u_des/u_regs/clk_gate_key_r_reg_6
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_9
+u_core/u_des/u_regs/clk_gate_rdata_r_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_11
+u_core/u_des/u_regs/clk_gate_w_data_lat_reg
+                                      3.9900      0.0      0.0000      3.9900  0.0000  SNPS_CLOCK_GATE_HIGH_des_axil_regs_0
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------------------------------------
+Total                                                  18729.8581  33531.6935  0.0000
+
+1

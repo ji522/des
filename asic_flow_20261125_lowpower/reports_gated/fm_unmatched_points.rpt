@@ -1,0 +1,328 @@
+**************************************************
+Report         : unmatched_points
+
+Reference      : r:/WORK/des_arb_cdc_top
+Implementation : i:/WORK/des_arb_cdc_top
+Version        : O-2018.06-SP1
+Date           : Thu Nov 26 14:38:05 2026
+**************************************************
+
+144 Unmatched points (0 reference, 144 implementation):
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[0]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[10]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[11]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[12]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[13]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[14]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[15]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[1]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[2]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[3]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[4]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[5]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[6]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[7]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[8]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_mem_reg[9]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_rdata_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af0/u_fifo/clk_gate_wbin_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[0]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[10]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[11]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[12]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[13]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[14]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[15]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[1]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[2]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[3]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[4]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[5]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[6]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[7]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[8]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_mem_reg[9]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_rdata_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_af1/u_fifo/clk_gate_wbin_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch0_beats_in_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch0_beats_out_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch0_blocked_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch0_packets_in_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch0_packets_out_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch0_stall_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch1_beats_in_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch1_beats_out_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch1_blocked_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch1_packets_in_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch1_packets_out_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/clk_gate_ch1_stall_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[0]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[10]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[11]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[12]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[13]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[14]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[15]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[1]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[2]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[3]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[4]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[5]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[6]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[7]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[8]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_mem_reg[9]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_rd_ptr_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo0/clk_gate_wr_ptr_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[0]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[10]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[11]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[12]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[13]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[14]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[15]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[1]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[2]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[3]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[4]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[5]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[6]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[7]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[8]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_mem_reg[9]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_rd_ptr_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb/u_fifo1/clk_gate_wr_ptr_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_af_thresh0_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_af_thresh1_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_ar_addr_lat_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_arb_mode_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_aw_addr_lat_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_irq_mask_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_irq_status_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_rdata_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_arb_regs/clk_gate_w_strb_lat_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/clk_gate_last_count_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/clk_gate_last_rd_ptr_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/clk_gate_last_wr_ptr_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[11].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[12].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[13].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[14].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[15].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[1].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[2].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[3].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[4].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[5].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/clk_gate_R_o_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_D_reg_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[0]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[10]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[11]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[12]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[13]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[14]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[15]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[1]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[2]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[3]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[4]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[5]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[6]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[7]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[8]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_key_ram_reg[9]/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_round_cnt_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_axis/u_des/u_key_ram_gen/clk_gate_state_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_aw_addr_lat_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_encrypt_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_loaded_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg_0/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg_1/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg_2/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg_3/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg_4/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg_5/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_key_r_reg_6/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_rdata_r_reg/latch
+
+  Impl LATCG      i:/WORK/des_arb_cdc_top/u_core/u_des/u_regs/clk_gate_w_data_lat_reg/latch
+
+ [BBNet: multiply-driven net
+  BBox:  black-box
+  BBPin: black-box pin
+  Block: hierarchical block
+  BlPin: hierarchical block pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Net:   matchable net
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1

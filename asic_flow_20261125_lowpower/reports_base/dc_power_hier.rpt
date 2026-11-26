@@ -1,0 +1,52 @@
+Warning: There are 3 switching activity information conflicts. (PWR-19)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 14:35:17 2026
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/ICer/work/des_arb_cdc_lp_20261125/pdk/nangate45/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+des_arb_cdc_top        5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+des_arb_cdc_top                        1.71e+03 9.26e+03 1.25e+06 1.22e+04 100.0
+  u_core/u_des/u_axis/u_des (des_pipeline_fb)
+                                       1.38e+03 3.76e+03 5.28e+05 5.67e+03  46.4
+  u_core/u_arb/u_fifo0 (sync_fifo_DATA_W65_ADDR_W4_1)
+                                         59.949 1.33e+03 1.44e+05 1.53e+03  12.6
+  u_core/u_arb/u_fifo1 (sync_fifo_DATA_W65_ADDR_W4_0)
+                                         47.763 1.34e+03 1.43e+05 1.53e+03  12.6
+  u_af1/u_fifo (async_fifo_DATA_W65_ADDR_W4_0)
+                                         89.801  907.019 1.56e+05 1.15e+03   9.4
+  u_af0/u_fifo (async_fifo_DATA_W65_ADDR_W4_1)
+                                         88.490  687.298 1.55e+05  930.669   7.6
+1

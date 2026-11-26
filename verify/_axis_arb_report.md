@@ -2,7 +2,7 @@
 
 日期：2026-11-24  
 工具：VCS O-2018.09-SP2（CentOS7 VM）；DC/PT/Formality O-2018.06-SP1  
-结论：VCS 全量回归 **14/14 PASS**（原 10 组 + 新增 4 组：standalone / corner / DES 集成 / 多时钟 CDC）；单时钟与多时钟两版 DC/PT/Formality 见 `asic_flow_20261124_arb/` 与 `asic_flow_20261125_arb_cdc/`
+结论：VCS 全量回归 **14/14 PASS**（原 10 组 + 新增 4 组：standalone / corner / DES 集成 / 多时钟 CDC）；单时钟、多时钟、低功耗三套 DC/PT/Formality 见 `asic_flow_20261124_arb/`、`asic_flow_20261125_arb_cdc/`、`asic_flow_20261125_lowpower/`
 
 ---
 
@@ -122,6 +122,18 @@ s1_axis ──> [sync_fifo 16 x 65] ──┘                                   
 - DC/PT/Formality：**34,988 cells / 6,959 DFF / 62,580.22 µm²**；`clk` / `wclk0` / `wclk1` 三域 **setup 0 违例、hold 0 违例**；最差 reg2reg **+1.5054 ns @250MHz**；271 条 async removal（同沿悲观）；Formality **7,073/7,073**。
 - 面积：两个异步 FIFO 各 8,337 µm²（13.3%×2），两个同步 FIFO 各 7,771 µm²（12.4%×2），DES 24,196 µm²（38.7%）；**4 个 65×16 FIFO 合计 51.5%**。
 - 对比单时钟版：45,908 µm² / 4,663 DFF → 62,580 µm² / 6,959 DFF，面积 +36%、DFF +49%，主要来自两个异步 FIFO（各 1,040 FF）与复位/同步逻辑。
+
+### 3.8 低功耗（SAIF + DC 时钟门控，2026-11-26）
+
+详细报告：`asic_flow_20261125_lowpower/低功耗对比报告_20261125.md`
+
+- 长流量 **256 beats / 64 packets** → VCD → `vcd2saif` → DC `read_saif`；baseline 与 `compile_ultra -gate_clock`（144 个 ICG）用同一份 SAIF 对比。
+- 动态功耗 **10.9865 mW → 3.2007 mW（−70.87%）**；leakage 1.2519 → 1.0222 mW；总功耗 12.2384 → 4.2229 mW（−65.50%）。
+- 面积 **62,580.22 → 52,261.55 µm²（−16.5%）**；DFF 6,959 → 7,114（ICG 锁存/测试逻辑）；cells 34,988 → 24,393。
+- gated 网表：三个时钟域 setup/hold 均 0（`clock_gating_default` 组也 0）；async_default 146 条 removal（同沿悲观）；reg2reg 最差 **+1.7046 ns @250MHz**；Formality **7,079/7,079**。
+- 面积下降来自 ICG 替换寄存器前的写使能 mux，不是丢逻辑；Formality 等价性已证明。
+- 突发 8-beat 窗口的 92.4% 是空闲占主导的上界，不作为主数字；主数字用稳态 256 beat 的 −70.9%。
+- 边界：SAIF 来自 RTL、Nangate45 typical 单角、理想时钟、pre-CTS；功耗是相对趋势，不是签核。
 
 ---
 

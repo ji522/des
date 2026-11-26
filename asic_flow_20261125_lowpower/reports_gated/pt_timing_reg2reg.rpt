@@ -1,0 +1,518 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 100.0000
+	-max_paths 10
+	-sort_by slack
+Design : des_arb_cdc_top
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 14:37:04 2026
+****************************************
+
+Warning: There are 147 invalid end points for constrained paths. (UITE-416)
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[29]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U28/ZN (INV_X1)             0.1606     0.3983 f
+  u_core/u_des/u_axis/u_des/U3/Z (CLKBUF_X1)            0.2167     0.6150 f
+  u_core/u_des/u_axis/u_des/U4/Z (CLKBUF_X1)            0.2291     0.8441 f
+  u_core/u_des/u_axis/u_des/U1/Z (CLKBUF_X1)            0.2257     1.0698 f
+  u_core/u_des/u_axis/u_des/U1235/ZN (INV_X1)           0.2451     1.3149 r
+  u_core/u_des/u_axis/u_des/U5688/ZN (AOI22_X1)         0.0591     1.3740 f
+  u_core/u_des/u_axis/u_des/U5689/ZN (XNOR2_X1)         0.1155     1.4895 r
+  u_core/u_des/u_axis/u_des/U5692/ZN (INV_X1)           0.0675     1.5570 f
+  u_core/u_des/u_axis/u_des/U5693/ZN (NOR2_X1)          0.1019     1.6589 r
+  u_core/u_des/u_axis/u_des/U5694/ZN (NOR2_X1)          0.0551     1.7140 f
+  u_core/u_des/u_axis/u_des/U5698/ZN (NAND2_X1)         0.0446     1.7586 r
+  u_core/u_des/u_axis/u_des/U5710/ZN (INV_X1)           0.0281     1.7867 f
+  u_core/u_des/u_axis/u_des/U5711/ZN (NOR2_X1)          0.0638     1.8506 r
+  u_core/u_des/u_axis/u_des/U6001/ZN (OAI22_X1)         0.0412     1.8918 f
+  u_core/u_des/u_axis/u_des/U6002/ZN (AOI211_X1)        0.0775     1.9692 r
+  u_core/u_des/u_axis/u_des/U6003/ZN (AOI21_X1)         0.0315     2.0007 f
+  u_core/u_des/u_axis/u_des/U6006/ZN (AOI211_X1)        0.0907     2.0914 r
+  u_core/u_des/u_axis/u_des/U6007/ZN (XNOR2_X1)         0.0639     2.1553 r
+  u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[29]/D (DFFR_X1)
+                                                        0.0090     2.1643 r
+  data arrival time                                                2.1643
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[29]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1643
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7046
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[18]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U28/ZN (INV_X1)             0.1606     0.3983 f
+  u_core/u_des/u_axis/u_des/U3/Z (CLKBUF_X1)            0.2167     0.6150 f
+  u_core/u_des/u_axis/u_des/U4/Z (CLKBUF_X1)            0.2291     0.8441 f
+  u_core/u_des/u_axis/u_des/U1/Z (CLKBUF_X1)            0.2257     1.0698 f
+  u_core/u_des/u_axis/u_des/U1235/ZN (INV_X1)           0.2451     1.3149 r
+  u_core/u_des/u_axis/u_des/U5688/ZN (AOI22_X1)         0.0591     1.3740 f
+  u_core/u_des/u_axis/u_des/U5689/ZN (XNOR2_X1)         0.1155     1.4895 r
+  u_core/u_des/u_axis/u_des/U5692/ZN (INV_X1)           0.0675     1.5570 f
+  u_core/u_des/u_axis/u_des/U5693/ZN (NOR2_X1)          0.1019     1.6589 r
+  u_core/u_des/u_axis/u_des/U5694/ZN (NOR2_X1)          0.0551     1.7140 f
+  u_core/u_des/u_axis/u_des/U5699/ZN (INV_X1)           0.0432     1.7572 r
+  u_core/u_des/u_axis/u_des/U5700/ZN (NAND2_X1)         0.0336     1.7908 f
+  u_core/u_des/u_axis/u_des/U5701/ZN (NAND2_X1)         0.0450     1.8359 r
+  u_core/u_des/u_axis/u_des/U5880/ZN (OAI22_X1)         0.0377     1.8735 f
+  u_core/u_des/u_axis/u_des/U5881/ZN (AOI211_X1)        0.0788     1.9524 r
+  u_core/u_des/u_axis/u_des/U5882/ZN (AOI21_X1)         0.0315     1.9838 f
+  u_core/u_des/u_axis/u_des/U5883/ZN (NOR4_X1)          0.1049     2.0888 r
+  u_core/u_des/u_axis/u_des/U5884/ZN (XNOR2_X1)         0.0651     2.1539 r
+  u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[18]/D (DFFR_X1)
+                                                        0.0090     2.1628 r
+  data arrival time                                                2.1628
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[18]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1628
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7061
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[26]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U29/ZN (INV_X1)             0.1593     0.3969 f
+  u_core/u_des/u_axis/u_des/U9/Z (CLKBUF_X1)            0.2187     0.6156 f
+  u_core/u_des/u_axis/u_des/U13/Z (CLKBUF_X1)           0.2272     0.8429 f
+  u_core/u_des/u_axis/u_des/U14/Z (CLKBUF_X1)           0.2005     1.0433 f
+  u_core/u_des/u_axis/u_des/U8257/ZN (INV_X1)           0.2069     1.2503 r
+  u_core/u_des/u_axis/u_des/U8260/ZN (AOI22_X1)         0.0572     1.3075 f
+  u_core/u_des/u_axis/u_des/U8261/Z (XOR2_X1)           0.1148     1.4223 r
+  u_core/u_des/u_axis/u_des/U8266/ZN (INV_X1)           0.0467     1.4689 f
+  u_core/u_des/u_axis/u_des/U8267/ZN (NOR2_X1)          0.0940     1.5629 r
+  u_core/u_des/u_axis/u_des/U8287/ZN (NOR2_X1)          0.0430     1.6059 f
+  u_core/u_des/u_axis/u_des/U8290/ZN (NOR2_X1)          0.0816     1.6875 r
+  u_core/u_des/u_axis/u_des/U8291/ZN (NOR2_X1)          0.0414     1.7289 f
+  u_core/u_des/u_axis/u_des/U8292/ZN (INV_X1)           0.0475     1.7764 r
+  u_core/u_des/u_axis/u_des/U8293/ZN (NOR2_X1)          0.0332     1.8097 f
+  u_core/u_des/u_axis/u_des/U8308/ZN (NAND2_X1)         0.0348     1.8445 r
+  u_core/u_des/u_axis/u_des/U8814/ZN (OAI211_X1)        0.0432     1.8878 f
+  u_core/u_des/u_axis/u_des/U8815/ZN (AOI22_X1)         0.0635     1.9513 r
+  u_core/u_des/u_axis/u_des/U8816/ZN (OAI211_X1)        0.0429     1.9942 f
+  u_core/u_des/u_axis/u_des/U8817/ZN (AOI221_X1)        0.0940     2.0882 r
+  u_core/u_des/u_axis/u_des/U8818/ZN (XNOR2_X1)         0.0646     2.1528 r
+  u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[26]/D (DFFR_X1)
+                                                        0.0090     2.1617 r
+  data arrival time                                                2.1617
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[10].u_round/R_o_reg[26]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0315     3.8685
+  data required time                                               3.8685
+  ------------------------------------------------------------------------------
+  data required time                                               3.8685
+  data arrival time                                               -2.1617
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7067
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/R_o_reg[26]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U29/ZN (INV_X1)             0.1593     0.3969 f
+  u_core/u_des/u_axis/u_des/U9/Z (CLKBUF_X1)            0.2187     0.6156 f
+  u_core/u_des/u_axis/u_des/U13/Z (CLKBUF_X1)           0.2272     0.8429 f
+  u_core/u_des/u_axis/u_des/U12/Z (CLKBUF_X1)           0.2232     1.0661 f
+  u_core/u_des/u_axis/u_des/U16/Z (CLKBUF_X1)           0.2306     1.2967 f
+  u_core/u_des/u_axis/u_des/U1117/ZN (AOI22_X1)         0.1251     1.4217 r
+  u_core/u_des/u_axis/u_des/U1118/ZN (XNOR2_X1)         0.0908     1.5125 r
+  u_core/u_des/u_axis/u_des/U1119/ZN (INV_X1)           0.0405     1.5530 f
+  u_core/u_des/u_axis/u_des/U1122/ZN (NOR2_X1)          0.0747     1.6277 r
+  u_core/u_des/u_axis/u_des/U1139/ZN (NOR2_X1)          0.0472     1.6750 f
+  u_core/u_des/u_axis/u_des/U1157/ZN (XNOR2_X1)         0.0716     1.7466 r
+  u_core/u_des/u_axis/u_des/U1158/ZN (INV_X1)           0.0367     1.7833 f
+  u_core/u_des/u_axis/u_des/U1540/ZN (NOR2_X1)          0.0517     1.8350 r
+  u_core/u_des/u_axis/u_des/U1668/ZN (AOI211_X1)        0.0327     1.8677 f
+  u_core/u_des/u_axis/u_des/U1669/ZN (AOI211_X1)        0.0773     1.9450 r
+  u_core/u_des/u_axis/u_des/U1671/ZN (OAI211_X1)        0.0473     1.9923 f
+  u_core/u_des/u_axis/u_des/U1672/ZN (AOI211_X1)        0.0865     2.0788 r
+  u_core/u_des/u_axis/u_des/U1673/ZN (XNOR2_X1)         0.0639     2.1427 r
+  u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/R_o_reg[26]/D (DFFR_X1)
+                                                        0.0090     2.1516 r
+  data arrival time                                                2.1516
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/R_o_reg[26]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1516
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7173
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[14].u_round/R_o_reg[2]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U29/ZN (INV_X1)             0.1593     0.3969 f
+  u_core/u_des/u_axis/u_des/U9/Z (CLKBUF_X1)            0.2187     0.6156 f
+  u_core/u_des/u_axis/u_des/U13/Z (CLKBUF_X1)           0.2272     0.8429 f
+  u_core/u_des/u_axis/u_des/U12/Z (CLKBUF_X1)           0.2232     1.0661 f
+  u_core/u_des/u_axis/u_des/U7039/ZN (INV_X1)           0.2445     1.3106 r
+  u_core/u_des/u_axis/u_des/U11132/ZN (AOI22_X1)        0.0591     1.3697 f
+  u_core/u_des/u_axis/u_des/U11133/ZN (XNOR2_X1)        0.0940     1.4637 r
+  u_core/u_des/u_axis/u_des/U11134/ZN (INV_X1)          0.0434     1.5071 f
+  u_core/u_des/u_axis/u_des/U11135/ZN (NOR2_X1)         0.1040     1.6112 r
+  u_core/u_des/u_axis/u_des/U11141/ZN (NOR2_X1)         0.0421     1.6533 f
+  u_core/u_des/u_axis/u_des/U11142/ZN (NOR2_X1)         0.0705     1.7238 r
+  u_core/u_des/u_axis/u_des/U11143/ZN (NOR2_X1)         0.0374     1.7612 f
+  u_core/u_des/u_axis/u_des/U11144/ZN (AND2_X1)         0.0471     1.8083 f
+  u_core/u_des/u_axis/u_des/U11179/ZN (NAND2_X1)        0.0327     1.8411 r
+  u_core/u_des/u_axis/u_des/U11180/ZN (OAI22_X1)        0.0369     1.8780 f
+  u_core/u_des/u_axis/u_des/U11181/ZN (OAI21_X1)        0.0462     1.9241 r
+  u_core/u_des/u_axis/u_des/U11182/ZN (OAI211_X1)       0.0420     1.9661 f
+  u_core/u_des/u_axis/u_des/U11183/ZN (NOR4_X1)         0.1051     2.0712 r
+  u_core/u_des/u_axis/u_des/U11184/ZN (XNOR2_X1)        0.0651     2.1363 r
+  u_core/u_des/u_axis/u_des/pipe_stages[14].u_round/R_o_reg[2]/D (DFFR_X1)
+                                                        0.0090     2.1452 r
+  data arrival time                                                2.1452
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[14].u_round/R_o_reg[2]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1452
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7237
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/R_o_reg[18]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U28/ZN (INV_X1)             0.1606     0.3983 f
+  u_core/u_des/u_axis/u_des/U3/Z (CLKBUF_X1)            0.2167     0.6150 f
+  u_core/u_des/u_axis/u_des/U4/Z (CLKBUF_X1)            0.2291     0.8441 f
+  u_core/u_des/u_axis/u_des/U1/Z (CLKBUF_X1)            0.2257     1.0698 f
+  u_core/u_des/u_axis/u_des/U1235/ZN (INV_X1)           0.2451     1.3149 r
+  u_core/u_des/u_axis/u_des/U7780/ZN (AOI22_X1)         0.0594     1.3743 f
+  u_core/u_des/u_axis/u_des/U7781/Z (XOR2_X1)           0.1172     1.4915 r
+  u_core/u_des/u_axis/u_des/U7786/ZN (INV_X1)           0.0551     1.5466 f
+  u_core/u_des/u_axis/u_des/U7787/ZN (NOR2_X1)          0.0862     1.6328 r
+  u_core/u_des/u_axis/u_des/U7788/ZN (NOR2_X1)          0.0456     1.6784 f
+  u_core/u_des/u_axis/u_des/U7977/ZN (NAND2_X1)         0.0429     1.7213 r
+  u_core/u_des/u_axis/u_des/U7978/ZN (NOR2_X1)          0.0286     1.7499 f
+  u_core/u_des/u_axis/u_des/U7979/ZN (AOI211_X1)        0.0797     1.8296 r
+  u_core/u_des/u_axis/u_des/U7980/ZN (OAI211_X1)        0.0475     1.8771 f
+  u_core/u_des/u_axis/u_des/U7981/ZN (AOI21_X1)         0.0653     1.9424 r
+  u_core/u_des/u_axis/u_des/U7991/ZN (OAI211_X1)        0.0389     1.9813 f
+  u_core/u_des/u_axis/u_des/U7992/ZN (AOI211_X1)        0.0865     2.0679 r
+  u_core/u_des/u_axis/u_des/U7993/ZN (XNOR2_X1)         0.0639     2.1318 r
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/R_o_reg[18]/D (DFFR_X1)
+                                                        0.0090     2.1407 r
+  data arrival time                                                2.1407
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[9].u_round/R_o_reg[18]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1407
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7282
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[27]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U29/ZN (INV_X1)             0.1593     0.3969 f
+  u_core/u_des/u_axis/u_des/U9/Z (CLKBUF_X1)            0.2187     0.6156 f
+  u_core/u_des/u_axis/u_des/U13/Z (CLKBUF_X1)           0.2272     0.8429 f
+  u_core/u_des/u_axis/u_des/U12/Z (CLKBUF_X1)           0.2232     1.0661 f
+  u_core/u_des/u_axis/u_des/U7/Z (CLKBUF_X1)            0.2306     1.2967 f
+  u_core/u_des/u_axis/u_des/U5599/ZN (AOI22_X1)         0.1237     1.4203 r
+  u_core/u_des/u_axis/u_des/U5600/Z (XOR2_X1)           0.1139     1.5342 r
+  u_core/u_des/u_axis/u_des/U5601/ZN (INV_X1)           0.0397     1.5739 f
+  u_core/u_des/u_axis/u_des/U5604/ZN (NAND2_X1)         0.0624     1.6363 r
+  u_core/u_des/u_axis/u_des/U5605/ZN (NAND2_X1)         0.0516     1.6879 f
+  u_core/u_des/u_axis/u_des/U5614/ZN (AOI22_X1)         0.0727     1.7606 r
+  u_core/u_des/u_axis/u_des/U5627/ZN (NAND2_X1)         0.0412     1.8018 f
+  u_core/u_des/u_axis/u_des/U5784/ZN (NAND2_X1)         0.0397     1.8415 r
+  u_core/u_des/u_axis/u_des/U5785/ZN (NAND3_X1)         0.0369     1.8784 f
+  u_core/u_des/u_axis/u_des/U5786/ZN (OAI221_X1)        0.0464     1.9247 r
+  u_core/u_des/u_axis/u_des/U5985/ZN (OAI221_X1)        0.0528     1.9776 f
+  u_core/u_des/u_axis/u_des/U5986/ZN (AOI211_X1)        0.0902     2.0677 r
+  u_core/u_des/u_axis/u_des/U5987/ZN (XNOR2_X1)         0.0639     2.1316 r
+  u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[27]/D (DFFR_X1)
+                                                        0.0090     2.1406 r
+  data arrival time                                                2.1406
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[6].u_round/R_o_reg[27]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1406
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7283
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/R_o_reg[18]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U29/ZN (INV_X1)             0.1593     0.3969 f
+  u_core/u_des/u_axis/u_des/U9/Z (CLKBUF_X1)            0.2187     0.6156 f
+  u_core/u_des/u_axis/u_des/U13/Z (CLKBUF_X1)           0.2272     0.8429 f
+  u_core/u_des/u_axis/u_des/U12/Z (CLKBUF_X1)           0.2232     1.0661 f
+  u_core/u_des/u_axis/u_des/U7039/ZN (INV_X1)           0.2445     1.3106 r
+  u_core/u_des/u_axis/u_des/U7086/ZN (AOI22_X1)         0.0594     1.3700 f
+  u_core/u_des/u_axis/u_des/U7087/Z (XOR2_X1)           0.1504     1.5204 r
+  u_core/u_des/u_axis/u_des/U7092/ZN (INV_X1)           0.0662     1.5866 f
+  u_core/u_des/u_axis/u_des/U7093/ZN (NOR2_X1)          0.1010     1.6876 r
+  u_core/u_des/u_axis/u_des/U7094/ZN (NOR2_X1)          0.0470     1.7345 f
+  u_core/u_des/u_axis/u_des/U7110/ZN (INV_X1)           0.0553     1.7899 r
+  u_core/u_des/u_axis/u_des/U7111/ZN (NAND2_X1)         0.0443     1.8342 f
+  u_core/u_des/u_axis/u_des/U7286/ZN (OAI211_X1)        0.0485     1.8827 r
+  u_core/u_des/u_axis/u_des/U7287/ZN (OAI211_X1)        0.0424     1.9251 f
+  u_core/u_des/u_axis/u_des/U7288/ZN (AOI211_X1)        0.0784     2.0035 r
+  u_core/u_des/u_axis/u_des/U7292/ZN (OAI221_X1)        0.0517     2.0552 f
+  u_core/u_des/u_axis/u_des/U7293/Z (XOR2_X1)           0.0798     2.1349 f
+  u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/R_o_reg[18]/D (DFFR_X1)
+                                                        0.0085     2.1434 f
+  data arrival time                                                2.1434
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[8].u_round/R_o_reg[18]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0271     3.8729
+  data required time                                               3.8729
+  ------------------------------------------------------------------------------
+  data required time                                               3.8729
+  data arrival time                                               -2.1434
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7295
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/R_o_reg[26]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U29/ZN (INV_X1)             0.1593     0.3969 f
+  u_core/u_des/u_axis/u_des/U9/Z (CLKBUF_X1)            0.2187     0.6156 f
+  u_core/u_des/u_axis/u_des/U13/Z (CLKBUF_X1)           0.2272     0.8429 f
+  u_core/u_des/u_axis/u_des/U12/Z (CLKBUF_X1)           0.2232     1.0661 f
+  u_core/u_des/u_axis/u_des/U16/Z (CLKBUF_X1)           0.2306     1.2967 f
+  u_core/u_des/u_axis/u_des/U6139/ZN (AOI22_X1)         0.1251     1.4217 r
+  u_core/u_des/u_axis/u_des/U6140/ZN (XNOR2_X1)         0.0752     1.4970 r
+  u_core/u_des/u_axis/u_des/U6155/ZN (INV_X1)           0.0402     1.5372 f
+  u_core/u_des/u_axis/u_des/U6157/ZN (NOR2_X1)          0.0748     1.6120 r
+  u_core/u_des/u_axis/u_des/U6164/ZN (NOR2_X1)          0.0395     1.6515 f
+  u_core/u_des/u_axis/u_des/U6165/ZN (INV_X1)           0.0440     1.6954 r
+  u_core/u_des/u_axis/u_des/U6166/ZN (NOR2_X1)          0.0314     1.7268 f
+  u_core/u_des/u_axis/u_des/U6168/ZN (NOR2_X1)          0.0650     1.7918 r
+  u_core/u_des/u_axis/u_des/U6169/ZN (INV_X1)           0.0393     1.8311 f
+  u_core/u_des/u_axis/u_des/U6170/ZN (NOR2_X1)          0.0590     1.8901 r
+  u_core/u_des/u_axis/u_des/U6173/ZN (NOR2_X1)          0.0300     1.9201 f
+  u_core/u_des/u_axis/u_des/U6679/ZN (INV_X1)           0.0268     1.9470 r
+  u_core/u_des/u_axis/u_des/U6684/ZN (OAI211_X1)        0.0328     1.9797 f
+  u_core/u_des/u_axis/u_des/U6685/ZN (AOI211_X1)        0.0865     2.0663 r
+  u_core/u_des/u_axis/u_des/U6686/ZN (XNOR2_X1)         0.0639     2.1302 r
+  u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/R_o_reg[26]/D (DFFR_X1)
+                                                        0.0090     2.1391 r
+  data arrival time                                                2.1391
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[7].u_round/R_o_reg[26]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1391
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7298
+
+
+  Startpoint: u_core/u_des/u_regs/encrypt_r_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/R_o_reg[29]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_core/u_des/u_regs/encrypt_r_reg/CK (DFFS_X1)        0.0000     0.0000 r
+  u_core/u_des/u_regs/encrypt_r_reg/Q (DFFS_X1)         0.2376     0.2376 r
+  u_core/u_des/u_axis/u_des/U29/ZN (INV_X1)             0.1593     0.3969 f
+  u_core/u_des/u_axis/u_des/U9/Z (CLKBUF_X1)            0.2187     0.6156 f
+  u_core/u_des/u_axis/u_des/U13/Z (CLKBUF_X1)           0.2272     0.8429 f
+  u_core/u_des/u_axis/u_des/U12/Z (CLKBUF_X1)           0.2232     1.0661 f
+  u_core/u_des/u_axis/u_des/U7/Z (CLKBUF_X1)            0.2306     1.2967 f
+  u_core/u_des/u_axis/u_des/U1376/ZN (AOI22_X1)         0.1237     1.4203 r
+  u_core/u_des/u_axis/u_des/U1377/Z (XOR2_X1)           0.1136     1.5339 r
+  u_core/u_des/u_axis/u_des/U1378/ZN (INV_X1)           0.0493     1.5832 f
+  u_core/u_des/u_axis/u_des/U1383/ZN (NOR2_X1)          0.0627     1.6459 r
+  u_core/u_des/u_axis/u_des/U1384/ZN (INV_X1)           0.0389     1.6848 f
+  u_core/u_des/u_axis/u_des/U1385/ZN (NAND2_X1)         0.0606     1.7454 r
+  u_core/u_des/u_axis/u_des/U1575/ZN (OR2_X1)           0.0473     1.7927 r
+  u_core/u_des/u_axis/u_des/U1692/ZN (OAI221_X1)        0.0456     1.8383 f
+  u_core/u_des/u_axis/u_des/U1693/ZN (NOR4_X1)          0.0971     1.9354 r
+  u_core/u_des/u_axis/u_des/U1694/ZN (OAI22_X1)         0.0408     1.9762 f
+  u_core/u_des/u_axis/u_des/U1695/ZN (AOI211_X1)        0.0866     2.0628 r
+  u_core/u_des/u_axis/u_des/U1696/ZN (XNOR2_X1)         0.0639     2.1267 r
+  u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/R_o_reg[29]/D (DFFR_X1)
+                                                        0.0090     2.1357 r
+  data arrival time                                                2.1357
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  clock reconvergence pessimism                         0.0000     4.0000
+  clock uncertainty                                    -0.1000     3.9000
+  u_core/u_des/u_axis/u_des/pipe_stages[0].u_round/R_o_reg[29]/CK (DFFR_X1)
+                                                                   3.9000 r
+  library setup time                                   -0.0311     3.8689
+  data required time                                               3.8689
+  ------------------------------------------------------------------------------
+  data required time                                               3.8689
+  data arrival time                                               -2.1357
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7332
+
+
+1
